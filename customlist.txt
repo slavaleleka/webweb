@@ -2,3 +2,4 @@
 geekcity.ru##.footer-social-icons
 
 @@||static.h-bid.com/notebookcheck.net/*/snhb-notebookcheck.net.min.js$domain=notebookcheck-ru.com
+@@||static.h-bid.com/gdpr/cmp.stub.js$domain=notebookcheck-ru.com
