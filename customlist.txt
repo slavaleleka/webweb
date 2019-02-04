@@ -5,4 +5,5 @@ sportsnet.ca##.sticky-sidebar > div > .bigbox_container_1
 sportsnet.ca##.sticky-sidebar > div > .bigbox_container_2
 
 
-m.discuss.com.hk###darkness
+! m.discuss.com.hk###darkness
+m.discuss.com.hk##.MFV
