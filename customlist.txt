@@ -4,7 +4,7 @@ geekcity.ru##.footer-social-icons
 sportsnet.ca##.sticky-sidebar > div > .bigbox_container_1
 sportsnet.ca##.sticky-sidebar > div > .bigbox_container_2
 
-newtoki.com##.hd_pops
+newtoki.com###hd_pop
 
 
 
