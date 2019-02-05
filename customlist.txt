@@ -4,6 +4,9 @@ geekcity.ru##.footer-social-icons
 sportsnet.ca##.sticky-sidebar > div > .bigbox_container_1
 sportsnet.ca##.sticky-sidebar > div > .bigbox_container_2
 
+newtoki.com##.hd_pops
 
-! m.discuss.com.hk###darkness
+
+
+
 m.discuss.com.hk##.MFV
