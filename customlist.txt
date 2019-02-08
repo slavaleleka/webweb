@@ -1,4 +1,4 @@
 !
 geekcity.ru##.footer-social-icons
 
-techbang.com##.phone_ads
+techbang.com##.phone-ads
