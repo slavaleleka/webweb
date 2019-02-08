@@ -1,3 +1,4 @@
 !
 geekcity.ru##.footer-social-icons
 
+amazon.com.tr##.gwm-TextNotificationCard-text
