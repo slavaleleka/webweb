@@ -1,4 +1,4 @@
 !
 geekcity.ru##.footer-social-icons
 
-techbang.com##.phone-ads
+jayisgames.com##.widget-legal
