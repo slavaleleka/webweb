@@ -1,4 +1,5 @@
 !
 geekcity.ru##.footer-social-icons
 
-||c.easypatent.net/cats/tt.js
+||c.easypatent.net/cats^$domain=m.chuixue.net
+
