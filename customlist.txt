@@ -5,3 +5,6 @@ geekcity.ru##.footer-social-icons
 
 ||monsterhunterworld.com/js/analytics.js
 ||monsterhunterworld.com/js/libs/jquery.cookie.js
+! monsterhunterworld.com##.modal
+
+||monsterhunterworld.com/js/gdpr.js
