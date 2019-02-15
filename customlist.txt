@@ -4,3 +4,4 @@ geekcity.ru##.footer-social-icons
 ! monsterhunterworld.com,residentevil2.com,devilmaycry5.com,capcom.co.jp,megaman-11.com###gdpr
 
 monsterhunterworld.com#$#body { overflow: visible!important; }
+monsterhunterworld.com#$#.modal.active { display: none!important; } 
