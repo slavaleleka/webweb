@@ -3,3 +3,5 @@ geekcity.ru##.footer-social-icons
 
 ||c.easypatent.net/cats^$domain=m.chuixue.net
 
+||monsterhunterworld.com/js/analytics.js
+monsterhunterworld.com/js/libs/jquery.cookie.js
