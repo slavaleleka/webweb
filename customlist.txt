@@ -1,4 +1,5 @@
 geekcity.ru##.footer-social-icons
-monsterhunterworld.com#$#body.active { overflow: visible!important; }
-monsterhunterworld.com#$#.modal.active { display: none!important; } 
-! monsterhunterworld.com,residentevil2.com,devilmaycry5.com,capcom.co.jp,megaman-11.com###gdpr
+!
+101android.ru##.spu-box
+101android.ru##.spu-bg 
+101android.ru##.myblockbottom
