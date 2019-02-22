@@ -3,4 +3,4 @@ geekcity.ru##.footer-social-icons
 101android.ru##.spu-box
 101android.ru##.spu-bg 
 101android.ru##.myblockbottom
-101android.ru##div:matches-css(margin: 4% 0px 0px;) > div:contains(Поделись этой страницей)
+101android.ru##div:matches-css(margin: 4% 0px 0px) > div:contains(Поделись этой страницей)
