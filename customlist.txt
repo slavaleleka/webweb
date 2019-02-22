@@ -3,4 +3,4 @@ geekcity.ru##.footer-social-icons
 101android.ru##.spu-box
 101android.ru##.spu-bg 
 101android.ru##.myblockbottom
-101android.ru##div[data-services*="vkontakte,facebook"]
+101android.ru##div:contains(Поделись этой страницей)
