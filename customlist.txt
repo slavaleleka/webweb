@@ -4,3 +4,16 @@ geekcity.ru##.footer-social-icons
 101android.ru##.spu-bg 
 101android.ru##.myblockbottom
 
+@@||static.clicktripz.com/r/ucb.js$domain=usatoday.com
+@@||c.amazon-adsystem.com/aax2/apstag.js$domain=usatoday.com
+
+@@||cdn.adsafeprotected.com/iasPET.1.js$domain=usatoday.com
+@@||js-sec.indexww.com/ht/p/*.js$domain=usatoday.com
+@@||clarium.global.ssl.fastly.net/gpt/a/wrap.js$domain=usatoday.com
+
+@@||adservice.google.com/adsid/integrator.js$domain=usatoday.com
+@@||securepubads.g.doubleclick.net/gpt/pubads_impl_*.js$domain=usatoday.com
+
+@@||js-agent.newrelic.com/nr-*.min.js$domain=usatoday.com
+
+@@||cpt-static.gannettdigital.com/universal-web-client/master/latest/elements/partner/partner-comscore/partner-comscore.html$domain=usatoday.com
