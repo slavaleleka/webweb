@@ -1,4 +1,5 @@
 geekcity.ru##.footer-social-icons
+sports.ru##div[itemprop="articleBody"] > p:contains(Все о баскетболе в ваших соцсетях)
 !
 101android.ru##.spu-box
 101android.ru##.spu-bg 
