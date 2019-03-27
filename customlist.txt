@@ -1,7 +1,7 @@
 ! Title: webweb/customlist.txt
 ! Description: Blocks some shiit.
 ! Version: 1.0.0.8
-! TimeUpdated: 2019-03-26T16:30:19+05:00
+! TimeUpdated: 2019-03-26T16:33:19+03:00
 ! Expires: 2 days (update frequency)geekcity.ru##.footer-social-icons
 !
 !
