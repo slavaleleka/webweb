@@ -2,9 +2,9 @@
 ! Description: do nothing, just sample
 ! Version: 2.0.0.8
 ! TimeUpdated: 2019-03-25T16:36:19+03:00
-! Expires: 2 days (update frequency)
+! Expires: 1 days (update frequency)
 !
 !
-geekcity.ru##.footer-social-icons
-sports.ru##div[itemprop="articleBody"] > p:contains(Все о баскетболе в ваших соцсетях)
-cs-fundamentals.com###adBlockerAlert
+! geekcity.ru##.footer-social-icons
+! sports.ru##div[itemprop="articleBody"] > p:contains(Все о баскетболе в ваших соцсетях)
+! cs-fundamentals.com###adBlockerAlert
