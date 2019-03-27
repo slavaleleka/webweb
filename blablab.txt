@@ -5,6 +5,6 @@
 ! Expires: 1 days (update frequency)
 !
 !
-! geekcity.ru##.footer-social-icons
-! sports.ru##div[itemprop="articleBody"] > p:contains(Все о баскетболе в ваших соцсетях)
-! cs-fundamentals.com###adBlockerAlert
+! 1
+! 22
+! 333
