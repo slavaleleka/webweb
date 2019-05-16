@@ -1,0 +1,47 @@
+! Title: trusted_filter.txt
+! Description: enable as trusted
+! Version: 1.0.0.1
+! TimeUpdated: 2019-05-16T10:00:00+03:00
+! 
+! 
+! 
+!
+! START: shouldn't work for untrusted
+!
+! https://www.thehindu.com/
+! console.log(Adblock)
+! Annoyances filter -- adblocker detection
+thehindu.com#%#AG_setConstant('Adblock', 'false');
+!
+! https://www.technogym.ru/
+! check cookie "visited"
+! Annoyances filter -- subscription popup
+technogym.com#%#document.cookie = "visited=true; path=/;";
+!
+! only for macOS, Windows, Android and Fifefox ext
+! https://www.spieletipps.de/video-23216-witcher-witcher-enhanced-edition-trailer/
+! German VPN needed
+! video ad at start of the video
+! German filter 
+||svonm.com/www.spieletipps.de/config.json$replace=/"enabled": true\,/"enabled": false\,/i,domain=spieletipps.de,important
+! 
+! END: shouldn't work for untrusted
+! 
+!
+!
+! only for macOS, Windows and Android. also advanced blocking rules, but allowed for untrusted filters
+! https://overclockers.ru/hardnews/show/97190/oficialnaya-dokumentaciya-po-processoram-intel-comet-lake-uzhe-dostupna-razrabotchikam
+! banner under article title is hidden
+! Russian filter
+overclockers.ru#$?#.material-inline-an { remove: true; }
+overclockers.ru#$?#.material-other-feed { remove: true; }
+!
+! 
+! https://adguard.com/ru/welcome.html
+! only FAQ and Support links isn't hidden in header 
+adguard.com##.header__right div:has(a:not([target="_blank"]))
+adguard.com##.header__nav-in > div:not(.header__item-wr--faq)
+! big green button "DOWNLOAD" is hidden
+adguard.com##a[href^="https://adguard.com/ru/download.html"]
+! 
+
