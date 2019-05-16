@@ -29,7 +29,7 @@ donday-taganrog.ru##div[style*="background: url(/uploads/banners/"]
 ! https://www.spieletipps.de/video-23216-witcher-witcher-enhanced-edition-trailer/
 ! German VPN needed
 ! video ad at start of the video
-! German filer 
+! German filter 
 ||svonm.com/www.spieletipps.de/config.json$replace=/"enabled": true\,/"enabled": false\,/i,domain=spieletipps.de,important
 ! 
 ! END: allowed for trusted
