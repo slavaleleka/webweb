@@ -1,0 +1,24 @@
+! Title: trusttest.txt
+! Description: testing - asap - great
+! Version: 1.0.0.1
+! TimeUpdated: 2019-05-15T15:00:00+03:00
+! Expires: who cares update frequency)
+!
+!
+!
+geekcity.ru##.footer-social-icons
+!
+! https://www.thehindu.com/
+! console.log(Adblock)
+! Annoyances filter -- adblocker detection
+thehindu.com#%#AG_setConstant('Adblock', 'false');
+!
+! https://www.technogym.ru/
+! check cookie "visited"
+! Annoyances filter -- subscription popup
+technogym.com#%#document.cookie = "visited=true; path=/;";
+!
+! https://donday-taganrog.ru/v-taganroge-k-yubileyu-chehova-poyavitsya-interaktivnyy-muzey.html
+! banner on the right sidebar under Yandex ad
+! Russian filter
+donday-taganrog.ru##div[style*="background: url(/uploads/banners/"]
