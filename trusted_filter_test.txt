@@ -20,7 +20,7 @@ technogym.com#%#document.cookie = "visited=true; path=/;";
 !
 ! only for macOS, Windows, Android and Fifefox ext
 ! https://www.spieletipps.de/video-23216-witcher-witcher-enhanced-edition-trailer/
-! German VPN needed
+! German VPN is needed
 ! video ad at start of the video
 ! German filter 
 ||svonm.com/www.spieletipps.de/config.json$replace=/"enabled": true\,/"enabled": false\,/i,domain=spieletipps.de,important
