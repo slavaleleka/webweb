@@ -4,7 +4,7 @@
 ! TimeUpdated: 2019-05-15T15:00:00+03:00
 ! Expires: who cares update frequency)
 !
-! 
+! total — 8 rules. advanced blocking — 5. allowed for trusted — 4.
 ! 
 !
 !
@@ -37,11 +37,12 @@ donday-taganrog.ru##div[style*="background: url(/uploads/banners/"]
 ! 
 !
 !
-! only for macOS, Windows and Android. also advanced blocking rule, but allowed for untrusted filters
+! only for macOS, Windows and Android. also advanced blocking rules, but allowed for untrusted filters
 ! https://overclockers.ru/hardnews/show/97190/oficialnaya-dokumentaciya-po-processoram-intel-comet-lake-uzhe-dostupna-razrabotchikam
 ! banner under article title is hidden
 ! Russian filter
 overclockers.ru#$?#.material-inline-an { remove: true; }
+overclockers.ru#$?#.material-other-feed { remove: true; }
 !
 !
 ! https://adguard.com/ru/welcome.html
