@@ -1,13 +1,12 @@
-! Title: trusttest.txt
-! Description: testing - asap - great
-! Version: 1.0.0.4
+! Title: trusted_filter.txt
+! Description: enable as trusted
+! Version: 1.0.0.1
 ! TimeUpdated: 2019-05-16T10:00:00+03:00
 ! 
-! total — 9 rules. advanced blocking — 5. allowed for trusted — 4.
 ! 
 ! 
 !
-! START: allowed for trusted
+! START: should work for trusted
 !
 ! https://www.thehindu.com/
 ! console.log(Adblock)
@@ -19,12 +18,6 @@ thehindu.com#%#AG_setConstant('Adblock', 'false');
 ! Annoyances filter -- subscription popup
 technogym.com#%#document.cookie = "visited=true; path=/;";
 !
-! https://donday-taganrog.ru/v-taganroge-k-yubileyu-chehova-poyavitsya-interaktivnyy-muzey.html
-! banner on the right sidebar under Yandex ad
-! Russian filter
-! no advance blocking, but "with 'url' in the style text"
-donday-taganrog.ru##div[style*="background: url(/uploads/banners/"]
-!
 ! only for macOS, Windows, Android and Fifefox ext
 ! https://www.spieletipps.de/video-23216-witcher-witcher-enhanced-edition-trailer/
 ! German VPN needed
@@ -32,7 +25,7 @@ donday-taganrog.ru##div[style*="background: url(/uploads/banners/"]
 ! German filter 
 ||svonm.com/www.spieletipps.de/config.json$replace=/"enabled": true\,/"enabled": false\,/i,domain=spieletipps.de,important
 ! 
-! END: allowed for trusted
+! END: should work for trusted
 ! 
 !
 !
