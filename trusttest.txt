@@ -43,12 +43,12 @@ donday-taganrog.ru##div[style*="background: url(/uploads/banners/"]
 overclockers.ru#$?#.material-inline-an { remove: true; }
 overclockers.ru#$?#.material-other-feed { remove: true; }
 !
-! CSS-extended rules, 
+! 
 ! https://adguard.com/ru/welcome.html
-! only FAQ and Support link in heaser left 
+! only FAQ and Support links isn't hidden in header 
 adguard.com##.header__right div:has(a:not([target="_blank"]))
 adguard.com##.header__nav-in > div:not(.header__item-wr--faq)
 ! big green button "DOWNLOAD" is hidden
-adguard.com##a[href="https://adguard.com/ru/download.html"]
+adguard.com##a[href^="https://adguard.com/ru/download.html"]
 ! 
 
