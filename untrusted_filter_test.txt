@@ -1,5 +1,5 @@
-! Title: trusted_filter.txt
-! Description: enable as trusted
+! Title: untrusted_filter.txt
+! Description: don't trust this one
 ! Version: 1.0.0.1
 ! TimeUpdated: 2019-05-16T10:00:00+03:00
 ! 
