@@ -4,8 +4,11 @@
 ! TimeUpdated: 2019-05-15T15:00:00+03:00
 ! Expires: who cares update frequency)
 !
-! 6 rules, 3 of them are advanced and should not be enabled if filter is untrusted 
 ! 
+! 
+!
+!
+! START: allowed for trusted
 !
 ! https://www.thehindu.com/
 ! console.log(Adblock)
@@ -20,10 +23,26 @@ technogym.com#%#document.cookie = "visited=true; path=/;";
 ! https://donday-taganrog.ru/v-taganroge-k-yubileyu-chehova-poyavitsya-interaktivnyy-muzey.html
 ! banner on the right sidebar under Yandex ad
 ! Russian filter
+! no advance blocking, but "with 'url' in the style text"
 donday-taganrog.ru##div[style*="background: url(/uploads/banners/"]
 !
+! only for macOS, Windows, Android and Fifefox ext
+! https://www.spieletipps.de/video-23216-witcher-witcher-enhanced-edition-trailer/
+! German VPN needed
+! video ad at start of the video
+! German filer 
+||svonm.com/www.spieletipps.de/config.json$replace=/"enabled": true\,/"enabled": false\,/i,domain=spieletipps.de,important
+! 
+! END: allowed for trusted
+! 
 !
-geekcity.ru##.footer-social-icons
+!
+! only for macOS, Windows and Android. also advanced blocking rule, but allowed for untrusted filters
+! https://overclockers.ru/hardnews/show/97190/oficialnaya-dokumentaciya-po-processoram-intel-comet-lake-uzhe-dostupna-razrabotchikam
+! banner under article title is hidden
+! Russian filter
+overclockers.ru#$?#.material-inline-an { remove: true; }
+!
 !
 ! https://adguard.com/ru/welcome.html
 ! only FAQ and Support link in heaser left 
