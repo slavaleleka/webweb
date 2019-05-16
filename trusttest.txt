@@ -1,12 +1,11 @@
 ! Title: trusttest.txt
 ! Description: testing - asap - great
-! Version: 1.0.0.1
-! TimeUpdated: 2019-05-15T15:00:00+03:00
-! Expires: who cares update frequency)
-!
-! total — 8 rules. advanced blocking — 5. allowed for trusted — 4.
+! Version: 1.0.0.4
+! TimeUpdated: 2019-05-16T10:00:00+03:00
 ! 
-!
+! total — 9 rules. advanced blocking — 5. allowed for trusted — 4.
+! 
+! 
 !
 ! START: allowed for trusted
 !
@@ -44,11 +43,12 @@ donday-taganrog.ru##div[style*="background: url(/uploads/banners/"]
 overclockers.ru#$?#.material-inline-an { remove: true; }
 overclockers.ru#$?#.material-other-feed { remove: true; }
 !
-!
+! CSS-extended rules, 
 ! https://adguard.com/ru/welcome.html
 ! only FAQ and Support link in heaser left 
 adguard.com##.header__right div:has(a:not([target="_blank"]))
-! 
 adguard.com##.header__nav-in > div:not(.header__item-wr--faq)
+! big green button "DOWNLOAD" is hidden
+adguard.com##a[href="https://adguard.com/ru/download.html"]
 ! 
 
