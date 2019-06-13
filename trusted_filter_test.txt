@@ -1,7 +1,7 @@
 ! Title: trusted_filter.txt
 ! Description: enable as trusted
-! Version: 1.0.0.1
-! TimeUpdated: 2019-05-16T10:00:00+03:00
+! Version: 1.0.0.2
+! TimeUpdated: 2019-06-36T14:53:00+03:00
 ! 
 ! 
 ! 
