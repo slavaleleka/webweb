@@ -1,7 +1,7 @@
 ! Title: untrusted_filter.txt
 ! Description: don't trust this one
-! Version: 1.0.0.1
-! TimeUpdated: 2019-05-16T10:00:00+03:00
+! Version: 1.0.0.2
+! TimeUpdated: 2019-06-13T14:53:00+03:00
 ! 
 ! 
 ! 
@@ -16,7 +16,7 @@ thehindu.com#%#AG_setConstant('Adblock', 'false');
 ! https://www.technogym.ru/
 ! check cookie "visited"
 ! Annoyances filter -- subscription popup
-technogym.com#%#document.cookie = "visited=true; path=/;";
+technogym.ru#%#document.cookie = "visited=true; path=/;";
 !
 ! only for macOS, Windows, Android and Fifefox ext
 ! https://www.spieletipps.de/video-23216-witcher-witcher-enhanced-edition-trailer/
@@ -39,7 +39,7 @@ overclockers.ru#$?#.material-other-feed { remove: true; }
 ! 
 ! https://adguard.com/ru/welcome.html
 ! only FAQ and Support links isn't hidden in header 
-adguard.com##.header__right div:has(a:not([target="_blank"]))
+adguard.com#?#.header__right div:has(a:not([target="_blank"]))
 adguard.com##.header__nav-in > div:not(.header__item-wr--faq)
 ! big green button "DOWNLOAD" is hidden
 adguard.com##a[href^="https://adguard.com/ru/download.html"]
