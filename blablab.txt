@@ -5,6 +5,4 @@
 ! Expires: 1 days (update frequency)
 !
 !
-! 1
-! 22
-! 333
+ADGUARD.COM##DIV.HEADER
