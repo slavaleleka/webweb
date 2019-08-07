@@ -5,4 +5,4 @@
 ! Expires: 1 days (update frequency)
 !
 !
-ADGUARD.COM##DIV.HEADER
+adguard.com##DIV.header
