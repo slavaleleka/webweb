@@ -1,6 +1,6 @@
 ! Title: webweb/customlist.txt
 ! Description: Blocks some shiit.
-! Version: 1.0.0.15
+! Version: 1.0.0.16
 ! TimeUpdated: 2019-08-12T11:40:19+03:00
 ! Expires: 2 days (update frequency)
 !
@@ -10,7 +10,7 @@ cs-fundamentals.com###adBlockerAlert
 !
 adguard.com##div.header
 !
-! https://github.com/AdguardTeam/AdguardFilters/issues/38404
+! https://github.com/AdguardTeam/AdguardFilters/pull/38506/files
 !#safari_cb_affinity(general)
-@@||ad.71i.de/somtag/loader/loader.js$domain=sportdeutschland.tv
+@@||ddnk.advertur.ru/*/loader.js$domain=zoobusiness.kiev.ua
 !#safari_cb_affinity
