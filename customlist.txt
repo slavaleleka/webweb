@@ -1,16 +1,14 @@
 ! Title: webweb/customlist.txt
 ! Description: Blocks some shiit.
-! Version: 1.0.0.16
-! TimeUpdated: 2019-08-12T11:40:19+03:00
+! Version: 1.0.0.17
+! TimeUpdated: 2019-08-13T16:40:19+03:00
 ! Expires: 2 days (update frequency)
-!
-cs-fundamentals.com###adBlockerAlert
 ! 
 ##DIV[id*="AdContainer"]
-!
 adguard.com##div.header
 !
-! https://github.com/AdguardTeam/AdguardFilters/pull/38506/files
+!
+! Google AdSense should be whitelisted on checkadblock.ru
 !#safari_cb_affinity(general)
-@@||ddnk.advertur.ru/*/loader.js$domain=zoobusiness.kiev.ua
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=checkadblock.ru
 !#safari_cb_affinity
