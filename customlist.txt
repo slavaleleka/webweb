@@ -1,8 +1,8 @@
 ! Title: webweb/customlist.txt
 ! Description: Blocks some shiit.
-! Version: 1.0.0.19
-! TimeUpdated: 2019-08-14T16:40:19+03:00
-! Expires: 2 days (update frequency)
+! Version: 1.0.0.20
+! TimeUpdated: 2019-08-30T17:45:19+03:00
+! Expires: ??
 ! 
 ! Google AdSense -- whitelisted
 !#safari_cb_affinity(general)
@@ -17,7 +17,6 @@ checkadblock.ru#@#.adsbygoogle
 ! 
 ! gif ad banner - 3 -- whitelisted
 !#safari_cb_affinity(all)
-!+ NOT_PLATFORM(ios)
 checkadblock.ru#@#img[width="728"][height="90"]
 !#safari_cb_affinity
 ! 
