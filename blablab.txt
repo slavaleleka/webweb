@@ -5,4 +5,6 @@
 ! Expires: 1 days (update frequency)
 !
 !
-adguard.com##DIV.header
+!#safari_cb_affinity(general)
+@@||static.doubleclick.net/instream/ad_status.js$domain=youtube.com
+!#safari_cb_affinity
