@@ -1,11 +1,11 @@
 ! Title: blablab.txt
 ! Description: do something
-! Version: 2.0.13
+! Version: 2.0.14
 ! TimeUpdated: 2019-09-04T21:40:19+03:00
 ! Expires: 1 days (update frequency)
 !
 !
 !#safari_cb_affinity(general)
-!+ PLATFORM(ios)
+!+ PLATFORM(ios,ext_safari)
 @@||static.doubleclick.net/instream/ad_status.js$domain=dtm.com
 !#safari_cb_affinity
