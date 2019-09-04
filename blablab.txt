@@ -6,5 +6,6 @@
 !
 !
 !#safari_cb_affinity(general)
-@@||static.doubleclick.net/instream/ad_status.js$domain=youtube.com
+!+ PLATFORM(ios)
+@@||static.doubleclick.net/instream/ad_status.js$domain=dtm.com
 !#safari_cb_affinity
