@@ -1,10 +1,13 @@
 ! Title: blablab.txt
 ! Description: does something
-! Version: 2.0.16
-! TimeUpdated: 2019-09-04T22:05:19+03:00
+! Version: 2.0.17
+! TimeUpdated: 2019-09-05T12:05:19+03:00
 ! Expires: 1 days (update frequency)
 !
 !
 !#safari_cb_affinity(general)
 @@||ad.71i.de/somtag/loader/loader.js$domain=dtm.com
 !#safari_cb_affinity
+!
+!+ PLATFORM(ios,ext_safari)
+@@||google-analytics.com/analytics.js$domain=checkadblock.ru
