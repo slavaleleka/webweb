@@ -1,5 +1,5 @@
-! Title: test_dns-1000.txt
-! Description: 1000 ad domains
+! Title: dns-990.txt
+! Description: fresh rus+eng dns-filter 
 ! Version: 0.0.1
 ! TimeUpdated: 2019-10-01T11:05:19+03:00
 !
