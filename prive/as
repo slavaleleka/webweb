@@ -1,0 +1,5 @@
+!
+subscity.ru##.main-container > .about
+subscity.ru##.main-container > .divider
+subscity.ru##.main-container > .about ~ .capitalize
+!
