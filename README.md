@@ -5,6 +5,14 @@
 
 * * *
 
+
+* [abort-on-property-write](#module_abort-on-property-write)
+    * [.abortOnPropertyWrite(source, property)](#module_abort-on-property-write.abortOnPropertyWrite)
+
+
+
+* * *
+
 **webweb**
 
 https://raw.githubusercontent.com/slavaleleka/webweb/master/customlist.txt
