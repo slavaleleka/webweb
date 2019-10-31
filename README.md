@@ -1,14 +1,10 @@
-<dl>
-<dt><a href="#module_abort-on-property-write">abort-on-property-write</a></dt>
-<dd></dd>
-</dl>
-
-* * *
 
 
-* [abort-on-property-write](#module_abort-on-property-write)
-    * [.abortOnPropertyWrite(source, property)](#module_abort-on-property-write.abortOnPropertyWrite)
-
+* abortOnPropertyWrite - &lt;p&gt;Abort property writing&lt;/p&gt;
+&lt;p&gt;Related UBO scriptlet:
+https://github.com/gorhill/uBlock/wiki/Resources-Library#abort-on-property-writejs-&lt;/p&gt;
+&lt;p&gt;Related ABP source:
+https://github.com/adblockplus/adblockpluscore/blob/6b2a309054cc23432102b85d13f12559639ef495/lib/content/snippets.js#L896&lt;/p&gt;
 
 
 * * *
