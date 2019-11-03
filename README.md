@@ -1,4 +1,5 @@
-### <a id="abort-on-property-write"></a> abort-on-property-write <br/> 
+### <a id="abort-on-property-write"></a> abort-on-property-write  
+
 Abort property writing
 
 Related UBO scriptlet:
@@ -23,9 +24,11 @@ utils.escape('<script></script>')
 !
 ! 2. Aborts all inline scripts trying to access `window.alert`
 example2.escape('<script></script>')
-``` <br/> * * *
+```
+* * *
       
-      
+     
+* * *
 
 ### Available scriptlets
 
