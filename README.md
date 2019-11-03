@@ -21,7 +21,7 @@ example.org#%#//scriptlet("abort-on-property-write", <property>)
 ! 1. Aborts all inline scripts trying to access `window.alert`
 utils.escape('<script></script>')
 // => '&lt;script&gt;&lt;/script&gt;'
-!
+
 ! 2. Aborts all inline scripts trying to access `window.alert`
 example2.escape('<script></script>')
 ```
