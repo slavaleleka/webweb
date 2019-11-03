@@ -1,14 +1,19 @@
-Scriptlet: <br/> -- abort-on-property-write -- Abort property writing
-
-* * * 
-
-* abortOnPropertyWrite - &lt;p&gt;Abort property writing&lt;/p&gt;
-&lt;p&gt;Related UBO scriptlet:
-https://github.com/gorhill/uBlock/wiki/Resources-Library#abort-on-property-writejs-&lt;/p&gt;
-&lt;p&gt;Related ABP source:
-https://github.com/adblockplus/adblockpluscore/blob/6b2a309054cc23432102b85d13f12559639ef495/lib/content/snippets.js#L896&lt;/p&gt;
-
-
+<p><strong>Syntax</strong></p>\n' +
+      '<pre><code>example.org#%#//scriptlet(&quot;abort-on-property-write&quot;, &lt;property&gt;)\n' +
+      '</code></pre>\n' +
+      '<p>! 1. Aborts all inline scripts trying to access <code>window.alert</code><br />\n' +
+      "utils.escape('<script></script>')<br />\n" +
+      "// =&gt; '&lt;script&gt;&lt;/script&gt;'<br />\n" +
+      '!<br />\n' +
+      '! 2. Aborts all inline scripts trying to access <code>window.alert</code><br />\n' +
+      "example2.escape('<script></script>')</p>\n" +
+      '<p>Abort property writing</p>\n' +
+      '<p>Related UBO scriptlet:<br />\n' +
+      'https://github.com/gorhill/uBlock/wiki/Resources-Library#abort-on-property-writejs-</p>\n' +
+      '<p>Related ABP source:<br />\n' +
+      'https://github.com/adblockplus/adblockpluscore/blob/6b2a309054cc23432102b85d13f12559639ef495/lib/content/snippets.js#L896</p>'
+      
+      
 * * *
 
 ### Available scriptlets
