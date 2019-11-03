@@ -8,25 +8,24 @@ Related ABP source:
 https://github.com/adblockplus/adblockpluscore/blob/6b2a309054cc23432102b85d13f12559639ef495/lib/content/snippets.js#L896
 
 **Syntax**
-&#x60;&#x60;&#x60;
-example.org#%#//scriptlet(&quot;abort-on-property-write&quot;, &lt;property&gt;)
-&#x60;&#x60;&#x60;
+```
+example.org#%#//scriptlet("abort-on-property-write", <property>)
+```
 
 **Parameters**
-- &#x60;property&#x60; (required) path to a property (joined with &#x60;.&#x60; if needed). The property must be attached to &#x60;window&#x60;.
+- `property` (required) path to a property (joined with `.` if needed). The property must be attached to `window`.
 
 **Examples**
-&#x60;&#x60;&#x60;
-! 1. Aborts all inline scripts trying to access &#x60;window.alert&#x60;
-utils.escape(&#x27;&lt;script&gt;&lt;/script&gt;&#x27;)
-// &#x3D;&gt; &#x27;&amp;lt;script&amp;gt;&amp;lt;/script&amp;gt;&#x27;
+```
+! 1. Aborts all inline scripts trying to access `window.alert`
+utils.escape('<script></script>')
+// => '&lt;script&gt;&lt;/script&gt;'
 !
-! 2. Aborts all inline scripts trying to access &#x60;window.alert&#x60;
-example2.escape(&#x27;&lt;script&gt;&lt;/script&gt;&#x27;)
-&#x60;&#x60;&#x60; <br/> * * *
+! 2. Aborts all inline scripts trying to access `window.alert`
+example2.escape('<script></script>')
+``` <br/> * * *
       
       
-* * *
 
 ### Available scriptlets
 
