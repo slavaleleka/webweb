@@ -1,8 +1,8 @@
 * [Scriptlets](#scriptlets)
     * [Syntax](#syntax)
     * [Available scriptlets](#available-scriptlets)
-    * [abort-on-property-reads](#abort-on-property-reads)
-        * [abort-on-property-writes](#abort-on-property-writes)
+        *[abort-on-property-reads](#abort-on-property-reads)
+        *[abort-on-property-writes](#abort-on-property-writes)
 
 * * *
 ### <a id="abort-on-property-read"></a> abort-on-property-read
