@@ -23,6 +23,6 @@
 ||b1img.com^
 ||b2c.com^
 ! 
-@@||||awin1.com^|
+@@||awin1.com^|
 !
 @@||feed.adrelayer.com^|
