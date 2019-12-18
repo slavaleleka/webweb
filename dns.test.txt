@@ -1,7 +1,7 @@
-! Title: blablab.txt
-! Description: does something
-! Version: 2.0.17
-! TimeUpdated: 2019-09-05T12:05:19+03:00
+! Title: dns.test.txt
+! Description: for exeptions testing
+! Version: 1.0.1
+! TimeUpdated: 2019-12-18T13:05:19+03:00
 ! Expires: 7 days (update frequency)
 !
 ||dotomi.com^
