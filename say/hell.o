@@ -1,8 +1,9 @@
 ! Title: /say/hell.o
 ! Description: cut some shtuff down
-! Version: 1.0.0.2
-! TimeUpdated: 2019-10-16T15:45:19+03:00
+! Version: 1.0.0.3
+! TimeUpdated: 2019-12-19T11:05:19+03:00
 !
+! TOP TEXT
 subscity.ru##.main-container > .about
 subscity.ru##.main-container > .divider
 subscity.ru##.main-container > .about ~ .capitalize
@@ -10,4 +11,6 @@ subscity.ru##.main-container > .about ~ .capitalize
 ! выбор редакции
 geekcity.ru##.single-container > .vc_row-fluid > div > div > div >div[class^="vc_custom_"]
 !
+! SOCIAls
 the-flow.ru##.socials
+ticketsalon.ru##.mec-event-sharing
