@@ -2,10 +2,6 @@
   <img src="https://cdn.adguard.com/public/Adguard/Common/adguard_safari.svg" width="300px" alt="AdGuard for Safari" />
 </h1>
 
-&nbsp;
-<p align="center">
-  <img src="https://cdn.adguard.com/public/Adguard/Common/adguard_safari.svg" width="300px" alt="AdGuard for Safari" />
-</p>
 <h3 align="center">The most advanced ad blocking extension for Safari</h3>
 <p align="center">
   Free and open source, highly customizable and lightning fast ad blocking extension.
