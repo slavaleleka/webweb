@@ -1,7 +1,6 @@
-<h1 align="center">
-  &nbsp;
-  <img src="https://cdn.adguard.com/public/Adguard/Common/adguard_safari.svg" width="300px" alt="AdGuard for Safari" />
-</h1>
+<h2 align="center">
+  <img src="https://cdn.adguard.com/public/Adguard/Common/adguard_safari.svg" width="300px" margin-top="10px" alt="AdGuard for Safari" />
+</h2>
 
 <h3 align="center">The most advanced ad blocking extension for Safari</h3>
 <p align="center">
