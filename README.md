@@ -1,4 +1,5 @@
 <h1 align="center">
+  &nbsp;
   <img src="https://cdn.adguard.com/public/Adguard/Common/adguard_safari.svg" width="300px" alt="AdGuard for Safari" />
 </h1>
 
