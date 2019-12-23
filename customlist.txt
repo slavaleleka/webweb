@@ -2,7 +2,7 @@
 ! Description: Blocks some shiit.
 ! Version: 1.0.0.21
 ! TimeUpdated: 2019-08-30T17:45:19+03:00
-! Expires: ??
+! Expires: 7 days
 ! 
 ! Google AdSense -- whitelisted
 !#safari_cb_affinity(general)
