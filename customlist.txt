@@ -12,6 +12,11 @@ checkadblock.ru#@#object[width="240"][height="400"]
 checkadblock.ru#@#embed[width="240"][height="400"]
 !#safari_cb_affinity
 !
+! TOP TEXT
+subscity.ru##.main-container > .about
+subscity.ru##.main-container > .divider
+subscity.ru##.main-container > .about ~ .capitalize
+!
 ! Google Analytics -- whitelisted
 !#safari_cb_affinity(general,privacy)
 @@||google-analytics.com/analytics.js$domain=checkadblock.ru
