@@ -4,20 +4,11 @@
 ! TimeUpdated: 2019-12-23T18:45:19+03:00
 ! Expires: 7 days
 ! 
-! Google AdSense -- whitelisted
-!#safari_cb_affinity(general)
-checkadblock.ru#@#.adsbygoogle
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=checkadblock.ru
-!#safari_cb_affinity
-! 
-! picture ad banner - 1 -- whitelisted
+! banner ads -- whitelisted
 !#safari_cb_affinity(all)
 @@||checkadblock.ru/banners/*$domain=checkadblock.ru
-!#safari_cb_affinity
-! 
-! gif ad banner - 3 -- whitelisted
-!#safari_cb_affinity(all)
-checkadblock.ru#@#img[width="728"][height="90"]
+checkadblock.ru#@#object[width="240"][height="400"]
+checkadblock.ru#@#embed[width="240"][height="400"]
 !#safari_cb_affinity
 ! 
 ! Google Analytics -- whitelisted
