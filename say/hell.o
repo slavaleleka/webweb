@@ -9,7 +9,7 @@ subscity.ru##.main-container > .divider
 subscity.ru##.main-container > .about ~ .capitalize
 !
 ! выбор редакции
-geekcity.ru##.single-container > .vc_row-fluid > div > div > div >div[class^="vc_custom_"]
+geekcity.ru##.single-container > .vc_row-fluid > div > div > div > div[class^="vc_custom_"]
 !
 ! SOCIAls
 the-flow.ru##.socials
