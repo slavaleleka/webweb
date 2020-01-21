@@ -1,14 +1,9 @@
 ! Title: dns.test.txt
-! Description: for exeptions testing
-! Version: 1.0.1
-! TimeUpdated: 2019-12-18T13:05:19+03:00
+! Description: for dns testing
+! Version: 1.0.2
+! TimeUpdated: 2020-01-21T16:35:19+03:00
 ! Expires: 7 days (update frequency)
 !
-||dotomi.com^
-||emjcd.com^
-||track.webgains.com^
+||techtarget.com^
 ! 
-@@||cj.dotomi.com^|
-@@||emjcd.com^|
-@@||track.webgains.com^|
-@@||notebookreview.com^|
+@@||forum.notebookreview.com^|
