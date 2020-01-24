@@ -1,6 +1,6 @@
 ! Title: /say/hell.o
 ! Description: cut some shtuff down
-! Version: 1.0.0.3
+! Version: 1.0.0.4
 ! TimeUpdated: 2019-12-19T11:05:19+03:00
 !
 ! TOP TEXT
@@ -16,3 +16,5 @@ the-flow.ru##.socials
 ticketsalon.ru##.mec-event-sharing
 ! 
 ||twitch.tv/embed/*/chat$third-party
+!
+m.sports.ru##.sib-scoreboard > .leaguepass-table
