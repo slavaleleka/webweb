@@ -1,6 +1,6 @@
 ! Title: /say/hell.o
 ! Description: cut some shtuff down
-! Version: 1.0.0.4
+! Version: 1.0.0.5
 ! TimeUpdated: 2019-12-19T11:05:19+03:00
 !
 ! TOP TEXT
@@ -17,4 +17,5 @@ ticketsalon.ru##.mec-event-sharing
 ! 
 ||twitch.tv/embed/*/chat$third-party
 !
-m.sports.ru##.sib-scoreboard > .leaguepass-table
+! m.sports.ru##.sib-scoreboard > .leaguepass-table
+ru.global.nba.com##.sib-scoreboard > .leaguepass-table
