@@ -22,3 +22,4 @@ ticketsalon.ru##.mec-event-sharing
 ru.global.nba.com##.sib-scoreboard > .leaguepass-table
 !
 codeburst.io,medium.com##div[data-test-id="post-sidebar"]
+codeburst.io,medium.com#?#div.lm.r:has(> iframe[src^="https://cdn.embedly.com/widgets/media.html"])
