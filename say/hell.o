@@ -19,3 +19,5 @@ ticketsalon.ru##.mec-event-sharing
 !
 ! LeaguePass banner on sports.ru
 ru.global.nba.com##.sib-scoreboard > .leaguepass-table
+!
+codeburst.io,medium.com##div[data-test-id="post-sidebar"]
