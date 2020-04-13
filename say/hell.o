@@ -11,10 +11,6 @@ subscity.ru##.main-container > .about ~ .capitalize
 !
 ! выбор редакции
 geekcity.ru##.single-container > .vc_row-fluid > div > div > div > div[class^="vc_custom_"]
-!
-! SOCIAls
-the-flow.ru##.socials
-ticketsalon.ru##.mec-event-sharing
 ! 
 ||twitch.tv/embed/*/chat$third-party
 !
