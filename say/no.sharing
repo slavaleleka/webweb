@@ -13,6 +13,6 @@ ticketsalon.ru##.mec-event-sharing
 reddit.com##div[id$="-share-menu"]
 !
 !
-!# --- general elemhide --- START ---
-
-!# --- general elemhide --- END ---
+! --- general elemhide --- START ---
+##.post_socialIcons
+! --- general elemhide ---  END  ---
