@@ -15,6 +15,7 @@ reddit.com##div[id$="-share-menu"]
 !
 !
 ! --- general elemhide --- START ---
+##.article__social
 ##.post_socialIcons
 ##.post-share-float
 ! --- general elemhide ---  END  ---
