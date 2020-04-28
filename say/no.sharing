@@ -1,21 +1,22 @@
 ! Title: /say/no.sharing
 ! Description: you know, bleen. better to use in addition to AdGuard Social filter
-! Version: 1.0.4
+! Version: 1.0.5
 ! TimeUpdated: 2020-04-13T17:52:19+03:00
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.sharing
 !
 !
-! --- specific ---
-pikabu.ru##.story__share
-stackoverflow.com##.js-share-link
+! specific --- START
 freecodecamp.org##.share
 the-flow.ru##.socials
 ticketsalon.ru##.mec-event-sharing
 reddit.com##div[id$="-share-menu"]
+! specific ---  END
 !
-!
-! --- general elemhide --- START ---
+! general elemhide --- START
+##.js-share-link
+##[data-role="share"]
+##.story__share
 ##.article__social
 ##.post_socialIcons
 ##.post-share-float
-! --- general elemhide ---  END  ---
+! general elemhide ---  END
