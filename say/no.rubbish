@@ -19,6 +19,7 @@ reddit.com##div[id$="-share-menu"]
 ##a[href="#print"]
 ##button.share
 !
+##.button--favorites
 ##.print
 ##.vjs-share-control
 ##.js_share-tools
