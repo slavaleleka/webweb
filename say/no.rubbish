@@ -7,6 +7,8 @@
 !
 !
 ! specific --- START
+flagma.ru##a.complain
+flagma.ru##.header-price-container .fav
 komus.ru##a[href^="/favorites/addProductToFavorites"]
 amazon.com##[data-feature-name="tellAFriendBox"]
 freecodecamp.org##.share
@@ -19,6 +21,7 @@ reddit.com##div[id$="-share-menu"]
 ##a[href="#print"]
 ##button.share
 !
+##.js-favorite-link
 ##.button--favorites
 ##.print
 ##.vjs-share-control
@@ -30,3 +33,6 @@ reddit.com##div[id$="-share-menu"]
 ##.post_socialIcons
 ##.post-share-float
 ! general elemhide ---  END
+!
+! extended css  --- START
+tiu.ru#?#.x-product-conversion .x-iconed-text:has(> div > .js-favorite-link)
