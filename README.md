@@ -2,7 +2,7 @@
 
 <a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o">hell.o</a>
 
-<a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.sharing">no.sharing</a>
+<a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish">no.rubbish</a>
 
 * * *
 
