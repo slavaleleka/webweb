@@ -22,7 +22,7 @@ reddit.com##div[id$="-share-menu"]
 ##button.share
 !
 ##[class*="__bookmark___"]
-##[href*="--bookmark_"]
+##[href*="---bookmark_"]
 ##.js-favorite-link
 ##.button--favorites
 ##.print
