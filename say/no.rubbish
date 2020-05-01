@@ -21,6 +21,8 @@ reddit.com##div[id$="-share-menu"]
 ##a[href="#print"]
 ##button.share
 !
+##[class*="__bookmark___"]
+##[href*="--bookmark_"
 ##.js-favorite-link
 ##.button--favorites
 ##.print
