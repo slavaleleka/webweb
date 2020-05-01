@@ -21,3 +21,5 @@ android.jlelse.eu,codeburst.io,medium.com##div[data-test-id="post-sidebar"]
 android.jlelse.eu,codeburst.io,medium.com#?#div.lm.r:has(> iframe[src^="https://cdn.embedly.com/widgets/media.html"])
 !
 stackoverflow.com##body > div.theme-selector
+!
+barbercompany.com##.block-service
