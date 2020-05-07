@@ -7,12 +7,21 @@
 !
 !
 ! specific --- START
+!
+! ###share
+play.pod.co###share
+! ##.share
+freecodecamp.org##.share
+!
+merriam-webster.com##.save-to-list
+otvet.mail.ru##div[class*="controls_right_"] > a[title="Подписаться"]
+otvet.mail.ru##div[title="Нравится"]
+beru.ru##div[data-zone-name="SkuWishlist"]
 men007.ru##.podelitsya_socseti
 flagma.ru##a.complain
 flagma.ru##.header-price-container .fav
 komus.ru##a[href^="/favorites/addProductToFavorites"]
 amazon.com##[data-feature-name="tellAFriendBox"]
-freecodecamp.org##.share
 the-flow.ru##.socials
 ticketsalon.ru##.mec-event-sharing
 reddit.com##div[id$="-share-menu"]
@@ -22,6 +31,11 @@ reddit.com##div[id$="-share-menu"]
 ##a[href="#print"]
 ##button.share
 !
+##.bookmarkLink
+##[data-xf-init="share-tooltip"]
+##a[href^="mailto:"]
+##[data-widget="addToFavorite"]
+##.sidebar-share-wrapper
 ##[class*="__bookmark___"]
 ##[href*="---bookmark_"]
 ##.js-favorite-link
@@ -39,3 +53,6 @@ reddit.com##div[id$="-share-menu"]
 !
 ! extended css  --- START
 tiu.ru#?#.x-product-conversion .x-iconed-text:has(> div > .js-favorite-link)
+sima-land.ru#?#.widget-content > .rating-item ~ div > div:has(> span:contains(В избранное))
+forum.adguard.com#?#ul.message-attribution-opposite > li:has(> .bookmarkLink)
+forum.adguard.com#?#ul.message-attribution-opposite > li:has(> [data-xf-init="share-tooltip"])
