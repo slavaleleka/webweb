@@ -1,0 +1,12 @@
+! Title: /say/imabroke
+! Description: [alpha] no paywall
+! Version: 0.1.0
+! TimeUpdated: 2020-05-12T14:52:19+03:00
+! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/imabroke
+!
+latimes.com#$##reg-overlay { display: none!important; }
+latimes.com#$#html { overflow-x: hidden !important; overflow-y: scroll !important; padding-right: 0 !important; }
+latimes.com#%#//scriptlet('prevent-addEventListener', 'scroll', 'event.dispatch')
+latimes.com#%#//scriptlet('remove-attr', 'data-ssor-modalup', 'html')
+latimes.com#%#//scriptlet('remove-attr', 'data-dss-meterup', 'html')
+!
