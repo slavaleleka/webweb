@@ -1,37 +1,22 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social filter
-! Version: 1.1.3
+! Version: 1.1.5
 ! TimeUpdated: 2020-04-30T14:52:19+03:00
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
 !
-!
-! specific --- START
-!
-! ###share
-play.pod.co###share
-! ##.share
-freecodecamp.org##.share
-!
-merriam-webster.com##.save-to-list
-otvet.mail.ru##div[class*="controls_right_"] > a[title="Подписаться"]
-otvet.mail.ru##div[title="Нравится"]
-beru.ru##div[data-zone-name="SkuWishlist"]
-men007.ru##.podelitsya_socseti
-flagma.ru##a.complain
-flagma.ru##.header-price-container .fav
-komus.ru##a[href^="/favorites/addProductToFavorites"]
-amazon.com##[data-feature-name="tellAFriendBox"]
-the-flow.ru##.socials
-ticketsalon.ru##.mec-event-sharing
-reddit.com##div[id$="-share-menu"]
-! specific ---  END
 !
 ! general elemhide --- START
 ##a[href="#print"]
 ##a[href^="mailto:"]
 ##button.share
 !
+##.add_to_wishlist
+##.addToWishlist
+##.item-toggle-favorite
+##.js-item-toggle-favorite
+##.js-item-favorite
+###product-share
 ##.js-post-bookmark
 ##.button_strip_print
 ##.bookmarkLink
@@ -53,8 +38,36 @@ reddit.com##div[id$="-share-menu"]
 ##.post-share-float
 ! general elemhide ---  END
 !
-! extended css  --- START
+! specific --- START
+!
+! ###share
+play.pod.co###share
+! ##.share
+freecodecamp.org##.share
+!
+latimes.com##a.ActionLink[data-dropdown-trigger=""]
+yourshaving.com##.functional_wrapper .add_to_compare
+yourshaving.com##.functional_wrapper .quick-view
+merriam-webster.com##.save-to-list
+otvet.mail.ru##div[class*="controls_right_"] > a[title="Подписаться"]
+otvet.mail.ru##div[title="Нравится"]
+beru.ru##div[data-zone-name="SkuWishlist"]
+men007.ru##.podelitsya_socseti
+flagma.ru##a.complain
+flagma.ru##.header-price-container .fav
+komus.ru##a[href^="/favorites/addProductToFavorites"]
+amazon.com##[data-feature-name="tellAFriendBox"]
+the-flow.ru##.socials
+ticketsalon.ru##.mec-event-sharing
+reddit.com##div[id$="-share-menu"]
+! specific ---  END
+!
+! extended css --- START
 tiu.ru#?#.x-product-conversion .x-iconed-text:has(> div > .js-favorite-link)
 sima-land.ru#?#.widget-content > .rating-item ~ div > div:has(> span:contains(В избранное))
 forum.adguard.com#?#ul.message-attribution-opposite > li:has(> .bookmarkLink)
 forum.adguard.com#?#ul.message-attribution-opposite > li:has(> [data-xf-init="share-tooltip"])
+! extended css  ---  END
+!
+! whitelist --- START
+! whitelist  ---  END
