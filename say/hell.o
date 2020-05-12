@@ -1,6 +1,6 @@
 ! Title: /say/hell.o
 ! Description: cut some shtuff down
-! Version: 1.0.8
+! Version: 1.0.9
 ! TimeUpdated: 2020-02-17T11:05:19+03:00
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
 !
@@ -19,7 +19,5 @@ ru.global.nba.com##.sib-scoreboard > .leaguepass-table
 !
 android.jlelse.eu,codeburst.io,medium.com##div[data-test-id="post-sidebar"]
 android.jlelse.eu,codeburst.io,medium.com#?#div.lm.r:has(> iframe[src^="https://cdn.embedly.com/widgets/media.html"])
-!
 stackoverflow.com##body > div.theme-selector
-!
 barbercompany.com##.block-service
