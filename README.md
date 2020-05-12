@@ -6,6 +6,8 @@
 
 <a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/testing/zdorov.o">testing/zdorov.o</a>
 
+<a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/tro/lo.lo">tro/lo.lo</a>
+
 
 * * *
 
