@@ -1,7 +1,7 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social filter
-! Version: 1.1.8
+! Version: 1.1.9
 ! TimeUpdated: 2020-04-30T14:52:19+03:00
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
 !
@@ -11,7 +11,15 @@
 ##a[href^="mailto:"]
 ##button.share
 !
+##.add-to-fav
+##.product-to-fav
+##[data-bind*=":button.addToWishlist"]
 ##.bookmark
+###newsletter_block_left
+##.sendtofriend
+##.wishlist-link
+##.newsletterForm
+##.footerNewsletter
 ##[data-list-type="bookmarks"]
 ##[data-bi-name="bookmark"]
 ##[aria-controls="sharing-menu"]
@@ -49,7 +57,14 @@
 play.pod.co###share
 ! ##.share
 freecodecamp.org##.share
+! ###social
+perfume-click.co.uk###social
+! ###newsletter
+perfume-click.co.uk###newsletter
 !
+beautydepot.ru##.buy_button-favorite > *
+beautydepot.ru#$#.buy_button-favorite::after { display: none!important; }
+landofroses.co.uk###main .socialHolder
 meduza.io##.Toolbar-root
 meduza.io##.MaterialNote-root
 xn--80aaadf9a6agjohr9n.xn--p1ai##.product-card .js-compare-add
@@ -77,6 +92,8 @@ sima-land.ru#?#.widget-content > .rating-item ~ div > div:has(> span:contains(В
 forum.adguard.com#?#ul.message-attribution-opposite > li:has(> .bookmarkLink)
 forum.adguard.com#?#ul.message-attribution-opposite > li:has(> [data-xf-init="share-tooltip"])
 xn--80aaadf9a6agjohr9n.xn--p1ai#?#.product-card > div.row:has(> div > button.product-buy[type="submit"]) + center:has(> p:contains(или))
+! [beta] extended css 
+#?#a[href^="mailto:"]:not(:upward(footer))
 ! extended css  ---  END
 !
 ! whitelist --- START
