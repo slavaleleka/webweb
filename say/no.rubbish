@@ -1,7 +1,7 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social filter
-! Version: 1.1.9
+! Version: 1.1.10
 ! TimeUpdated: 2020-04-30T14:52:19+03:00
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
 !
@@ -11,6 +11,12 @@
 ##a[href^="mailto:"]
 ##button.share
 !
+###subscribe-form_footer
+##.subscribe-form_footer
+##.subscribe_wrap
+##.wish_item
+##.ya-chat-widget
+##.share_wrapp
 ##.add-to-fav
 ##.product-to-fav
 ##[data-bind*=":button.addToWishlist"]

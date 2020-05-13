@@ -1,6 +1,6 @@
 ! Title: /say/hell.o
 ! Description: cut some shtuff down
-! Version: 1.0.10
+! Version: 1.0.11
 ! TimeUpdated: 2020-05-12T15:05:19+03:00
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
 !
@@ -21,5 +21,6 @@ android.jlelse.eu,codeburst.io,medium.com##div[data-test-id="post-sidebar"]
 android.jlelse.eu,codeburst.io,medium.com#?#div.lm.r:has(> iframe[src^="https://cdn.embedly.com/widgets/media.html"])
 stackoverflow.com##body > div.theme-selector
 barbercompany.com##.block-service
+matreshkatm.ru##.banners_column
 xn--80aaadf9a6agjohr9n.xn--p1ai#?#.product-info > h5:contains(Что означают стикеры)
 xn--80aaadf9a6agjohr9n.xn--p1ai#?#.product-info > h5:contains(Что означают стикеры) + div[style^="font-size"]:not([class])
