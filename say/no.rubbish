@@ -11,7 +11,11 @@
 ##a[href^="mailto:"]
 ##a[href="#tab_share"]
 ##button.share
+##svg[id^="heart-svg"]
 !
+##.user-favorites
+##[class$="__favorite"]
+##.link-wishlist
 ##.image_name_favorite
 ##.addthis_sharing_toolbox
 ##.itemEmail
@@ -83,6 +87,7 @@ perfume-click.co.uk###social
 ! ###newsletter
 perfume-click.co.uk###newsletter
 !
+ria.ru##.m-emoji
 beautydepot.ru#$#.buy_button-favorite { visibility: hidden!important; }
 landofroses.co.uk###main .socialHolder
 meduza.io##.Toolbar-root
