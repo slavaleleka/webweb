@@ -1,7 +1,7 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social filter
-! Version: 1.1.14
+! Version: 1.1.15
 ! TimeUpdated: 2020-04-30T14:52:19+03:00
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
 !
@@ -12,6 +12,8 @@
 ##a[href="#tab_share"]
 ##button.share
 !
+##.image_name_favorite
+##.addthis_sharing_toolbox
 ##.itemEmail
 ##.itemPrint
 ##.j-add-to-postpone
@@ -81,8 +83,7 @@ perfume-click.co.uk###social
 ! ###newsletter
 perfume-click.co.uk###newsletter
 !
-beautydepot.ru##.buy_button-favorite > *
-beautydepot.ru#$#.buy_button-favorite::after { display: none!important; }
+beautydepot.ru#$#.buy_button-favorite { visibility: hidden!important; }
 landofroses.co.uk###main .socialHolder
 meduza.io##.Toolbar-root
 meduza.io##.MaterialNote-root
