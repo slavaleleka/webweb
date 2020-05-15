@@ -1,7 +1,7 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social filter
-! Version: 1.1.17
+! Version: 1.1.18
 ! Expires: 2 hours
 ! TimeUpdated: 2020-04-30T14:52:19+03:00
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
@@ -14,7 +14,21 @@
 ##button.share
 ##svg[id^="heart-svg"]
 ##button.wishlist
+##img.icon[src*="favorite" i]
+##header .favorites_block
+##a[class*="AddToWishlist"]
 !
+##.add-to-wishlist
+##[data-ajax-inject^="wishlist-link-"]
+##[href$="/wishlist"]
+##.wishlist__nav
+##.item-wishlist
+##[data-lightbox-target="product-wishlist"]
+##.icon-hl-email
+##.subscription
+##.js-subscription_block
+##.favorites_button
+##.js_favorites_button
 ##.towishlist
 ##[data-action="add-to-wishlist"]
 ##.wishlist-btn
@@ -119,6 +133,8 @@ reddit.com##div[id$="-share-menu"]
 ! specific ---  END
 !
 ! extended css --- START
+#?#div[class^="css-"]:has(> a[class^="css-"]:contains(/FEEDBACK:/))
+!
 tiu.ru#?#.x-product-conversion .x-iconed-text:has(> div > .js-favorite-link)
 sima-land.ru#?#.widget-content > .rating-item ~ div > div:has(> span:contains(В избранное))
 forum.adguard.com#?#ul.message-attribution-opposite > li:has(> .bookmarkLink)
