@@ -1,6 +1,6 @@
 ! Title: /say/hell.o
 ! Description: cut some shtuff down
-! Version: 1.0.13
+! Version: 1.0.14
 ! Expires: 2 hours
 ! TimeUpdated: 2020-05-12T15:05:19+03:00
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
@@ -18,7 +18,7 @@ geekcity.ru##.single-container > .vc_row-fluid > div > div > div > div[class^="v
 ! LeaguePass banner on sports.ru
 ru.global.nba.com##.sib-scoreboard > .leaguepass-table
 !
-||lpsnmedia.net^$domain=smallflower.com
+||lpsnmedia.net^$domain=smallflower.com|schick.com
 lider-mart.ru###custom_modal_window
 lider-mart.ru###modal_form_pop_up
 android.jlelse.eu,codeburst.io,medium.com##div[data-test-id="post-sidebar"]
