@@ -1,7 +1,7 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social filter
-! Version: 1.1.23
+! Version: 1.1.24
 ! Expires: 2 hours
 ! TimeUpdated: 2020-04-30T14:52:19+03:00
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
@@ -9,7 +9,7 @@
 !
 ! general elemhide --- START
 ##a[href="#print"]
-##a[href^="mailto:"]
+~mail.google.com##a[href^="mailto:"]
 ##a[href="#tab_share"]
 ##button.share
 ##svg[id^="heart-svg"]
