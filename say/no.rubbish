@@ -19,6 +19,7 @@
 ##header .favorites_block
 ##header .favorite
 ##a[class*="AddToWishlist"]
+##a[onclick^="wishlist.add("]
 !
 ##.anv-splash-share
 ##.favorites[onclick]
