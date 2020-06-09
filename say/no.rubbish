@@ -1,13 +1,14 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social filter
-! Version: 1.1.34
+! Version: 1.1.35
 ! Expires: 2 hours
 ! TimeUpdated: 2020-04-30T14:52:19+03:00
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
 !
 !
 ! general elemhide --- START
+##a[class*="button-in-favorite"]
 ##button[marker="print-button"]
 ##a[href="#print"]
 ##a[href="javascript:window.print()"]
