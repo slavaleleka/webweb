@@ -1,9 +1,9 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social filter
-! Version: 1.1.38
+! Version: 1.1.39
 ! Expires: 2 hours
-! TimeUpdated: 2020-04-30T14:52:19+03:00
+! TimeUpdated: 2020-06-35T14:52:19+03:00
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
 !
 !
@@ -135,6 +135,7 @@ perfume-click.co.uk###social
 ! ###newsletter
 perfume-click.co.uk###newsletter
 !
+cian.ru##div[class*="--header-information--"] div[data-name="Sharing"]
 stackoverflow.com##.js-voting-container > .js-reactions
 hi-chef.ru#?#svg[width="32"][height="32"]:has(> .currentLayer > #label):upward(div)
 petshop.ru##div[class^="style_info_rating_wrapper"] > div[style]:not(class) > svg
