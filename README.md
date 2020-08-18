@@ -15,6 +15,37 @@
 
 * * *
 
+```PostCSS
+// for blocking div#targer1
+div:matches-attr(/-link/ = /-banner_/)
+
+// for blocking div#targer2
+div:has(> div:matches-attr(/data-/ = /adbanner/))
+
+// for blocking div#targer3
+div:matches-attr(/-unit/ = /click/):has(> span:contains(ads))
+
+// for blocking div#targer4
+*[class]:matches-attr(/.{5,}delay$/ = /^[0-9]*$/):upward(2)
+```
+
+```
+// for blocking div#targer1
+div:matches-attr(/-link/ = /-banner_/)
+
+// for blocking div#targer2
+div:has(> div:matches-attr(/data-/ = /adbanner/))
+
+// for blocking div#targer3
+div:matches-attr(/-unit/ = /click/):has(> span:contains(ads))
+
+// for blocking div#targer4
+*[class]:matches-attr(/.{5,}delay$/ = /^[0-9]*$/):upward(2)
+```
+
+
+* * *
+
 <h3 align="center">
   <img src="https://cdn.adguard.com/public/Adguard/Common/adguard_safari.svg" width="300px" alt="AdGuard for Safari" />
 </h3>
