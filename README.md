@@ -15,6 +15,72 @@
 
 * * *
 
+```PostCSS
+// for blocking div#targer1
+div:matches-attr(/-link/ = /-banner_/)
+
+// for blocking div#targer2
+div:has(> div:matches-attr(/data-/ = /adbanner/))
+
+// for blocking div#targer3
+div:matches-attr(/-unit/ = /click/):has(> span:contains(ads))
+
+// for blocking div#targer4
+*[class]:matches-attr(/.{5,}delay$/ = /^[0-9]*$/):upward(2)
+
+div:xpath(//*[@class="test-xpath-class"])
+div:has-text(/test-xpath-content/):xpath(../../..)
+
+div.test:nth-ancestor(4)
+div:has-text(/test/):nth-ancestor(2)
+
+div.inner:remove()
+div:has(> div[ad-attr]):remove()
+div:xpath(../..):remove()
+div:contains(target text) { remove: true; }
+div[class]:has(> a:not([id])) { remove: true; }
+
+div:contains(/this .* banner/)
+
+div.banner:matches-css-before(content: block me)
+div.banner[-ext-matches-css-before="content: /block me/"]
+```
+
+```
+// for blocking div#targer1
+div:matches-attr(/-link/ = /-banner_/)
+
+// for blocking div#targer2
+div:has(> div:matches-attr(/data-/ = /adbanner/))
+
+// for blocking div#targer3
+div:matches-attr(/-unit/ = /click/):has(> span:contains(ads))
+
+// for blocking div#targer4
+*[class]:matches-attr(/.{5,}delay$/ = /^[0-9]*$/):upward(2)
+
+div:xpath(//*[@class="test-xpath-class"])
+div:has-text(/test-xpath-content/):xpath(../../..)
+
+div.test:nth-ancestor(4)
+div:has-text(/test/):nth-ancestor(2)
+
+div.inner:remove()
+div:has(> div[ad-attr]):remove()
+div:xpath(../..):remove()
+div:contains(target text) { remove: true; }
+div[class]:has(> a:not([id])) { remove: true; }
+
+div:contains(/this .* banner/)
+
+
+div.banner:matches-css-before(content: block me)
+div.banner[-ext-matches-css-before="content: /block me/"]
+```
+
+
+* * *
+
 <h3 align="center">
   <img src="https://cdn.adguard.com/public/Adguard/Common/adguard_safari.svg" width="300px" alt="AdGuard for Safari" />
 </h3>
