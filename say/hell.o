@@ -1,24 +1,10 @@
 ! Title: /say/hell.o
 ! Description: cut some shtuff down
-! Version: 1.0.16
+! Version: 1.0.17
 ! Expires: 2 hours
 ! TimeUpdated: 2020-05-12T15:05:19+03:00
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
 !
-!
-||chatango.com^$domain=nbastreams.xyz
-! TOP TEXT
-subscity.ru##.main-container > .about
-subscity.ru##.main-container > .divider
-subscity.ru##.main-container > .about ~ .capitalize
-!
-! выбор редакции
-geekcity.ru##.single-container > .vc_row-fluid > div > div > div > div[class^="vc_custom_"]
-! 
-||twitch.tv/embed/*/chat$third-party
-!
-! LeaguePass banner on sports.ru
-ru.global.nba.com##.sib-scoreboard > .leaguepass-table
 !
 novostroy-m.ru###quiz
 novostroy-m.ru##a[href="/ipotechnyj-kalkulyator"][target="_blank"]
@@ -32,3 +18,29 @@ barbercompany.com##.block-service
 matreshkatm.ru##.banners_column
 xn--80aaadf9a6agjohr9n.xn--p1ai#?#.product-info > h5:contains(Что означают стикеры)
 xn--80aaadf9a6agjohr9n.xn--p1ai#?#.product-info > h5:contains(Что означают стикеры) + div[style^="font-size"]:not([class])
+!
+! sports.ru/nba/ -- making styles more compacted
+sports.ru#$#body #branding-layout { margin-top: 0!important; }
+sports.ru#$#.news-item__social-line { margin: 0!important; padding: 0!important; }
+sports.ru#$#.columns-layout.main-wrap { padding-top: 0!important; }
+! nba store and nba league pass buttons
+sports.ru##nav.nba-links
+! LeaguePass banner on sports.ru
+ru.global.nba.com##.sib-scoreboard > .leaguepass-table
+! панель авторизации
+sports.ru##.user-panel__fixed
+sports.ru##.user-panel_state_loaded
+! рейтинг / подписаться на блог
+sports.ru##.nl-item .voting > *
+sports.ru##.nl-item a[data-type="subscribe-to-blog"]
+!
+! выбор редакции
+geekcity.ru##.single-container > .vc_row-fluid > div > div > div > div[class^="vc_custom_"]
+!
+! chat widgets
+||twitch.tv/embed/*/chat$third-party
+||chatango.com^$domain=nbastreams.xyz
+! TOP TEXT
+subscity.ru##.main-container > .about
+subscity.ru##.main-container > .divider
+subscity.ru##.main-container > .about ~ .capitalize
