@@ -27,6 +27,23 @@ div:matches-attr(/-unit/ = /click/):has(> span:contains(ads))
 
 // for blocking div#targer4
 *[class]:matches-attr(/.{5,}delay$/ = /^[0-9]*$/):upward(2)
+
+div:xpath(//*[@class="test-xpath-class"])
+div:has-text(/test-xpath-content/):xpath(../../..)
+
+div.test:nth-ancestor(4)
+div:has-text(/test/):nth-ancestor(2)
+
+div.inner:remove()
+div:has(> div[ad-attr]):remove()
+div:xpath(../..):remove()
+div:contains(target text) { remove: true; }
+div[class]:has(> a:not([id])) { remove: true; }
+
+div:contains(/this .* banner/)
+
+div.banner:matches-css-before(content: block me)
+div.banner[-ext-matches-css-before="content: /block me/"]
 ```
 
 ```
@@ -41,6 +58,24 @@ div:matches-attr(/-unit/ = /click/):has(> span:contains(ads))
 
 // for blocking div#targer4
 *[class]:matches-attr(/.{5,}delay$/ = /^[0-9]*$/):upward(2)
+
+div:xpath(//*[@class="test-xpath-class"])
+div:has-text(/test-xpath-content/):xpath(../../..)
+
+div.test:nth-ancestor(4)
+div:has-text(/test/):nth-ancestor(2)
+
+div.inner:remove()
+div:has(> div[ad-attr]):remove()
+div:xpath(../..):remove()
+div:contains(target text) { remove: true; }
+div[class]:has(> a:not([id])) { remove: true; }
+
+div:contains(/this .* banner/)
+
+
+div.banner:matches-css-before(content: block me)
+div.banner[-ext-matches-css-before="content: /block me/"]
 ```
 
 
