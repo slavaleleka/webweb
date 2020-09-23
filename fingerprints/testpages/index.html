@@ -47,10 +47,21 @@
     </div>
 
     <script>
-    console.log("test fing");
+        console.log("test fing");
     </script>
 
-    <script src="../index.js"></script>
+    <script src="cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@2/dist/fingerprint2.min.js"></script>
+
+    <!-- <script src="../index.js"></script> -->
+
+    <script>
+        setTimeout(function () {
+            Fingerprint2.get(function(result, components) {
+            console.log(result) // a hash, representing your device fingerprint
+            console.log(components) // an array of FP components
+            })  
+        }, 500)
+    </script>
 </body>
 
 </html>
