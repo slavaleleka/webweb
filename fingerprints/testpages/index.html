@@ -55,12 +55,27 @@
     <!-- <script src="../index.js"></script> -->
 
     <script>
-        setTimeout(function () {
-            Fingerprint2.get(function(result, components) {
-            console.log(result) // a hash, representing your device fingerprint
-            console.log(components) // an array of FP components
-            })  
-        }, 500)
+        const doFing = () => {
+            setTimeout(function () {
+                Fingerprint2.get(function(result, components) {
+                    console.log(result) // a hash, representing your device fingerprint
+                    console.log(components) // an array of FP components
+                })
+            }, 500)
+        };
+
+        if (window.requestIdleCallback) {
+            requestIdleCallback(doFing)
+        } else {
+            setTimeout(doFing, 500)
+        }
+
+        // setTimeout(function () {
+        //     Fingerprint2.get(function(result, components) {
+        //     console.log(result) // a hash, representing your device fingerprint
+        //     console.log(components) // an array of FP components
+        //     })
+        // }, 500)
     </script>
 </body>
 
