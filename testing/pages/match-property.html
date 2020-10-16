@@ -35,7 +35,24 @@
             color: #38488f;
             text-decoration: none;
         }
-        </style>   
+        </style>
+        <script>
+            const nullPropName = 'nullProp';
+            const nullInner = null;
+            const testPropName = 'testProp';
+            const testInner = {
+                abc: 123,
+            };
+    
+            const testInnerEl = document.createElement('span');
+            testInnerEl.id = 'inner';
+    
+            testInnerEl[nullPropName] = nullInner;
+            testInnerEl[testPropName] = testInner;
+    
+            const testEl = document.querySelector('p#test');
+            testEl.appendChild(testInnerEl);
+        </script>
 </head>
 
 <body>
@@ -45,7 +62,7 @@
         </p>
     </div>
 
-    <script>
+    <!-- <script>
         const nullPropName = 'nullProp';
         const nullInner = null;
         const testPropName = 'testProp';
@@ -61,7 +78,7 @@
 
         const testEl = document.querySelector('p#test');
         testEl.appendChild(testInnerEl);
-    </script>
+    </script> -->
 </body>
 
 </html>
