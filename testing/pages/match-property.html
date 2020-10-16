@@ -52,58 +52,11 @@
         testEl.appendChild();
     </script>
 
-    <!-- <script>
-        window.stackTest = "rrrun!";
-
-        function trace() {
-        try {
-            throw new Error('myError');
-        }
-        catch(e) {
-            console.log(e.stack);
-        }
-        }
-        function b() {
-        trace();
-        }
-        function a() {
-        b(3, 4, '\n\n', undefined, {});
-        }
-        a('first call, firstarg');
-
-        console.log(window.stackTest);
-    </script>
-
-<script>
-    window.stackTest = "runNNN!";
-
-    function trace() {
-        try {
-            throw new Error('myError NNN');
-        }
-        catch(e) {
-            console.log(e.stack);
-        }
-    }
-    function b1() {
-       trace();
-    }
-    function a1() {
-        b1(3, 4, '\n\n', undefined, {});
-    }
-    a1('first call, firstarg');
-
-    console.log(window.stackTest);
-</script>
-
-    <script src="match-stack-script.js"></script> -->
-
     <script>
         window.setTimeout(function () {
             console.log("setTimeout - Test");
         }, 1000);
     </script>
-    <script src="acis-test-script.js"></script>
 </body>
 
 </html>
