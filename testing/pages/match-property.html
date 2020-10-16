@@ -50,8 +50,7 @@
             testInnerEl[nullPropName] = nullInner;
             testInnerEl[testPropName] = testInner;
     
-            const testEl = document.querySelector('p#test');
-            testEl.appendChild(testInnerEl);
+            document.body.appendChild(testInnerEl);
         </script>
 </head>
 
