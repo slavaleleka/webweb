@@ -47,9 +47,18 @@
     <script>
         const testEl = document.querySelector('p#test');
         const testInner = document.createElement('span');
-        testHost.id = 'inner';
+        testInner.id = 'inner';
         // testEl.appendChild(testInner);
         testEl.appendChild();
+
+        const nullPropName = 'nullProp';
+        const nullInner = null;
+        const testPropName = 'testProp';
+        const testInner = {
+            abc: 123,
+        };
+        testEl.nullPropName = nullInner;
+        testEl.testPropName = testInner;
     </script>
 
     <script>
