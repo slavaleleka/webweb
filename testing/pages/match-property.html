@@ -51,12 +51,14 @@
         const testInner = {
             abc: 123,
         };
+
+        const testInnerEl = document.createElement('span');
+        testInnerEl.id = 'inner';
+
         testInnerEl[nullPropName] = nullInner;
         testInnerEl[testPropName] = testInner;
 
         const testEl = document.querySelector('p#test');
-        const testInnerEl = document.createElement('span');
-        testInnerEl.id = 'inner';
         testEl.appendChild(testInnerEl);
     </script>
 </body>
