@@ -45,20 +45,19 @@
     </div>
 
     <script>
-        const testEl = document.querySelector('p#test');
-        const testInnerEl = document.createElement('span');
-        testInnerEl.id = 'inner';
-        // testEl.appendChild(testInner);
-        testEl.appendChild(testInnerEl);
-
         const nullPropName = 'nullProp';
         const nullInner = null;
         const testPropName = 'testProp';
         const testInner = {
             abc: 123,
         };
-        testEl[nullPropName] = nullInner;
-        testEl[testPropName] = testInner;
+        testInnerEl[nullPropName] = nullInner;
+        testInnerEl[testPropName] = testInner;
+
+        const testEl = document.querySelector('p#test');
+        const testInnerEl = document.createElement('span');
+        testInnerEl.id = 'inner';
+        testEl.appendChild(testInnerEl);
     </script>
 </body>
 
