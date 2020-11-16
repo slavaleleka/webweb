@@ -8,6 +8,7 @@
 ! to subscribe: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
 !
 ! general elemhide --- START
+##.button-favorite
 ##.add_favorites
 ##div[data-spec^="favorite-"]
 ##.article__search-error
@@ -152,6 +153,7 @@ perfume-click.co.uk###social
 ! ###newsletter
 perfume-click.co.uk###newsletter
 !
+naked-science.ru##.typo_text
 ebay.com##.s-item__watchheart
 sport-marafon.ru##.article-favorite
 kickscontest.ru##.fix-consent
