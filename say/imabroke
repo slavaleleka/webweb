@@ -1,9 +1,10 @@
 ! Title: /say/imabroke
 ! Description: [alpha] no paywall
-! Version: 0.1.1
+! Version: 0.1.2
 ! Expires: 4 days
 ! TimeUpdated: 2020-05-12T14:52:19+03:00
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/imabroke
+! to subscribe: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/imabroke
 !
 latimes.com#$##reg-overlay { display: none!important; }
 latimes.com#$#html { overflow-x: hidden !important; overflow-y: scroll !important; padding-right: 0 !important; }
