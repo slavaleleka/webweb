@@ -44,3 +44,15 @@ geekcity.ru##.single-container > .vc_row-fluid > div > div > div > div[class^="v
 subscity.ru##.main-container > .about
 subscity.ru##.main-container > .divider
 subscity.ru##.main-container > .about ~ .capitalize
+!
+! fix for vstat.info extension
+! https://chrome.google.com/webstore/detail/vstat-2-visit-statistics/bohliiapbjnbphkefjiakajaimlleoma
+web.vstat.info#%#//scriptlet('prevent-setTimeout', 'reloadevnet')
+web.vstat.info##.popup_wait
+web.vstat.info##.timeproggress
+web.vstat.info##.direction-top
+web.vstat.info##.direction-organic
+web.vstat.info##.stats_block_hori
+web.vstat.info##.footer-block
+web.vstat.info#$#.time-dot { margin-top: 50px!important; }
+||web.vstat.info/images/*_locker.*$image
