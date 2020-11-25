@@ -1,6 +1,6 @@
 ! Title: /say/better.workflow
 ! Description: tiny improvements
-! Version: 0.0.1
+! Version: 0.0.2
 ! Expires: 2 hours
 ! TimeUpdated: 2020-11-25T13:05:19+03:00
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/better.workflow
@@ -17,6 +17,6 @@ bit.adguard.com#$#.pull-request-details { margin-bottom: 0px!important; }
 bit.adguard.com#$#.pull-request-activities { margin-top: 0!important; }
 bit.adguard.com#$#.pull-request-title-review-section { margin-top: 5px!important; }
 bit.adguard.com#$#h2.pull-request-title { margin-bottom: 2px!important; }
-bit.adguard.com#$#.pull-request-header-bar { height: 16px!important; }
+bit.adguard.com#$#.pull-request-header-bar { height: 20px!important; }
 bit.adguard.com#$#.pull-request-tabs .tabs-pane { padding-top: 5px!important; }
 bit.adguard.com#$#.aui-page-panel-content { padding-top: 8px!important; }
