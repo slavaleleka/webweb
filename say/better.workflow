@@ -1,13 +1,19 @@
 ! Title: /say/better.workflow
 ! Description: tiny improvements
-! Version: 0.0.2
+! Version: 0.0.3
 ! Expires: 2 hours
-! TimeUpdated: 2020-11-25T13:05:19+03:00
+! TimeUpdated: 2020-11-27T13:05:19+03:00
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/better.workflow
 ! to subscribe: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/better.workflow
 !
 !
 github.com##signup-prompt-controller
+github.com#$#header { padding-top: 8px!important; }
+github.com#$#header { padding-bottom: 8px!important; }
+github.com#$#main > .hide-full-screen { padding-top: 8px!important; margin-bottom: 0!important; }
+github.com#$#main > .hide-full-screen > div[class] { margin-bottom: 0!important; }
+github.com#$#.repository-content > .flex-column > div[class] { margin: 0!important; }
+github.com#$##partial-discussion-header { margin: 0!important; }
 !
 jira.adguard.com#$##gh > div#ghx-header { padding: 5px 20px !important; }
 jira.adguard.com#$##js-work-quickfilters > dd { margin-bottom: 2px! important; }
