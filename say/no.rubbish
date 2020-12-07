@@ -1,11 +1,14 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social filter
-! Version: 1.1.66
+! Version: 1.1.67
 ! Expires: 2 hours
-! TimeUpdated: 2020-11-23T11:46:19+03:00
-! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
-! to subscribe: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
+! TimeUpdated: 2020-12-07T14:05:00+03:00
+! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
+!
+! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
+! subscribe: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
+!
 !
 ! general elemhide --- START
 ##button.favorite
