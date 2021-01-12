@@ -20,6 +20,7 @@ github.com#$##partial-discussion-header { margin: 0!important; }
 jira.adguard.com#$##gh > div#ghx-header { padding: 5px 20px !important; }
 jira.adguard.com#$##js-work-quickfilters > dd { margin-bottom: 2px! important; }
 jira.adguard.com#$#ul#ghx-column-headers > { padding: 5px 9px !important; }
+jira.adguard.com#$#input#quickSearchInput.search { background: none!important; border: 1px solid black!important; }
 !
 bit.adguard.com#$#.pull-request-details { margin-bottom: 0px!important; }
 bit.adguard.com#$#.pull-request-activities { margin-top: 0!important; }
