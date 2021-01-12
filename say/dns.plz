@@ -1,0 +1,15 @@
+! Title: /say/dns.plz
+! Description: dns list for iOS
+! Version: 0.0.1
+! Expires: 2 hours
+! TimeUpdated: 2021-01-12T12:05:00+03:00
+! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
+!
+! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/dns.plz
+!
+!
+! The list of bug-tracker services(Sentry, etc.)
+||sessions.bugsnag.com^
+||notify.bugsnag.com^
+||crashlytics2.l.google.com^
+||crashlyticsreports-pa.googleapis.com^

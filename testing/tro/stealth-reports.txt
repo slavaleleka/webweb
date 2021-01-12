@@ -1,0 +1,10 @@
+reporting from AdGuard for Android
+
+// custom
+&stealth.enabled=true&stealth.hide_search_queries=true&stealth.DNT=true&stealth.x_client=true&stealth.strip_url=false&stealth.block_third_party_auth=false&stealth.disable_third_party_cache=false&stealth.third_party_cookies=180&stealth.webrtc=true&stealth.push=false&stealth.location=false&stealth.ext_hide_referrer=true&stealth.referrer=&
+
+// high stealth 
+&stealth.enabled=true&stealth.hide_search_queries=false&stealth.DNT=false&stealth.x_client=false&stealth.strip_url=true&stealth.block_third_party_auth=false&stealth.disable_third_party_cache=false&stealth.third_party_cookies=0&stealth.webrtc=false&stealth.push=false&stealth.location=false&stealth.ext_hide_referrer=false&
+
+// ultimate stealth 
+&stealth.enabled=true&stealth.hide_search_queries=false&stealth.DNT=false&stealth.x_client=false&stealth.strip_url=true&stealth.block_third_party_auth=false&stealth.first_party_cookies=0&stealth.disable_third_party_cache=false&stealth.third_party_cookies=0&stealth.webrtc=true&stealth.push=false&stealth.location=true&stealth.ext_hide_referrer=false&
