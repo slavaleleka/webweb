@@ -1,8 +1,8 @@
 ! Title: /say/better.workflow
 ! Description: tiny improvements
-! Version: 0.0.5
+! Version: 0.0.6
 ! Expires: 2 hours
-! TimeUpdated: 2021-01-12T17:05:00+03:00
+! TimeUpdated: 2021-01-14T17:05:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/better.workflow
@@ -29,3 +29,8 @@ bit.adguard.com#$#h2.pull-request-title { margin-bottom: 2px!important; }
 bit.adguard.com#$#.pull-request-header-bar { height: 20px!important; }
 bit.adguard.com#$#.pull-request-tabs .tabs-pane { padding-top: 5px!important; }
 bit.adguard.com#$#.aui-page-panel-content { padding-top: 8px!important; }
+!
+mail.yandex.ru##.PSHeader-Right a.PSHeader-Pro
+mail.yandex.ru##.PSHeader-Center
+mail.yandex.ru#$#.PSHeader { height: 48px!important; }
+mail.yandex.ru#$#.mail-Layout-Inner { top: 48px!important; }
