@@ -1,8 +1,8 @@
 ! Title: /say/hell.o
 ! Description: cut some shtuff down
-! Version: 1.0.19
+! Version: 1.0.20
 ! Expires: 2 hours
-! TimeUpdated: 2020-12-07T14:05:00+03:00
+! TimeUpdated: 2021-01-29T15:05:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
@@ -59,3 +59,8 @@ web.vstat.info##.stats_block_hori
 web.vstat.info##.footer-block
 web.vstat.info#$#.time-dot { margin-top: 50px!important; }
 ||web.vstat.info/images/*_locker.*$image
+!
+! lk gosuslugi chat
+lk.gosuslugi.ru#$##pso-widget { height: 600px!important; width: 800px!important; }
+lk.gosuslugi.ru#$#.pso-body { height: 530px!important; }
+lk.gosuslugi.ru#$#._ocwidget_chat_messangerWrap { height: 480px!important; }
