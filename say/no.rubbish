@@ -1,7 +1,7 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social filter
-! Version: 1.1.70
+! Version: 1.1.71
 ! Expires: 2 hours
 ! TimeUpdated: 2021-02-19T13:30:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
@@ -170,6 +170,7 @@ perfume-click.co.uk###social
 ! ###newsletter
 perfume-click.co.uk###newsletter
 !
+dribbble.com##.keyboard-legend
 nba.com##button[data-text="FAVORITE"]
 ozon.ru##.fav-button
 naked-science.ru##.typo_text
