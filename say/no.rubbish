@@ -1,7 +1,7 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social filter
-! Version: 1.1.74
+! Version: 1.1.75
 ! Expires: 2 hours
 ! TimeUpdated: 2021-03-25T01:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
@@ -37,6 +37,8 @@
 ##svg.icon-like
 ##button[data-favorite]
 !
+##.b-sticked-material-share
+##.stickedBlock__spacer
 ##.yasr-auto-insert-visitor
 ##[data-target="#shareModal"]
 ##.share-article__button
