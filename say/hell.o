@@ -1,8 +1,8 @@
 ! Title: /say/hell.o
 ! Description: cut some shtuff down
-! Version: 1.0.21
+! Version: 1.0.22
 ! Expires: 2 hours
-! TimeUpdated: 2021-01-29T15:05:00+03:00
+! TimeUpdated: 2021-02-29T15:05:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
@@ -64,3 +64,9 @@ web.vstat.info#$#.time-dot { margin-top: 50px!important; }
 ! lk.gosuslugi.ru#$##pso-widget { height: 600px!important; width: 800px!important; }
 ! lk.gosuslugi.ru#$#.pso-body { height: 530px!important; }
 ! lk.gosuslugi.ru#$#._ocwidget_chat_messangerWrap { height: 480px!important; }
+!
+! SMALL SOCIALS
+slovotvir.org.ua#?#.app-word--discussion > div > div:has(> .app-facebook-share-btn)
+foamstore.ru##.product-info-social
+foamstore.ru##.footer_subscribe_block
+foamstore.ru##.subscribe-form-wrapper
