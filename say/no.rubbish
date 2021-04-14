@@ -1,9 +1,9 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social filter
-! Version: 1.1.75
+! Version: 1.1.76
 ! Expires: 2 hours
-! TimeUpdated: 2021-03-25T01:00:00+03:00
+! TimeUpdated: 2021-04-14T17:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
@@ -201,7 +201,8 @@ dogeat.ru##.desc-error
 disqus.com###reactions__container
 stackexchange.com,stackoverflow.com##.post-menu
 executive-shaving.co.uk##.wishlist
-ria.ru##.m-emoji
+! ria.ru##.m-emoji
+ria.ru#?#.article__userbar:has(.m-emoji)
 beautydepot.ru#$#.buy_button-favorite { visibility: hidden!important; }
 landofroses.co.uk###main .socialHolder
 meduza.io##.Toolbar-root
