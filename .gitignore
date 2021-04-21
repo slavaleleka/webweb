@@ -1,2 +1,5 @@
+.DS_Store
+fingerprints/.DS_Store
+testing/.DS_Store
 fingerprints/node_modules/
 fingerprints/.eslintrc.json
