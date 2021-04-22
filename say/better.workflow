@@ -1,8 +1,8 @@
 ! Title: /say/better.workflow
 ! Description: tiny improvements
-! Version: 0.0.8
+! Version: 0.0.9
 ! Expires: 2 hours
-! TimeUpdated: 2021-04-22T15:05:00+03:00
+! TimeUpdated: 2021-04-22T16:05:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/better.workflow
@@ -32,6 +32,11 @@ bit.adguard.com#$#.aui-page-panel-content { padding-top: 8px!important; }
 bit.adguard.com##.dashboard-empty-reviewing > svg
 bit.adguard.com#$#.empty-state { margin: 0!important; }
 bit.adguard.com##.empty-state .dashboard-empty-description
+!
+bit.adguard.com#$##dashboard-container > .main-panel { padding-top: 0!important; }
+bit.adguard.com#$##dashboard-container > .side-panel > .dashboard-repositories-section { padding-top: 4px!important; }
+bit.adguard.com#$#.side-panel .dashboard-recent-repositories { margin-top: 8px!important; }
+bit.adguard.com#$#.side-panel ol.dashboard-repositories-list > li > a { padding-top: 0!important; padding-bottom: 0!important; }
 !
 mail.yandex.ru##.PSHeader-Right a.PSHeader-Pro
 mail.yandex.ru##.PSHeader-Center
