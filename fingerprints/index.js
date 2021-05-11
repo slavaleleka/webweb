@@ -1,4 +1,3 @@
-// const Fingerprint2 = require('@fingerprintjs/fingerprintjs');
 import Fingerprint2 from '@fingerprintjs/fingerprintjs';
 
 setTimeout(function () {
