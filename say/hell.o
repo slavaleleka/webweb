@@ -1,8 +1,8 @@
 ! Title: /say/hell.o
 ! Description: cut some shtuff down
-! Version: 1.0.22
+! Version: 1.0.23
 ! Expires: 2 hours
-! TimeUpdated: 2021-02-29T15:05:00+03:00
+! TimeUpdated: 2021-06-25T12:05:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
@@ -70,3 +70,11 @@ slovotvir.org.ua#?#.app-word--discussion > div > div:has(> .app-facebook-share-b
 foamstore.ru##.product-info-social
 foamstore.ru##.footer_subscribe_block
 foamstore.ru##.subscribe-form-wrapper
+!
+basketball-video.com##.header_bg
+basketball-video.com##.content > .search
+basketball-video.com##.aside_right
+basketball-video.com##.aside_left > .aside_bl
+basketball-video.com#$#.aside_left { max-width: 200px!important; }
+basketball-video.com#$#.fullstory { margin-top: 0!important; }
+basketball-video.com#$#.video-responsive  { width: 100%!important; }
