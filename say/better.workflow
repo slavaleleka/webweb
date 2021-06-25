@@ -1,8 +1,8 @@
 ! Title: /say/better.workflow
 ! Description: tiny improvements
-! Version: 0.0.9
+! Version: 0.0.10
 ! Expires: 2 hours
-! TimeUpdated: 2021-04-22T16:05:00+03:00
+! TimeUpdated: 2021-06-25T13:05:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/better.workflow
@@ -43,3 +43,8 @@ mail.yandex.ru##.PSHeader-Center
 mail.yandex.ru#$#.PSHeader { height: 48px!important; }
 mail.yandex.ru#$#.mail-Layout-Inner { top: 48px!important; }
 mail.yandex.ru##.PSHeaderLogo360-360
+!
+mail.yandex.ru#$#.mail-MessageSnippet-Item { padding-left: 0!important }
+mail.yandex.ru#$#.mail-MessageSnippet-Item { padding-right: 0!important }
+mail.yandex.ru#$#.mail-MessageSnippet-Item_dateText { padding-right: 20px!important }
+!
