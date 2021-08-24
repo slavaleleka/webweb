@@ -1,8 +1,8 @@
 ! Title: /say/hell.o
 ! Description: cut some shtuff down
-! Version: 1.0.23
+! Version: 1.0.24
 ! Expires: 2 hours
-! TimeUpdated: 2021-08-22T16:05:00+03:00
+! TimeUpdated: 2021-08-23T16:05:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
@@ -22,6 +22,8 @@ matreshkatm.ru##.banners_column
 xn--80aaadf9a6agjohr9n.xn--p1ai#?#.product-info > h5:contains(Что означают стикеры)
 xn--80aaadf9a6agjohr9n.xn--p1ai#?#.product-info > h5:contains(Что означают стикеры) + div[style^="font-size"]:not([class])
 vk.com###im_dialogs .ConvoRecommendList
+sgpress.ru##.content-block-wide-top
+sgpress.ru##a[href^="https://consaltika.ru/"]
 !
 ! sports.ru/nba/ -- making styles more compacted
 sports.ru#$#body #branding-layout { margin-top: 0!important; }
