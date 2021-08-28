@@ -1,9 +1,9 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social filter
-! Version: 1.1.86
+! Version: 1.1.87
 ! Expires: 2 hours
-! TimeUpdated: 2021-08-26T16:00:00+03:00
+! TimeUpdated: 2021-08-27T16:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
@@ -238,6 +238,7 @@ ticketsalon.ru##.mec-event-sharing
 reddit.com##div[id$="-share-menu"]
 timepad.ru##.mevtshares
 mvideo.ru##mvid-wishlist-button
+fmovies.app##.fmr-buttons
 ! specific ---  END
 !
 ! extended css --- START
