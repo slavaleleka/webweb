@@ -6,6 +6,8 @@
 
 <a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/better.workflow">🛠️ better.workflow</a>
 
+<a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/screw.urltrack">🧽 screw.urltrack [alpha]</a>
+
 <a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/imabroke">🏴‍☠️ imabroke [alpha]</a>
 
 * * *

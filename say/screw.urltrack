@@ -1,0 +1,13 @@
+! Title: /say/screw.urltrack
+! Description: [alpha] removimg url tracking params
+! Version: 0.1.1
+! Expires: 4 days
+! TimeUpdated: 2021-07-09T18:00:00+03:00
+! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
+!
+! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/screw.urltrack
+! to subscribe: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/screw.urltrack
+!
+||airbnb.ru^$removeparam=federated_search_id
+||airbnb.ru^$removeparam=source_impression_id
+||airbnb.ru^$removeparam=translate_ugc
