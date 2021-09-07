@@ -1,9 +1,11 @@
 <h2>subscribe</h2>
 
 <h3>once for all:</h3>
+
 <a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/all.lists">💐 all.lists</a>
 
 <h3>one by one:</h3>
+ё
 <a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o">🐣 hell.o</a>
 
 <a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish">🎩 no.rubbish</a>
