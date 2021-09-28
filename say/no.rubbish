@@ -1,7 +1,7 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social filter
-! Version: 1.1.90
+! Version: 1.1.91
 ! Expires: 2 hours
 ! TimeUpdated: 2021-09-27T15:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
@@ -262,11 +262,6 @@ xn--80aaadf9a6agjohr9n.xn--p1ai#?#.product-card > div.row:has(> div > button.pro
 !
 !
 !###    FOR IOS    ###!
-!#safari_cb_affinity(social)
 !
-! !+ PLATFORM(ios)
 63.ru###record-header > div > button[title="В закладки"]
-! !+ PLATFORM(ios)
 63.ru###record-header > div > button[title="В закладки"] + div[class]:not([id]):not([style])
-!
-!#safari_cb_affinity
