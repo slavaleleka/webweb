@@ -1,8 +1,8 @@
 ! Title: /say/hell.o
 ! Description: cut some shtuff down
-! Version: 1.0.28
+! Version: 1.0.29
 ! Expires: 2 hours
-! TimeUpdated: 2021-10-20T17:00:00+03:00
+! TimeUpdated: 2021-10-21T17:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
@@ -30,6 +30,11 @@ sgpress.ru##a[href^="https://consaltika.ru/"]
 kurmyshi.media##.ad_after_content
 kurmyshi.media##.ad_container_bottom
 !
+! myshows.me
+myshows.me#$#.UserShowItem_mode_compact { padding: 7px 0!important; }
+myshows.me#$#.User-showsMore { margin-top: 10px!important; }
+myshows.me#$#.User-tabs { margin-bottom: 10px!important; }
+myshows.me#$#.User-hr { margin-bottom: 10px!important; }
 ! drugoigorod.ru
 drugoigorod.ru#?#.article-content > p:has(> a[href="https://t.me/drugoigorod"])
 ||w.hypercomments.com^$domain=drugoigorod.ru,third-party
