@@ -7,7 +7,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run lint"
+      "pre-commit": "yarn lint"
     }
   },
   "author": "v.leleka@adguard.com",
@@ -15,7 +15,7 @@
   "devDependencies": {
     "@fingerprintjs/fingerprintjs": "^2.1.4",
     "eslint": "^7.32.0",
-    "husky": "^4.2.1",
+    "husky": "^7.0.4",
     "rollup": "^2.28.1"
   },
   "dependencies": {}
