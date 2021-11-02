@@ -1,9 +1,9 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social filter
-! Version: 1.1.99
+! Version: 1.1.100
 ! Expires: 2 hours
-! TimeUpdated: 2021-10-21T16:00:00+03:00
+! TimeUpdated: 2021-10-22T16:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
@@ -250,7 +250,7 @@ fmovies.app##.fmr-buttons
 ! extended css --- START
 #?#div[class^="css-"]:has(> a[class^="css-"]:contains(/FEEDBACK:/))
 !
-myshows.me##.Popover__content
+myshows.me##.ShowLink .Popover__content
 amazon.com#?#[data-automation-id="bottom-bar-actions"] > div:has(> span > button#shareTrigger)
 fontanka.ru#?#a[href$="/print.html"]:contains(Печать)
 tiu.ru#?#.x-product-conversion .x-iconed-text:has(> div > .js-favorite-link)
