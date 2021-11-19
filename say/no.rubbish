@@ -1,9 +1,9 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social filter
-! Version: 1.1.106
+! Version: 1.1.107
 ! Expires: 2 hours
-! TimeUpdated: 2021-11-17T16:00:00+03:00
+! TimeUpdated: 2021-11-17T17:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
@@ -199,6 +199,8 @@ freecodecamp.org##.share
 perfume-click.co.uk###social
 ! ###newsletter
 perfume-click.co.uk###newsletter
+! ##.favorite
+domdivanov63.com##.favorite
 !
 yandex.*##a[href="/favorites/"]
 tiktok.com##.share-container
