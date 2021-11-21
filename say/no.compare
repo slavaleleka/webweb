@@ -1,6 +1,6 @@
 ! Title: /say/no.compare
 ! Description: no comparing elements while shopping
-! Version: 0.0.2
+! Version: 0.0.3
 ! Expires: 2 hours
 ! TimeUpdated: 2021-11-21T19:01:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
@@ -10,13 +10,19 @@
 !
 !
 ! general elemhide --- START
+! with tagnames:
 ##div[data-replace-container^="product-compare"]
 ##label[for^="product-compare-"]
 !
+! just with attributes:
+##.add-to-compare
+##.compare-product
 ##.js-product-compare
 ##.js-toggle-compare
-##.compare-product
-##.add-to-compare
+##.js--AddToComparison
+##.js--ProductHeader__add-to-compare
+##.HeaderMenu__buttons_compare
+##[aria-label="Добавить к сравнению"]
 ##[data-ajax-id="product-compare"]
 ##[data-ajax*="/shop-compare/"]
 ##[data-id^="popover-product-compare-"]
@@ -25,20 +31,21 @@
 !
 ! specific --- START
 !
-! ##.share
-! freecodecamp.org##.share
+! rules which might break smtg
+! ##.compare
+! example.org##.compare
 !
-! yandex.*##a[href="/favorites/"]
+e-katalog.ru###bar_bm_compared
 !
 ! specific ---  END
 !
 ! extended css --- START
-! #?#div[class^="css-"]:has(> a[class^="css-"]:contains(/FEEDBACK:/))
+! generic:
 !
-! fontanka.ru#?#a[href$="/print.html"]:contains(Печать)
+! specific:
+e-katalog.ru#?#.desc-short-prices div[class][id^="c_"]:has(> input[onclick*="add-compare"])
+e-katalog.ru#?#.touchcarousel-item > label[for^="chk_"]:has(> span:contains(сравнить))
 !
-! [beta] extended css
-! #?#a[href^="mailto:"]:not(:upward(footer))
 ! extended css  ---  END
 !
 ! whitelist --- START
