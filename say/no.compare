@@ -1,9 +1,8 @@
-! Title: /say/no.rubbish
-! Description:  no sharing/print/favorite
-!               better to use in addition to AdGuard Social filter
-! Version: 0.0.1
+! Title: /say/no.compare
+! Description: no comparing elements while shopping
+! Version: 0.0.2
 ! Expires: 2 hours
-! TimeUpdated: 2021-11-21T19:00:00+03:00
+! TimeUpdated: 2021-11-21T19:01:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.compare
@@ -11,9 +10,17 @@
 !
 !
 ! general elemhide --- START
-! ##button[data-favorite]
+##div[data-replace-container^="product-compare"]
+##label[for^="product-compare-"]
 !
-! ##.add-to-favourite
+##.js-product-compare
+##.js-toggle-compare
+##.compare-product
+##.add-to-compare
+##[data-ajax-id="product-compare"]
+##[data-ajax*="/shop-compare/"]
+##[data-id^="popover-product-compare-"]
+##[id^="product-compare-"]
 ! general elemhide ---  END
 !
 ! specific --- START
