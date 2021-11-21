@@ -10,6 +10,8 @@
 
 <a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish">🎩 no.rubbish</a>
 
+<a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.compare">🧮 no.compare</a>
+
 <a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/better.workflow">🛠️ better.workflow</a>
 
 <a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/screw.urltrack">🧽 screw.urltrack [alpha]</a>
