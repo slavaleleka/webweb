@@ -1,8 +1,8 @@
 ! Title: /say/no.compare
 ! Description: no comparing elements while shopping
-! Version: 0.0.9
+! Version: 0.0.10
 ! Expires: 2 hours
-! TimeUpdated: 2021-11-21T19:07:00+03:00
+! TimeUpdated: 2021-11-21T19:08:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.compare
@@ -14,6 +14,8 @@
 ##div[data-replace-container^="product-compare"]
 ##label[for^="product-compare-"]
 ##.header-menu-wrapper a[href="/compare/"]
+##input[value="Сравнить"]
+##header .moduletable-compare
 !
 ! just with attributes:
 ##.add-to-compare
@@ -22,6 +24,8 @@
 ##.compare-block__link
 ##.compare-button
 ##.compare-inited
+##.compare_item
+##.compare_item_button
 ##.compare-link
 ##.compare-checkbox
 ##.compare-product
@@ -48,9 +52,12 @@
 ##[data-title="К сравнению"]
 ##[data-titlefalse="Сравнить"]
 ##[data-widget="webAddToCompare"]
+##[id^="compare_"]
 ##[id^="product-compare-"]
 ##[title="В сравнение"]
 ##[title="Добавить в сравнение"]
+##[title="Сравнить"]
+##[title="Сравнение товаров"]
 ##[title="Перейти к сравнению"]
 ! general elemhide ---  END
 !
