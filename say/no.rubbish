@@ -1,9 +1,9 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social filter
-! Version: 1.1.121
+! Version: 1.1.122
 ! Expires: 2 hours
-! TimeUpdated: 2021-11-21T19:07:00+03:00
+! TimeUpdated: 2021-11-21T19:08:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
@@ -11,6 +11,11 @@
 !
 !
 ! general elemhide --- START
+##[slot="wishlist-control"]
+##.filmInfo_fav
+##.header_btn-fav
+##[data-fav-btn]
+##[data-sub-modules="Fav"]
 ##header .wishlist_view
 ##.btn-wishlist
 ##[value="В избранное"]
@@ -247,16 +252,18 @@
 !
 ! specific --- START
 !
-! ###share
+! #share
 play.pod.co###share
-! ##.share
+! .share
 freecodecamp.org##.share
-! ###social
+! #social
 perfume-click.co.uk###social
-! ###newsletter
+! #newsletter
 perfume-click.co.uk###newsletter
-! ##.favorite
+! .favorite
 domdivanov63.com##.favorite
+! .feedback
+domrfbank.ru##.feedback
 !
 yandex.*##a[href="/favorites/"]
 tiktok.com##.share-container
