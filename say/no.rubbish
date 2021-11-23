@@ -1,9 +1,9 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social filter
-! Version: 1.1.122
+! Version: 1.1.123
 ! Expires: 2 hours
-! TimeUpdated: 2021-11-21T19:08:00+03:00
+! TimeUpdated: 2021-11-22T19:01:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
@@ -11,6 +11,7 @@
 !
 !
 ! general elemhide --- START
+##[onclick*="click_favorite"]
 ##[slot="wishlist-control"]
 ##.filmInfo_fav
 ##.header_btn-fav
@@ -324,6 +325,8 @@ iphones.ru##.postpage_dont_forget_other
 e-katalog.ru###bar_bm_marked
 ozon.ru##[data-widget="skuShelfGoods"] div[style*="transition-duration"][style*="transform"] > div div[tile-id]
 mvideo.ru##.tab-personal
+tjournal.ru##.favorite_marker
+shop.tastycoffee.ru##a.fav-h
 ! share button
 travel.yandex.ru##svg[width="18"][height="24"][class]
 ! specific ---  END
@@ -339,7 +342,6 @@ sima-land.ru#?#.widget-content > .rating-item ~ div > div:has(> span:contains(В
 forum.adguard.com#?#ul.message-attribution-opposite > li:has(> .bookmarkLink)
 forum.adguard.com#?#ul.message-attribution-opposite > li:has(> [data-xf-init="share-tooltip"])
 xn--80aaadf9a6agjohr9n.xn--p1ai#?#.product-card > div.row:has(> div > button.product-buy[type="submit"]) + center:has(> p:contains(или))
-tjournal.ru##.favorite_marker
 ! [beta] extended css
 #?#a[href^="mailto:"]:not(:upward(footer))
 ! extended css  ---  END
