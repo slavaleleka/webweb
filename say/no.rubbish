@@ -1,9 +1,9 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social filter
-! Version: 1.1.125
+! Version: 1.1.126
 ! Expires: 2 hours
-! TimeUpdated: 2021-11-23T19:02:00+03:00
+! TimeUpdated: 2021-11-24T19:02:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
@@ -332,6 +332,7 @@ ozon.ru##[data-widget="skuShelfGoods"] div[style*="transition-duration"][style*=
 mvideo.ru##.tab-personal
 tjournal.ru##.favorite_marker
 shop.tastycoffee.ru##a.fav-h
+ikea.com##.range-revamp-product-compact__add-to-list-button
 ! share button
 travel.yandex.ru##svg[width="18"][height="24"][class]
 ! specific ---  END
