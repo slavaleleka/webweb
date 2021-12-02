@@ -1,8 +1,8 @@
 ! Title: /say/no.compare
 ! Description: no comparing elements while shopping
-! Version: 0.0.16
+! Version: 0.0.17
 ! Expires: 2 hours
-! TimeUpdated: 2021-11-25T19:02:00+03:00
+! TimeUpdated: 2021-11-26T19:02:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.compare
@@ -35,12 +35,14 @@
 ##.ic__hasSet__compare
 ##.header__compare
 ##.js-add-to-compare
+##.js_add2compare
 ##.js-compare
 ##.js-product-compare
 ##.js-product-comparison
 ##.js-toggle-compare
 ##.js--AddToComparison
 ##.js--ProductHeader__add-to-compare
+##.navbar__compare
 ##.plp-compare-checkbox
 ##.product-compare
 ##.sm-header-compare__link
