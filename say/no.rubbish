@@ -1,9 +1,9 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social filter
-! Version: 1.1.133
+! Version: 1.1.134
 ! Expires: 2 hours
-! TimeUpdated: 2021-12-22T19:02:00+03:00
+! TimeUpdated: 2021-12-22T19:03:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
@@ -360,6 +360,7 @@ sima-land.ru#?#.widget-content > .rating-item ~ div > div:has(> span:contains(В
 forum.adguard.com#?#ul.message-attribution-opposite > li:has(> .bookmarkLink)
 forum.adguard.com#?#ul.message-attribution-opposite > li:has(> [data-xf-init="share-tooltip"])
 xn--80aaadf9a6agjohr9n.xn--p1ai#?#.product-card > div.row:has(> div > button.product-buy[type="submit"]) + center:has(> p:contains(или))
+smeg.ru##.social__footer
 ! [beta] extended css
 #?#a[href^="mailto:"]:not(:upward(footer))
 ! extended css  ---  END
