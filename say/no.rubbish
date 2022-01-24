@@ -1,9 +1,9 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
-!               better to use in addition to AdGuard Social filter
-! Version: 1.1.134
+!               better to use in addition to AdGuard Social and AdGuard Annoyances filters
+! Version: 1.1.135
 ! Expires: 2 hours
-! TimeUpdated: 2021-12-22T19:03:00+03:00
+! TimeUpdated: 2022-01-22T19:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
@@ -345,6 +345,8 @@ mvideo.ru##.tab-personal
 tjournal.ru##.favorite_marker
 shop.tastycoffee.ru##a.fav-h
 ikea.com##.range-revamp-product-compact__add-to-list-button
+smeg.ru##.social__footer
+myshows.me##.ShowLink .Popover__content
 ! share button
 travel.yandex.ru##svg[width="18"][height="24"][class]
 ! specific ---  END
@@ -352,7 +354,7 @@ travel.yandex.ru##svg[width="18"][height="24"][class]
 ! extended css --- START
 #?#div[class^="css-"]:has(> a[class^="css-"]:contains(/FEEDBACK:/))
 !
-myshows.me##.ShowLink .Popover__content
+didomi.io#?##animatedComponent:has(a[href$="/privacy/cookies"])
 amazon.com#?#[data-automation-id="bottom-bar-actions"] > div:has(> span > button#shareTrigger)
 fontanka.ru#?#a[href$="/print.html"]:contains(Печать)
 tiu.ru#?#.x-product-conversion .x-iconed-text:has(> div > .js-favorite-link)
@@ -360,7 +362,6 @@ sima-land.ru#?#.widget-content > .rating-item ~ div > div:has(> span:contains(В
 forum.adguard.com#?#ul.message-attribution-opposite > li:has(> .bookmarkLink)
 forum.adguard.com#?#ul.message-attribution-opposite > li:has(> [data-xf-init="share-tooltip"])
 xn--80aaadf9a6agjohr9n.xn--p1ai#?#.product-card > div.row:has(> div > button.product-buy[type="submit"]) + center:has(> p:contains(или))
-smeg.ru##.social__footer
 ! [beta] extended css
 #?#a[href^="mailto:"]:not(:upward(footer))
 ! extended css  ---  END
