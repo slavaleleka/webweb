@@ -1,8 +1,8 @@
 ! Title: /say/hell.o
 ! Description: cut some shtuff down
-! Version: 1.0.33
+! Version: 1.0.34
 ! Expires: 2 hours
-! TimeUpdated: 2021-11-18T17:00:00+03:00
+! TimeUpdated: 2022-11-27T17:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
@@ -18,7 +18,7 @@ novostroy-m.ru##a[href="/ipotechnyj-kalkulyator"][target="_blank"]
 ||lpsnmedia.net^$domain=smallflower.com|schick.com
 lider-mart.ru###custom_modal_window
 lider-mart.ru###modal_form_pop_up
-android.jlelse.eu,codeburst.io,medium.com##div[data-test-id="post-sidebar"]
+levelup.gitconnected.com,android.jlelse.eu,codeburst.io,medium.com##div[data-test-id="post-sidebar"]
 android.jlelse.eu,codeburst.io,medium.com#?#div.lm.r:has(> iframe[src^="https://cdn.embedly.com/widgets/media.html"])
 stackoverflow.com##body > div.theme-selector
 barbercompany.com##.block-service
