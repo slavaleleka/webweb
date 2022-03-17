@@ -1,13 +1,18 @@
 ! Title: /say/better.workflow
 ! Description: tiny improvements
-! Version: 0.0.10
+! Version: 0.0.11
 ! Expires: 2 hours
-! TimeUpdated: 2021-06-25T13:05:00+03:00
+! TimeUpdated: 2022-03-17T13:05:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/better.workflow
 ! to subscribe: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/better.workflow
 !
+!
+github.com#$#.repository-content > div[class] { margin-top: 0!important; }
+github.com#$#.gh-header-meta { margin-bottom: 4px!important; }
+github.com#$#.gh-header-meta { padding-bottom: 0!important; }
+github.com#$#.TimelineItem { padding: 8px 0!important; }
 !
 github.com##signup-prompt-controller
 github.com#$#header { padding-top: 8px!important; }
