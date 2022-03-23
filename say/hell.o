@@ -1,14 +1,15 @@
 ! Title: /say/hell.o
 ! Description: cut some shtuff down
-! Version: 1.0.35
+! Version: 1.0.36
 ! Expires: 2 hours
-! TimeUpdated: 2022-01-27T19:00:00+03:00
+! TimeUpdated: 2022-03-21T19:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
 ! to subscribe: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
 !
 !
+texty.org.ua###readmorebanner-target
 ||travel.yandex.ru/api/hotels/$domain=travel.yandex.ru
 ikea.com###search-results > section.survey
 tv.ivideon.com##.iv-tv-page-split-right
