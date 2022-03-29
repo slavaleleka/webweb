@@ -1,13 +1,13 @@
 ! Title: /testing/safari/main.absolute.list
 ! Description: combined filter list with absolute paths
-! Version: 0.0.1
+! Version: 0.0.2
 ! Expires: 4 days
-! TimeUpdated: 2022-03-29T16:00:00+03:00
+! TimeUpdated: 2022-03-29T16:00:01+03:00
 !
 !
 !
 ! has one rule: example.org##h1
-!#include raw.githubusercontent.com/slavaleleka/webweb/master/testing/safari/list1.include
+!#include https://raw.githubusercontent.com/slavaleleka/webweb/master/testing/safari/list1.include
 !
 ! has one rule: example.org##p > a
-!#include raw.githubusercontent.com/slavaleleka/webweb/master/testing/safari/list2.t.xt
+!#include https://raw.githubusercontent.com/slavaleleka/webweb/master/testing/safari/list2.t.xt
