@@ -1,0 +1,13 @@
+! Title: /testing/safari/main.relative.list
+! Description: combined filter list with relative paths
+! Version: 0.0.1
+! Expires: 4 days
+! TimeUpdated: 2022-03-29T16:00:00+03:00
+!
+!
+!
+! has one rule: example.org##h1
+!#include ./list1.include
+!
+! has one rule: example.org##p > a
+!#include ./list2.t.xt
