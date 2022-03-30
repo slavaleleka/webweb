@@ -1,8 +1,8 @@
 ! Title: /say/no.donate
 ! Description: no donate banners, widgets etc
-! Version: 0.0.1
+! Version: 0.0.2
 ! Expires: 2 hours
-! TimeUpdated: 2021-11-26T19:02:00+03:00
+! TimeUpdated: 2022-03-28T19:02:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.donate
@@ -18,17 +18,11 @@
 ! general elemhide ---  END
 !
 ! specific --- START
-!
 theins.ru###articleContainer a[href="http://donate.theins.ru/"]
-!
 ! specific ---  END
 !
 ! extended css --- START
-! generic:
-!
-! specific:
-! domclick.ru##button:has(> span:contains(Сравнить))
-!
+vedomosti.ru#?#.layout__container > .page-banner:has(a[href*="vedomosti.ru/subscription"][href*="bannermobile"])
 ! extended css  ---  END
 !
 ! whitelist --- START
