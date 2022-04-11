@@ -1,8 +1,8 @@
 ! Title: /say/hell.o
-! Description: cut some shtuff down
-! Version: 1.0.38
+! Description: personal blocklist
+! Version: 1.0.39
 ! Expires: 2 hours
-! TimeUpdated: 2022-03-21T19:03:00+03:00
+! TimeUpdated: 2022-04-11T19:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
@@ -47,10 +47,7 @@ drugoigorod.ru#?#article h3:contains(HYPER_COMM)
 drugoigorod.ru##a.hc-link[href="http://hypercomments.com"]
 !
 ! sports.ru/nba/ -- making styles more compacted
-sports.ru#$#body[class] > div#branding-layout { padding-top: 0!important; }
-!sports.ru#$#body #branding-layout { margin-top: 0!important; }
 sports.ru#$#.news-item__social-line { margin: 0!important; padding: 0!important; }
-sports.ru#$#.columns-layout.main-wrap { padding-top: 0!important; }
 ! nba store and nba league pass buttons
 sports.ru##nav.nba-links
 ! LeaguePass banner on sports.ru
