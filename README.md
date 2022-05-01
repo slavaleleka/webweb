@@ -6,17 +6,19 @@
 
 <h3>one by one:</h3>
 
-<a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o">🐣 hell.o</a>
+<a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o">🐣 hell.o</a> : `https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o`
 
-<a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish">🎩 no.rubbish</a>
+<a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish">🎩 no.rubbish</a> : `https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish`
 
-<a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.compare">🧮 no.compare</a>
+<a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.compare">🧮 no.compare</a> : `https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.compare`
 
-<a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/better.workflow">🛠️ better.workflow</a>
+<a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.donate">🪙 no.donate</a> : `https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.donate`
 
-<a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/screw.urltrack">🧽 screw.urltrack [alpha]</a>
+<a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/better.workflow">🛠️ better.workflow</a> : `https://raw.githubusercontent.com/slavaleleka/webweb/master/say/better.workflow`
 
-<a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/imabroke">🏴‍☠️ imabroke [alpha]</a>
+<a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/screw.urltrack">🧽 screw.urltrack [alpha]</a> : `https://raw.githubusercontent.com/slavaleleka/webweb/master/say/screw.urltrack`
+
+<a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/imabroke">🏴‍☠️ imabroke [alpha]</a> : `https://raw.githubusercontent.com/slavaleleka/webweb/master/say/imabroke`
 
 * * *
 
