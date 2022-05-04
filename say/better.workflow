@@ -1,15 +1,21 @@
 ! Title: /say/better.workflow
 ! Description: tiny improvements
-! Version: 0.0.11
+! Version: 0.0.12
 ! Expires: 2 hours
-! TimeUpdated: 2022-03-17T13:05:00+03:00
+! TimeUpdated: 2022-04-17T13:05:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/better.workflow
 ! to subscribe: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/better.workflow
 !
 !
-github.com#$#.repository-content > div[class] { margin-top: 0!important; }
+! labels
+github.com#$#div[role="group"][aria-label="Issues"] div[id^="issue_"] > div[class] > div[class] > a[id^="issue_"] + span.d-block { position: absolute!important; right: 10em!important; }
+!
+github.com#$#.repository-content > div[class] { margin-top: 4px!important; }
+github.com#$#.file-navigation { margin-bottom: 4px!important; }
+github.com#$#.Box-header { padding-top: 8px!important; }
+github.com#$#.Box-header { padding-bottom: 8px!important; }
 github.com#$#.gh-header-meta { margin-bottom: 4px!important; }
 github.com#$#.gh-header-meta { padding-bottom: 0!important; }
 github.com#$#.TimelineItem { padding: 8px 0!important; }
@@ -19,7 +25,6 @@ github.com#$#header { padding-top: 8px!important; }
 github.com#$#header { padding-bottom: 8px!important; }
 github.com#$#main > .hide-full-screen { padding-top: 8px!important; margin-bottom: 0!important; }
 github.com#$#main > .hide-full-screen > div[class] { margin-bottom: 0!important; }
-github.com#$#.repository-content > .flex-column > div[class] { margin: 0!important; }
 github.com#$##partial-discussion-header { margin: 0!important; }
 !
 jira.adguard.com#$##gh > div#ghx-header { padding: 5px 20px !important; }
