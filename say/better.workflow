@@ -1,6 +1,6 @@
 ! Title: /say/better.workflow
 ! Description: tiny improvements
-! Version: 0.0.12
+! Version: 0.0.13
 ! Expires: 2 hours
 ! TimeUpdated: 2022-04-17T13:05:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
@@ -31,6 +31,9 @@ jira.adguard.com#$##gh > div#ghx-header { padding: 5px 20px !important; }
 jira.adguard.com#$##js-work-quickfilters > dd { margin-bottom: 2px! important; }
 jira.adguard.com#$#ul#ghx-column-headers > { padding: 5px 9px !important; }
 jira.adguard.com#$#input#quickSearchInput.search { background: none!important; border: 1px solid black!important; }
+!
+bit.adguard.com#$#.comment .comment-actions { margin-top: 4px!important; }
+bit.adguard.com#$#.comment > .comment-wrapper { padding-top: 0!important; padding-bottom: 0!important; }
 !
 bit.adguard.com#$#.pull-request-details { margin-bottom: 0px!important; }
 bit.adguard.com#$#.pull-request-activities { margin-top: 0!important; }
