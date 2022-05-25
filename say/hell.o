@@ -1,8 +1,8 @@
 ! Title: /say/hell.o
 ! Description: personal blocklist
-! Version: 1.0.44
+! Version: 1.0.45
 ! Expires: 2 hours
-! TimeUpdated: 2022-05-21T13:01:00+03:00
+! TimeUpdated: 2022-05-21T13:02:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
@@ -104,6 +104,7 @@ basketball-video.com#$#.fullstory { margin-top: 0!important; }
 basketball-video.com#$#.video-responsive  { width: 100%!important; }
 !
 nbafullhd.com###header-main
+nbafullhd.com#$#.site-header { padding-top: 0!important; }
 nbafullhd.com##.main-container .row #secondary
 nbafullhd.com#$#.entry iframe { max-width: none!important; }
 nbafullhd.com#$#.entry-content iframe { width: 1000px!important; height: 570px!important; }
