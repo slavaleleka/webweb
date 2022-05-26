@@ -1,11 +1,12 @@
 ! Title: /testing/zdorov.o
 ! Description: test.ing
-! Version: 1.0.0.3
+! Version: 1.0.0.4
 ! Expires: 2 hours
-! TimeUpdated: 2022-05-26T19:02:00+03:00
+! TimeUpdated: 2022-05-26T19:03:00+03:00
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/testing/zdorov.o
 ! subscribe: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/testing/zdorov.o
 !
 !
+example.org##p > a
 ||example.org^$removeparam=test
