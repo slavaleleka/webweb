@@ -1,9 +1,9 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social and AdGuard Annoyances filters
-! Version: 1.1.159
+! Version: 1.1.160
 ! Expires: 2 hours
-! TimeUpdated: 2022-05-26T19:06:0+03:00
+! TimeUpdated: 2022-05-27T19:06:0+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
@@ -409,6 +409,7 @@ xn--80aaadf9a6agjohr9n.xn--p1ai#?#.product-card > div.row:has(> div > button.pro
 blick.ch#?#button[aria-label="facebook"]:upward(1)
 airbnb.*#?#div[role="dialog"] button[type="button"]:has(div:contains(Поделиться))
 airbnb.*#?#div[data-section-id="TITLE_DEFAULT"] button[type="button"]:has(div:contains(Поделиться))
+genius.com#?#span[class^="LabelWithIcon__Label"]:contains(Share):upward(button)
 ! [beta] extended css
 #?#a[href^="mailto:"]:not(:upward(footer))
 ! extended css  ---  END
