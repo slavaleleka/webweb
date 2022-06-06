@@ -1,8 +1,8 @@
 ! Title: /say/hell.o
 ! Description: personal blocklist
-! Version: 1.0.45
+! Version: 1.0.46
 ! Expires: 2 hours
-! TimeUpdated: 2022-05-21T13:02:00+03:00
+! TimeUpdated: 2022-05-25T13:02:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
@@ -48,6 +48,9 @@ drugoigorod.ru#?#.article-content > p:has(> a[href="https://t.me/drugoigorod"])
 drugoigorod.ru#?#article h3:contains(HYPER_COMM)
 drugoigorod.ru##a.hc-link[href="http://hypercomments.com"]
 !
+! self-promo
+diffchecker.com##form.diff-form > .bottom-banner
+diffchecker.com##.diff-checker-page > .hero
 ! sports.ru/nba/ -- making styles more compacted
 sports.ru#$#.news-item__social-line { margin: 0!important; padding: 0!important; }
 ! nba store and nba league pass buttons
