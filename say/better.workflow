@@ -1,8 +1,8 @@
 ! Title: /say/better.workflow
 ! Description: tiny improvements
-! Version: 0.0.15
+! Version: 0.0.16
 ! Expires: 2 hours
-! TimeUpdated: 2022-06-05T13:05:00+03:00
+! TimeUpdated: 2022-06-15T13:05:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/better.workflow
@@ -10,7 +10,7 @@
 !
 !
 ! labels
-github.com#$#div[role="group"][aria-label="Issues"] div[id^="issue_"] > div[class] > div[class] > a[id^="issue_"] + span.d-block { position: absolute!important; right: 15em!important; }
+github.com#$#div[role="group"][aria-label="Issues"] div[id^="issue_"] > div[class] > div[class] > a[id^="issue_"] + span.d-block { position: absolute!important; right: 12em!important; top: 2.4em!important; }
 ! issue search
 github.com#$?#.repository-content > div:not([style]) > div[class]:has(> div[role="search"])  { margin-bottom: 4px!important; }
 github.com#$?#.repository-content > div:not([style]) > div.Box { margin-top: 4px!important; }
