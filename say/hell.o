@@ -1,8 +1,8 @@
 ! Title: /say/hell.o
 ! Description: personal blocklist
-! Version: 1.0.46
+! Version: 1.0.47
 ! Expires: 2 hours
-! TimeUpdated: 2022-05-25T13:02:00+03:00
+! TimeUpdated: 2022-06-25T13:02:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
@@ -37,6 +37,7 @@ kurmyshi.media##.ad_after_content
 kurmyshi.media##.ad_container_bottom
 !
 ! myshows.me
+myshows.me##.ShowDetails__section > .online-link
 myshows.me#$#.UserShowItem-titleOriginal { margin-top: 0!important; }
 myshows.me#$#.UserShowItem_mode_compact { padding: 7px 0!important; }
 myshows.me#$#.User-showsMore { margin-top: 10px!important; }
