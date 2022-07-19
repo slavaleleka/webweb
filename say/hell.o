@@ -1,8 +1,8 @@
 ! Title: /say/hell.o
 ! Description: personal blocklist
-! Version: 1.0.48
+! Version: 1.0.49
 ! Expires: 2 hours
-! TimeUpdated: 2022-07-15T13:02:00+03:00
+! TimeUpdated: 2022-07-16T13:02:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
@@ -36,6 +36,8 @@ sgpress.ru##a[href^="https://consaltika.ru/"]
 kurmyshi.media##.ad_after_content
 kurmyshi.media##.ad_container_bottom
 !
+! quicknote.io - wtf popup on open
+quicknote.io#%#//scriptlet('remove-class', 'open', '.explanation', 'complete')
 ! m.censor.net
 m.censor.net##div.text > .related-news
 m.censor.net##article > a[href="https://m.censor.net/ua/yuriy_butusov_fund"]
