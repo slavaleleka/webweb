@@ -1,9 +1,9 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social and AdGuard Annoyances filters
-! Version: 1.1.168
+! Version: 1.1.169
 ! Expires: 2 hours
-! TimeUpdated: 2022-07-11T19:08:0+03:00
+! TimeUpdated: 2022-07-12T19:08:0+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
@@ -136,7 +136,7 @@
 ##button[marker="print-button"]
 ##a[href="#print"]
 ##a[href="javascript:window.print()"]
-~reports.dv,~adguard.com,~telegram.org,~mail.google.com##a[href^="mailto:"]
+~adguard-dns.io,~reports.dv,~adguard.com,~telegram.org,~mail.google.com##a[href^="mailto:"]
 ##a[href="#tab_share"]
 ##button.share
 ##svg[id^="heart-svg"]
