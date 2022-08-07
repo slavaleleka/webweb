@@ -1,8 +1,8 @@
 ! Title: /say/hell.o
 ! Description: personal blocklist
-! Version: 1.0.49
+! Version: 1.0.50
 ! Expires: 2 hours
-! TimeUpdated: 2022-07-16T13:02:00+03:00
+! TimeUpdated: 2022-08-07T13:02:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
@@ -49,6 +49,8 @@ espreso.tv#$#.main-wrapper { padding-top: 0 !important; }
 espreso.tv#?#.news-content > p:has(a[href="https://t.me/espresotb"])
 espreso.tv##.similar_by_tag
 ! myshows.me
+myshows.me#?#.Page-aside > h3:contains(KinopoiskHD)
+myshows.me#?#.Page-aside > .episodes-kp-promo
 myshows.me##.ShowDetails__section > .online-link
 myshows.me#$#.UserShowItem-titleOriginal { margin-top: 0!important; }
 myshows.me#$#.UserShowItem_mode_compact { padding: 7px 0!important; }
