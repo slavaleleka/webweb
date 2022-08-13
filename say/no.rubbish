@@ -1,7 +1,7 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social and AdGuard Annoyances filters
-! Version: 1.1.170
+! Version: 1.1.171
 ! Expires: 2 hours
 ! TimeUpdated: 2022-07-13T19:08:0+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
@@ -419,6 +419,7 @@ m.censor.net##.block-social-link
 !
 ! TODO: consider not to limit by domain
 m.censor.net##.tags
+mil.in.ua##.hashtags
 !
 ! specific ---  END
 !
