@@ -1,9 +1,9 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social and AdGuard Annoyances filters
-! Version: 1.1.171
+! Version: 1.1.172
 ! Expires: 2 hours
-! TimeUpdated: 2022-07-13T19:08:0+03:00
+! TimeUpdated: 2022-08-13T19:08:0+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
@@ -417,9 +417,30 @@ imgflip.com###done > .done-msg
 yakaboo.ua##.like
 m.censor.net##.block-social-link
 !
+!
+!# font customization
+zmina.info##.article_controls
+!
+!# subscribe blocks
+zmina.info##.subcribe
+zmina.info##.subscribe_disclimer
+!
+!
 ! TODO: consider not to limit by domain
-m.censor.net##.tags
+!# hashtags
+ukrinform.ua,chytomo.com,m.censor.net##.tags
 mil.in.ua##.hashtags
+zmina.info##.article_tags
+!
+!
+!# mistakes
+! report a mistake on text
+chytomo.com##.mistake
+zmina.info##.disklamer
+!
+!
+!# promo socials
+ukrinform.ua#?#article p:contains(Приєднуйтесь до наших)
 !
 ! specific ---  END
 !
