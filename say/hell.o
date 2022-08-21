@@ -1,14 +1,15 @@
 ! Title: /say/hell.o
 ! Description: personal blocklist
-! Version: 1.0.51
+! Version: 1.0.52
 ! Expires: 2 hours
-! TimeUpdated: 2022-08-12T13:02:00+03:00
+! TimeUpdated: 2022-08-21T13:02:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
 ! to subscribe: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
 !
 !
+! SECTION: common specifics
 chytomo.com##.donate-single
 knowyourmeme.com##.sticky-sidebar
 svoboda.org##.foot__texts-wrap
@@ -33,7 +34,10 @@ xn--80aaadf9a6agjohr9n.xn--p1ai#?#.product-info > h5:contains(Что означ�
 vk.com###im_dialogs .ConvoRecommendList
 sgpress.ru##.content-block-wide-top
 sgpress.ru##a[href^="https://consaltika.ru/"]
+! ANCHOR: end of common specifics
+! !SECTION: common specifics
 !
+! SECTION: grouped
 kurmyshi.media##.ad_after_content
 kurmyshi.media##.ad_container_bottom
 !
@@ -129,6 +133,30 @@ nbafullhd.com#$#.entry iframe { max-width: none!important; }
 nbafullhd.com#$#.entry-content iframe { width: 1000px!important; height: 570px!important; }
 nbafullhd.com#$##header-main { padding: 0!important; }
 nbafullhd.com#$#.main-container { padding-top: 0!important; margin-top: 0!important; }
+!
+! !SECTION: grouped
+!
+! SECTION: tiktok
+!
+! mobile version
+! - bottom right block with actions
+!tiktok.com##div[class^="tiktok-"][class*="-DivOperaterArea"]
+! - whole block bottom block with description, likes (and other actions).
+tiktok.com##div[class^="tiktok-"][class*="-DivInfoSection"]
+! - top banner about mobile app and sender
+tiktok.com##div[type="top"][class^="tiktok-"][class*="-DivTopBannerAB"]
+!
+! desktop version
+! - bottom right block with actions
+tiktok.com##div[class^="tiktok-"][class*="-DivActionItemContainer"]
+! - recommended videos at the right
+tiktok.com##div[class^="tiktok-"][class*="-DivVideoList"]
+! - recommended accounts at the left
+tiktok.com##div[class^="tiktok-"][class*="-DivUserContainer"]
+! - recommended hashtags at the left
+tiktok.com##div[class^="tiktok-"][class*="-DivDiscoverContainer"]
+!
+! !SECTION: tiktok
 !
 !#-----------|
 !#  PRIVACY  |
