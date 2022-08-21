@@ -1,8 +1,8 @@
 ! Title: /say/hell.o
 ! Description: personal blocklist
-! Version: 1.0.52
+! Version: 1.0.53
 ! Expires: 2 hours
-! TimeUpdated: 2022-08-21T13:02:00+03:00
+! TimeUpdated: 2022-08-21T13:03:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
@@ -155,6 +155,8 @@ tiktok.com##div[class^="tiktok-"][class*="-DivVideoList"]
 tiktok.com##div[class^="tiktok-"][class*="-DivUserContainer"]
 ! - recommended hashtags at the left
 tiktok.com##div[class^="tiktok-"][class*="-DivDiscoverContainer"]
+! - 'go back' in the top
+tiktok.com##div[class^="tiktok-"][class*="-DivBackHead"]
 !
 ! !SECTION: tiktok
 !
