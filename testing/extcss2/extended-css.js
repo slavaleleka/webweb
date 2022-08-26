@@ -1873,7 +1873,7 @@ var BrowserstackTest = (function (exports) {
   const isSafariBrowser = navigator.vendor === 'Apple Computer, Inc.';
   const CHROME_BROWSER_NAME = 'Chrome';
   const FIREFOX_BROWSER_NAME = 'Firefox';
-  const EDGE_BROWSER_NAME = 'Edge';
+  const EDGE_BROWSER_NAME = 'Edg';
   const OPERA_BROWSER_NAME = 'Opera';
   const SAFARI_BROWSER_NAME = 'Safari';
   const CHROMIUM_BRAND_NAME = 'Chromium';
