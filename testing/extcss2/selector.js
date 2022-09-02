@@ -141,6 +141,15 @@ var testExtCss = (function (exports) {
     const REGEXP_VALID_OLD_SYNTAX = /\[-(?:ext)-([a-z-_]+)=(["'])((?:(?=(\\?))\4.)*?)\2\]/g; // marker for checking invalid selector after old-syntax normalizing by selector converter
 
     const INVALID_OLD_SYNTAX_MARKER = '[-ext-';
+    let BrowserName;
+
+    (function (BrowserName) {
+      BrowserName["Chrome"] = "Chrome";
+      BrowserName["Firefox"] = "Firefox";
+      BrowserName["Edge"] = "Edg";
+      BrowserName["Opera"] = "Opera";
+      BrowserName["Safari"] = "Safari";
+    })(BrowserName || (BrowserName = {}));
 
     /**
      * Complex replacement function.
@@ -319,7 +328,7 @@ var testExtCss = (function (exports) {
       constructor(name) {
         super(NodeType.AbsolutePseudoClass);
 
-        _defineProperty(this, "arg", '');
+        _defineProperty(this, "value", '');
 
         this.name = name;
       }
@@ -370,7 +379,7 @@ var testExtCss = (function (exports) {
      * AbsolutePseudoClass
      *   : type
      *   : name
-     *   : arg
+     *   : value
      *   ;
      */
 
@@ -490,10 +499,12 @@ var testExtCss = (function (exports) {
         throw new Error('No bufferNode to update');
       }
 
-      if (bufferNode.type === NodeType.RegularSelector) {
+      const {
+        type
+      } = bufferNode;
+
+      if (type === NodeType.RegularSelector || type === NodeType.AbsolutePseudoClass) {
         bufferNode.value += tokenValue;
-      } else if (bufferNode.type === NodeType.AbsolutePseudoClass) {
-        bufferNode.arg += tokenValue;
       } else {
         throw new Error(`${bufferNode.type} node can not be updated. Only RegularSelector and AbsolutePseudoClass are supported.`); // eslint-disable-line max-len
       }
@@ -1325,7 +1336,34 @@ var testExtCss = (function (exports) {
       return output;
     };
 
-    const isSafariBrowser = navigator.vendor === 'Apple Computer, Inc.'; // TODO: improve while checking if the browser supported: AG-16039
+    /**
+     * Simple check for Safari browser
+     */
+
+    const isSafariBrowser = navigator.vendor === 'Apple Computer, Inc.';
+    ({
+      [BrowserName.Chrome]: {
+        // avoid Chromium-based Edge browser
+        MASK: /\s(Chrome)\/(\d+)\..+\s(?!.*Edg\/)/,
+        MIN_VERSION: 55
+      },
+      [BrowserName.Firefox]: {
+        MASK: /\s(Firefox)\/(\d+)\./,
+        MIN_VERSION: 52
+      },
+      [BrowserName.Edge]: {
+        MASK: /\s(Edg)\/(\d+)\./,
+        MIN_VERSION: 80
+      },
+      [BrowserName.Opera]: {
+        MASK: /\s(OPR)\/(\d+)\./,
+        MIN_VERSION: 80
+      },
+      [BrowserName.Safari]: {
+        MASK: /\sVersion\/(\d+)\..+\s(Safari)\//,
+        MIN_VERSION: 10
+      }
+    });
 
     /**
      * Removes quotes for specified content value.
@@ -2350,7 +2388,7 @@ var testExtCss = (function (exports) {
       }
 
       if (ABSOLUTE_PSEUDO_CLASSES.includes(pseudoName)) {
-        const absolutePseudoArg = extendedSelectorNode.children[0].arg;
+        const absolutePseudoArg = extendedSelectorNode.children[0].value;
 
         if (!absolutePseudoArg) {
           // absolute extended pseudo-classes should have an argument
