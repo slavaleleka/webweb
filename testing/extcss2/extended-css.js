@@ -3448,13 +3448,9 @@ var BrowserstackTest = (function (exports) {
 
   }
 
-  const {
-    MutationObserver
-  } = natives;
   /**
    * A helper class for MutationObserver with extra property `styleProtectionCount`
    */
-
   class ExtMutationObserver extends MutationObserver {
     // extra property for keeping 'style fix counts'
     // extra property for easy checking whether the observer does observe
@@ -3471,18 +3467,18 @@ var BrowserstackTest = (function (exports) {
      */
 
 
-    observe(target, options) {
+    observeNode(target, options) {
       this.isActive = true;
-      super.observe(target, options);
+      this.observe(target, options);
     }
     /**
      * Disconnect Observer and mark as inactive
      */
 
 
-    disconnect() {
+    disconnectProtection() {
       this.isActive = false;
-      super.disconnect();
+      this.disconnect();
     }
 
   }
@@ -3606,13 +3602,13 @@ var BrowserstackTest = (function (exports) {
       const {
         target
       } = mutations[0];
-      observer.disconnect();
+      observer.disconnectProtection();
       styles.forEach(style => {
         setStyleToElement(target, style);
       });
 
       if (observer.styleProtectionCount < MAX_STYLE_PROTECTION_COUNT) {
-        observer.observe(target, protectionObserverOption);
+        observer.observeNode(target, protectionObserverOption);
       } else {
         logger.error('ExtendedCss: infinite loop protection for style');
       }
@@ -3646,7 +3642,7 @@ var BrowserstackTest = (function (exports) {
       styles.push(style);
     });
     const protectionObserver = new ExtMutationObserver(createProtectionCallback(styles));
-    protectionObserver.observe(node, protectionObserverOption);
+    protectionObserver.observeNode(node, protectionObserverOption);
     return protectionObserver;
   };
 
@@ -3742,7 +3738,7 @@ var BrowserstackTest = (function (exports) {
     var _affElement$protectio;
 
     if ((_affElement$protectio = affElement.protectionObserver) !== null && _affElement$protectio !== void 0 && _affElement$protectio.isActive) {
-      affElement.protectionObserver.disconnect();
+      affElement.protectionObserver.disconnectProtection();
     }
 
     affElement.node.style.cssText = affElement.originalStyle;
