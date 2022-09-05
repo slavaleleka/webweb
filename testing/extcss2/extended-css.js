@@ -3733,6 +3733,8 @@ var BrowserstackTest = (function (exports) {
 
     // extra property for keeping 'style fix counts'
     // extra property for easy checking whether the observer does observe
+    // observeNode: (t: Node, o: MutationObserverInit) => void;
+    // disconnectProtection:
     function ExtMutationObserver(protectionCallback) {
       var _this;
 
@@ -3744,6 +3746,8 @@ var BrowserstackTest = (function (exports) {
       });
       _this.styleProtectionCount = 0;
       _this.isActive = false;
+      _this.observeNode = _this.observeNode;
+      _this.disconnectProtection = _this.disconnectProtection;
       return _this;
     }
     /**
