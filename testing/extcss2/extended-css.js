@@ -5,13 +5,98 @@
 var BrowserstackTest = (function (exports) {
   'use strict';
 
-  const LEFT_SQUARE_BRACKET = '[';
-  const RIGHT_SQUARE_BRACKET = ']';
-  const LEFT_PARENTHESIS = '(';
-  const RIGHT_PARENTHESIS = ')';
-  const LEFT_CURLY_BRACKET = '{';
-  const RIGHT_CURLY_BRACKET = '}';
-  const BRACKETS = {
+  function _typeof(obj) {
+    "@babel/helpers - typeof";
+
+    return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
+      return typeof obj;
+    } : function (obj) {
+      return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    }, _typeof(obj);
+  }
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  function _defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }
+
+  function _createClass(Constructor, protoProps, staticProps) {
+    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) _defineProperties(Constructor, staticProps);
+    Object.defineProperty(Constructor, "prototype", {
+      writable: false
+    });
+    return Constructor;
+  }
+
+  function _arrayLikeToArray(arr, len) {
+    if (len == null || len > arr.length) len = arr.length;
+
+    for (var i = 0, arr2 = new Array(len); i < len; i++) {
+      arr2[i] = arr[i];
+    }
+
+    return arr2;
+  }
+
+  function _arrayWithoutHoles(arr) {
+    if (Array.isArray(arr)) return _arrayLikeToArray(arr);
+  }
+
+  function _iterableToArray(iter) {
+    if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
+  }
+
+  function _unsupportedIterableToArray(o, minLen) {
+    if (!o) return;
+    if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+    var n = Object.prototype.toString.call(o).slice(8, -1);
+    if (n === "Object" && o.constructor) n = o.constructor.name;
+    if (n === "Map" || n === "Set") return Array.from(o);
+    if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+  }
+
+  function _nonIterableSpread() {
+    throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  }
+
+  function _toConsumableArray(arr) {
+    return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
+  }
+
+  function _defineProperty(obj, key, value) {
+    if (key in obj) {
+      Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+      });
+    } else {
+      obj[key] = value;
+    }
+
+    return obj;
+  }
+
+  var LEFT_SQUARE_BRACKET = '[';
+  var RIGHT_SQUARE_BRACKET = ']';
+  var LEFT_PARENTHESIS = '(';
+  var RIGHT_PARENTHESIS = ')';
+  var LEFT_CURLY_BRACKET = '{';
+  var RIGHT_CURLY_BRACKET = '}';
+  var BRACKETS = {
     SQUARE: {
       LEFT: LEFT_SQUARE_BRACKET,
       RIGHT: RIGHT_SQUARE_BRACKET
@@ -25,74 +110,74 @@ var BrowserstackTest = (function (exports) {
       RIGHT: RIGHT_CURLY_BRACKET
     }
   };
-  const SLASH = '/';
-  const BACKSLASH = '\\';
-  const SPACE = ' ';
-  const COMMA = ',';
-  const DOT = '.';
-  const SEMICOLON = ';';
-  const COLON = ':';
-  const SINGLE_QUOTE = '\'';
-  const DOUBLE_QUOTE = '"'; // do not consider hyphen `-` as separated mark
+  var SLASH = '/';
+  var BACKSLASH = '\\';
+  var SPACE = ' ';
+  var COMMA = ',';
+  var DOT = '.';
+  var SEMICOLON = ';';
+  var COLON = ':';
+  var SINGLE_QUOTE = '\'';
+  var DOUBLE_QUOTE = '"'; // do not consider hyphen `-` as separated mark
   // to avoid pseudo-class names splitting
   // e.g. 'matches-css' or 'if-not'
 
-  const CARET = '^';
-  const DOLLAR_SIGN = '$';
-  const EQUAL_SIGN = '=';
-  const TAB = '\t';
-  const CARRIAGE_RETURN = '\r';
-  const LINE_FEED = '\n';
-  const FORM_FEED = '\f';
-  const WHITE_SPACE_CHARACTERS = [SPACE, TAB, CARRIAGE_RETURN, LINE_FEED, FORM_FEED]; // for universal selector and attributes
+  var CARET = '^';
+  var DOLLAR_SIGN = '$';
+  var EQUAL_SIGN = '=';
+  var TAB = '\t';
+  var CARRIAGE_RETURN = '\r';
+  var LINE_FEED = '\n';
+  var FORM_FEED = '\f';
+  var WHITE_SPACE_CHARACTERS = [SPACE, TAB, CARRIAGE_RETURN, LINE_FEED, FORM_FEED]; // for universal selector and attributes
 
-  const ASTERISK = '*';
-  const ID_MARKER = '#';
-  const CLASS_MARKER = DOT;
-  const DESCENDANT_COMBINATOR = SPACE;
-  const CHILD_COMBINATOR = '>';
-  const NEXT_SIBLING_COMBINATOR = '+';
-  const SUBSEQUENT_SIBLING_COMBINATOR = '~';
-  const COMBINATORS = [DESCENDANT_COMBINATOR, CHILD_COMBINATOR, NEXT_SIBLING_COMBINATOR, SUBSEQUENT_SIBLING_COMBINATOR];
-  const SUPPORTED_SELECTOR_MARKS = [LEFT_SQUARE_BRACKET, RIGHT_SQUARE_BRACKET, LEFT_PARENTHESIS, RIGHT_PARENTHESIS, LEFT_CURLY_BRACKET, RIGHT_CURLY_BRACKET, SLASH, BACKSLASH, SEMICOLON, COLON, COMMA, SINGLE_QUOTE, DOUBLE_QUOTE, CARET, DOLLAR_SIGN, ASTERISK, ID_MARKER, CLASS_MARKER, DESCENDANT_COMBINATOR, CHILD_COMBINATOR, NEXT_SIBLING_COMBINATOR, SUBSEQUENT_SIBLING_COMBINATOR, TAB, CARRIAGE_RETURN, LINE_FEED, FORM_FEED]; // absolute:
+  var ASTERISK = '*';
+  var ID_MARKER = '#';
+  var CLASS_MARKER = DOT;
+  var DESCENDANT_COMBINATOR = SPACE;
+  var CHILD_COMBINATOR = '>';
+  var NEXT_SIBLING_COMBINATOR = '+';
+  var SUBSEQUENT_SIBLING_COMBINATOR = '~';
+  var COMBINATORS = [DESCENDANT_COMBINATOR, CHILD_COMBINATOR, NEXT_SIBLING_COMBINATOR, SUBSEQUENT_SIBLING_COMBINATOR];
+  var SUPPORTED_SELECTOR_MARKS = [LEFT_SQUARE_BRACKET, RIGHT_SQUARE_BRACKET, LEFT_PARENTHESIS, RIGHT_PARENTHESIS, LEFT_CURLY_BRACKET, RIGHT_CURLY_BRACKET, SLASH, BACKSLASH, SEMICOLON, COLON, COMMA, SINGLE_QUOTE, DOUBLE_QUOTE, CARET, DOLLAR_SIGN, ASTERISK, ID_MARKER, CLASS_MARKER, DESCENDANT_COMBINATOR, CHILD_COMBINATOR, NEXT_SIBLING_COMBINATOR, SUBSEQUENT_SIBLING_COMBINATOR, TAB, CARRIAGE_RETURN, LINE_FEED, FORM_FEED]; // absolute:
 
-  const CONTAINS_PSEUDO = 'contains';
-  const HAS_TEXT_PSEUDO = 'has-text';
-  const ABP_CONTAINS_PSEUDO = '-abp-contains';
-  const MATCHES_CSS_PSEUDO = 'matches-css';
-  const MATCHES_CSS_BEFORE_PSEUDO = 'matches-css-before';
-  const MATCHES_CSS_AFTER_PSEUDO = 'matches-css-after';
-  const MATCHES_ATTR_PSEUDO_CLASS_MARKER = 'matches-attr';
-  const MATCHES_PROPERTY_PSEUDO_CLASS_MARKER = 'matches-property';
-  const XPATH_PSEUDO_CLASS_MARKER = 'xpath';
-  const NTH_ANCESTOR_PSEUDO_CLASS_MARKER = 'nth-ancestor';
+  var CONTAINS_PSEUDO = 'contains';
+  var HAS_TEXT_PSEUDO = 'has-text';
+  var ABP_CONTAINS_PSEUDO = '-abp-contains';
+  var MATCHES_CSS_PSEUDO = 'matches-css';
+  var MATCHES_CSS_BEFORE_PSEUDO = 'matches-css-before';
+  var MATCHES_CSS_AFTER_PSEUDO = 'matches-css-after';
+  var MATCHES_ATTR_PSEUDO_CLASS_MARKER = 'matches-attr';
+  var MATCHES_PROPERTY_PSEUDO_CLASS_MARKER = 'matches-property';
+  var XPATH_PSEUDO_CLASS_MARKER = 'xpath';
+  var NTH_ANCESTOR_PSEUDO_CLASS_MARKER = 'nth-ancestor';
   /**
    * :upward() can get number or selector arg
    * and if the arg is selector it should be standard, not extended
    * so :upward pseudo-class is always absolute
    */
 
-  const UPWARD_PSEUDO_CLASS_MARKER = 'upward';
+  var UPWARD_PSEUDO_CLASS_MARKER = 'upward';
   /**
    * :remove() pseudo-class is used for element actions, not for element selecting
    * and 'clear' selector should not contain it
    * so selector parser should consider it as invalid
    */
 
-  const REMOVE_PSEUDO_CLASS_MARKER = 'remove'; // relative:
+  var REMOVE_PSEUDO_CLASS_MARKER = 'remove'; // relative:
 
-  const HAS_PSEUDO_CLASS_MARKER = 'has';
-  const IF_PSEUDO_CLASS_MARKER = 'if';
-  const ABP_HAS_PSEUDO_CLASS_MARKER = '-abp-has';
-  const HAS_PSEUDO_CLASS_MARKERS = [HAS_PSEUDO_CLASS_MARKER, IF_PSEUDO_CLASS_MARKER, ABP_HAS_PSEUDO_CLASS_MARKER];
-  const IF_NOT_PSEUDO_CLASS_MARKER = 'if-not';
-  const IS_PSEUDO_CLASS_MARKER = 'is';
-  const NOT_PSEUDO_CLASS_MARKER = 'not';
-  const ABSOLUTE_PSEUDO_CLASSES = [CONTAINS_PSEUDO, HAS_TEXT_PSEUDO, ABP_CONTAINS_PSEUDO, MATCHES_CSS_PSEUDO, MATCHES_CSS_BEFORE_PSEUDO, MATCHES_CSS_AFTER_PSEUDO, MATCHES_ATTR_PSEUDO_CLASS_MARKER, MATCHES_PROPERTY_PSEUDO_CLASS_MARKER, XPATH_PSEUDO_CLASS_MARKER, NTH_ANCESTOR_PSEUDO_CLASS_MARKER, UPWARD_PSEUDO_CLASS_MARKER];
-  const RELATIVE_PSEUDO_CLASSES = [...HAS_PSEUDO_CLASS_MARKERS, IF_NOT_PSEUDO_CLASS_MARKER, IS_PSEUDO_CLASS_MARKER, NOT_PSEUDO_CLASS_MARKER];
-  const SUPPORTED_PSEUDO_CLASSES = [...ABSOLUTE_PSEUDO_CLASSES, ...RELATIVE_PSEUDO_CLASSES];
-  const REGEXP_WITH_FLAGS_REGEXP = /^\s*\/.*\/[gmisuy]*\s*$/;
-  const REGEXP_ANY_SYMBOL = '.*';
+  var HAS_PSEUDO_CLASS_MARKER = 'has';
+  var IF_PSEUDO_CLASS_MARKER = 'if';
+  var ABP_HAS_PSEUDO_CLASS_MARKER = '-abp-has';
+  var HAS_PSEUDO_CLASS_MARKERS = [HAS_PSEUDO_CLASS_MARKER, IF_PSEUDO_CLASS_MARKER, ABP_HAS_PSEUDO_CLASS_MARKER];
+  var IF_NOT_PSEUDO_CLASS_MARKER = 'if-not';
+  var IS_PSEUDO_CLASS_MARKER = 'is';
+  var NOT_PSEUDO_CLASS_MARKER = 'not';
+  var ABSOLUTE_PSEUDO_CLASSES = [CONTAINS_PSEUDO, HAS_TEXT_PSEUDO, ABP_CONTAINS_PSEUDO, MATCHES_CSS_PSEUDO, MATCHES_CSS_BEFORE_PSEUDO, MATCHES_CSS_AFTER_PSEUDO, MATCHES_ATTR_PSEUDO_CLASS_MARKER, MATCHES_PROPERTY_PSEUDO_CLASS_MARKER, XPATH_PSEUDO_CLASS_MARKER, NTH_ANCESTOR_PSEUDO_CLASS_MARKER, UPWARD_PSEUDO_CLASS_MARKER];
+  var RELATIVE_PSEUDO_CLASSES = [].concat(HAS_PSEUDO_CLASS_MARKERS, [IF_NOT_PSEUDO_CLASS_MARKER, IS_PSEUDO_CLASS_MARKER, NOT_PSEUDO_CLASS_MARKER]);
+  var SUPPORTED_PSEUDO_CLASSES = [].concat(ABSOLUTE_PSEUDO_CLASSES, _toConsumableArray(RELATIVE_PSEUDO_CLASSES));
+  var REGEXP_WITH_FLAGS_REGEXP = /^\s*\/.*\/[gmisuy]*\s*$/;
+  var REGEXP_ANY_SYMBOL = '.*';
   /**
    * ':scope' is used for extended pseudo-class :has(), if-not(), :is() and :not()
    *
@@ -100,7 +185,7 @@ var BrowserstackTest = (function (exports) {
    * https://bugs.chromium.org/p/chromium/issues/detail?id=669058#c54 [1]
    */
 
-  const REGULAR_PSEUDO_CLASSES = {
+  var REGULAR_PSEUDO_CLASSES = {
     SCOPE: 'scope',
     WHERE: 'where'
   };
@@ -110,7 +195,7 @@ var BrowserstackTest = (function (exports) {
    * https://bugs.chromium.org/p/chromium/issues/detail?id=669058#c54 [3]
    */
 
-  const REGULAR_PSEUDO_ELEMENTS = {
+  var REGULAR_PSEUDO_ELEMENTS = {
     AFTER: 'after',
     BACKDROP: 'backdrop',
     BEFORE: 'before',
@@ -128,7 +213,7 @@ var BrowserstackTest = (function (exports) {
     SPELLING_ERROR: 'spelling-error',
     TARGET_TEXT: 'target-text'
   };
-  const CSS_PROPERTIES = {
+  var CSS_PROPERTIES = {
     BACKGROUND: 'background',
     BACKGROUND_IMAGE: 'background-image',
     CONTENT: 'content',
@@ -136,22 +221,22 @@ var BrowserstackTest = (function (exports) {
   }; // limit applying of wildcard :is and :not pseudo-class only to html children
   // e.g. ':is(.page, .main) > .banner' or '*:not(span):not(p)'
 
-  const IS_OR_NOT_PSEUDO_SELECTING_ROOT = `html ${ASTERISK}`; // limit applying of :xpath pseudo-class with to 'any' element
+  var IS_OR_NOT_PSEUDO_SELECTING_ROOT = "html ".concat(ASTERISK); // limit applying of :xpath pseudo-class with to 'any' element
   // https://github.com/AdguardTeam/ExtendedCss/issues/115
 
-  const XPATH_PSEUDO_SELECTING_ROOT = 'body'; // regexp that matches backward compatible syntaxes
+  var XPATH_PSEUDO_SELECTING_ROOT = 'body'; // regexp that matches backward compatible syntaxes
 
-  const REGEXP_VALID_OLD_SYNTAX = /\[-(?:ext)-([a-z-_]+)=(["'])((?:(?=(\\?))\4.)*?)\2\]/g; // marker for checking invalid selector after old-syntax normalizing by selector converter
+  var REGEXP_VALID_OLD_SYNTAX = /\[-(?:ext)-([a-z-_]+)=(["'])((?:(?=(\\?))\4.)*?)\2\]/g; // marker for checking invalid selector after old-syntax normalizing by selector converter
 
-  const INVALID_OLD_SYNTAX_MARKER = '[-ext-';
-  const DEBUG_PSEUDO_PROPERTY_KEY = 'debug';
-  const REMOVE_PSEUDO_PROPERTY_KEY = REMOVE_PSEUDO_CLASS_MARKER;
-  const PSEUDO_PROPERTY_POSITIVE_VALUE = 'true';
-  const DEBUG_PSEUDO_PROPERTY_GLOBAL_VALUE = 'global';
-  const REGEXP_DECLARATION_END = /[;}]/g;
-  const REGEXP_DECLARATION_DIVIDER = /[;:}]/g;
-  const REGEXP_NON_WHITESPACE = /\S/g;
-  const STYLESHEET_ERROR_PREFIX = {
+  var INVALID_OLD_SYNTAX_MARKER = '[-ext-';
+  var DEBUG_PSEUDO_PROPERTY_KEY = 'debug';
+  var REMOVE_PSEUDO_PROPERTY_KEY = REMOVE_PSEUDO_CLASS_MARKER;
+  var PSEUDO_PROPERTY_POSITIVE_VALUE = 'true';
+  var DEBUG_PSEUDO_PROPERTY_GLOBAL_VALUE = 'global';
+  var REGEXP_DECLARATION_END = /[;}]/g;
+  var REGEXP_DECLARATION_DIVIDER = /[;:}]/g;
+  var REGEXP_NON_WHITESPACE = /\S/g;
+  var STYLESHEET_ERROR_PREFIX = {
     NO_STYLE: 'No style declaration at stylesheet part',
     INVALID_STYLE: 'Invalid style declaration at stylesheet part',
     UNCLOSED_STYLE: 'Unclosed style declaration at stylesheet part',
@@ -160,7 +245,7 @@ var BrowserstackTest = (function (exports) {
     INVALID_REMOVE: 'Invalid :remove() pseudo-class in selector',
     NO_STYLE_OR_REMOVE: 'Invalid stylesheet - no style declared or :remove() pseudo-class used'
   };
-  let BrowserName;
+  var BrowserName;
 
   (function (BrowserName) {
     BrowserName["Chrome"] = "Chrome";
@@ -170,8 +255,8 @@ var BrowserstackTest = (function (exports) {
     BrowserName["Safari"] = "Safari";
   })(BrowserName || (BrowserName = {}));
 
-  const CHROMIUM_BRAND_NAME = 'Chromium';
-  const GOOGLE_CHROME_BRAND_NAME = 'Google Chrome';
+  var CHROMIUM_BRAND_NAME = 'Chromium';
+  var GOOGLE_CHROME_BRAND_NAME = 'Google Chrome';
 
   /**
    * Complex replacement function.
@@ -183,29 +268,29 @@ var BrowserstackTest = (function (exports) {
    * @param rawValue  Group 3
    */
 
-  const evaluateMatch = (match, name, quoteChar, rawValue) => {
+  var evaluateMatch = function evaluateMatch(match, name, quoteChar, rawValue) {
     // Unescape quotes
-    const re = new RegExp(`([^\\\\]|^)\\\\${quoteChar}`, 'g');
-    const value = rawValue.replace(re, `$1${quoteChar}`);
-    return `:${name}(${value})`;
+    var re = new RegExp("([^\\\\]|^)\\\\".concat(quoteChar), 'g');
+    var value = rawValue.replace(re, "$1".concat(quoteChar));
+    return ":".concat(name, "(").concat(value, ")");
   }; // ':scope' pseudo may be at start of :has() argument
   // but ExtCssDocument.querySelectorAll() already use it for selecting exact element descendants
 
 
-  const reScope = /\(:scope >/g;
-  const SCOPE_REPLACER = '(>';
+  var reScope = /\(:scope >/g;
+  var SCOPE_REPLACER = '(>';
   /**
    * Handles old syntax and :scope inside :has
    * @param selector trimmed selector to normalize
    * @returns normalized selector
    */
 
-  const normalize = selector => {
-    const normalizedSelector = selector.replace(REGEXP_VALID_OLD_SYNTAX, evaluateMatch).replace(reScope, SCOPE_REPLACER); // validate old syntax after normalizing
+  var normalize = function normalize(selector) {
+    var normalizedSelector = selector.replace(REGEXP_VALID_OLD_SYNTAX, evaluateMatch).replace(reScope, SCOPE_REPLACER); // validate old syntax after normalizing
     // e.g. '[-ext-matches-css-before=\'content:  /^[A-Z][a-z]'
 
     if (normalizedSelector.includes(INVALID_OLD_SYNTAX_MARKER)) {
-      throw new Error(`Invalid extended-css old syntax selector: '${selector}'`);
+      throw new Error("Invalid extended-css old syntax selector: '".concat(selector, "'"));
     }
 
     return normalizedSelector;
@@ -220,12 +305,12 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const convert = rawSelector => {
-    const trimmedSelector = rawSelector.trim();
+  var convert = function convert(rawSelector) {
+    var trimmedSelector = rawSelector.trim();
     return normalize(trimmedSelector);
   };
 
-  let TokenType;
+  var TokenType;
 
   (function (TokenType) {
     TokenType["Mark"] = "mark";
@@ -236,16 +321,16 @@ var BrowserstackTest = (function (exports) {
    * Splits selector string into tokens
    * @param rawSelector raw css selector
    */
-  const tokenize = rawSelector => {
-    const selector = convert(rawSelector); // currently processed
+  var tokenize = function tokenize(rawSelector) {
+    var selector = convert(rawSelector); // currently processed
 
-    let symbol; // for words collecting while iterating
+    var symbol; // for words collecting while iterating
 
-    let buffer = ''; // result collection
+    var buffer = ''; // result collection
 
-    const tokens = []; // iterate selector chars and collect tokens
+    var tokens = []; // iterate selector chars and collect tokens
 
-    for (let i = 0; i < selector.length; i += 1) {
+    for (var i = 0; i < selector.length; i += 1) {
       symbol = selector[i];
 
       if (SUPPORTED_SELECTOR_MARKS.includes(symbol)) {
@@ -257,7 +342,7 @@ var BrowserstackTest = (function (exports) {
       }
 
       buffer += symbol;
-      const nextSymbol = selector[i + 1]; // string end has been reached if nextSymbol is undefined
+      var nextSymbol = selector[i + 1]; // string end has been reached if nextSymbol is undefined
 
       if (!nextSymbol || SUPPORTED_SELECTOR_MARKS.includes(nextSymbol)) {
         tokens.push({
@@ -271,22 +356,62 @@ var BrowserstackTest = (function (exports) {
     return tokens;
   };
 
-  function _defineProperty(obj, key, value) {
-    if (key in obj) {
-      Object.defineProperty(obj, key, {
-        value: value,
-        enumerable: true,
-        configurable: true,
-        writable: true
-      });
-    } else {
-      obj[key] = value;
+  function _assertThisInitialized(self) {
+    if (self === void 0) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
     }
 
-    return obj;
+    return self;
   }
 
-  let NodeType;
+  function _setPrototypeOf(o, p) {
+    _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) {
+      o.__proto__ = p;
+      return o;
+    };
+    return _setPrototypeOf(o, p);
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function");
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        writable: true,
+        configurable: true
+      }
+    });
+    Object.defineProperty(subClass, "prototype", {
+      writable: false
+    });
+    if (superClass) _setPrototypeOf(subClass, superClass);
+  }
+
+  function _possibleConstructorReturn(self, call) {
+    if (call && (_typeof(call) === "object" || typeof call === "function")) {
+      return call;
+    } else if (call !== void 0) {
+      throw new TypeError("Derived constructors may only return object or undefined");
+    }
+
+    return _assertThisInitialized(self);
+  }
+
+  function _getPrototypeOf(o) {
+    _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) {
+      return o.__proto__ || Object.getPrototypeOf(o);
+    };
+    return _getPrototypeOf(o);
+  }
+
+  function _createSuper$1(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$2(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+  function _isNativeReflectConstruct$2() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+  var NodeType;
   /**
    * Universal interface for all node types
    */
@@ -304,8 +429,10 @@ var BrowserstackTest = (function (exports) {
    * Class needed for creating ast nodes while selector parsing.
    * Used for SelectorList, Selector, ExtendedSelector
    */
-  class AnySelectorNode {
-    constructor(type) {
+  var AnySelectorNode = /*#__PURE__*/function () {
+    function AnySelectorNode(type) {
+      _classCallCheck(this, AnySelectorNode);
+
       _defineProperty(this, "children", []);
 
       this.type = type;
@@ -315,47 +442,81 @@ var BrowserstackTest = (function (exports) {
      */
 
 
-    addChild(child) {
-      this.children.push(child);
-    }
+    _createClass(AnySelectorNode, [{
+      key: "addChild",
+      value: function addChild(child) {
+        this.children.push(child);
+      }
+    }]);
 
-  }
+    return AnySelectorNode;
+  }();
   /**
    * Class needed for creating ast RegularSelector node while selector parsing
    */
 
-  class RegularSelectorNode extends AnySelectorNode {
-    constructor(value) {
-      super(NodeType.RegularSelector);
-      this.value = value;
+  var RegularSelectorNode = /*#__PURE__*/function (_AnySelectorNode) {
+    _inherits(RegularSelectorNode, _AnySelectorNode);
+
+    var _super = _createSuper$1(RegularSelectorNode);
+
+    function RegularSelectorNode(value) {
+      var _this;
+
+      _classCallCheck(this, RegularSelectorNode);
+
+      _this = _super.call(this, NodeType.RegularSelector);
+      _this.value = value;
+      return _this;
     }
 
-  }
+    return _createClass(RegularSelectorNode);
+  }(AnySelectorNode);
   /**
    * Class needed for creating ast RelativePseudoClass node while selector parsing
    */
 
-  class RelativePseudoClassNode extends AnySelectorNode {
-    constructor(name) {
-      super(NodeType.RelativePseudoClass);
-      this.name = name;
+  var RelativePseudoClassNode = /*#__PURE__*/function (_AnySelectorNode2) {
+    _inherits(RelativePseudoClassNode, _AnySelectorNode2);
+
+    var _super2 = _createSuper$1(RelativePseudoClassNode);
+
+    function RelativePseudoClassNode(name) {
+      var _this2;
+
+      _classCallCheck(this, RelativePseudoClassNode);
+
+      _this2 = _super2.call(this, NodeType.RelativePseudoClass);
+      _this2.name = name;
+      return _this2;
     }
 
-  }
+    return _createClass(RelativePseudoClassNode);
+  }(AnySelectorNode);
   /**
    * Class needed for creating ast AbsolutePseudoClass node while selector parsing
    */
 
-  class AbsolutePseudoClassNode extends AnySelectorNode {
-    constructor(name) {
-      super(NodeType.AbsolutePseudoClass);
+  var AbsolutePseudoClassNode = /*#__PURE__*/function (_AnySelectorNode3) {
+    _inherits(AbsolutePseudoClassNode, _AnySelectorNode3);
 
-      _defineProperty(this, "value", '');
+    var _super3 = _createSuper$1(AbsolutePseudoClassNode);
 
-      this.name = name;
+    function AbsolutePseudoClassNode(name) {
+      var _this3;
+
+      _classCallCheck(this, AbsolutePseudoClassNode);
+
+      _this3 = _super3.call(this, NodeType.AbsolutePseudoClass);
+
+      _defineProperty(_assertThisInitialized(_this3), "value", '');
+
+      _this3.name = name;
+      return _this3;
     }
 
-  }
+    return _createClass(AbsolutePseudoClassNode);
+  }(AnySelectorNode);
   /**
    * Root node
    *
@@ -440,14 +601,16 @@ var BrowserstackTest = (function (exports) {
    * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat
    * @param input
    */
-  const flatten = input => {
-    const stack = [];
-    input.forEach(el => stack.push(el));
-    const res = [];
+  var flatten = function flatten(input) {
+    var stack = [];
+    input.forEach(function (el) {
+      return stack.push(el);
+    });
+    var res = [];
 
     while (stack.length) {
       // pop value from stack
-      const next = stack.pop();
+      var next = stack.pop();
 
       if (!next) {
         throw new Error('Unable to make array flat');
@@ -455,7 +618,9 @@ var BrowserstackTest = (function (exports) {
 
       if (Array.isArray(next)) {
         // push back array items, won't modify the original input
-        next.forEach(el => stack.push(el));
+        next.forEach(function (el) {
+          return stack.push(el);
+        });
       } else {
         res.push(next);
       }
@@ -469,7 +634,7 @@ var BrowserstackTest = (function (exports) {
    * @param array
    */
 
-  const getLast = array => {
+  var getLast = function getLast(array) {
     return array[array.length - 1];
   };
 
@@ -478,7 +643,9 @@ var BrowserstackTest = (function (exports) {
    * @param token
    */
 
-  const isSupportedExtendedPseudo = token => SUPPORTED_PSEUDO_CLASSES.includes(token);
+  var isSupportedExtendedPseudo = function isSupportedExtendedPseudo(token) {
+    return SUPPORTED_PSEUDO_CLASSES.includes(token);
+  };
   /**
    * Checks whether next token is a continuation of regular selector being processed
    * @param nextTokenType
@@ -486,7 +653,7 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const doesRegularContinueAfterSpace = (nextTokenType, nextTokenValue) => {
+  var doesRegularContinueAfterSpace = function doesRegularContinueAfterSpace(nextTokenType, nextTokenValue) {
     return COMBINATORS.includes(nextTokenValue) || nextTokenType === TokenType.Word // e.g. '#main *:has(> .ad)'
     || nextTokenValue === ASTERISK || nextTokenValue === ID_MARKER || nextTokenValue === CLASS_MARKER // e.g. 'div :where(.content)'
     || nextTokenValue === COLON // e.g. "div[class*=' ']"
@@ -499,7 +666,7 @@ var BrowserstackTest = (function (exports) {
    * or null if there is no such one
    * @param context parser context
    */
-  const getBufferNode = context => {
+  var getBufferNode = function getBufferNode(context) {
     if (context.pathToBufferNode.length === 0) {
       return null;
     } // buffer node is always the last in the pathToBufferNode stack
@@ -514,21 +681,19 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const updateBufferNode = (context, tokenValue) => {
-    const bufferNode = getBufferNode(context);
+  var updateBufferNode = function updateBufferNode(context, tokenValue) {
+    var bufferNode = getBufferNode(context);
 
     if (bufferNode === null) {
       throw new Error('No bufferNode to update');
     }
 
-    const {
-      type
-    } = bufferNode;
+    var type = bufferNode.type;
 
     if (type === NodeType.RegularSelector || type === NodeType.AbsolutePseudoClass) {
       bufferNode.value += tokenValue;
     } else {
-      throw new Error(`${bufferNode.type} node can not be updated. Only RegularSelector and AbsolutePseudoClass are supported.`); // eslint-disable-line max-len
+      throw new Error("".concat(bufferNode.type, " node can not be updated. Only RegularSelector and AbsolutePseudoClass are supported.")); // eslint-disable-line max-len
     }
   };
   /**
@@ -537,8 +702,8 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const addSelectorListNode = context => {
-    const selectorListNode = new AnySelectorNode(NodeType.SelectorList);
+  var addSelectorListNode = function addSelectorListNode(context) {
+    var selectorListNode = new AnySelectorNode(NodeType.SelectorList);
     context.ast = selectorListNode;
     context.pathToBufferNode.push(selectorListNode);
   };
@@ -551,15 +716,15 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const addAstNodeByType = function (context, type) {
-    let tokenValue = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
-    const bufferNode = getBufferNode(context);
+  var addAstNodeByType = function addAstNodeByType(context, type) {
+    var tokenValue = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
+    var bufferNode = getBufferNode(context);
 
     if (bufferNode === null) {
       throw new Error('No buffer node');
     }
 
-    let node;
+    var node;
 
     if (type === NodeType.RegularSelector) {
       node = new RegularSelectorNode(tokenValue);
@@ -582,7 +747,7 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const initAst = (context, tokenValue) => {
+  var initAst = function initAst(context, tokenValue) {
     addSelectorListNode(context);
     addAstNodeByType(context, NodeType.Selector); // RegularSelector node is always the first child of Selector node
 
@@ -595,8 +760,8 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const initRelativeSubtree = function (context) {
-    let tokenValue = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+  var initRelativeSubtree = function initRelativeSubtree(context) {
+    var tokenValue = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
     addAstNodeByType(context, NodeType.SelectorList);
     addAstNodeByType(context, NodeType.Selector);
     addAstNodeByType(context, NodeType.RegularSelector, tokenValue);
@@ -609,8 +774,8 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const upToClosest = (context, parentType) => {
-    for (let i = context.pathToBufferNode.length - 1; i >= 0; i -= 1) {
+  var upToClosest = function upToClosest(context, parentType) {
+    for (var i = context.pathToBufferNode.length - 1; i >= 0; i -= 1) {
       if (context.pathToBufferNode[i].type === parentType) {
         context.pathToBufferNode = context.pathToBufferNode.slice(0, i + 1);
         break;
@@ -623,11 +788,11 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const parse$1 = selector => {
+  var parse$1 = function parse(selector) {
     var _bufferNode, _bufferNode2, _bufferNode3, _bufferNode4, _bufferNode5, _bufferNode6, _bufferNode7, _bufferNode8, _bufferNode9, _bufferNode10, _bufferNode11, _bufferNode12, _bufferNode13, _bufferNode14, _bufferNode15, _bufferNode16, _bufferNode17, _bufferNode18;
 
-    const tokens = tokenize(selector);
-    const context = {
+    var tokens = tokenize(selector);
+    var context = {
       ast: null,
       pathToBufferNode: [],
       extendedPseudoNamesStack: [],
@@ -637,38 +802,30 @@ var BrowserstackTest = (function (exports) {
       isAttributeBracketsOpen: false,
       isRegexpOpen: false
     };
-    let i = 0;
+    var i = 0;
 
     while (i < tokens.length) {
-      const token = tokens[i]; // Token to process
+      var token = tokens[i]; // Token to process
 
-      const {
-        type: tokenType,
-        value: tokenValue
-      } = token; // needed for SPACE and COLON tokens checking
+      var tokenType = token.type,
+          tokenValue = token.value; // needed for SPACE and COLON tokens checking
 
-      const nextToken = tokens[i + 1] || [];
-      const {
-        type: nextTokenType,
-        value: nextTokenValue
-      } = nextToken; // needed for limitations
+      var nextToken = tokens[i + 1] || [];
+      var nextTokenType = nextToken.type,
+          nextTokenValue = nextToken.value; // needed for limitations
       // - :not() and :is() root element
       // - :has() usage
       // - white space before and after pseudo-class name
 
-      const nextToNextToken = tokens[i + 2] || [];
-      const {
-        value: nextToNextTokenValue
-      } = nextToNextToken; // needed for COLON token checking for none-specified regular selector before extended one
+      var nextToNextToken = tokens[i + 2] || [];
+      var nextToNextTokenValue = nextToNextToken.value; // needed for COLON token checking for none-specified regular selector before extended one
       // e.g. 'p, :hover'
       // or   '.banner, :contains(ads)'
 
-      const previousToken = tokens[i - 1] || [];
-      const {
-        type: prevTokenType,
-        value: prevTokenValue
-      } = previousToken;
-      let bufferNode = getBufferNode(context);
+      var previousToken = tokens[i - 1] || [];
+      var prevTokenType = previousToken.type,
+          prevTokenValue = previousToken.value;
+      var bufferNode = getBufferNode(context);
 
       switch (tokenType) {
         case TokenType.Word:
@@ -687,7 +844,7 @@ var BrowserstackTest = (function (exports) {
             // https://www.w3.org/TR/selectors-4/#pseudo-classes
             // e.g. 'span:contains (text)'
             if (WHITE_SPACE_CHARACTERS.includes(nextTokenValue) && nextToNextTokenValue === BRACKETS.PARENTHESES.LEFT) {
-              throw new Error(`No white space is allowed before or after extended pseudo-class name in selector: '${selector}'`); // eslint-disable-line max-len
+              throw new Error("No white space is allowed before or after extended pseudo-class name in selector: '".concat(selector, "'")); // eslint-disable-line max-len
             } // save pseudo-class name for brackets balance checking
 
 
@@ -717,7 +874,7 @@ var BrowserstackTest = (function (exports) {
               if (!bufferNode || typeof bufferNode !== 'undefined' && !nextTokenValue) {
                 // consider the selector is invalid if there is no bufferNode yet (e.g. ', a')
                 // or there is nothing after the comma while bufferNode is defined (e.g. 'div, ')
-                throw new Error(`'${selector}' is not a valid selector`);
+                throw new Error("'".concat(selector, "' is not a valid selector"));
               } else if (bufferNode.type === NodeType.RegularSelector) {
                 if (context.isAttributeBracketsOpen) {
                   // the comma might be inside element attribute value
@@ -752,7 +909,7 @@ var BrowserstackTest = (function (exports) {
                 && (prevTokenValue === COLON && nextTokenType === TokenType.Word // or after the pseudo and before the opening parenthesis
                 // e.g. '.block:nth-child (2)
                 || prevTokenType === TokenType.Word && nextTokenValue === BRACKETS.PARENTHESES.LEFT)) {
-                  throw new Error(`'${selector}' is not a valid selector.`);
+                  throw new Error("'".concat(selector, "' is not a valid selector."));
                 } // collect current tokenValue to value of RegularSelector
                 // if it is the last token or standard selector continues after the space.
                 // otherwise it will be skipped
@@ -888,7 +1045,7 @@ var BrowserstackTest = (function (exports) {
               // https://www.w3.org/TR/selectors-4/#pseudo-classes
               // e.g. 'span: contains(text)'
               if (WHITE_SPACE_CHARACTERS.includes(nextTokenValue) && SUPPORTED_PSEUDO_CLASSES.includes(nextToNextTokenValue)) {
-                throw new Error(`No white space is allowed before or after extended pseudo-class name in selector: '${selector}'`); // eslint-disable-line max-len
+                throw new Error("No white space is allowed before or after extended pseudo-class name in selector: '".concat(selector, "'")); // eslint-disable-line max-len
               }
 
               if (bufferNode === null) {
@@ -950,7 +1107,7 @@ var BrowserstackTest = (function (exports) {
                 if (context.extendedPseudoNamesStack.length > 0 // check the last extended pseudo-class name from context
                 && HAS_PSEUDO_CLASS_MARKERS.includes(getLast(context.extendedPseudoNamesStack)) // and check the processing pseudo-class
                 && (HAS_PSEUDO_CLASS_MARKERS.includes(nextTokenValue) || nextTokenValue === IS_PSEUDO_CLASS_MARKER || nextTokenValue === REGULAR_PSEUDO_CLASSES.WHERE)) {
-                  throw new Error(`Usage of :${nextTokenValue} pseudo-class is not allowed inside upper :has`); // eslint-disable-line max-len
+                  throw new Error("Usage of :".concat(nextTokenValue, " pseudo-class is not allowed inside upper :has")); // eslint-disable-line max-len
                 }
 
                 if (!isSupportedExtendedPseudo(nextTokenValue.toLowerCase())) {
@@ -958,7 +1115,7 @@ var BrowserstackTest = (function (exports) {
                     // :remove() pseudo-class should be handled before
                     // as it is not about element selecting but actions with elements
                     // e.g. 'body > div:empty:remove()'
-                    throw new Error(`Selector parser error: invalid :remove() pseudo-class in selector: '${selector}'`); // eslint-disable-line max-len
+                    throw new Error("Selector parser error: invalid :remove() pseudo-class in selector: '".concat(selector, "'")); // eslint-disable-line max-len
                   } // if following token is not an extended pseudo
                   // the colon should be collected to value of RegularSelector
                   // e.g. '.entry_text:nth-child(2)'
@@ -979,7 +1136,7 @@ var BrowserstackTest = (function (exports) {
                   // https://bugs.chromium.org/p/chromium/issues/detail?id=669058#c54 [2]
                   if (HAS_PSEUDO_CLASS_MARKERS.includes(nextTokenValue) && context.standardPseudoNamesStack.length > 0) {
                     // eslint-disable-next-line max-len
-                    throw new Error(`Usage of :${nextTokenValue} pseudo-class is not allowed inside regular pseudo: '${getLast(context.standardPseudoNamesStack)}'`);
+                    throw new Error("Usage of :".concat(nextTokenValue, " pseudo-class is not allowed inside regular pseudo: '").concat(getLast(context.standardPseudoNamesStack), "'"));
                   } else {
                     // stop RegularSelector value collecting
                     upToClosest(context, NodeType.Selector); // add ExtendedSelector to Selector children
@@ -1003,7 +1160,7 @@ var BrowserstackTest = (function (exports) {
                   // :remove() pseudo-class should be handled before
                   // as it is not about element selecting but actions with elements
                   // e.g. '#banner:upward(2):remove()'
-                  throw new Error(`Selector parser error: invalid :remove() pseudo-class in selector: '${selector}'`); // eslint-disable-line max-len
+                  throw new Error("Selector parser error: invalid :remove() pseudo-class in selector: '".concat(selector, "'")); // eslint-disable-line max-len
                 } else {
                   // otherwise it is standard pseudo after extended pseudo-class
                   // and colon should be collected to value of RegularSelector
@@ -1124,12 +1281,12 @@ var BrowserstackTest = (function (exports) {
                   updateBufferNode(context, tokenValue); // remove bracket and pseudo name from stacks
 
                   context.standardPseudoBracketsStack.pop();
-                  const lastStandardPseudo = context.standardPseudoNamesStack.pop();
+                  var lastStandardPseudo = context.standardPseudoNamesStack.pop();
 
                   if (!lastStandardPseudo) {
                     // standard pseudo should be in standardPseudoNamesStack
                     // as related to standardPseudoBracketsStack
-                    throw new Error(`Parsing error. Invalid selector: ${selector}`);
+                    throw new Error("Parsing error. Invalid selector: ".concat(selector));
                   } // Disallow :has() after regular pseudo-elements
                   // https://bugs.chromium.org/p/chromium/issues/detail?id=669058#c54 [3]
 
@@ -1139,7 +1296,7 @@ var BrowserstackTest = (function (exports) {
                   // e.g. '::part(foo):has(.a)'
                   && nextTokenValue === COLON && nextToNextTokenValue && HAS_PSEUDO_CLASS_MARKERS.includes(nextToNextTokenValue)) {
                     // eslint-disable-next-line max-len
-                    throw new Error(`Usage of :${nextToNextTokenValue} pseudo-class is not allowed after any regular pseudo-element: '${lastStandardPseudo}'`);
+                    throw new Error("Usage of :".concat(nextToNextTokenValue, " pseudo-class is not allowed after any regular pseudo-element: '").concat(lastStandardPseudo, "'"));
                   }
                 } else {
                   // extended pseudo-class was processing.
@@ -1182,7 +1339,7 @@ var BrowserstackTest = (function (exports) {
             case CARRIAGE_RETURN:
               // such characters at start and end of selector should be trimmed
               // so is there is one them among tokens, it is not valid selector
-              throw new Error(`'${selector}' is not a valid selector.`);
+              throw new Error("'".concat(selector, "' is not a valid selector."));
           }
 
           break;
@@ -1191,29 +1348,29 @@ var BrowserstackTest = (function (exports) {
         // so error for invalid Word will be thrown later while element selecting by parsed ast
 
         default:
-          throw new Error(`Unknown type of token: '${tokenValue}'.`);
+          throw new Error("Unknown type of token: '".concat(tokenValue, "'."));
       }
 
       i += 1;
     }
 
     if (context.ast === null) {
-      throw new Error(`'${selector}' is not a valid selector`);
+      throw new Error("'".concat(selector, "' is not a valid selector"));
     }
 
     if (context.extendedPseudoNamesStack.length > 0 || context.extendedPseudoBracketsStack.length > 0) {
       // eslint-disable-next-line max-len
-      throw new Error(`Unbalanced brackets for extended pseudo-class: '${getLast(context.extendedPseudoNamesStack)}'`);
+      throw new Error("Unbalanced brackets for extended pseudo-class: '".concat(getLast(context.extendedPseudoNamesStack), "'"));
     }
 
     if (context.isAttributeBracketsOpen) {
-      throw new Error(`Unbalanced brackets for attributes is selector: '${selector}'`);
+      throw new Error("Unbalanced brackets for attributes is selector: '".concat(selector, "'"));
     }
 
     return context.ast;
   };
 
-  const logger = {
+  var logger = {
     /**
      * Safe console.error version
      */
@@ -1231,11 +1388,11 @@ var BrowserstackTest = (function (exports) {
    * https://caniuse.com/?search=Object.fromEntries
    * @param entries - array of pairs
    */
-  const getObjectFromEntries = entries => {
-    const initAcc = {};
-    const object = entries.reduce((acc, el) => {
-      const key = el[0];
-      const value = el[1];
+  var getObjectFromEntries = function getObjectFromEntries(entries) {
+    var initAcc = {};
+    var object = entries.reduce(function (acc, el) {
+      var key = el[0];
+      var value = el[1];
       acc[key] = value;
       return acc;
     }, initAcc);
@@ -1245,7 +1402,7 @@ var BrowserstackTest = (function (exports) {
   /**
    * Init value for rawRuleData
    */
-  const initRawRuleData = {
+  var initRawRuleData = {
     selector: ''
   };
   /**
@@ -1253,7 +1410,7 @@ var BrowserstackTest = (function (exports) {
    * @param context
    */
 
-  const restoreRuleAcc = context => {
+  var restoreRuleAcc = function restoreRuleAcc(context) {
     context.rawRuleData = initRawRuleData;
   };
 
@@ -1261,33 +1418,33 @@ var BrowserstackTest = (function (exports) {
    * Checks the presence of :remove() pseudo-class and validates it while parsing the selector part of css rule
    * @param rawSelector
    */
-  const parseRemoveSelector = rawSelector => {
+  var parseRemoveSelector = function parseRemoveSelector(rawSelector) {
     /**
      * no error will be thrown on invalid selector as it will be validated later
      * so it's better to explicitly specify 'any' selector for :remove() pseudo-class by '*'
      * e.g. '.banner > *:remove()' instead of '.banner > :remove()'
      */
     // ':remove()'
-    const VALID_REMOVE_MARKER = `${COLON}${REMOVE_PSEUDO_CLASS_MARKER}${BRACKETS.PARENTHESES.LEFT}${BRACKETS.PARENTHESES.RIGHT}`; // eslint-disable-line max-len
+    var VALID_REMOVE_MARKER = "".concat(COLON).concat(REMOVE_PSEUDO_CLASS_MARKER).concat(BRACKETS.PARENTHESES.LEFT).concat(BRACKETS.PARENTHESES.RIGHT); // eslint-disable-line max-len
     // ':remove(' - needed for validation rules like 'div:remove(2)'
 
-    const INVALID_REMOVE_MARKER = `${COLON}${REMOVE_PSEUDO_CLASS_MARKER}${BRACKETS.PARENTHESES.LEFT}`;
-    let selector;
-    let shouldRemove = false;
-    const firstIndex = rawSelector.indexOf(VALID_REMOVE_MARKER);
+    var INVALID_REMOVE_MARKER = "".concat(COLON).concat(REMOVE_PSEUDO_CLASS_MARKER).concat(BRACKETS.PARENTHESES.LEFT);
+    var selector;
+    var shouldRemove = false;
+    var firstIndex = rawSelector.indexOf(VALID_REMOVE_MARKER);
 
     if (firstIndex === 0) {
       // e.g. ':remove()'
-      throw new Error(`Selector should be specified before :remove() pseudo-class: '${rawSelector}'`);
+      throw new Error("Selector should be specified before :remove() pseudo-class: '".concat(rawSelector, "'"));
     } else if (firstIndex > 0) {
       if (firstIndex !== rawSelector.lastIndexOf(VALID_REMOVE_MARKER)) {
         // rule with more than one :remove() pseudo-class is invalid
         // e.g. '.block:remove() > .banner:remove()'
-        throw new Error(`Pseudo-class :remove() appears more than once in selector: '${rawSelector}'`);
+        throw new Error("Pseudo-class :remove() appears more than once in selector: '".concat(rawSelector, "'"));
       } else if (firstIndex + VALID_REMOVE_MARKER.length < rawSelector.length) {
         // remove pseudo-class should be last in the rule
         // e.g. '.block:remove():upward(2)'
-        throw new Error(`Pseudo-class :remove() should be at the end of selector: '${rawSelector}'`);
+        throw new Error("Pseudo-class :remove() should be at the end of selector: '".concat(rawSelector, "'"));
       } else {
         // valid :remove() pseudo-class position
         selector = rawSelector.substring(0, firstIndex);
@@ -1296,19 +1453,19 @@ var BrowserstackTest = (function (exports) {
     } else if (rawSelector.includes(INVALID_REMOVE_MARKER)) {
       // it is not valid if ':remove()' is absent in rule but just ':remove(' is present
       // e.g. 'div:remove(0)'
-      throw new Error(`${STYLESHEET_ERROR_PREFIX.INVALID_REMOVE}: '${rawSelector}'`);
+      throw new Error("".concat(STYLESHEET_ERROR_PREFIX.INVALID_REMOVE, ": '").concat(rawSelector, "'"));
     } else {
       // there is no :remove() pseudo-class is rule
       selector = rawSelector;
     }
 
-    const stylesOfSelector = shouldRemove ? [{
+    var stylesOfSelector = shouldRemove ? [{
       property: REMOVE_PSEUDO_PROPERTY_KEY,
       value: String(shouldRemove)
     }] : [];
     return {
-      selector,
-      stylesOfSelector
+      selector: selector,
+      stylesOfSelector: stylesOfSelector
     };
   };
   /**
@@ -1317,31 +1474,31 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const parseSelectorPart = context => {
-    let selector = context.selectorBuffer.trim();
-    let removeSelectorData;
+  var parseSelectorPart = function parseSelectorPart(context) {
+    var selector = context.selectorBuffer.trim();
+    var removeSelectorData;
 
     try {
       removeSelectorData = parseRemoveSelector(selector);
     } catch (e) {
       // eslint-disable-line @typescript-eslint/no-explicit-any
       logger.error(e.message);
-      throw new Error(`${STYLESHEET_ERROR_PREFIX.INVALID_REMOVE}: '${selector}'`);
+      throw new Error("".concat(STYLESHEET_ERROR_PREFIX.INVALID_REMOVE, ": '").concat(selector, "'"));
     }
 
     if (context.nextIndex === -1) {
       if (selector === removeSelectorData.selector) {
         // rule should have style or pseudo-class :remove()
-        throw new Error(`${STYLESHEET_ERROR_PREFIX.NO_STYLE_OR_REMOVE}: '${context.cssToParse}'`); // eslint-disable-line max-len
+        throw new Error("".concat(STYLESHEET_ERROR_PREFIX.NO_STYLE_OR_REMOVE, ": '").concat(context.cssToParse, "'")); // eslint-disable-line max-len
       } // stop parsing as there is no style declaration and selector parsed fine
 
 
       context.cssToParse = '';
     }
 
-    let stylesOfSelector = [];
-    let success = false;
-    let ast;
+    var stylesOfSelector = [];
+    var success = false;
+    var ast;
 
     try {
       selector = removeSelectorData.selector;
@@ -1362,10 +1519,10 @@ var BrowserstackTest = (function (exports) {
     }
 
     return {
-      success,
-      selector,
-      ast,
-      stylesOfSelector
+      success: success,
+      selector: selector,
+      ast: ast,
+      stylesOfSelector: stylesOfSelector
     };
   };
   /**
@@ -1374,26 +1531,26 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const parseUntilClosingBracket = (context, styles) => {
+  var parseUntilClosingBracket = function parseUntilClosingBracket(context, styles) {
     // Expects ":", ";", and "}".
     REGEXP_DECLARATION_DIVIDER.lastIndex = context.nextIndex;
-    let match = REGEXP_DECLARATION_DIVIDER.exec(context.cssToParse);
+    var match = REGEXP_DECLARATION_DIVIDER.exec(context.cssToParse);
 
     if (match === null) {
-      throw new Error(`${STYLESHEET_ERROR_PREFIX.INVALID_STYLE}: '${context.cssToParse}'`);
+      throw new Error("".concat(STYLESHEET_ERROR_PREFIX.INVALID_STYLE, ": '").concat(context.cssToParse, "'"));
     }
 
-    let matchPos = match.index;
-    let matched = match[0];
+    var matchPos = match.index;
+    var matched = match[0];
 
     if (matched === BRACKETS.CURLY.RIGHT) {
-      const declarationChunk = context.cssToParse.slice(context.nextIndex, matchPos);
+      var declarationChunk = context.cssToParse.slice(context.nextIndex, matchPos);
 
       if (declarationChunk.trim().length === 0) {
         // empty style declaration
         // e.g. 'div { }'
         if (styles.length === 0) {
-          throw new Error(`${STYLESHEET_ERROR_PREFIX.NO_STYLE}: '${context.cssToParse}'`);
+          throw new Error("".concat(STYLESHEET_ERROR_PREFIX.NO_STYLE, ": '").concat(context.cssToParse, "'"));
         } // else valid style parsed before it
         // e.g. '{ display: none; }' -- position is after ';'
 
@@ -1401,40 +1558,40 @@ var BrowserstackTest = (function (exports) {
         // closing curly bracket '}' is matched before colon ':'
         // trimmed declarationChunk is not a space, between ';' and '}',
         // e.g. 'visible }' in style '{ display: none; visible }' after part before ';' is parsed
-        throw new Error(`${STYLESHEET_ERROR_PREFIX.INVALID_STYLE}: '${context.cssToParse}'`);
+        throw new Error("".concat(STYLESHEET_ERROR_PREFIX.INVALID_STYLE, ": '").concat(context.cssToParse, "'"));
       }
 
       return matchPos;
     }
 
     if (matched === COLON) {
-      const colonIndex = matchPos; // Expects ";" and "}".
+      var colonIndex = matchPos; // Expects ";" and "}".
 
       REGEXP_DECLARATION_END.lastIndex = colonIndex;
       match = REGEXP_DECLARATION_END.exec(context.cssToParse);
 
       if (match === null) {
-        throw new Error(`${STYLESHEET_ERROR_PREFIX.UNCLOSED_STYLE}: '${context.cssToParse}'`);
+        throw new Error("".concat(STYLESHEET_ERROR_PREFIX.UNCLOSED_STYLE, ": '").concat(context.cssToParse, "'"));
       }
 
       matchPos = match.index;
       matched = match[0]; // Populates the `styleMap` key-value map.
 
-      const property = context.cssToParse.slice(context.nextIndex, colonIndex).trim();
+      var property = context.cssToParse.slice(context.nextIndex, colonIndex).trim();
 
       if (property.length === 0) {
-        throw new Error(`${STYLESHEET_ERROR_PREFIX.NO_PROPERTY}: '${context.cssToParse}'`);
+        throw new Error("".concat(STYLESHEET_ERROR_PREFIX.NO_PROPERTY, ": '").concat(context.cssToParse, "'"));
       }
 
-      const value = context.cssToParse.slice(colonIndex + 1, matchPos).trim();
+      var value = context.cssToParse.slice(colonIndex + 1, matchPos).trim();
 
       if (value.length === 0) {
-        throw new Error(`${STYLESHEET_ERROR_PREFIX.NO_VALUE}: '${context.cssToParse}'`);
+        throw new Error("".concat(STYLESHEET_ERROR_PREFIX.NO_VALUE, ": '").concat(context.cssToParse, "'"));
       }
 
       styles.push({
-        property,
-        value
+        property: property,
+        value: value
       }); // finish style parsing if '}' is found
       // e.g. '{ display: none }' -- no ';' at the end of declaration
 
@@ -1455,19 +1612,19 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const parseNextStyle = context => {
-    const styles = [];
-    const styleEndPos = parseUntilClosingBracket(context, styles); // find next rule after the style declaration
+  var parseNextStyle = function parseNextStyle(context) {
+    var styles = [];
+    var styleEndPos = parseUntilClosingBracket(context, styles); // find next rule after the style declaration
 
     REGEXP_NON_WHITESPACE.lastIndex = styleEndPos + 1;
-    const match = REGEXP_NON_WHITESPACE.exec(context.cssToParse);
+    var match = REGEXP_NON_WHITESPACE.exec(context.cssToParse);
 
     if (match === null) {
       context.cssToParse = '';
       return styles;
     }
 
-    const matchPos = match.index; // cut out matched style declaration for previous selector
+    var matchPos = match.index; // cut out matched style declaration for previous selector
 
     context.cssToParse = context.cssToParse.slice(matchPos);
     return styles;
@@ -1479,8 +1636,8 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const isRemoveSetInStyles = styles => {
-    return styles.some(s => {
+  var isRemoveSetInStyles = function isRemoveSetInStyles(styles) {
+    return styles.some(function (s) {
       return s.property === REMOVE_PSEUDO_PROPERTY_KEY && s.value === PSEUDO_PROPERTY_POSITIVE_VALUE;
     });
   };
@@ -1491,8 +1648,8 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const getDebugStyleValue = styles => {
-    const debugStyle = styles.find(s => {
+  var getDebugStyleValue = function getDebugStyleValue(styles) {
+    var debugStyle = styles.find(function (s) {
       return s.property === DEBUG_PSEUDO_PROPERTY_KEY;
     });
     return debugStyle === null || debugStyle === void 0 ? void 0 : debugStyle.value;
@@ -1505,18 +1662,20 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const prepareRuleData = (selector, ast, rawStyles) => {
-    const ruleData = {
-      selector,
-      ast
+  var prepareRuleData = function prepareRuleData(selector, ast, rawStyles) {
+    var ruleData = {
+      selector: selector,
+      ast: ast
     };
-    const debugValue = getDebugStyleValue(rawStyles);
-    const shouldRemove = isRemoveSetInStyles(rawStyles);
-    let styles = rawStyles;
+    var debugValue = getDebugStyleValue(rawStyles);
+    var shouldRemove = isRemoveSetInStyles(rawStyles);
+    var styles = rawStyles;
 
     if (debugValue) {
       // get rid of 'debug' from styles
-      styles = rawStyles.filter(s => s.property !== DEBUG_PSEUDO_PROPERTY_KEY); // and set it as separate property only if its value is valid
+      styles = rawStyles.filter(function (s) {
+        return s.property !== DEBUG_PSEUDO_PROPERTY_KEY;
+      }); // and set it as separate property only if its value is valid
       // which is 'true' or 'global'
 
       if (debugValue === PSEUDO_PROPERTY_POSITIVE_VALUE || debugValue === DEBUG_PSEUDO_PROPERTY_GLOBAL_VALUE) {
@@ -1526,21 +1685,17 @@ var BrowserstackTest = (function (exports) {
 
     if (shouldRemove) {
       // no other styles are needed to apply if 'remove' is set
-      ruleData.style = {
-        [REMOVE_PSEUDO_PROPERTY_KEY]: PSEUDO_PROPERTY_POSITIVE_VALUE
-      };
+      ruleData.style = _defineProperty({}, REMOVE_PSEUDO_PROPERTY_KEY, PSEUDO_PROPERTY_POSITIVE_VALUE);
     } else {
       // otherwise all styles should be applied.
       // every style property will be unique because of their converting into object
       if (styles.length > 0) {
-        const stylesAsEntries = styles.map(style => {
-          const {
-            property,
-            value
-          } = style;
+        var stylesAsEntries = styles.map(function (style) {
+          var property = style.property,
+              value = style.value;
           return [property, value];
         });
-        const preparedStyleData = getObjectFromEntries(stylesAsEntries);
+        var preparedStyleData = getObjectFromEntries(stylesAsEntries);
         ruleData.style = preparedStyleData;
       }
     }
@@ -1553,30 +1708,30 @@ var BrowserstackTest = (function (exports) {
    * @param rawRuleData
    */
 
-  const saveToRawResults = (rawResults, rawRuleData) => {
-    const {
-      selector,
-      ast,
-      styles
-    } = rawRuleData;
+  var saveToRawResults = function saveToRawResults(rawResults, rawRuleData) {
+    var selector = rawRuleData.selector,
+        ast = rawRuleData.ast,
+        styles = rawRuleData.styles;
 
     if (!styles) {
-      throw new Error(`No style declaration for selector: '${selector}'`);
+      throw new Error("No style declaration for selector: '".concat(selector, "'"));
     }
 
     if (!ast) {
-      throw new Error(`No ast parsed for selector: '${selector}'`);
+      throw new Error("No ast parsed for selector: '".concat(selector, "'"));
     }
 
-    const storedRuleData = rawResults.get(selector);
+    var storedRuleData = rawResults.get(selector);
 
     if (!storedRuleData) {
       rawResults.set(selector, {
-        ast,
-        styles
+        ast: ast,
+        styles: styles
       });
     } else {
-      storedRuleData.styles.push(...styles);
+      var _storedRuleData$style;
+
+      (_storedRuleData$style = storedRuleData.styles).push.apply(_storedRuleData$style, _toConsumableArray(styles));
     }
   };
   /**
@@ -1585,9 +1740,9 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const parse = rawStylesheet => {
-    const stylesheet = rawStylesheet.trim();
-    const context = {
+  var parse = function parse(rawStylesheet) {
+    var stylesheet = rawStylesheet.trim();
+    var context = {
       // any stylesheet should start with selector
       isSelector: true,
       // init value of parser position
@@ -1599,8 +1754,8 @@ var BrowserstackTest = (function (exports) {
       // accumulator for rules
       rawRuleData: initRawRuleData
     };
-    const rawResults = new Map();
-    let selectorData; // context.cssToParse is going to be cropped while its parsing
+    var rawResults = new Map();
+    var selectorData; // context.cssToParse is going to be cropped while its parsing
 
     while (context.cssToParse) {
       if (context.isSelector) {
@@ -1609,7 +1764,7 @@ var BrowserstackTest = (function (exports) {
         context.nextIndex = context.cssToParse.indexOf(BRACKETS.CURLY.LEFT); // rule should not start with style, selector required
 
         if (context.selectorBuffer.length === 0 && context.nextIndex === 0) {
-          throw new Error(`Selector should be defined before style declaration in stylesheet: '${context.cssToParse}'`); // eslint-disable-line max-len
+          throw new Error("Selector should be defined before style declaration in stylesheet: '".concat(context.cssToParse, "'")); // eslint-disable-line max-len
         }
 
         if (context.nextIndex === -1) {
@@ -1651,10 +1806,10 @@ var BrowserstackTest = (function (exports) {
         var _context$rawRuleData$;
 
         // style declaration should be parsed
-        const parsedStyles = parseNextStyle(context); // styles can be parsed from selector part if it has :remove() pseudo-class
+        var parsedStyles = parseNextStyle(context); // styles can be parsed from selector part if it has :remove() pseudo-class
         // e.g. '.banner:remove() { debug: true; }'
 
-        (_context$rawRuleData$ = context.rawRuleData.styles) === null || _context$rawRuleData$ === void 0 ? void 0 : _context$rawRuleData$.push(...parsedStyles); // save rule data to results
+        (_context$rawRuleData$ = context.rawRuleData.styles) === null || _context$rawRuleData$ === void 0 ? void 0 : _context$rawRuleData$.push.apply(_context$rawRuleData$, _toConsumableArray(parsedStyles)); // save rule data to results
 
         saveToRawResults(rawResults, context.rawRuleData);
         context.nextIndex = 0; // clean up ruleContext
@@ -1665,19 +1820,59 @@ var BrowserstackTest = (function (exports) {
       }
     }
 
-    const results = [];
-    rawResults.forEach((value, key) => {
-      const selector = key;
-      const {
-        ast,
-        styles: rawStyles
-      } = value;
+    var results = [];
+    rawResults.forEach(function (value, key) {
+      var selector = key;
+      var ast = value.ast,
+          rawStyles = value.styles;
       results.push(prepareRuleData(selector, ast, rawStyles));
     });
     return results;
   };
 
-  const natives = {
+  function _arrayWithHoles(arr) {
+    if (Array.isArray(arr)) return arr;
+  }
+
+  function _iterableToArrayLimit(arr, i) {
+    var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
+
+    if (_i == null) return;
+    var _arr = [];
+    var _n = true;
+    var _d = false;
+
+    var _s, _e;
+
+    try {
+      for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
+        _arr.push(_s.value);
+
+        if (i && _arr.length === i) break;
+      }
+    } catch (err) {
+      _d = true;
+      _e = err;
+    } finally {
+      try {
+        if (!_n && _i["return"] != null) _i["return"]();
+      } finally {
+        if (_d) throw _e;
+      }
+    }
+
+    return _arr;
+  }
+
+  function _nonIterableRest() {
+    throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  }
+
+  function _slicedToArray(arr, i) {
+    return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+  }
+
+  var natives = {
     MutationObserver: window.MutationObserver || window.WebKitMutationObserver
   };
   /**
@@ -1686,19 +1881,19 @@ var BrowserstackTest = (function (exports) {
    * https://github.com/AdguardTeam/ExtendedCss/issues/127
    */
 
-  const nodeTextContentGetter = (() => {
+  var nodeTextContentGetter = function () {
     var _Object$getOwnPropert;
 
-    const nativeNode = window.Node || Node;
+    var nativeNode = window.Node || Node;
     return (_Object$getOwnPropert = Object.getOwnPropertyDescriptor(nativeNode.prototype, 'textContent')) === null || _Object$getOwnPropert === void 0 ? void 0 : _Object$getOwnPropert.get;
-  })();
+  }();
 
   /**
    * Returns textContent of passed domElement
    * @param domElement
    */
 
-  const getNodeTextContent = domElement => {
+  var getNodeTextContent = function getNodeTextContent(domElement) {
     return (nodeTextContentGetter === null || nodeTextContentGetter === void 0 ? void 0 : nodeTextContentGetter.apply(domElement)) || '';
   };
   /**
@@ -1706,10 +1901,10 @@ var BrowserstackTest = (function (exports) {
    * @param element
    */
 
-  const getElementSelectorDesc = element => {
-    let selectorText = element.tagName.toLowerCase();
-    selectorText += Array.from(element.attributes).map(attr => {
-      return `[${attr.name}="${element.getAttribute(attr.name)}"]`;
+  var getElementSelectorDesc = function getElementSelectorDesc(element) {
+    var selectorText = element.tagName.toLowerCase();
+    selectorText += Array.from(element.attributes).map(function (attr) {
+      return "[".concat(attr.name, "=\"").concat(element.getAttribute(attr.name), "\"]");
     }).join('');
     return selectorText;
   };
@@ -1718,27 +1913,27 @@ var BrowserstackTest = (function (exports) {
    * @param inputEl input element
    */
 
-  const getElementSelectorPath = inputEl => {
+  var getElementSelectorPath = function getElementSelectorPath(inputEl) {
     if (!(inputEl instanceof Element)) {
       throw new Error('Function received argument with wrong type');
     }
 
-    let el;
+    var el;
     el = inputEl;
-    const path = []; // we need to check '!!el' first because it is possible
+    var path = []; // we need to check '!!el' first because it is possible
     // that some ancestor of the inputEl was removed before it
 
     while (!!el && el.nodeType === Node.ELEMENT_NODE) {
-      let selector = el.nodeName.toLowerCase();
+      var selector = el.nodeName.toLowerCase();
 
       if (el.id && typeof el.id === 'string') {
-        selector += `#${el.id}`;
+        selector += "#".concat(el.id);
         path.unshift(selector);
         break;
       }
 
-      let sibling = el;
-      let nth = 1;
+      var sibling = el;
+      var nth = 1;
 
       while (sibling.previousElementSibling) {
         sibling = sibling.previousElementSibling;
@@ -1749,7 +1944,7 @@ var BrowserstackTest = (function (exports) {
       }
 
       if (nth !== 1) {
-        selector += `:nth-of-type(${nth})`;
+        selector += ":nth-of-type(".concat(nth, ")");
       }
 
       path.unshift(selector);
@@ -1763,7 +1958,7 @@ var BrowserstackTest = (function (exports) {
    * @param element
    */
 
-  const isHtmlElement = element => {
+  var isHtmlElement = function isHtmlElement(element) {
     return element instanceof HTMLElement;
   };
 
@@ -1773,8 +1968,8 @@ var BrowserstackTest = (function (exports) {
    * @param suffix needed to remove
    */
 
-  const removeSuffix = (str, suffix) => {
-    const index = str.indexOf(suffix, str.length - suffix.length);
+  var removeSuffix = function removeSuffix(str, suffix) {
+    var index = str.indexOf(suffix, str.length - suffix.length);
 
     if (index >= 0) {
       return str.substring(0, index);
@@ -1791,7 +1986,7 @@ var BrowserstackTest = (function (exports) {
    * @param replacement
    */
 
-  const replaceAll = (input, pattern, replacement) => {
+  var replaceAll = function replaceAll(input, pattern, replacement) {
     if (!input) {
       return input;
     }
@@ -1803,12 +1998,12 @@ var BrowserstackTest = (function (exports) {
    * @param str
    */
 
-  const toRegExp = str => {
+  var toRegExp = function toRegExp(str) {
     if (str.startsWith(SLASH) && str.endsWith(SLASH)) {
       return new RegExp(str.slice(1, -1));
     }
 
-    const escaped = str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    var escaped = str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     return new RegExp(escaped);
   };
   /**
@@ -1817,8 +2012,8 @@ var BrowserstackTest = (function (exports) {
    * @param value
    */
 
-  const convertTypeIntoString = value => {
-    let output;
+  var convertTypeIntoString = function convertTypeIntoString(value) {
+    var output;
 
     switch (value) {
       case undefined:
@@ -1841,9 +2036,9 @@ var BrowserstackTest = (function (exports) {
    * @param value
    */
 
-  const convertTypeFromString = value => {
-    const numValue = Number(value);
-    let output;
+  var convertTypeFromString = function convertTypeFromString(value) {
+    var numValue = Number(value);
+    var output;
 
     if (!Number.isNaN(numValue)) {
       output = numValue;
@@ -1873,34 +2068,29 @@ var BrowserstackTest = (function (exports) {
     return output;
   };
 
+  var _SUPPORTED_BROWSERS_D;
   /**
    * Simple check for Safari browser
    */
 
-  const isSafariBrowser = navigator.vendor === 'Apple Computer, Inc.';
-  const SUPPORTED_BROWSERS_DATA = {
-    [BrowserName.Chrome]: {
-      // avoid Chromium-based Edge browser
-      MASK: /\s(Chrome)\/(\d+)\..+\s(?!.*Edg\/)/,
-      MIN_VERSION: 55
-    },
-    [BrowserName.Firefox]: {
-      MASK: /\s(Firefox)\/(\d+)\./,
-      MIN_VERSION: 52
-    },
-    [BrowserName.Edge]: {
-      MASK: /\s(Edg)\/(\d+)\./,
-      MIN_VERSION: 80
-    },
-    [BrowserName.Opera]: {
-      MASK: /\s(OPR)\/(\d+)\./,
-      MIN_VERSION: 80
-    },
-    [BrowserName.Safari]: {
-      MASK: /\sVersion\/(\d+)\..+\s(Safari)\//,
-      MIN_VERSION: 10
-    }
-  };
+  var isSafariBrowser = navigator.vendor === 'Apple Computer, Inc.';
+  var SUPPORTED_BROWSERS_DATA = (_SUPPORTED_BROWSERS_D = {}, _defineProperty(_SUPPORTED_BROWSERS_D, BrowserName.Chrome, {
+    // avoid Chromium-based Edge browser
+    MASK: /\s(Chrome)\/(\d+)\..+\s(?!.*Edg\/)/,
+    MIN_VERSION: 55
+  }), _defineProperty(_SUPPORTED_BROWSERS_D, BrowserName.Firefox, {
+    MASK: /\s(Firefox)\/(\d+)\./,
+    MIN_VERSION: 52
+  }), _defineProperty(_SUPPORTED_BROWSERS_D, BrowserName.Edge, {
+    MASK: /\s(Edg)\/(\d+)\./,
+    MIN_VERSION: 80
+  }), _defineProperty(_SUPPORTED_BROWSERS_D, BrowserName.Opera, {
+    MASK: /\s(OPR)\/(\d+)\./,
+    MIN_VERSION: 80
+  }), _defineProperty(_SUPPORTED_BROWSERS_D, BrowserName.Safari, {
+    MASK: /\sVersion\/(\d+)\..+\s(Safari)\//,
+    MIN_VERSION: 10
+  }), _SUPPORTED_BROWSERS_D);
   /**
    * Returns chromium brand object from navigator.userAgentData.brands or null if not supported.
    * Chromium because of all browsers based on it should be supported as well
@@ -1908,17 +2098,17 @@ var BrowserstackTest = (function (exports) {
    * https://developer.mozilla.org/en-US/docs/Web/API/NavigatorUAData/brands
    */
 
-  const getChromiumBrand = () => {
+  var getChromiumBrand = function getChromiumBrand() {
     var _navigator$userAgentD;
 
-    const brandsData = (_navigator$userAgentD = navigator.userAgentData) === null || _navigator$userAgentD === void 0 ? void 0 : _navigator$userAgentD.brands;
+    var brandsData = (_navigator$userAgentD = navigator.userAgentData) === null || _navigator$userAgentD === void 0 ? void 0 : _navigator$userAgentD.brands;
 
     if (!brandsData) {
       return null;
     } // for chromium-based browsers
 
 
-    const chromiumBrand = brandsData.find(brandData => {
+    var chromiumBrand = brandsData.find(function (brandData) {
       return brandData.brand === CHROMIUM_BRAND_NAME || brandData.brand === GOOGLE_CHROME_BRAND_NAME;
     });
     return chromiumBrand || null;
@@ -1928,13 +2118,13 @@ var BrowserstackTest = (function (exports) {
    * Parses userAgent string and returns the data object for supported browsers;
    * otherwise returns null
    */
-  const parseUserAgent = () => {
-    let browserName;
-    let currentVersion;
-    const browserNames = Object.values(BrowserName);
+  var parseUserAgent = function parseUserAgent() {
+    var browserName;
+    var currentVersion;
+    var browserNames = Object.values(BrowserName);
 
-    for (let i = 0; i < browserNames.length; i += 1) {
-      const match = SUPPORTED_BROWSERS_DATA[browserNames[i]].MASK.exec(navigator.userAgent);
+    for (var i = 0; i < browserNames.length; i += 1) {
+      var match = SUPPORTED_BROWSERS_DATA[browserNames[i]].MASK.exec(navigator.userAgent);
 
       if (match) {
         // for safari order is different because of regexp
@@ -1948,8 +2138,8 @@ var BrowserstackTest = (function (exports) {
         }
 
         return {
-          browserName,
-          currentVersion
+          browserName: browserName,
+          currentVersion: currentVersion
         };
       }
     }
@@ -1961,35 +2151,31 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const getCurrentBrowserInfoAsSupported = () => {
-    const brandData = getChromiumBrand();
+  var getCurrentBrowserInfoAsSupported = function getCurrentBrowserInfoAsSupported() {
+    var brandData = getChromiumBrand();
 
     if (!brandData) {
-      const uaInfo = parseUserAgent();
+      var uaInfo = parseUserAgent();
 
       if (!uaInfo) {
         return null;
       }
 
-      const {
-        browserName,
-        currentVersion
-      } = uaInfo;
+      var _browserName = uaInfo.browserName,
+          currentVersion = uaInfo.currentVersion;
       return {
-        browserName,
-        currentVersion
+        browserName: _browserName,
+        currentVersion: currentVersion
       };
     } // if navigator.userAgentData is supported
 
 
-    const {
-      brand,
-      version
-    } = brandData; // handle chromium-based browsers
+    var brand = brandData.brand,
+        version = brandData.version; // handle chromium-based browsers
 
-    const browserName = brand === CHROMIUM_BRAND_NAME || brand === GOOGLE_CHROME_BRAND_NAME ? BrowserName.Chrome : brand;
+    var browserName = brand === CHROMIUM_BRAND_NAME || brand === GOOGLE_CHROME_BRAND_NAME ? BrowserName.Chrome : brand;
     return {
-      browserName,
+      browserName: browserName,
       currentVersion: Number(version)
     };
   };
@@ -1998,8 +2184,8 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const isBrowserSupported = () => {
-    const ua = navigator.userAgent; // do not support Internet Explorer
+  var isBrowserSupported = function isBrowserSupported() {
+    var ua = navigator.userAgent; // do not support Internet Explorer
 
     if (ua.includes('MSIE') || ua.includes('Trident/')) {
       return false;
@@ -2010,16 +2196,14 @@ var BrowserstackTest = (function (exports) {
       return true;
     }
 
-    const currentBrowserData = getCurrentBrowserInfoAsSupported();
+    var currentBrowserData = getCurrentBrowserInfoAsSupported();
 
     if (!currentBrowserData) {
       return false;
     }
 
-    const {
-      browserName,
-      currentVersion
-    } = currentBrowserData;
+    var browserName = currentBrowserData.browserName,
+        currentVersion = currentBrowserData.currentVersion;
     return currentVersion >= SUPPORTED_BROWSERS_DATA[browserName].MIN_VERSION;
   };
 
@@ -2033,7 +2217,7 @@ var BrowserstackTest = (function (exports) {
    * because filters maintainers does not use any quotes in real rules
    * @param str
    */
-  const removeContentQuotes = str => {
+  var removeContentQuotes = function removeContentQuotes(str) {
     return str.replace(/^(["'])([\s\S]*)\1$/, '$2');
   };
   /**
@@ -2050,9 +2234,9 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const addUrlPropertyQuotes = str => {
+  var addUrlPropertyQuotes = function addUrlPropertyQuotes(str) {
     if (!str.includes('url("')) {
-      const re = /url\((.*?)\)/g;
+      var re = /url\((.*?)\)/g;
       return str.replace(re, 'url("$1")');
     }
 
@@ -2063,11 +2247,11 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const addUrlQuotesTo = {
-    regexpArg: str => {
+  var addUrlQuotesTo = {
+    regexpArg: function regexpArg(str) {
       // e.g. /^url\\([a-z]{4}:[a-z]{5}/
       // or /^url\\(data\\:\\image\\/gif;base64.+/
-      const re = /(\^)?url(\\)?\\\((\w|\[\w)/g;
+      var re = /(\^)?url(\\)?\\\((\w|\[\w)/g;
       return str.replace(re, '$1url$2\\(\\"?$3');
     },
     noneRegexpArg: addUrlPropertyQuotes
@@ -2077,12 +2261,12 @@ var BrowserstackTest = (function (exports) {
    * @param str
    */
 
-  const escapeRegExp = str => {
+  var escapeRegExp = function escapeRegExp(str) {
     // https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/regexp
     // should be escaped . * + ? ^ $ { } ( ) | [ ] / \
     // except of * | ^
-    const specials = ['.', '+', '?', '$', '{', '}', '(', ')', '[', ']', '\\', '/'];
-    const specialsRegex = new RegExp(`[${specials.join('\\')}]`, 'g');
+    var specials = ['.', '+', '?', '$', '{', '}', '(', ')', '[', ']', '\\', '/'];
+    var specialsRegex = new RegExp("[".concat(specials.join('\\'), "]"), 'g');
     return str.replace(specialsRegex, '\\$&');
   };
   /**
@@ -2091,8 +2275,8 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const convertStyleMatchValueToRegexp = rawArg => {
-    let arg;
+  var convertStyleMatchValueToRegexp = function convertStyleMatchValueToRegexp(rawArg) {
+    var arg;
 
     if (rawArg.startsWith(SLASH) && rawArg.endsWith(SLASH)) {
       // For regex patterns double quotes `"` and backslashes `\` should be escaped
@@ -2117,8 +2301,8 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const normalizePropertyValue = (propertyName, propertyValue) => {
-    let normalized = '';
+  var normalizePropertyValue = function normalizePropertyValue(propertyName, propertyValue) {
+    var normalized = '';
 
     switch (propertyName) {
       case CSS_PROPERTIES.BACKGROUND:
@@ -2155,9 +2339,9 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const getComputedStylePropertyValue = (domElement, propertyName, regularPseudoElement) => {
-    const style = getComputedStyle(domElement, regularPseudoElement);
-    const propertyValue = style.getPropertyValue(propertyName);
+  var getComputedStylePropertyValue = function getComputedStylePropertyValue(domElement, propertyName, regularPseudoElement) {
+    var style = getComputedStyle(domElement, regularPseudoElement);
+    var propertyValue = style.getPropertyValue(propertyName);
     return normalizePropertyValue(propertyName, propertyValue);
   };
 
@@ -2170,10 +2354,10 @@ var BrowserstackTest = (function (exports) {
    * @param separator
    * @returns {PseudoArgData} { name, value } where 'value' can be undefined
    */
-  const getPseudoArgData = (pseudoArg, separator) => {
-    const index = pseudoArg.indexOf(separator);
-    let name;
-    let value;
+  var getPseudoArgData = function getPseudoArgData(pseudoArg, separator) {
+    var index = pseudoArg.indexOf(separator);
+    var name;
+    var value;
 
     if (index > -1) {
       name = pseudoArg.substring(0, index).trim();
@@ -2183,8 +2367,8 @@ var BrowserstackTest = (function (exports) {
     }
 
     return {
-      name,
-      value
+      name: name,
+      value: value
     };
   };
   /**
@@ -2193,32 +2377,30 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const isStyleMatched = argsData => {
-    const {
-      pseudoName,
-      pseudoArg,
-      domElement,
-      regularPseudoElement
-    } = argsData;
-    const {
-      name: matchName,
-      value: matchValue
-    } = getPseudoArgData(pseudoArg, COLON);
+  var isStyleMatched = function isStyleMatched(argsData) {
+    var pseudoName = argsData.pseudoName,
+        pseudoArg = argsData.pseudoArg,
+        domElement = argsData.domElement,
+        regularPseudoElement = argsData.regularPseudoElement;
+
+    var _getPseudoArgData = getPseudoArgData(pseudoArg, COLON),
+        matchName = _getPseudoArgData.name,
+        matchValue = _getPseudoArgData.value;
 
     if (!matchName || !matchValue) {
-      throw new Error(`Required property name or value is missing in :${pseudoName}() arg: '${pseudoArg}'`);
+      throw new Error("Required property name or value is missing in :".concat(pseudoName, "() arg: '").concat(pseudoArg, "'"));
     }
 
-    let valueRegexp;
+    var valueRegexp;
 
     try {
       valueRegexp = convertStyleMatchValueToRegexp(matchValue);
     } catch (e) {
       logger.error(e);
-      throw new Error(`Invalid argument of :${pseudoName}() pseudo-class: '${pseudoArg}'`);
+      throw new Error("Invalid argument of :".concat(pseudoName, "() pseudo-class: '").concat(pseudoArg, "'"));
     }
 
-    const value = getComputedStylePropertyValue(domElement, matchName, regularPseudoElement);
+    var value = getComputedStylePropertyValue(domElement, matchName, regularPseudoElement);
     return valueRegexp && valueRegexp.test(value);
   };
   /**
@@ -2226,7 +2408,7 @@ var BrowserstackTest = (function (exports) {
    * @param arg
    */
 
-  const validateStrMatcherArg = arg => {
+  var validateStrMatcherArg = function validateStrMatcherArg(arg) {
     if (arg.includes(SLASH)) {
       return false;
     }
@@ -2244,13 +2426,13 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const getValidMatcherArg = function (rawArg) {
-    let isWildcardAllowed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+  var getValidMatcherArg = function getValidMatcherArg(rawArg) {
+    var isWildcardAllowed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
     // if rawArg is missing for pseudo-class
     // e.g. :matches-attr()
     // error will be thrown before getValidMatcherArg() is called:
     // name or arg is missing in AbsolutePseudoClass
-    let arg;
+    var arg;
 
     if (rawArg.length > 1 && rawArg.startsWith(DOUBLE_QUOTE) && rawArg.endsWith(DOUBLE_QUOTE)) {
       rawArg = rawArg.slice(1, -1);
@@ -2266,19 +2448,19 @@ var BrowserstackTest = (function (exports) {
       if (rawArg.length > 2) {
         arg = toRegExp(rawArg);
       } else {
-        throw new Error(`Invalid regexp: '${rawArg}'`);
+        throw new Error("Invalid regexp: '".concat(rawArg, "'"));
       }
     } else if (rawArg.includes(ASTERISK)) {
       if (rawArg === ASTERISK && !isWildcardAllowed) {
         // e.g. :matches-attr(*)
-        throw new Error(`Argument should be more specific than ${rawArg}`);
+        throw new Error("Argument should be more specific than ".concat(rawArg));
       }
 
       arg = replaceAll(rawArg, ASTERISK, REGEXP_ANY_SYMBOL);
       arg = new RegExp(arg);
     } else {
       if (!validateStrMatcherArg(rawArg)) {
-        throw new Error(`Invalid argument: '${rawArg}'`);
+        throw new Error("Invalid argument: '".concat(rawArg, "'"));
       }
 
       arg = rawArg;
@@ -2292,19 +2474,18 @@ var BrowserstackTest = (function (exports) {
    * @param pseudoName extended pseudo-class name
    * @param pseudoArg extended pseudo-class argument
    */
-  const getRawMatchingData = (pseudoName, pseudoArg) => {
-    const {
-      name: rawName,
-      value: rawValue
-    } = getPseudoArgData(pseudoArg, EQUAL_SIGN);
+  var getRawMatchingData = function getRawMatchingData(pseudoName, pseudoArg) {
+    var _getPseudoArgData2 = getPseudoArgData(pseudoArg, EQUAL_SIGN),
+        rawName = _getPseudoArgData2.name,
+        rawValue = _getPseudoArgData2.value;
 
     if (!rawName) {
-      throw new Error(`Required attribute name is missing in :${pseudoName} arg: ${pseudoArg}`);
+      throw new Error("Required attribute name is missing in :".concat(pseudoName, " arg: ").concat(pseudoArg));
     }
 
     return {
-      rawName,
-      rawValue
+      rawName: rawName,
+      rawValue: rawValue
     };
   };
   /**
@@ -2312,23 +2493,21 @@ var BrowserstackTest = (function (exports) {
    * @param argsData
    */
 
-  const isAttributeMatched = argsData => {
-    const {
-      pseudoName,
-      pseudoArg,
-      domElement
-    } = argsData;
-    const elementAttributes = domElement.attributes; // no match if dom element has no attributes
+  var isAttributeMatched = function isAttributeMatched(argsData) {
+    var pseudoName = argsData.pseudoName,
+        pseudoArg = argsData.pseudoArg,
+        domElement = argsData.domElement;
+    var elementAttributes = domElement.attributes; // no match if dom element has no attributes
 
     if (elementAttributes.length === 0) {
       return false;
     }
 
-    const {
-      rawName: rawAttrName,
-      rawValue: rawAttrValue
-    } = getRawMatchingData(pseudoName, pseudoArg);
-    let attrNameMatch;
+    var _getRawMatchingData = getRawMatchingData(pseudoName, pseudoArg),
+        rawAttrName = _getRawMatchingData.rawName,
+        rawAttrValue = _getRawMatchingData.rawValue;
+
+    var attrNameMatch;
 
     try {
       attrNameMatch = getValidMatcherArg(rawAttrName);
@@ -2338,19 +2517,19 @@ var BrowserstackTest = (function (exports) {
       throw new SyntaxError(e.message);
     }
 
-    let isMatched = false;
-    let i = 0;
+    var isMatched = false;
+    var i = 0;
 
     while (i < elementAttributes.length && !isMatched) {
-      const attr = elementAttributes[i];
-      const isNameMatched = attrNameMatch instanceof RegExp ? attrNameMatch.test(attr.name) : attrNameMatch === attr.name;
+      var attr = elementAttributes[i];
+      var isNameMatched = attrNameMatch instanceof RegExp ? attrNameMatch.test(attr.name) : attrNameMatch === attr.name;
 
       if (!rawAttrValue) {
         // for rules with no attribute value specified
         // e.g. :matches-attr("/regex/") or :matches-attr("attr-name")
         isMatched = isNameMatched;
       } else {
-        let attrValueMatch;
+        var attrValueMatch = void 0;
 
         try {
           attrValueMatch = getValidMatcherArg(rawAttrValue);
@@ -2360,7 +2539,7 @@ var BrowserstackTest = (function (exports) {
           throw new SyntaxError(e.message);
         }
 
-        const isValueMatched = attrValueMatch instanceof RegExp ? attrValueMatch.test(attr.value) : attrValueMatch === attr.value;
+        var isValueMatched = attrValueMatch instanceof RegExp ? attrValueMatch.test(attr.value) : attrValueMatch === attr.value;
         isMatched = isNameMatched && isValueMatched;
       }
 
@@ -2374,19 +2553,19 @@ var BrowserstackTest = (function (exports) {
    * @param input argument of :matches-property()
    */
 
-  const parseRawPropChain = input => {
+  var parseRawPropChain = function parseRawPropChain(input) {
     if (input.length > 1 && input.startsWith(DOUBLE_QUOTE) && input.endsWith(DOUBLE_QUOTE)) {
       input = input.slice(1, -1);
     }
 
-    const chainChunks = input.split(DOT);
-    const chainPatterns = [];
-    let patternBuffer = '';
-    let isRegexpPattern = false;
-    let i = 0;
+    var chainChunks = input.split(DOT);
+    var chainPatterns = [];
+    var patternBuffer = '';
+    var isRegexpPattern = false;
+    var i = 0;
 
     while (i < chainChunks.length) {
-      const chunk = chainChunks[i];
+      var chunk = chainChunks[i];
 
       if (chunk.startsWith(SLASH) && chunk.endsWith(SLASH) && chunk.length > 2) {
         // regexp pattern with no dot in it, e.g. /propName/
@@ -2399,7 +2578,7 @@ var BrowserstackTest = (function (exports) {
         isRegexpPattern = false; // restore dot removed while splitting
         // e.g. testProp./.{1,5}/
 
-        patternBuffer += `.${chunk}`;
+        patternBuffer += ".".concat(chunk);
         chainPatterns.push(patternBuffer);
         patternBuffer = '';
       } else {
@@ -2417,22 +2596,22 @@ var BrowserstackTest = (function (exports) {
     }
 
     if (patternBuffer.length > 0) {
-      throw new Error(`Invalid regexp property pattern '${input}'`);
+      throw new Error("Invalid regexp property pattern '".concat(input, "'"));
     }
 
-    const chainMatchPatterns = chainPatterns.map(pattern => {
+    var chainMatchPatterns = chainPatterns.map(function (pattern) {
       if (pattern.length === 0) {
         // e.g. '.prop.id' or 'nested..test'
-        throw new Error(`Empty pattern '${pattern}' is invalid in chain '${input}'`);
+        throw new Error("Empty pattern '".concat(pattern, "' is invalid in chain '").concat(input, "'"));
       }
 
-      let validPattern;
+      var validPattern;
 
       try {
         validPattern = getValidMatcherArg(pattern, true);
       } catch (e) {
         logger.error(e);
-        throw new Error(`Invalid property pattern '${pattern}' in property chain '${input}'`);
+        throw new Error("Invalid property pattern '".concat(pattern, "' in property chain '").concat(input, "'"));
       }
 
       return validPattern;
@@ -2446,18 +2625,18 @@ var BrowserstackTest = (function (exports) {
    * @param chain array of objects - parsed string property chain
    * @param [output=[]] result acc
    */
-  const filterRootsByRegexpChain = function (base, chain) {
-    let output = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
-    const tempProp = chain[0];
+  var filterRootsByRegexpChain = function filterRootsByRegexpChain(base, chain) {
+    var output = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
+    var tempProp = chain[0];
 
     if (chain.length === 1) {
-      for (const key in base) {
+      for (var key in base) {
         if (tempProp instanceof RegExp) {
           if (tempProp.test(key)) {
             var _Object$getOwnPropert;
 
             output.push({
-              base,
+              base: base,
               prop: key,
               value: (_Object$getOwnPropert = Object.getOwnPropertyDescriptor(base, key)) === null || _Object$getOwnPropert === void 0 ? void 0 : _Object$getOwnPropert.value
             });
@@ -2466,7 +2645,7 @@ var BrowserstackTest = (function (exports) {
           var _Object$getOwnPropert2;
 
           output.push({
-            base,
+            base: base,
             prop: tempProp,
             value: (_Object$getOwnPropert2 = Object.getOwnPropertyDescriptor(base, key)) === null || _Object$getOwnPropert2 === void 0 ? void 0 : _Object$getOwnPropert2.value
           });
@@ -2480,19 +2659,19 @@ var BrowserstackTest = (function (exports) {
 
 
     if (tempProp instanceof RegExp) {
-      const nextProp = chain.slice(1);
-      const baseKeys = [];
+      var nextProp = chain.slice(1);
+      var baseKeys = [];
 
-      for (const key in base) {
-        if (tempProp.test(key)) {
-          baseKeys.push(key);
+      for (var _key in base) {
+        if (tempProp.test(_key)) {
+          baseKeys.push(_key);
         }
       }
 
-      baseKeys.forEach(key => {
+      baseKeys.forEach(function (key) {
         var _Object$getOwnPropert3;
 
-        const item = (_Object$getOwnPropert3 = Object.getOwnPropertyDescriptor(base, key)) === null || _Object$getOwnPropert3 === void 0 ? void 0 : _Object$getOwnPropert3.value;
+        var item = (_Object$getOwnPropert3 = Object.getOwnPropertyDescriptor(base, key)) === null || _Object$getOwnPropert3 === void 0 ? void 0 : _Object$getOwnPropert3.value;
         filterRootsByRegexpChain(item, nextProp, output);
       });
     }
@@ -2500,7 +2679,7 @@ var BrowserstackTest = (function (exports) {
     if (base && typeof tempProp === 'string') {
       var _Object$getOwnPropert4;
 
-      const nextBase = (_Object$getOwnPropert4 = Object.getOwnPropertyDescriptor(base, tempProp)) === null || _Object$getOwnPropert4 === void 0 ? void 0 : _Object$getOwnPropert4.value;
+      var nextBase = (_Object$getOwnPropert4 = Object.getOwnPropertyDescriptor(base, tempProp)) === null || _Object$getOwnPropert4 === void 0 ? void 0 : _Object$getOwnPropert4.value;
       chain = chain.slice(1);
 
       if (nextBase !== undefined) {
@@ -2516,23 +2695,22 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const isPropertyMatched = argsData => {
-    const {
-      pseudoName,
-      pseudoArg,
-      domElement
-    } = argsData;
-    const {
-      rawName: rawPropertyName,
-      rawValue: rawPropertyValue
-    } = getRawMatchingData(pseudoName, pseudoArg); // chained property name can not include '/' or '.'
+  var isPropertyMatched = function isPropertyMatched(argsData) {
+    var pseudoName = argsData.pseudoName,
+        pseudoArg = argsData.pseudoArg,
+        domElement = argsData.domElement;
+
+    var _getRawMatchingData2 = getRawMatchingData(pseudoName, pseudoArg),
+        rawPropertyName = _getRawMatchingData2.rawName,
+        rawPropertyValue = _getRawMatchingData2.rawValue; // chained property name can not include '/' or '.'
     // so regex prop names with such escaped characters are invalid
 
+
     if (rawPropertyName.includes('\\/') || rawPropertyName.includes('\\.')) {
-      throw new Error(`Invalid :${pseudoName} name pattern: ${rawPropertyName}`);
+      throw new Error("Invalid :".concat(pseudoName, " name pattern: ").concat(rawPropertyName));
     }
 
-    let propChainMatches;
+    var propChainMatches;
 
     try {
       propChainMatches = parseRawPropChain(rawPropertyName);
@@ -2542,16 +2720,16 @@ var BrowserstackTest = (function (exports) {
       throw new SyntaxError(e.message);
     }
 
-    const ownerObjArr = filterRootsByRegexpChain(domElement, propChainMatches);
+    var ownerObjArr = filterRootsByRegexpChain(domElement, propChainMatches);
 
     if (ownerObjArr.length === 0) {
       return false;
     }
 
-    let isMatched = true;
+    var isMatched = true;
 
     if (rawPropertyValue) {
-      let propValueMatch;
+      var propValueMatch;
 
       try {
         propValueMatch = getValidMatcherArg(rawPropertyValue);
@@ -2562,8 +2740,8 @@ var BrowserstackTest = (function (exports) {
       }
 
       if (propValueMatch) {
-        for (let i = 0; i < ownerObjArr.length; i += 1) {
-          const realValue = ownerObjArr[i].value;
+        for (var i = 0; i < ownerObjArr.length; i += 1) {
+          var realValue = ownerObjArr[i].value;
 
           if (propValueMatch instanceof RegExp) {
             isMatched = propValueMatch.test(convertTypeIntoString(realValue));
@@ -2591,32 +2769,30 @@ var BrowserstackTest = (function (exports) {
    * @param argsData
    */
 
-  const isTextMatched = argsData => {
-    const {
-      pseudoName,
-      pseudoArg,
-      domElement
-    } = argsData;
-    const textContent = getNodeTextContent(domElement);
-    let isTextContentMatched;
+  var isTextMatched = function isTextMatched(argsData) {
+    var pseudoName = argsData.pseudoName,
+        pseudoArg = argsData.pseudoArg,
+        domElement = argsData.domElement;
+    var textContent = getNodeTextContent(domElement);
+    var isTextContentMatched;
     /**
      * TODO: consider adding helper for parsing pseudoArg (string or regexp) later,
      * seems to be similar for few extended pseudo-classes
      */
 
-    let pseudoArgToMatch = pseudoArg;
+    var pseudoArgToMatch = pseudoArg;
 
     if (pseudoArgToMatch.startsWith(SLASH) && REGEXP_WITH_FLAGS_REGEXP.test(pseudoArgToMatch)) {
       // regexp arg
-      const flagsIndex = pseudoArgToMatch.lastIndexOf('/');
-      const flagsStr = pseudoArgToMatch.substring(flagsIndex + 1);
+      var flagsIndex = pseudoArgToMatch.lastIndexOf('/');
+      var flagsStr = pseudoArgToMatch.substring(flagsIndex + 1);
       pseudoArgToMatch = pseudoArgToMatch.substring(0, flagsIndex + 1).slice(1, -1).replace(/\\([\\"])/g, '$1');
-      let regex;
+      var regex;
 
       try {
         regex = new RegExp(pseudoArgToMatch, flagsStr);
       } catch (e) {
-        throw new Error(`Invalid argument of :${pseudoName}() pseudo-class: ${pseudoArg}`);
+        throw new Error("Invalid argument of :".concat(pseudoName, "() pseudo-class: ").concat(pseudoArg));
       }
 
       isTextContentMatched = regex.test(textContent);
@@ -2634,11 +2810,11 @@ var BrowserstackTest = (function (exports) {
    * @param rawArg raw arg of pseudo-class
    * @param pseudoName pseudo-class name
    */
-  const getValidNumberAncestorArg = (rawArg, pseudoName) => {
-    const deep = Number(rawArg);
+  var getValidNumberAncestorArg = function getValidNumberAncestorArg(rawArg, pseudoName) {
+    var deep = Number(rawArg);
 
     if (Number.isNaN(deep) || deep < 1 || deep >= 256) {
-      throw new Error(`Invalid argument of :${pseudoName} pseudo-class: '${rawArg}'`);
+      throw new Error("Invalid argument of :".concat(pseudoName, " pseudo-class: '").concat(rawArg, "'"));
     }
 
     return deep;
@@ -2650,15 +2826,15 @@ var BrowserstackTest = (function (exports) {
    * @param pseudoName
    */
 
-  const getNthAncestor = (domElement, deep, pseudoName) => {
-    let ancestor = null;
-    let i = 0;
+  var getNthAncestor = function getNthAncestor(domElement, deep, pseudoName) {
+    var ancestor = null;
+    var i = 0;
 
     while (i < deep) {
       ancestor = domElement.parentElement;
 
       if (!ancestor) {
-        throw new Error(`Argument of :${pseudoName}() pseudo-class is too big — '${deep}', out of DOM elements root.`); // eslint-disable-line max-len
+        throw new Error("Argument of :".concat(pseudoName, "() pseudo-class is too big \u2014 '").concat(deep, "', out of DOM elements root.")); // eslint-disable-line max-len
       }
 
       domElement = ancestor;
@@ -2672,8 +2848,8 @@ var BrowserstackTest = (function (exports) {
    * @param selector
    */
 
-  const validateStandardSelector = selector => {
-    let isValid;
+  var validateStandardSelector = function validateStandardSelector(selector) {
+    var isValid;
 
     try {
       document.querySelectorAll(selector);
@@ -2692,8 +2868,8 @@ var BrowserstackTest = (function (exports) {
    * @param argsData
    * @param errorMessage
    */
-  const matcherWrapper = (callback, argsData, errorMessage) => {
-    let isMatched;
+  var matcherWrapper = function matcherWrapper(callback, argsData, errorMessage) {
+    var isMatched;
 
     try {
       isMatched = callback(argsData);
@@ -2712,12 +2888,12 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const isMatchedByAbsolutePseudo = (domElement, pseudoName, pseudoArg) => {
-    let argsData;
-    let errorMessage;
-    let callback; // no standard pseudo-element is needed for :matched-css
+  var isMatchedByAbsolutePseudo = function isMatchedByAbsolutePseudo(domElement, pseudoName, pseudoArg) {
+    var argsData;
+    var errorMessage;
+    var callback; // no standard pseudo-element is needed for :matched-css
 
-    let regularPseudoElement = '';
+    var regularPseudoElement = '';
 
     switch (pseudoName) {
       case CONTAINS_PSEUDO:
@@ -2725,69 +2901,69 @@ var BrowserstackTest = (function (exports) {
       case ABP_CONTAINS_PSEUDO:
         callback = isTextMatched;
         argsData = {
-          pseudoName,
-          pseudoArg,
-          domElement
+          pseudoName: pseudoName,
+          pseudoArg: pseudoArg,
+          domElement: domElement
         };
-        errorMessage = `Error while matching element text content by arg '${pseudoArg}'.`;
+        errorMessage = "Error while matching element text content by arg '".concat(pseudoArg, "'.");
         break;
 
       case MATCHES_CSS_PSEUDO:
       case MATCHES_CSS_AFTER_PSEUDO:
       case MATCHES_CSS_BEFORE_PSEUDO:
         if (pseudoName === MATCHES_CSS_BEFORE_PSEUDO) {
-          regularPseudoElement = `${COLON}${REGULAR_PSEUDO_ELEMENTS.BEFORE}`;
+          regularPseudoElement = "".concat(COLON).concat(REGULAR_PSEUDO_ELEMENTS.BEFORE);
         } else if (pseudoName === MATCHES_CSS_AFTER_PSEUDO) {
-          regularPseudoElement = `${COLON}${REGULAR_PSEUDO_ELEMENTS.AFTER}`;
+          regularPseudoElement = "".concat(COLON).concat(REGULAR_PSEUDO_ELEMENTS.AFTER);
         }
 
         callback = isStyleMatched;
         argsData = {
-          pseudoName,
-          pseudoArg,
-          domElement,
-          regularPseudoElement
+          pseudoName: pseudoName,
+          pseudoArg: pseudoArg,
+          domElement: domElement,
+          regularPseudoElement: regularPseudoElement
         };
-        errorMessage = `Error while matching element style by arg '${pseudoArg}'.`;
+        errorMessage = "Error while matching element style by arg '".concat(pseudoArg, "'.");
         break;
 
       case MATCHES_ATTR_PSEUDO_CLASS_MARKER:
         callback = isAttributeMatched;
         argsData = {
-          domElement,
-          pseudoName,
-          pseudoArg
+          domElement: domElement,
+          pseudoName: pseudoName,
+          pseudoArg: pseudoArg
         };
-        errorMessage = `Error while matching element attributes by arg '${pseudoArg}'.`;
+        errorMessage = "Error while matching element attributes by arg '".concat(pseudoArg, "'.");
         break;
 
       case MATCHES_PROPERTY_PSEUDO_CLASS_MARKER:
         callback = isPropertyMatched;
         argsData = {
-          domElement,
-          pseudoName,
-          pseudoArg
+          domElement: domElement,
+          pseudoName: pseudoName,
+          pseudoArg: pseudoArg
         };
-        errorMessage = `Error while matching element properties by arg '${pseudoArg}'.`;
+        errorMessage = "Error while matching element properties by arg '".concat(pseudoArg, "'.");
         break;
 
       default:
-        throw new Error(`Unknown absolute pseudo-class :${pseudoName}()`);
+        throw new Error("Unknown absolute pseudo-class :".concat(pseudoName, "()"));
     }
 
     return matcherWrapper(callback, argsData, errorMessage);
   };
-  const findByAbsolutePseudoPseudo = {
+  var findByAbsolutePseudoPseudo = {
     /**
      * Gets list of nth ancestors relative to every dom node from domElements list
      * @param domElements dom nodes
      * @param rawPseudoArg number arg of :nth-ancestor or :upward pseudo-class
      * @param pseudoName pseudo-class name
      */
-    nthAncestor: (domElements, rawPseudoArg, pseudoName) => {
-      const deep = getValidNumberAncestorArg(rawPseudoArg, pseudoName);
-      const ancestors = domElements.map(domElement => {
-        let ancestor = null;
+    nthAncestor: function nthAncestor(domElements, rawPseudoArg, pseudoName) {
+      var deep = getValidNumberAncestorArg(rawPseudoArg, pseudoName);
+      var ancestors = domElements.map(function (domElement) {
+        var ancestor = null;
 
         try {
           ancestor = getNthAncestor(domElement, deep, pseudoName);
@@ -2805,19 +2981,19 @@ var BrowserstackTest = (function (exports) {
      * @param domElements dom nodes
      * @param rawPseudoArg arg of :xpath pseudo-class
      */
-    xpath: (domElements, rawPseudoArg) => {
-      const foundElements = domElements.map(domElement => {
-        const result = [];
-        let xpathResult;
+    xpath: function xpath(domElements, rawPseudoArg) {
+      var foundElements = domElements.map(function (domElement) {
+        var result = [];
+        var xpathResult;
 
         try {
           xpathResult = document.evaluate(rawPseudoArg, domElement, null, XPathResult.UNORDERED_NODE_ITERATOR_TYPE, null);
         } catch (e) {
           logger.error(e);
-          throw new Error(`Invalid argument of :xpath pseudo-class: '${rawPseudoArg}'`);
+          throw new Error("Invalid argument of :xpath pseudo-class: '".concat(rawPseudoArg, "'"));
         }
 
-        let node = xpathResult.iterateNext();
+        var node = xpathResult.iterateNext();
 
         while (node) {
           if (isHtmlElement(node)) {
@@ -2837,15 +3013,15 @@ var BrowserstackTest = (function (exports) {
      * @param domElements dom nodes
      * @param rawPseudoArg standard selector arg of :upward pseudo-class
      */
-    upward: (domElements, rawPseudoArg) => {
+    upward: function upward(domElements, rawPseudoArg) {
       if (!validateStandardSelector(rawPseudoArg)) {
-        throw new Error(`Invalid argument of :upward pseudo-class: '${rawPseudoArg}'`);
+        throw new Error("Invalid argument of :upward pseudo-class: '".concat(rawPseudoArg, "'"));
       }
 
-      const closestAncestors = domElements.map(domElement => {
+      var closestAncestors = domElements.map(function (domElement) {
         // closest to parent element should be found
         // otherwise `.base:upward(.base)` will return itself too, not only ancestor
-        const parent = domElement.parentElement;
+        var parent = domElement.parentElement;
 
         if (!parent) {
           return null;
@@ -2881,25 +3057,24 @@ var BrowserstackTest = (function (exports) {
    * Used for :has() and :if-not()
    * @param argsData
    */
-  const hasRelativesBySelectorList = argsData => {
-    const {
-      element,
-      relativeSelectorList,
-      pseudoName
-    } = argsData;
+  var hasRelativesBySelectorList = function hasRelativesBySelectorList(argsData) {
+    var element = argsData.element,
+        relativeSelectorList = argsData.relativeSelectorList,
+        pseudoName = argsData.pseudoName;
     return relativeSelectorList.children // Array.every() is used here as each Selector node from SelectorList should exist on page
-    .every(selector => {
+    .every(function (selector) {
       var _relativeRegularSelec, _relativeRegularSelec2;
 
       // selectorList.children always starts with regular selector as any selector generally
-      const [relativeRegularSelector] = selector.children;
+      var _selector$children = _slicedToArray(selector.children, 1),
+          relativeRegularSelector = _selector$children[0];
 
       if (!relativeRegularSelector) {
-        throw new Error(`RegularSelector is missing for :${pseudoName} pseudo-class.`);
+        throw new Error("RegularSelector is missing for :".concat(pseudoName, " pseudo-class."));
       }
 
-      let specificity = '';
-      let rootElement = null;
+      var specificity = '';
+      var rootElement = null;
 
       if ((_relativeRegularSelec = relativeRegularSelector.value) !== null && _relativeRegularSelec !== void 0 && _relativeRegularSelec.startsWith(NEXT_SIBLING_COMBINATOR) || (_relativeRegularSelec2 = relativeRegularSelector.value) !== null && _relativeRegularSelec2 !== void 0 && _relativeRegularSelec2.startsWith(SUBSEQUENT_SIBLING_COMBINATOR)) {
         /**
@@ -2909,8 +3084,8 @@ var BrowserstackTest = (function (exports) {
          * https://www.w3.org/TR/selectors-4/#relational
          */
         rootElement = element.parentElement;
-        const elementSelectorText = element.tagName.toLowerCase();
-        specificity = `${COLON}${REGULAR_PSEUDO_CLASSES.SCOPE}${CHILD_COMBINATOR}${elementSelectorText}`;
+        var elementSelectorText = element.tagName.toLowerCase();
+        specificity = "".concat(COLON).concat(REGULAR_PSEUDO_CLASSES.SCOPE).concat(CHILD_COMBINATOR).concat(elementSelectorText);
       } else {
         /**
          * TODO: figure out something with :scope usage as IE does not support it
@@ -2923,15 +3098,15 @@ var BrowserstackTest = (function (exports) {
          * e.g. 'a:has(> img)' -> `aNode.querySelectorAll(':scope > img')`
          * OR '.block(div > span)' -> `blockClassNode.querySelectorAll(':scope div > span')`
          */
-        specificity = `${COLON}${REGULAR_PSEUDO_CLASSES.SCOPE}${DESCENDANT_COMBINATOR}`;
+        specificity = "".concat(COLON).concat(REGULAR_PSEUDO_CLASSES.SCOPE).concat(DESCENDANT_COMBINATOR);
         rootElement = element;
       }
 
       if (!rootElement) {
-        throw new Error(`Selection by :${pseudoName} pseudo-class is not possible.`);
+        throw new Error("Selection by :".concat(pseudoName, " pseudo-class is not possible."));
       }
 
-      let relativeElements;
+      var relativeElements;
 
       try {
         // eslint-disable-next-line @typescript-eslint/no-use-before-define
@@ -2939,7 +3114,7 @@ var BrowserstackTest = (function (exports) {
       } catch (e) {
         logger.error(e); // fail for invalid selector
 
-        throw new Error(`Invalid selector for :${pseudoName} pseudo-class: '${relativeRegularSelector.value}'`);
+        throw new Error("Invalid selector for :".concat(pseudoName, " pseudo-class: '").concat(relativeRegularSelector.value, "'"));
       }
 
       return relativeElements.length > 0;
@@ -2951,20 +3126,19 @@ var BrowserstackTest = (function (exports) {
    * @param argsData
    */
 
-  const isAnyElementBySelectorList = argsData => {
-    const {
-      element,
-      relativeSelectorList,
-      pseudoName,
-      errorOnInvalidSelector
-    } = argsData;
+  var isAnyElementBySelectorList = function isAnyElementBySelectorList(argsData) {
+    var element = argsData.element,
+        relativeSelectorList = argsData.relativeSelectorList,
+        pseudoName = argsData.pseudoName,
+        errorOnInvalidSelector = argsData.errorOnInvalidSelector;
     return relativeSelectorList.children // Array.some() is used here as any selector from selector list should exist on page
-    .some(selector => {
+    .some(function (selector) {
       // selectorList.children always starts with regular selector
-      const [relativeRegularSelector] = selector.children;
+      var _selector$children2 = _slicedToArray(selector.children, 1),
+          relativeRegularSelector = _selector$children2[0];
 
       if (!relativeRegularSelector) {
-        throw new Error(`RegularSelector is missing for :${pseudoName} pseudo-class.`);
+        throw new Error("RegularSelector is missing for :".concat(pseudoName, " pseudo-class."));
       }
       /**
        * For checking the element by 'div:is(.banner)' and 'div:not([data="content"])
@@ -2972,10 +3146,10 @@ var BrowserstackTest = (function (exports) {
        */
 
 
-      const rootElement = element.parentElement;
+      var rootElement = element.parentElement;
 
       if (!rootElement) {
-        throw new Error(`Selection by :${pseudoName} pseudo-class is not possible.`);
+        throw new Error("Selection by :".concat(pseudoName, " pseudo-class is not possible."));
       }
       /**
        * So we calculate the element "description" by it's tagname and attributes for targeting
@@ -2984,9 +3158,9 @@ var BrowserstackTest = (function (exports) {
        */
 
 
-      const elementSelectorText = getElementSelectorDesc(element);
-      const specificity = `${COLON}${REGULAR_PSEUDO_CLASSES.SCOPE}${CHILD_COMBINATOR}${elementSelectorText}`;
-      let anyElements;
+      var elementSelectorText = getElementSelectorDesc(element);
+      var specificity = "".concat(COLON).concat(REGULAR_PSEUDO_CLASSES.SCOPE).concat(CHILD_COMBINATOR).concat(elementSelectorText);
+      var anyElements;
 
       try {
         anyElements = getElementsForSelectorNode(selector, rootElement, specificity);
@@ -2994,7 +3168,7 @@ var BrowserstackTest = (function (exports) {
         if (errorOnInvalidSelector) {
           // fail on invalid selectors for :not()
           logger.error(e);
-          throw new Error(`Invalid selector for :${pseudoName} pseudo-class: '${relativeRegularSelector.value}'`); // eslint-disable-line max-len
+          throw new Error("Invalid selector for :".concat(pseudoName, " pseudo-class: '").concat(relativeRegularSelector.value, "'")); // eslint-disable-line max-len
         } else {
           // do not fail on invalid selectors for :is()
           return false;
@@ -3012,19 +3186,19 @@ var BrowserstackTest = (function (exports) {
    * @param specificity
    */
 
-  const getByRegularSelector = (regularSelectorNode, root, specificity) => {
+  var getByRegularSelector = function getByRegularSelector(regularSelectorNode, root, specificity) {
     if (!regularSelectorNode.value) {
       throw new Error('RegularSelector value should be specified');
     }
 
-    const selectorText = specificity ? `${specificity}${regularSelectorNode.value}` : regularSelectorNode.value;
-    let selectedElements = [];
+    var selectorText = specificity ? "".concat(specificity).concat(regularSelectorNode.value) : regularSelectorNode.value;
+    var selectedElements = [];
 
     try {
       selectedElements = Array.from(root.querySelectorAll(selectorText));
     } catch (e) {
       // eslint-disable-line @typescript-eslint/no-explicit-any
-      throw new Error(`Error: unable to select by '${selectorText}' — ${e.message}`);
+      throw new Error("Error: unable to select by '".concat(selectorText, "' \u2014 ").concat(e.message));
     }
 
     return selectedElements;
@@ -3036,9 +3210,9 @@ var BrowserstackTest = (function (exports) {
    * @returns array of dom elements
    */
 
-  const getByExtendedSelector = (domElements, extendedSelectorNode) => {
-    let foundElements = [];
-    const pseudoName = extendedSelectorNode.children[0].name;
+  var getByExtendedSelector = function getByExtendedSelector(domElements, extendedSelectorNode) {
+    var foundElements = [];
+    var pseudoName = extendedSelectorNode.children[0].name;
 
     if (!pseudoName) {
       // extended pseudo-classes should have a name
@@ -3046,11 +3220,11 @@ var BrowserstackTest = (function (exports) {
     }
 
     if (ABSOLUTE_PSEUDO_CLASSES.includes(pseudoName)) {
-      const absolutePseudoArg = extendedSelectorNode.children[0].value;
+      var absolutePseudoArg = extendedSelectorNode.children[0].value;
 
       if (!absolutePseudoArg) {
         // absolute extended pseudo-classes should have an argument
-        throw new Error(`Missing arg for :${pseudoName} pseudo-class`);
+        throw new Error("Missing arg for :".concat(pseudoName, " pseudo-class"));
       }
 
       if (pseudoName === NTH_ANCESTOR_PSEUDO_CLASS_MARKER) {
@@ -3061,7 +3235,7 @@ var BrowserstackTest = (function (exports) {
         try {
           document.createExpression(absolutePseudoArg, null);
         } catch (e) {
-          throw new Error(`Invalid argument of :${pseudoName} pseudo-class: '${absolutePseudoArg}'`);
+          throw new Error("Invalid argument of :".concat(pseudoName, " pseudo-class: '").concat(absolutePseudoArg, "'"));
         }
 
         foundElements = findByAbsolutePseudoPseudo.xpath(domElements, absolutePseudoArg);
@@ -3076,73 +3250,83 @@ var BrowserstackTest = (function (exports) {
       } else {
         // all other absolute extended pseudo-classes
         // e.g. contains, matches-attr, etc.
-        foundElements = domElements.filter(element => {
+        foundElements = domElements.filter(function (element) {
           return isMatchedByAbsolutePseudo(element, pseudoName, absolutePseudoArg);
         });
       }
     } else if (RELATIVE_PSEUDO_CLASSES.includes(pseudoName)) {
-      const relativeSelectorNodes = extendedSelectorNode.children[0].children;
+      var relativeSelectorNodes = extendedSelectorNode.children[0].children;
 
       if (relativeSelectorNodes.length === 0) {
         // extended relative pseudo-classes should have an argument as well
-        throw new Error(`Missing arg for :${pseudoName} pseudo-class`);
+        throw new Error("Missing arg for :".concat(pseudoName, " pseudo-class"));
       }
 
-      const [relativeSelectorList] = relativeSelectorNodes; // needed for :not()
+      var _relativeSelectorNode = _slicedToArray(relativeSelectorNodes, 1),
+          relativeSelectorList = _relativeSelectorNode[0]; // needed for :not()
 
-      let errorOnInvalidSelector = false;
-      let relativePredicate;
+
+      var errorOnInvalidSelector = false;
+      var relativePredicate;
 
       switch (pseudoName) {
         case HAS_PSEUDO_CLASS_MARKER:
         case IF_PSEUDO_CLASS_MARKER:
         case ABP_HAS_PSEUDO_CLASS_MARKER:
-          relativePredicate = element => hasRelativesBySelectorList({
-            element,
-            relativeSelectorList,
-            pseudoName
-          });
+          relativePredicate = function relativePredicate(element) {
+            return hasRelativesBySelectorList({
+              element: element,
+              relativeSelectorList: relativeSelectorList,
+              pseudoName: pseudoName
+            });
+          };
 
           break;
 
         case IF_NOT_PSEUDO_CLASS_MARKER:
-          relativePredicate = element => !hasRelativesBySelectorList({
-            element,
-            relativeSelectorList,
-            pseudoName
-          });
+          relativePredicate = function relativePredicate(element) {
+            return !hasRelativesBySelectorList({
+              element: element,
+              relativeSelectorList: relativeSelectorList,
+              pseudoName: pseudoName
+            });
+          };
 
           break;
 
         case IS_PSEUDO_CLASS_MARKER:
-          relativePredicate = element => isAnyElementBySelectorList({
-            element,
-            relativeSelectorList,
-            pseudoName
-          });
+          relativePredicate = function relativePredicate(element) {
+            return isAnyElementBySelectorList({
+              element: element,
+              relativeSelectorList: relativeSelectorList,
+              pseudoName: pseudoName
+            });
+          };
 
           break;
 
         case NOT_PSEUDO_CLASS_MARKER:
           errorOnInvalidSelector = true;
 
-          relativePredicate = element => !isAnyElementBySelectorList({
-            element,
-            relativeSelectorList,
-            pseudoName,
-            errorOnInvalidSelector
-          });
+          relativePredicate = function relativePredicate(element) {
+            return !isAnyElementBySelectorList({
+              element: element,
+              relativeSelectorList: relativeSelectorList,
+              pseudoName: pseudoName,
+              errorOnInvalidSelector: errorOnInvalidSelector
+            });
+          };
 
           break;
 
         default:
-          throw new Error(`Unknown relative pseudo-class :${pseudoName}()`);
+          throw new Error("Unknown relative pseudo-class :".concat(pseudoName, "()"));
       }
 
       foundElements = domElements.filter(relativePredicate);
     } else {
       // extra check is parser missed something
-      throw new Error(`Unknown extended pseudo-class: ':${pseudoName}'`);
+      throw new Error("Unknown extended pseudo-class: ':".concat(pseudoName, "'"));
     }
 
     return foundElements;
@@ -3154,12 +3338,10 @@ var BrowserstackTest = (function (exports) {
    * @returns array of dom elements
    */
 
-  const getByFollowingRegularSelector = (domElements, regularSelectorNode) => {
+  var getByFollowingRegularSelector = function getByFollowingRegularSelector(domElements, regularSelectorNode) {
     // array of arrays because of Array.map() later
-    let foundElements = [];
-    const {
-      value
-    } = regularSelectorNode;
+    var foundElements = [];
+    var value = regularSelectorNode.value;
 
     if (!value) {
       throw new Error('RegularSelector should have a value.');
@@ -3167,30 +3349,30 @@ var BrowserstackTest = (function (exports) {
 
     if (value.startsWith(CHILD_COMBINATOR)) {
       // e.g. div:has(> img) > .banner
-      foundElements = domElements.map(root => {
-        const specificity = `${COLON}${REGULAR_PSEUDO_CLASSES.SCOPE}`;
+      foundElements = domElements.map(function (root) {
+        var specificity = "".concat(COLON).concat(REGULAR_PSEUDO_CLASSES.SCOPE);
         return getByRegularSelector(regularSelectorNode, root, specificity);
       });
     } else if (value.startsWith(NEXT_SIBLING_COMBINATOR) || value.startsWith(SUBSEQUENT_SIBLING_COMBINATOR)) {
       // e.g. div:has(> img) + .banner
       // or   div:has(> img) ~ .banner
-      foundElements = domElements.map(element => {
-        const rootElement = element.parentElement;
+      foundElements = domElements.map(function (element) {
+        var rootElement = element.parentElement;
 
         if (!rootElement) {
-          throw new Error(`Selection by '${value}' part of selector is not possible.`);
+          throw new Error("Selection by '".concat(value, "' part of selector is not possible."));
         }
 
-        const elementSelectorText = getElementSelectorDesc(element);
-        const specificity = `${COLON}${REGULAR_PSEUDO_CLASSES.SCOPE}${CHILD_COMBINATOR}${elementSelectorText}`;
-        const selected = getByRegularSelector(regularSelectorNode, rootElement, specificity);
+        var elementSelectorText = getElementSelectorDesc(element);
+        var specificity = "".concat(COLON).concat(REGULAR_PSEUDO_CLASSES.SCOPE).concat(CHILD_COMBINATOR).concat(elementSelectorText);
+        var selected = getByRegularSelector(regularSelectorNode, rootElement, specificity);
         return selected;
       });
     } else {
       // space-separated regular selector after extended one
       // e.g. div:has(> img) .banner
-      foundElements = domElements.map(root => {
-        const specificity = `${COLON}${REGULAR_PSEUDO_CLASSES.SCOPE}${DESCENDANT_COMBINATOR}`;
+      foundElements = domElements.map(function (root) {
+        var specificity = "".concat(COLON).concat(REGULAR_PSEUDO_CLASSES.SCOPE).concat(DESCENDANT_COMBINATOR);
         return getByRegularSelector(regularSelectorNode, root, specificity);
       });
     } // foundElements should be flattened
@@ -3216,12 +3398,12 @@ var BrowserstackTest = (function (exports) {
    * @param specificity needed element specification
    */
 
-  const getElementsForSelectorNode = (selectorNode, root, specificity) => {
-    let selectedElements = [];
-    let i = 0;
+  var getElementsForSelectorNode = function getElementsForSelectorNode(selectorNode, root, specificity) {
+    var selectedElements = [];
+    var i = 0;
 
     while (i < selectorNode.children.length) {
-      const selectorNodeChild = selectorNode.children[i];
+      var selectorNodeChild = selectorNode.children[i];
 
       if (i === 0) {
         // any selector always starts with regular selector
@@ -3245,16 +3427,17 @@ var BrowserstackTest = (function (exports) {
    * @param doc document
    */
 
-  const selectElementsByAst = function (ast) {
-    let doc = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : document;
-    const selectedElements = []; // ast root is SelectorList node;
+  var selectElementsByAst = function selectElementsByAst(ast) {
+    var doc = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : document;
+    var selectedElements = []; // ast root is SelectorList node;
     // it has Selector nodes as children which should be processed separately
 
-    ast.children.forEach(selectorNode => {
-      selectedElements.push(...getElementsForSelectorNode(selectorNode, doc));
+    ast.children.forEach(function (selectorNode) {
+      selectedElements.push.apply(selectedElements, _toConsumableArray(getElementsForSelectorNode(selectorNode, doc)));
     }); // selectedElements should be flattened as it is array of arrays with elements
 
-    const uniqueElements = [...new Set(flatten(selectedElements))];
+    var uniqueElements = _toConsumableArray(new Set(flatten(selectedElements)));
+
     return uniqueElements;
   };
   /**
@@ -3262,11 +3445,13 @@ var BrowserstackTest = (function (exports) {
    * For making cache related to each new instance of class, not global
    */
 
-  class ExtCssDocument {
+  var ExtCssDocument = /*#__PURE__*/function () {
     /**
      * Cache with selectors and their AST parsing results
      */
-    constructor() {
+    function ExtCssDocument() {
+      _classCallCheck(this, ExtCssDocument);
+
       this.astCache = new Map();
     }
     /**
@@ -3276,209 +3461,326 @@ var BrowserstackTest = (function (exports) {
      */
 
 
-    saveAstToCache(selector, ast) {
-      this.astCache.set(selector, ast);
-    }
-    /**
-     * Gets ast from cache for given selector
-     * @param selector
-     */
-
-
-    getAstFromCache(selector) {
-      const cachedAst = this.astCache.get(selector) || null;
-      return cachedAst;
-    }
-    /**
-     * Gets selector ast:
-     * - if cached ast exists — returns it
-     * - if no cached ast — saves newly parsed ast to cache and returns it
-     * @param selector
-     */
-
-
-    getSelectorAst(selector) {
-      let ast = this.getAstFromCache(selector);
-
-      if (!ast) {
-        ast = parse$1(selector);
+    _createClass(ExtCssDocument, [{
+      key: "saveAstToCache",
+      value: function saveAstToCache(selector, ast) {
+        this.astCache.set(selector, ast);
       }
+      /**
+       * Gets ast from cache for given selector
+       * @param selector
+       */
 
-      this.saveAstToCache(selector, ast);
-      return ast;
-    }
-    /**
-     * Selects elements by selector
-     * @param selector
-     */
+    }, {
+      key: "getAstFromCache",
+      value: function getAstFromCache(selector) {
+        var cachedAst = this.astCache.get(selector) || null;
+        return cachedAst;
+      }
+      /**
+       * Gets selector ast:
+       * - if cached ast exists — returns it
+       * - if no cached ast — saves newly parsed ast to cache and returns it
+       * @param selector
+       */
 
+    }, {
+      key: "getSelectorAst",
+      value: function getSelectorAst(selector) {
+        var ast = this.getAstFromCache(selector);
 
-    querySelectorAll(selector) {
-      const ast = this.getSelectorAst(selector);
-      return selectElementsByAst(ast);
-    }
+        if (!ast) {
+          ast = parse$1(selector);
+        }
 
-  }
+        this.saveAstToCache(selector, ast);
+        return ast;
+      }
+      /**
+       * Selects elements by selector
+       * @param selector
+       */
+
+    }, {
+      key: "querySelectorAll",
+      value: function querySelectorAll(selector) {
+        var ast = this.getSelectorAst(selector);
+        return selectElementsByAst(ast);
+      }
+    }]);
+
+    return ExtCssDocument;
+  }();
 
   /**
    * Checks whether passed `arg` is number type
    * @param arg
    */
-  const isNumber = arg => {
+  var isNumber = function isNumber(arg) {
     return typeof arg === 'number';
   };
 
-  const isSupported = typeof window.requestAnimationFrame !== 'undefined';
-  const rAF = isSupported ? requestAnimationFrame : window.setTimeout;
-  const perf = isSupported ? performance : Date;
-  const DEFAULT_THROTTLE_DELAY_MS = 150;
+  var isSupported = typeof window.requestAnimationFrame !== 'undefined';
+  var rAF = isSupported ? requestAnimationFrame : window.setTimeout;
+  var perf = isSupported ? performance : Date;
+  var DEFAULT_THROTTLE_DELAY_MS = 150;
 
   /**
    * A helper class to throttle function calls with setTimeout and requestAnimationFrame
    */
-  class AsyncWrapper {
+  var AsyncWrapper = /*#__PURE__*/function () {
     // number, the provided callback should be executed twice in this time frame
-    constructor(context, callback, throttle) {
+    function AsyncWrapper(context, callback, throttle) {
+      _classCallCheck(this, AsyncWrapper);
+
       this.context = context;
       this.callback = callback;
       this.throttle = throttle || DEFAULT_THROTTLE_DELAY_MS;
       this.wrappedCb = this.wrappedCallback.bind(this);
     }
 
-    wrappedCallback(timestamp) {
-      this.lastRun = isNumber(timestamp) ? timestamp : perf.now();
-      delete this.rAFid;
-      delete this.timerId;
+    _createClass(AsyncWrapper, [{
+      key: "wrappedCallback",
+      value: function wrappedCallback(timestamp) {
+        this.lastRun = isNumber(timestamp) ? timestamp : perf.now();
+        delete this.rAFid;
+        delete this.timerId;
 
-      if (this.callback) {
-        this.callback(this.context);
-      }
-    }
-    /**
-     * Indicates whether there is a scheduled callback.
-     */
-
-
-    hasPendingCallback() {
-      return isNumber(this.rAFid) || isNumber(this.timerId);
-    }
-    /**
-     * Schedules a function call before the next animation frame.
-     */
-
-
-    run() {
-      if (this.hasPendingCallback()) {
-        // there is a pending execution scheduled
-        return;
-      }
-
-      if (typeof this.lastRun !== 'undefined') {
-        const elapsed = perf.now() - this.lastRun;
-
-        if (elapsed < this.throttle) {
-          this.timerId = window.setTimeout(this.wrappedCb, this.throttle - elapsed);
-          return;
+        if (this.callback) {
+          this.callback(this.context);
         }
       }
+      /**
+       * Indicates whether there is a scheduled callback.
+       */
 
-      this.rAFid = rAF(this.wrappedCb);
-    }
+    }, {
+      key: "hasPendingCallback",
+      value: function hasPendingCallback() {
+        return isNumber(this.rAFid) || isNumber(this.timerId);
+      }
+      /**
+       * Schedules a function call before the next animation frame.
+       */
 
-    static now() {
-      return perf.now();
-    }
+    }, {
+      key: "run",
+      value: function run() {
+        if (this.hasPendingCallback()) {
+          // there is a pending execution scheduled
+          return;
+        }
 
-  }
+        if (typeof this.lastRun !== 'undefined') {
+          var elapsed = perf.now() - this.lastRun;
 
-  const LAST_EVENT_TIMEOUT_MS = 10;
-  const IGNORED_EVENTS = ['mouseover', 'mouseleave', 'mouseenter', 'mouseout'];
-  const SUPPORTED_EVENTS = [// keyboard events
+          if (elapsed < this.throttle) {
+            this.timerId = window.setTimeout(this.wrappedCb, this.throttle - elapsed);
+            return;
+          }
+        }
+
+        this.rAFid = rAF(this.wrappedCb);
+      }
+    }], [{
+      key: "now",
+      value: function now() {
+        return perf.now();
+      }
+    }]);
+
+    return AsyncWrapper;
+  }();
+
+  var LAST_EVENT_TIMEOUT_MS = 10;
+  var IGNORED_EVENTS = ['mouseover', 'mouseleave', 'mouseenter', 'mouseout'];
+  var SUPPORTED_EVENTS = [// keyboard events
   'keydown', 'keypress', 'keyup', // mouse events
   'auxclick', 'click', 'contextmenu', 'dblclick', 'mousedown', 'mouseenter', 'mouseleave', 'mousemove', 'mouseover', 'mouseout', 'mouseup', 'pointerlockchange', 'pointerlockerror', 'select', 'wheel']; // 'wheel' event makes scrolling in Safari twitchy
   // https://github.com/AdguardTeam/ExtendedCss/issues/120
 
-  const SAFARI_PROBLEMATIC_EVENTS = ['wheel'];
+  var SAFARI_PROBLEMATIC_EVENTS = ['wheel'];
   /**
    * We use EventTracker to track the event that is likely to cause the mutation.
    * The problem is that we cannot use `window.event` directly from the mutation observer call
    * as we're not in the event handler context anymore.
    */
 
-  class EventTracker {
-    constructor() {
-      _defineProperty(this, "getLastEventType", () => this.lastEventType);
+  var EventTracker = /*#__PURE__*/function () {
+    function EventTracker() {
+      var _this = this;
 
-      _defineProperty(this, "getTimeSinceLastEvent", () => {
-        if (!this.lastEventTime) {
+      _classCallCheck(this, EventTracker);
+
+      _defineProperty(this, "getLastEventType", function () {
+        return _this.lastEventType;
+      });
+
+      _defineProperty(this, "getTimeSinceLastEvent", function () {
+        if (!_this.lastEventTime) {
           return null;
         }
 
-        return Date.now() - this.lastEventTime;
+        return Date.now() - _this.lastEventTime;
       });
 
-      this.trackedEvents = isSafariBrowser ? SUPPORTED_EVENTS.filter(event => !SAFARI_PROBLEMATIC_EVENTS.includes(event)) : SUPPORTED_EVENTS;
-      this.trackedEvents.forEach(eventName => {
-        document.documentElement.addEventListener(eventName, this.trackEvent, true);
+      this.trackedEvents = isSafariBrowser ? SUPPORTED_EVENTS.filter(function (event) {
+        return !SAFARI_PROBLEMATIC_EVENTS.includes(event);
+      }) : SUPPORTED_EVENTS;
+      this.trackedEvents.forEach(function (eventName) {
+        document.documentElement.addEventListener(eventName, _this.trackEvent, true);
       });
     }
 
-    trackEvent(event) {
-      this.lastEvent = event;
-      this.lastEventType = event.type;
-      this.lastEventTime = Date.now();
-    }
+    _createClass(EventTracker, [{
+      key: "trackEvent",
+      value: function trackEvent(event) {
+        this.lastEvent = event;
+        this.lastEventType = event.type;
+        this.lastEventTime = Date.now();
+      }
+    }, {
+      key: "isIgnoredEventType",
+      value: function isIgnoredEventType() {
+        var lastEventType = this.getLastEventType();
+        var sinceLastEventTime = this.getTimeSinceLastEvent();
+        return !!lastEventType && IGNORED_EVENTS.includes(lastEventType) && !!sinceLastEventTime && sinceLastEventTime < LAST_EVENT_TIMEOUT_MS;
+      }
+    }]);
 
-    isIgnoredEventType() {
-      const lastEventType = this.getLastEventType();
-      const sinceLastEventTime = this.getTimeSinceLastEvent();
-      return !!lastEventType && IGNORED_EVENTS.includes(lastEventType) && !!sinceLastEventTime && sinceLastEventTime < LAST_EVENT_TIMEOUT_MS;
-    }
+    return EventTracker;
+  }();
 
+  function _isNativeFunction(fn) {
+    return Function.toString.call(fn).indexOf("[native code]") !== -1;
   }
+
+  function _isNativeReflectConstruct$1() {
+    if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+    if (Reflect.construct.sham) return false;
+    if (typeof Proxy === "function") return true;
+
+    try {
+      Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function _construct(Parent, args, Class) {
+    if (_isNativeReflectConstruct$1()) {
+      _construct = Reflect.construct.bind();
+    } else {
+      _construct = function _construct(Parent, args, Class) {
+        var a = [null];
+        a.push.apply(a, args);
+        var Constructor = Function.bind.apply(Parent, a);
+        var instance = new Constructor();
+        if (Class) _setPrototypeOf(instance, Class.prototype);
+        return instance;
+      };
+    }
+
+    return _construct.apply(null, arguments);
+  }
+
+  function _wrapNativeSuper(Class) {
+    var _cache = typeof Map === "function" ? new Map() : undefined;
+
+    _wrapNativeSuper = function _wrapNativeSuper(Class) {
+      if (Class === null || !_isNativeFunction(Class)) return Class;
+
+      if (typeof Class !== "function") {
+        throw new TypeError("Super expression must either be null or a function");
+      }
+
+      if (typeof _cache !== "undefined") {
+        if (_cache.has(Class)) return _cache.get(Class);
+
+        _cache.set(Class, Wrapper);
+      }
+
+      function Wrapper() {
+        return _construct(Class, arguments, _getPrototypeOf(this).constructor);
+      }
+
+      Wrapper.prototype = Object.create(Class.prototype, {
+        constructor: {
+          value: Wrapper,
+          enumerable: false,
+          writable: true,
+          configurable: true
+        }
+      });
+      return _setPrototypeOf(Wrapper, Class);
+    };
+
+    return _wrapNativeSuper(Class);
+  }
+
+  function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+  function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
   /**
    * A helper class for MutationObserver with extra property `styleProtectionCount`
    */
-  class ExtMutationObserver extends MutationObserver {
+  var ExtMutationObserver = /*#__PURE__*/function (_MutationObserver) {
+    _inherits(ExtMutationObserver, _MutationObserver);
+
+    var _super = _createSuper(ExtMutationObserver);
+
     // extra property for keeping 'style fix counts'
     // extra property for easy checking whether the observer does observe
-    constructor(protectionCallback) {
-      super(mutations => {
-        this.styleProtectionCount += 1;
-        protectionCallback(mutations, this);
+    function ExtMutationObserver(protectionCallback) {
+      var _this;
+
+      _classCallCheck(this, ExtMutationObserver);
+
+      _this = _super.call(this, function (mutations) {
+        _this.styleProtectionCount += 1;
+        protectionCallback(mutations, _assertThisInitialized(_this));
       });
-      this.styleProtectionCount = 0;
-      this.isActive = false;
-      this.observeNode = this.observePrivate;
-      this.disconnectProtection = this.disconnectPrivate;
+      _this.styleProtectionCount = 0;
+      _this.isActive = false;
+      _this.observeNode = _this.observePrivate;
+      _this.disconnectProtection = _this.disconnectPrivate;
+      return _this;
     }
     /**
      * Observe target element and mark observer as active
      */
 
 
-    observePrivate(target, options) {
-      this.isActive = true;
-      this.observe(target, options);
-    }
-    /**
-     * Disconnect Observer and mark as inactive
-     */
+    _createClass(ExtMutationObserver, [{
+      key: "observePrivate",
+      value: function observePrivate(target, options) {
+        this.isActive = true;
+        this.observe(target, options);
+      }
+      /**
+       * Disconnect Observer and mark as inactive
+       */
 
+    }, {
+      key: "disconnectPrivate",
+      value: function disconnectPrivate() {
+        this.isActive = false;
+        this.disconnect();
+      }
+    }]);
 
-    disconnectPrivate() {
-      this.isActive = false;
-      this.disconnect();
-    }
-
-  }
+    return ExtMutationObserver;
+  }( /*#__PURE__*/_wrapNativeSuper(MutationObserver));
 
   /**
    * A helper class for applied rule stats
    */
-  class TimingStats {
-    constructor() {
+  var TimingStats = /*#__PURE__*/function () {
+    function TimingStats() {
+      _classCallCheck(this, TimingStats);
+
       this.array = [];
       this.length = 0;
       this.sum = 0;
@@ -3490,36 +3792,42 @@ var BrowserstackTest = (function (exports) {
      */
 
 
-    push(dataPoint) {
-      this.array.push(dataPoint);
-      this.length += 1;
-      this.sum += dataPoint;
-      this.squaredSum += dataPoint * dataPoint;
-      this.mean = this.sum / this.length;
-      this.stddev = Math.sqrt(this.squaredSum / this.length - Math.pow(this.mean, 2));
-    }
+    _createClass(TimingStats, [{
+      key: "push",
+      value: function push(dataPoint) {
+        this.array.push(dataPoint);
+        this.length += 1;
+        this.sum += dataPoint;
+        this.squaredSum += dataPoint * dataPoint;
+        this.mean = this.sum / this.length;
+        this.stddev = Math.sqrt(this.squaredSum / this.length - Math.pow(this.mean, 2));
+      }
+    }]);
 
-  }
+    return TimingStats;
+  }();
 
-  const APPLY_RULES_DELAY = 150;
-  const isEventListenerSupported = typeof window.addEventListener !== 'undefined';
+  var APPLY_RULES_DELAY = 150;
+  var isEventListenerSupported = typeof window.addEventListener !== 'undefined';
 
-  const observeDocument = (context, callback) => {
+  var observeDocument = function observeDocument(context, callback) {
     // We are trying to limit the number of callback calls by not calling it on all kind of "hover" events.
     // The rationale behind this is that "hover" events often cause attributes modification,
     // but re-applying extCSS rules will be useless as these attribute changes are usually transient.
-    const shouldIgnoreMutations = mutations => {
+    var shouldIgnoreMutations = function shouldIgnoreMutations(mutations) {
       // ignore if all mutations are about attributes changes
-      return mutations.every(m => m.type === 'attributes');
+      return mutations.every(function (m) {
+        return m.type === 'attributes';
+      });
     };
 
     if (natives.MutationObserver) {
-      context.domMutationObserver = new natives.MutationObserver(mutations => {
+      context.domMutationObserver = new natives.MutationObserver(function (mutations) {
         if (!mutations || mutations.length === 0) {
           return;
         }
 
-        const eventTracker = new EventTracker();
+        var eventTracker = new EventTracker();
 
         if (eventTracker.isIgnoredEventType() && shouldIgnoreMutations(mutations)) {
           return;
@@ -3540,7 +3848,7 @@ var BrowserstackTest = (function (exports) {
     }
   };
 
-  const disconnectDocument = (context, callback) => {
+  var disconnectDocument = function disconnectDocument(context, callback) {
     if (context.domMutationObserver) {
       context.domMutationObserver.disconnect();
     } else if (isEventListenerSupported) {
@@ -3556,16 +3864,16 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const setStyleToElement = (node, style) => {
+  var setStyleToElement = function setStyleToElement(node, style) {
     if (!(node instanceof HTMLElement)) {
       return;
     }
 
-    Object.keys(style).forEach(prop => {
+    Object.keys(style).forEach(function (prop) {
       // Apply this style only to existing properties
       // We can't use hasOwnProperty here (does not work in FF)
       if (typeof node.style.getPropertyValue(prop) !== 'undefined') {
-        let value = style[prop]; // First we should remove !important attribute (or it won't be applied')
+        var value = style[prop]; // First we should remove !important attribute (or it won't be applied')
 
         value = removeSuffix(value.trim(), '!important').trim();
         node.style.setProperty(prop, value, 'important');
@@ -3573,8 +3881,8 @@ var BrowserstackTest = (function (exports) {
     });
   };
 
-  const MAX_STYLE_PROTECTION_COUNT = 50;
-  const protectionObserverOption = {
+  var MAX_STYLE_PROTECTION_COUNT = 50;
+  var protectionObserverOption = {
     attributes: true,
     attributeOldValue: true,
     attributeFilter: ['style']
@@ -3584,17 +3892,15 @@ var BrowserstackTest = (function (exports) {
    * @param styles
    */
 
-  const createProtectionCallback = styles => {
-    const protectionCallback = (mutations, observer) => {
+  var createProtectionCallback = function createProtectionCallback(styles) {
+    var protectionCallback = function protectionCallback(mutations, observer) {
       if (!mutations.length) {
         return;
       }
 
-      const {
-        target
-      } = mutations[0];
+      var target = mutations[0].target;
       observer.disconnect();
-      styles.forEach(style => {
+      styles.forEach(function (style) {
         setStyleToElement(target, style);
       });
 
@@ -3615,25 +3921,23 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const protectStyleAttribute = (node, rules) => {
+  var protectStyleAttribute = function protectStyleAttribute(node, rules) {
     if (!natives.MutationObserver) {
       return null;
     }
 
-    const styles = [];
-    rules.forEach(ruleData => {
-      const {
-        style
-      } = ruleData;
+    var styles = [];
+    rules.forEach(function (ruleData) {
+      var style = ruleData.style;
 
       if (!style) {
-        throw new Error(`No affectedElement style to apply for selector: '${ruleData.selector}'`);
+        throw new Error("No affectedElement style to apply for selector: '".concat(ruleData.selector, "'"));
       }
 
       styles.push(style);
     });
-    const protectionObserver = new ExtMutationObserver(createProtectionCallback(styles));
-    protectionObserver.observePrivate(node, protectionObserverOption);
+    var protectionObserver = new ExtMutationObserver(createProtectionCallback(styles));
+    protectionObserver.observeNode(node, protectionObserverOption);
     return protectionObserver;
   };
 
@@ -3643,8 +3947,10 @@ var BrowserstackTest = (function (exports) {
    * @param domNode DOM node
    * @returns found affectedElement or undefined
    */
-  const findAffectedElement = (affElements, domNode) => {
-    return affElements.find(affEl => affEl.node === domNode);
+  var findAffectedElement = function findAffectedElement(affElements, domNode) {
+    return affElements.find(function (affEl) {
+      return affEl.node === domNode;
+    });
   };
   /**
    * Removes affectedElement.node from DOM
@@ -3653,17 +3959,15 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const removeElement = (context, affectedElement) => {
-    const {
-      node
-    } = affectedElement;
+  var removeElement = function removeElement(context, affectedElement) {
+    var node = affectedElement.node;
     affectedElement.removed = true;
-    const elementSelector = getElementSelectorPath(node); // check if the element has been already removed earlier
+    var elementSelector = getElementSelectorPath(node); // check if the element has been already removed earlier
 
-    const elementRemovalsCounter = context.removalsStatistic[elementSelector] || 0; // if removals attempts happened more than specified we do not try to remove node again
+    var elementRemovalsCounter = context.removalsStatistic[elementSelector] || 0; // if removals attempts happened more than specified we do not try to remove node again
 
     if (elementRemovalsCounter > MAX_STYLE_PROTECTION_COUNT) {
-      logger.error(`ExtendedCss: infinite loop protection for selector: '${elementSelector}'`);
+      logger.error("ExtendedCss: infinite loop protection for selector: '".concat(elementSelector, "'"));
       return;
     }
 
@@ -3682,7 +3986,7 @@ var BrowserstackTest = (function (exports) {
    * @param context
    * @param affectedElement Object containing DOM node and rule to be applied
    */
-  const applyStyle = (context, affectedElement) => {
+  var applyStyle = function applyStyle(context, affectedElement) {
     var _affectedElement$prot;
 
     if ((_affectedElement$prot = affectedElement.protectionObserver) !== null && _affectedElement$prot !== void 0 && _affectedElement$prot.isActive) {
@@ -3698,18 +4002,16 @@ var BrowserstackTest = (function (exports) {
       }
     }
 
-    const {
-      node
-    } = affectedElement;
+    var _affectedElement = affectedElement,
+        node = _affectedElement.node;
 
-    for (let i = 0; i < affectedElement.rules.length; i += 1) {
-      const {
-        selector,
-        style
-      } = affectedElement.rules[i];
+    for (var i = 0; i < affectedElement.rules.length; i += 1) {
+      var _affectedElement$rule = affectedElement.rules[i],
+          selector = _affectedElement$rule.selector,
+          style = _affectedElement$rule.style;
 
       if (!style) {
-        throw new Error(`No affectedElement style to apply for selector: '${selector}'`);
+        throw new Error("No affectedElement style to apply for selector: '".concat(selector, "'"));
       }
 
       if (style[REMOVE_PSEUDO_PROPERTY_KEY] === PSEUDO_PROPERTY_POSITIVE_VALUE) {
@@ -3725,7 +4027,7 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const revertStyle = affElement => {
+  var revertStyle = function revertStyle(affElement) {
     var _affElement$protectio;
 
     if ((_affElement$protectio = affElement.protectionObserver) !== null && _affElement$protectio !== void 0 && _affElement$protectio.isActive) {
@@ -3741,38 +4043,36 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  const applyRule = (context, ruleData) => {
+  var applyRule = function applyRule(context, ruleData) {
     // debugging mode can be enabled in two ways:
     // 1. for separate rules - by `{ debug: true; }`
     // 2. for all rules simultaneously by:
     //   - `{ debug: global; }` in any rule
     //   - positive `debug` property in ExtCssConfiguration
-    const isDebuggingMode = !!ruleData.debug || context.debug;
-    let startTime;
+    var isDebuggingMode = !!ruleData.debug || context.debug;
+    var startTime;
 
     if (isDebuggingMode) {
       startTime = AsyncWrapper.now();
     }
 
-    const {
-      ast
-    } = ruleData;
-    const nodes = selectElementsByAst(ast);
-    nodes.forEach(node => {
-      let affectedElement = findAffectedElement(context.affectedElements, node);
+    var ast = ruleData.ast;
+    var nodes = selectElementsByAst(ast);
+    nodes.forEach(function (node) {
+      var affectedElement = findAffectedElement(context.affectedElements, node);
 
       if (affectedElement) {
         affectedElement.rules.push(ruleData);
         applyStyle(context, affectedElement);
       } else {
         // Applying style first time
-        const originalStyle = node.style.cssText;
+        var originalStyle = node.style.cssText;
         affectedElement = {
-          node,
+          node: node,
           // affected DOM node
           rules: [ruleData],
           // rule to be applied
-          originalStyle,
+          originalStyle: originalStyle,
           // original node style
           protectionObserver: null // style attribute observer
 
@@ -3783,7 +4083,7 @@ var BrowserstackTest = (function (exports) {
     });
 
     if (isDebuggingMode && startTime) {
-      const elapsed = AsyncWrapper.now() - startTime;
+      var elapsed = AsyncWrapper.now() - startTime;
 
       if (!ruleData.timingStats) {
         ruleData.timingStats = new TimingStats();
@@ -3798,16 +4098,16 @@ var BrowserstackTest = (function (exports) {
   /**
    * Prints timing information if debugging mode is enabled
    */
-  const printTimingInfo = context => {
+  var printTimingInfo = function printTimingInfo(context) {
     if (context.timingsPrinted) {
       return;
     }
 
     context.timingsPrinted = true;
-    const timingsToLog = [];
-    context.parsedRules.forEach(rule => {
+    var timingsToLog = [];
+    context.parsedRules.forEach(function (rule) {
       if (rule.timingStats) {
-        const record = {
+        var record = {
           selector: rule.selector,
           timings: rule.timingStats
         };
@@ -3823,7 +4123,7 @@ var BrowserstackTest = (function (exports) {
     logger.info('[ExtendedCss] Timings in milliseconds for %o:\n%o', window.location.href, timingsToLog);
   };
 
-  const mainObserve = (context, mainCallback) => {
+  var mainObserve = function mainObserve(context, mainCallback) {
     if (context.isDomObserved) {
       return;
     } // handle dynamically added elements
@@ -3833,7 +4133,7 @@ var BrowserstackTest = (function (exports) {
     observeDocument(context, mainCallback);
   };
 
-  const mainDisconnect = (context, mainCallback) => {
+  var mainDisconnect = function mainDisconnect(context, mainCallback) {
     if (!context.isDomObserved) {
       return;
     }
@@ -3846,8 +4146,10 @@ var BrowserstackTest = (function (exports) {
    */
 
 
-  class ExtendedCss {
-    constructor(configuration) {
+  var ExtendedCss = /*#__PURE__*/function () {
+    function ExtendedCss(configuration) {
+      _classCallCheck(this, ExtendedCss);
+
       if (!isBrowserSupported()) {
         throw new Error('Browser is not supported by ExtendedCss.');
       }
@@ -3863,10 +4165,10 @@ var BrowserstackTest = (function (exports) {
         isDomObserved: false,
         removalsStatistic: {},
         parsedRules: parse(configuration.styleSheet),
-        mainCallback: () => {}
+        mainCallback: function mainCallback() {}
       }; // true if any one rule in styleSheet has `debug: global`
 
-      this.context.debug = this.context.parsedRules.some(ruleData => {
+      this.context.debug = this.context.parsedRules.some(function (ruleData) {
         return ruleData.debug === DEBUG_PSEUDO_PROPERTY_GLOBAL_VALUE;
       });
       this.applyRulesScheduler = new AsyncWrapper(this.context, this.applyRules, APPLY_RULES_DELAY);
@@ -3874,7 +4176,7 @@ var BrowserstackTest = (function (exports) {
       this.context.mainCallback = this.mainCallback;
 
       if (this.context.beforeStyleApplied && typeof this.context.beforeStyleApplied !== 'function') {
-        throw new Error(`Invalid configuration. Type of 'beforeStyleApplied' should be a function, received: '${typeof this.context.beforeStyleApplied}'`); // eslint-disable-line max-len
+        throw new Error("Invalid configuration. Type of 'beforeStyleApplied' should be a function, received: '".concat(_typeof(this.context.beforeStyleApplied), "'")); // eslint-disable-line max-len
       }
     }
     /**
@@ -3882,130 +4184,141 @@ var BrowserstackTest = (function (exports) {
      */
 
 
-    applyRules(context) {
-      const newSelectedElements = []; // some rules could make call - selector.querySelectorAll() temporarily to change node id attribute
-      // this caused MutationObserver to call recursively
-      // https://github.com/AdguardTeam/ExtendedCss/issues/81
+    _createClass(ExtendedCss, [{
+      key: "applyRules",
+      value: function applyRules(context) {
+        var newSelectedElements = []; // some rules could make call - selector.querySelectorAll() temporarily to change node id attribute
+        // this caused MutationObserver to call recursively
+        // https://github.com/AdguardTeam/ExtendedCss/issues/81
 
-      mainDisconnect(context, context.mainCallback);
-      context.parsedRules.forEach(ruleData => {
-        const nodes = applyRule(context, ruleData);
-        Array.prototype.push.apply(newSelectedElements, nodes);
-      }); // Now revert styles for elements which are no more affected
+        mainDisconnect(context, context.mainCallback);
+        context.parsedRules.forEach(function (ruleData) {
+          var nodes = applyRule(context, ruleData);
+          Array.prototype.push.apply(newSelectedElements, nodes);
+        }); // Now revert styles for elements which are no more affected
 
-      let affLength = context.affectedElements.length; // do nothing if there is no elements to process
+        var affLength = context.affectedElements.length; // do nothing if there is no elements to process
 
-      while (affLength) {
-        const affectedEl = context.affectedElements[affLength - 1];
+        while (affLength) {
+          var affectedEl = context.affectedElements[affLength - 1];
 
-        if (!newSelectedElements.includes(affectedEl.node)) {
-          // Time to revert style
-          revertStyle(affectedEl);
-          context.affectedElements.splice(affLength - 1, 1);
-        } else if (!affectedEl.removed) {
-          var _affectedEl$protectio;
+          if (!newSelectedElements.includes(affectedEl.node)) {
+            // Time to revert style
+            revertStyle(affectedEl);
+            context.affectedElements.splice(affLength - 1, 1);
+          } else if (!affectedEl.removed) {
+            var _affectedEl$protectio;
 
-          // Add style protection observer
-          // Protect "style" attribute from changes
-          if (!((_affectedEl$protectio = affectedEl.protectionObserver) !== null && _affectedEl$protectio !== void 0 && _affectedEl$protectio.isActive)) {
-            affectedEl.protectionObserver = protectStyleAttribute(affectedEl.node, affectedEl.rules);
+            // Add style protection observer
+            // Protect "style" attribute from changes
+            if (!((_affectedEl$protectio = affectedEl.protectionObserver) !== null && _affectedEl$protectio !== void 0 && _affectedEl$protectio.isActive)) {
+              affectedEl.protectionObserver = protectStyleAttribute(affectedEl.node, affectedEl.rules);
+            }
+          }
+
+          affLength -= 1;
+        } // After styles are applied we can start observe again
+
+
+        mainObserve(context, context.mainCallback);
+        printTimingInfo(context);
+      }
+      /**
+       * Applies stylesheet rules on page
+       */
+
+    }, {
+      key: "apply",
+      value: function apply() {
+        var _this = this;
+
+        this.applyRules(this.context);
+
+        if (document.readyState !== 'complete') {
+          document.addEventListener('DOMContentLoaded', function () {
+            _this.applyRules(_this.context);
+          }, false);
+        }
+      }
+      /**
+       * Disposes ExtendedCss and removes our styles from matched elements
+       */
+
+    }, {
+      key: "dispose",
+      value: function dispose() {
+        mainDisconnect(this.context, this.context.mainCallback);
+        this.context.affectedElements.forEach(function (el) {
+          revertStyle(el);
+        });
+      }
+      /**
+       * Exposed for testing purposes only
+       */
+
+    }, {
+      key: "_getAffectedElements",
+      value: function _getAffectedElements() {
+        return this.context.affectedElements;
+      }
+      /**
+       * Returns a list of the document's elements that match the specified selector.
+       * Uses ExtCssDocument.querySelectorAll()
+       * @param selector selector text
+       * @param [noTiming=true] if true -- do not print the timing to the console
+       * @returns a list of elements that match the selector
+       * @throws an error if selector is not valid
+       */
+
+    }], [{
+      key: "query",
+      value: function query(selector) {
+        var noTiming = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+
+        if (typeof selector !== 'string') {
+          throw new Error('Selector should be defined as a string.');
+        }
+
+        var start = AsyncWrapper.now();
+
+        try {
+          var extCssDoc = new ExtCssDocument();
+          return extCssDoc.querySelectorAll(selector);
+        } finally {
+          var end = AsyncWrapper.now();
+
+          if (!noTiming) {
+            logger.info("[ExtendedCss] Elapsed: ".concat(Math.round((end - start) * 1000), " \u03BCs."));
           }
         }
-
-        affLength -= 1;
-      } // After styles are applied we can start observe again
-
-
-      mainObserve(context, context.mainCallback);
-      printTimingInfo(context);
-    }
-    /**
-     * Applies stylesheet rules on page
-     */
-
-
-    apply() {
-      this.applyRules(this.context);
-
-      if (document.readyState !== 'complete') {
-        document.addEventListener('DOMContentLoaded', () => {
-          this.applyRules(this.context);
-        }, false);
       }
-    }
-    /**
-     * Disposes ExtendedCss and removes our styles from matched elements
-     */
+      /**
+       * Validates selector
+       * @param selector selector text
+       */
 
-
-    dispose() {
-      mainDisconnect(this.context, this.context.mainCallback);
-      this.context.affectedElements.forEach(el => {
-        revertStyle(el);
-      });
-    }
-    /**
-     * Exposed for testing purposes only
-     */
-
-
-    _getAffectedElements() {
-      return this.context.affectedElements;
-    }
-    /**
-     * Returns a list of the document's elements that match the specified selector.
-     * Uses ExtCssDocument.querySelectorAll()
-     * @param selector selector text
-     * @param [noTiming=true] if true -- do not print the timing to the console
-     * @returns a list of elements that match the selector
-     * @throws an error if selector is not valid
-     */
-
-
-    static query(selector) {
-      let noTiming = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-
-      if (typeof selector !== 'string') {
-        throw new Error('Selector should be defined as a string.');
-      }
-
-      const start = AsyncWrapper.now();
-
-      try {
-        const extCssDoc = new ExtCssDocument();
-        return extCssDoc.querySelectorAll(selector);
-      } finally {
-        const end = AsyncWrapper.now();
-
-        if (!noTiming) {
-          logger.info(`[ExtendedCss] Elapsed: ${Math.round((end - start) * 1000)} μs.`);
+    }, {
+      key: "validate",
+      value: function validate(selector) {
+        try {
+          ExtendedCss.query(selector);
+          return {
+            ok: true,
+            error: null
+          };
+        } catch (e) {
+          // eslint-disable-line @typescript-eslint/no-explicit-any
+          var error = "Error: selector \"".concat(selector, "\" is invalid \u2014 ").concat(e.message, ")");
+          return {
+            ok: false,
+            error: error
+          };
         }
       }
-    }
-    /**
-     * Validates selector
-     * @param selector selector text
-     */
+    }]);
 
-
-    static validate(selector) {
-      try {
-        ExtendedCss.query(selector);
-        return {
-          ok: true,
-          error: null
-        };
-      } catch (e) {
-        // eslint-disable-line @typescript-eslint/no-explicit-any
-        const error = `Error: selector "${selector}" is invalid — ${e.message})`;
-        return {
-          ok: false,
-          error
-        };
-      }
-    }
-
-  }
+    return ExtendedCss;
+  }();
 
   exports.ExtendedCss = ExtendedCss;
 
