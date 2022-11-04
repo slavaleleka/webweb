@@ -1,9 +1,9 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social and AdGuard Annoyances filters
-! Version: 1.1.177
+! Version: 1.1.178
 ! Expires: 2 hours
-! TimeUpdated: 2022-11-02T15:00:00+03:00
+! TimeUpdated: 2022-11-02T16:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
@@ -436,6 +436,7 @@ ukrinform.ua,chytomo.com,m.censor.net##.tags
 mil.in.ua##.hashtags
 zmina.info##.article_tags
 nerdist.com##.tags-links
+bbc.com##[aria-labelledby="related-topics"]
 !
 !
 !# mistakes
@@ -454,6 +455,7 @@ ukrinform.ua#?#article p:contains(Приєднуйтесь до наших)
 ! gitbook.com cookies
 #?##animatedComponent:has(a[href$="/privacy/cookies"])
 !
+bbc.com#?#main > div:has(> p > a[href="https://t.me/bbcukrainian"])
 giphy.com#?#div[class^="Navigation-"] div[class^="ButtonDiv-"]:has(> div > div[class^="FavoriteContainer-"])
 amazon.com#?#[data-automation-id="bottom-bar-actions"] > div:has(> span > button#shareTrigger)
 fontanka.ru#?#a[href$="/print.html"]:contains(Печать)
