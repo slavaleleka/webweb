@@ -469,7 +469,7 @@ airbnb.*#?#div[role="dialog"] button[type="button"]:has(div:contains(Подел�
 airbnb.*#?#div[data-section-id="TITLE_DEFAULT"] button[type="button"]:has(div:contains(Поделиться))
 genius.com#?#span[class^="LabelWithIcon__Label"]:contains(Share):upward(button)
 ! [beta] extended css
-#?#a[href^="mailto:"]:not(:upward(footer))
+! #?#a[href^="mailto:"]:not(:upward(footer))
 ! extended css  ---  END
 !
 ! whitelist --- START
