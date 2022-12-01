@@ -1,0 +1,20 @@
+img[height="60"][width\"468\"]
+Unbalanced attribute brackets is selector: 'img[height="60"][width\"468\"]' in rule: nilemotors.net##img[height="60"][width\"468\"]
+
+a[href^="/watch?v="][onclick^="return koya.onEvent(arguments[0]||window.event,'"]:not([role]):not([class]):not([id])
+Error: unable to select by 'a[href^="/watch?v="][onclick^="return koya.onEvent(arguments[0]||window.event,'"]' — 'a[href^="/watch?v="][onclick^="return koya.onEvent(arguments[0]||window.event,'"]' is not a valid selector in rule: m.youtube.com##a[href^="/watch?v="][onclick^="return koya.onEvent(arguments[0]||window.event,'"]:not([role]):not([class]):not([id])
+
+a[href^="/watch?v="][onclick^="return koya.onEvent(arguments[0]||window.event,'"]:not([role]):not([class]):not([id]) + div
+Error: unable to select by 'a[href^="/watch?v="][onclick^="return koya.onEvent(arguments[0]||window.event,'"]' — 'a[href^="/watch?v="][onclick^="return koya.onEvent(arguments[0]||window.event,'"]' is not a valid selector in rule: m.youtube.com##a[href^="/watch?v="][onclick^="return koya.onEvent(arguments[0]||window.event,'"]:not([role]):not([class]):not([id]) + div
+
+div[class\"ads-article\"]
+Unbalanced attribute brackets is selector: 'div[class\"ads-article\"]' in rule: yeniakit.com.tr##div[class\"ads-article\"]
+
+#main-container > div[\:class^="$store.adtech.reskinRenderedDesktop"]
+'[\:class^="$store.adtech.reskinRenderedDesktop"]' is not a valid attribute due to '\' at start of it in rule: mumsnet.com###main-container > div[\:class^="$store.adtech.reskinRenderedDesktop"]
+
+#main-container > div[\:class^="$store.adtech.reskinRenderedDesktop"]
+'[\:class^="$store.adtech.reskinRenderedDesktop"]' is not a valid attribute due to '\' at start of it in rule: mumsnet.com###main-container > div[\:class^="$store.adtech.reskinRenderedDesktop"]
+
+div[\:data-service-slot][data-ac]
+'[\:data-service-slot]' is not a valid attribute due to '\' at start of it in rule: web.de,gmx.net##div[\:data-service-slot][data-ac]
