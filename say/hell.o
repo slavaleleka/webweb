@@ -1,8 +1,8 @@
 ! Title: /say/hell.o
 ! Description: personal blocklist
-! Version: 1.0.56
+! Version: 1.0.57
 ! Expires: 2 hours
-! TimeUpdated: 2022-11-23T15:00:00+03:00
+! TimeUpdated: 2022-11-24T15:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
@@ -69,7 +69,7 @@ drugoigorod.ru#?#.article-content > p:has(> a[href="https://t.me/drugoigorod"])
 drugoigorod.ru#?#article h3:contains(HYPER_COMM)
 drugoigorod.ru##a.hc-link[href="http://hypercomments.com"]
 ! XTranslate extension banner — at least on example.org
-##.XTranslate
+example.*##.XTranslate
 !
 !
 ! self-promo
