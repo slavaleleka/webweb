@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Extended CSS test page</title>
+</head>
+
+<body>
+  <div id="root" level="0">
+    <div id="parent" level="1" random>
+        <p id="paragraph" class="text">text</p>
+        <div id="child" class="base" level="2">
+            <div id="inner" class="base" level="3">
+                <span id="innerSpan" class="span" level="4">inner span text</span>
+                <p id="innerParagraph">inner paragraph</p>
+            </div>
+        </div>
+        <div id="child2" class="base2" level="3">
+            <span id="innerSpan2" class="span2" level="4">s2222222</span>
+            <p id="innerParagraph2">inP2</p>
+            <div id="deep2">
+                <input id="disabledInput" disabled>
+            </div>
+        </div>
+        <p id="childParagraph">p2222</p>
+    </div>
+  </div>
+</body>
+
+</html>
