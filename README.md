@@ -29,6 +29,9 @@
 
 * * *
 
+<a href="https://subscribe.adblockplus.org?location=">empty location</a>
+
+
 ```PostCSS
 // for blocking div#targer1
 div:matches-attr(/-link/ = /-banner_/)
