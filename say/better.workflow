@@ -1,8 +1,8 @@
 ! Title: /say/better.workflow
 ! Description: tiny improvements
-! Version: 0.0.16
+! Version: 0.0.17
 ! Expires: 2 hours
-! TimeUpdated: 2022-06-15T13:05:00+03:00
+! TimeUpdated: 2023-05-05T13:05:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/better.workflow
@@ -34,6 +34,12 @@ jira.adguard.com#$##gh > div#ghx-header { padding: 5px 20px !important; }
 jira.adguard.com#$##js-work-quickfilters > dd { margin-bottom: 2px! important; }
 jira.adguard.com#$#ul#ghx-column-headers > { padding: 5px 9px !important; }
 jira.adguard.com#$#input#quickSearchInput.search { background: none!important; border: 1px solid black!important; }
+!
+jira.adguard.com#$##create-issue-dialog { top: 10px !important; min-height: 750px !important; }
+jira.adguard.com#$#.aui-dialog2-header { height: 50px !important; }
+jira.adguard.com#$#.aui-dialog2-content { min-height: 650px !important; }
+jira.adguard.com#$#.aui-dialog2-content #description-wiki-edit > textarea[name="description"] { max-height: 550px !important; }
+jira.adguard.com#$#.aui-dialog2-content .qf-field { padding: 2px 30px 2px 0 !important; }
 !
 bit.adguard.com#$#.comment .comment-actions { margin-top: 4px!important; }
 bit.adguard.com#$#.comment > .comment-wrapper { padding-top: 0!important; padding-bottom: 0!important; }
