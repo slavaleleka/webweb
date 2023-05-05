@@ -1,8 +1,8 @@
 ! Title: /say/better.workflow
 ! Description: tiny improvements
-! Version: 0.0.17
+! Version: 0.0.18
 ! Expires: 2 hours
-! TimeUpdated: 2023-05-05T13:05:00+03:00
+! TimeUpdated: 2023-05-04T13:05:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/better.workflow
