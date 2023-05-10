@@ -1,0 +1,13 @@
+[ADFS Adblock List]
+! Title: ad-rules.txt
+! Last Modified: 2023-05-10 16:28:05
+! Homepage: https://github.com/Bibaiji/ad-rules/
+## 👇This Part Merge from: /home/runner/work/ad-rules/ad-rules/rule/local-rule.txt
+||sf3-ttcdn-tos.pstatp.com^$important
+@@||om.cbsi.com^$important
+||lf-cdn-tos.bytescm.com^
+@@||tnc16-platform-useast1a.tiktokv.com^$important
+@@||jiathis.com^$important
+||feedback-c.zijieapi.com^
+@@||puui.qpic.cn^$important
+@@||pan.quark.cn^$important
