@@ -1,8 +1,8 @@
 ! Title: /say/better.workflow
 ! Description: tiny improvements
-! Version: 0.0.19
+! Version: 0.0.20
 ! Expires: 2 hours
-! TimeUpdated: 2023-05-04T13:06:00+03:00
+! TimeUpdated: 2023-05-21T13:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/better.workflow
@@ -29,6 +29,8 @@ github.com#$#header { padding-bottom: 8px!important; }
 github.com#$#main > .hide-full-screen { padding-top: 8px!important; margin-bottom: 0!important; }
 github.com#$#main > .hide-full-screen > div[class] { margin-bottom: 0!important; }
 github.com#$##partial-discussion-header { margin: 0!important; }
+!
+jira.adguard.com#$#.ajs-layer { min-width: 300px !important; }
 !
 jira.adguard.com#$##gh > div#ghx-header { padding: 5px 20px !important; }
 jira.adguard.com#$##js-work-quickfilters > dd { margin-bottom: 2px! important; }
