@@ -1,6 +1,6 @@
 ! Title: /tro/lo.lo
 ! Description: test.ing
-! Version: 1.0.0.7
+! Version: 1.0.0.8
 ! TimeUpdated: 2022-05-13T13:06:00+03:00
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/testing/tro/lo.lo
@@ -13,4 +13,3 @@
 ! *#@#h1
 !
 example.org#%#//scriptlet('set-constant', 'test1', '1')
-example.org#%#//scriptlet('set-constant', 'test2', '2')
