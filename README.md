@@ -1,3 +1,7 @@
+test [*]
+
+* * *
+
 <h2>subscribe</h2>
 
 <h3>once for all:</h3>
@@ -147,10 +151,6 @@ https://raw.githubusercontent.com/slavaleleka/webweb/master/dns-990.txt
 https://raw.githubusercontent.com/slavaleleka/webweb/master/trusted_filter_test.txt
 
 https://raw.githubusercontent.com/slavaleleka/webweb/master/untrusted_filter_test.txt
-
-* * *
-
-name[*]
 
 * * *
 
