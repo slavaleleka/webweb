@@ -150,4 +150,13 @@ https://raw.githubusercontent.com/slavaleleka/webweb/master/untrusted_filter_tes
 
 * * *
 
-[*](. "The field is required")
+name[*]
+
+* * *
+
+### <a name="asterisk"></a>
+
+> \*: The field is required.
+
+
+[*]: #asterisk "The field is required"
