@@ -1,9 +1,9 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social and AdGuard Annoyances filters
-! Version: 1.1.189
+! Version: 1.1.190
 ! Expires: 2 hours
-! TimeUpdated: 2023-06-29T15:00:00+03:00
+! TimeUpdated: 2023-06-30T15:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
@@ -441,6 +441,9 @@ zmina.info##.subscribe_disclimer
 ##.post_tags
 ##.tagcloud
 ##.entry-tags
+##.ipagesTagGroup-title
+##.ipagesTagGroup-tagList
+##.news-tags
 ukrinform.ua,chytomo.com,m.censor.net##.tags
 mil.in.ua##.hashtags
 zmina.info##.article_tags
@@ -450,6 +453,7 @@ bbc.com##[aria-labelledby="related-topics"]
 !
 !# mistakes
 ! report a mistake on text
+24tv.ua##.text_search_error
 chytomo.com##.mistake
 zmina.info##.disklamer
 !
