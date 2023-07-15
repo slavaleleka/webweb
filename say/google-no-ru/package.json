@@ -1,0 +1,19 @@
+{
+    "name": "google-no-ru",
+    "version": "0.0.1",
+    "description": "Userscript to remove ru google search result",
+    "license": "GPL-3.0",
+    "author": "Slava Leleka",
+    "main": "index.js",
+    "scripts": {
+        "build": "echo 'to be implemented' && exit 1",
+        "update-google-domains": "node ./tools/update-google-domains.js",
+        "test": "echo 'to be implemented' && exit 1",
+        "lint": "eslint . --cache --ext .js"
+    },
+    "devDependencies": {
+        "eslint": "^7.32.0 || ^8.2.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.25.2"
+    }
+}
