@@ -1,9 +1,9 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite
 !               better to use in addition to AdGuard Social and AdGuard Annoyances filters
-! Version: 1.1.193
+! Version: 1.1.194
 ! Expires: 2 hours
-! TimeUpdated: 2023-07-11T17:00:00+03:00
+! TimeUpdated: 2023-07-12T17:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
@@ -439,6 +439,7 @@ zmina.info##.subscribe_disclimer
 !
 ! TODO: consider not to limit by domain
 !# hashtags
+##.tags-wrapper
 ##.b-post-tags
 ##.post_tags
 ##.tagcloud
