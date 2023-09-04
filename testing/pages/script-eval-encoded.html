@@ -1,0 +1,15 @@
+<!--------------------------------------------------------------------------------->
+<!-- https://slavaleleka.github.io/webweb/testing/pages/script-eval-encoded.html -->
+<!--------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Test</title>
+   </head>
+   <body>
+        <a href="index.html">Back</a>
+        <!-- logs '!!  test  !!' to browser console -->
+        <script src="data:text/javascript;base64,Y29uc3QgdGVzdF9zY3JpcHQgPSAoKSA9PiB7CiAgICBjb25zdCBURVhUID0gJyEhICB0ZXN0ICAhISc7CiAgICBjb25zb2xlLmxvZyhURVhUKTsKfTsKZXZhbCh0ZXN0X3NjcmlwdCgpKTs="></script>
+   </body>
+</html>
