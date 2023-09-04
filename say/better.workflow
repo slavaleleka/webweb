@@ -1,8 +1,8 @@
 ! Title: /say/better.workflow
 ! Description: tiny improvements
-! Version: 0.0.21
+! Version: 0.0.22
 ! Expires: 2 hours
-! TimeUpdated: 2023-07-21T13:00:00+03:00
+! TimeUpdated: 2023-08-21T13:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/better.workflow
@@ -37,9 +37,10 @@ jira.adguard.com#$##js-work-quickfilters > dd { margin-bottom: 2px! important; }
 jira.adguard.com#$#ul#ghx-column-headers > { padding: 5px 9px !important; }
 jira.adguard.com#$#input#quickSearchInput.search { background: none!important; border: 1px solid black!important; }
 !
-jira.adguard.com#$##create-issue-dialog { top: 10px !important; min-height: 750px !important; }
-jira.adguard.com#$##edit-issue-dialog { top: 10px !important; min-height: 750px !important; }
-jira.adguard.com#$##create-subtask-dialog { top: 10px !important; min-height: 750px !important; }
+jira.adguard.com#$#section#create-issue-dialog { top: 10px !important; min-height: 750px !important; }
+jira.adguard.com#$#section#edit-issue-dialog { top: 10px !important; min-height: 750px !important; }
+jira.adguard.com#$#section#create-subtask-dialog { top: 10px !important; min-height: 750px !important; }
+jira.adguard.com#$#section#new-dialog-id { top: 10px !important; min-height: 750px !important; }
 jira.adguard.com#$#.aui-dialog2-header { height: 50px !important; }
 jira.adguard.com#$#.aui-dialog2-content { min-height: 650px !important; }
 jira.adguard.com#$#.aui-dialog2-content #description-wiki-edit > textarea[name="description"] { max-height: 550px !important; }
