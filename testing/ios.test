@@ -1,0 +1,11 @@
+! Title: /testing/ios.test
+! Description: test.ing
+! Version: 1.0.0.1
+! Expires: 2 hours
+! TimeUpdated: 2023-09-27T19:00:00+03:00
+!
+! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/testing/ios.test
+! subscribe: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/testing/ios.test
+!
+!
+liquipedia.net#%#//scriptlet('remove-class', 'mobile-sticky-ad-is-active', 'body')
