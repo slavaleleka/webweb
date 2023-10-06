@@ -1,8 +1,8 @@
 ! Title: /say/better.workflow
 ! Description: tiny improvements
-! Version: 0.0.23
+! Version: 0.0.24
 ! Expires: 2 hours
-! TimeUpdated: 2023-08-22T13:00:00+03:00
+! TimeUpdated: 2023-09-22T13:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/better.workflow
@@ -65,3 +65,5 @@ bit.int.agrd.dev,bit.adguard.com#$##dashboard-container > .side-panel > .dashboa
 bit.int.agrd.dev,bit.adguard.com#$#.side-panel .dashboard-recent-repositories { margin-top: 8px!important; }
 bit.int.agrd.dev,bit.adguard.com#$#.side-panel ol.dashboard-repositories-list > li > a { padding-top: 0!important; padding-bottom: 0!important; }
 !
+! create jira issue from the bitbucket task
+bit.int.agrd.dev#$##select2-drop > ul.select2-results { max-height: 280px !important }
