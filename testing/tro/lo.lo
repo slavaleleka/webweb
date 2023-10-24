@@ -1,7 +1,7 @@
 ! Title: /tro/lo.lo
 ! Description: test.ing
-! Version: 1.0.0.8
-! TimeUpdated: 2022-05-13T13:06:00+03:00
+! Version: 1.0.0.9
+! TimeUpdated: 2023-10-13T13:00:00+03:00
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/testing/tro/lo.lo
 ! to subscribe: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/testing/tro/lo.lo
@@ -12,4 +12,8 @@
 ! example.org##h1
 ! *#@#h1
 !
-example.org#%#//scriptlet('set-constant', 'test1', '1')
+!#if adguard_ext_chromium
+example.org#%#//scriptlet('set-constant', 'test123', '123')
+!#else
+example.org#%#//scriptlet('set-constant', 'test1', '666')
+!#endif
