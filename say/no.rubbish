@@ -1,9 +1,9 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite/tags
 !               better to use in addition to AdGuard Social and AdGuard Annoyances filters
-! Version: 1.1.201
+! Version: 1.1.202
 ! Expires: 2 hours
-! TimeUpdated: 2023-08-18T17:00:00+03:00
+! TimeUpdated: 2023-10-18T17:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
@@ -11,6 +11,10 @@
 !
 !
 ! general elemhide --- START
+##div[class^="post_subscribe__"]
+##div[class^="post_authorSubscription__"]
+##div[class^="style_sharer__"]
+##.new-sharin-sn
 ##.saveJobContainer
 ##.command-print-job
 ##.shr-opn
@@ -261,7 +265,7 @@
 ##.item-wishlist
 ##[data-lightbox-target="product-wishlist"]
 ##.icon-hl-email
-~my.cloudpayments.ru##.subscription
+##.subscription
 ##.js-subscription_block
 ##.favorites_button
 ##.js_favorites_button
@@ -346,8 +350,6 @@ perfume-click.co.uk###social
 perfume-click.co.uk###newsletter
 ! .favorite
 domdivanov63.com##.favorite
-! .feedback
-domrfbank.ru##.feedback
 !
 dou.ua##.tg-promo
 monster.ca##.save-button
@@ -355,31 +357,19 @@ yandex.*##a[href="/favorites/"]
 tiktok.com##.share-container
 dribbble.com##.keyboard-legend
 nba.com##button[data-text="FAVORITE"]
-ozon.ru##.fav-button
-naked-science.ru##.typo_text
 ebay.com##.s-item__watchheart
-sport-marafon.ru##.article-favorite
-kickscontest.ru##.fix-consent
 booking.com###wrap-hotelpage-top .lists-hotel-dropdown-square-heart
 nytimes.com##.more-share-item
 context.reverso.net##button.add.icon.addentry
 context.reverso.net##button.non-favourite
 context.reverso.net##button.copy.icon
-auto.ru##.ButtonFavorite-module__container
 github.com##signup-prompt-controller
 mbk-news.appspot.com##.mistape_caption
-cian.ru##div[class*="--header-information--"] div[data-name="Sharing"]
 stackoverflow.com##.js-voting-container > .js-reactions
-hi-chef.ru#?#svg[width="32"][height="32"]:has(> .currentLayer > #label):upward(div)
-petshop.ru##div[class^="style_info_rating_wrapper"] > div[style]:not(class) > svg
-dogeat.ru##.desc-error
 disqus.com###reactions__container
 stackexchange.com,stackoverflow.com##.post-menu
 executive-shaving.co.uk##.wishlist
 madte.st##.test-soc-wrap
-! ria.ru##.m-emoji
-ria.ru#?#.article__userbar:has(.m-emoji)
-beautydepot.ru#$#.buy_button-favorite { visibility: hidden!important; }
 landofroses.co.uk###main .socialHolder
 meduza.io##.Toolbar-root
 meduza.io##.MaterialNote-root
@@ -389,37 +379,13 @@ latimes.com##a.ActionLink[data-dropdown-trigger=""]
 yourshaving.com##.functional_wrapper .add_to_compare
 yourshaving.com##.functional_wrapper .quick-view
 merriam-webster.com##.save-to-list
-otvet.mail.ru##div[class*="controls_right_"] > a[title="Подписаться"]
-otvet.mail.ru##div[title="Нравится"]
-beru.ru##div[data-zone-name="SkuWishlist"]
-men007.ru##.podelitsya_socseti
-flagma.ru##a.complain
-flagma.ru##.header-price-container .fav
-komus.ru##a[href^="/favorites/addProductToFavorites"]
 amazon.com##[data-feature-name="tellAFriendBox"]
-the-flow.ru##.socials
-ticketsalon.ru##.mec-event-sharing
 reddit.com##div[id$="-share-menu"]
-timepad.ru##.mevtshares
-mvideo.ru##mvid-wishlist-button
 fmovies.app##.fmr-buttons
-iphones.ru##.post__favorites
-iphones.ru##.header__menu-item_favorites
-iphones.ru##.postpage__favorites
-iphones.ru##.postpage_telega
-iphones.ru##.postpage_dont_forget_other
-e-katalog.ru###bar_bm_marked
-ozon.ru##[data-widget="skuShelfGoods"] div[style*="transition-duration"][style*="transform"] > div div[tile-id]
-mvideo.ru##.tab-personal
-tjournal.ru##.favorite_marker
-shop.tastycoffee.ru##a.fav-h
 ikea.com##.range-revamp-product-compact__add-to-list-button
-smeg.ru##.social__footer
 myshows.me##.ShowLink .Popover__content
 svoboda.org##.foot__texts-wrap
 svoboda.org##.infgraphicsAttach
-! share button
-travel.yandex.ru##svg[width="18"][height="24"][class]
 ! subscriptions popups
 investigate-europe.eu##body > aside.page-banner-bottom
 investigate-europe.eu##.modal-newsletter
@@ -460,6 +426,7 @@ zmina.info##.article_tags
 nerdist.com##.tags-links
 bbc.com##[aria-labelledby="related-topics"]
 #?#div:contains(/^(Т|т)еги(:?)$/)
+#?#span:contains(/related\\stags/i):upward(1)
 !
 !
 !# mistakes
@@ -472,6 +439,7 @@ zmina.info##.disklamer
 !
 !# promo socials
 ukrinform.ua#?#article p:contains(Приєднуйтесь до наших)
+##.news-links-social
 !
 !# no puccian
 #?#a:contains(Читать на русском)
@@ -484,17 +452,13 @@ ukrinform.ua#?#article p:contains(Приєднуйтесь до наших)
 ! gitbook.com cookies
 #?##animatedComponent:has(a[href$="/privacy/cookies"])
 !
+nachasi.com##ul.show-tablet > li:has(a[class^="style_comments__"])
+nachasi.com##ul.show-tablet > li:has(a[class^="style_tooltip__"])
 nauka.ua#?#[itemprop="articleBody"] > p:has(a[href="https://t.me/naukaua"])
 nauka.ua#?#[itemprop="articleBody"] > p:has(a[href="https://t.me/naukaua"]) + hr
 bbc.com#?#main > div:has(> p > a[href="https://t.me/bbcukrainian"])
 giphy.com#?#div[class^="Navigation-"] div[class^="ButtonDiv-"]:has(> div > div[class^="FavoriteContainer-"])
 amazon.com#?#[data-automation-id="bottom-bar-actions"] > div:has(> span > button#shareTrigger)
-fontanka.ru#?#a[href$="/print.html"]:contains(Печать)
-tiu.ru#?#.x-product-conversion .x-iconed-text:has(> div > .js-favorite-link)
-sima-land.ru#?#.widget-content > .rating-item ~ div > div:has(> span:contains(В избранное))
-forum.adguard.com#?#ul.message-attribution-opposite > li:has(> .bookmarkLink)
-forum.adguard.com#?#ul.message-attribution-opposite > li:has(> [data-xf-init="share-tooltip"])
-xn--80aaadf9a6agjohr9n.xn--p1ai#?#.product-card > div.row:has(> div > button.product-buy[type="submit"]) + center:has(> p:contains(или))
 blick.ch#?#button[aria-label="facebook"]:upward(1)
 airbnb.*#?#div[role="dialog"] button[type="button"]:has(div:contains(Поделиться))
 airbnb.*#?#div[data-section-id="TITLE_DEFAULT"] button[type="button"]:has(div:contains(Поделиться))
@@ -506,9 +470,3 @@ genius.com#?#span[class^="LabelWithIcon__Label"]:contains(Share):upward(button)
 ! whitelist --- START
 ! whitelist  ---  END
 !
-!
-!###    FOR IOS    ###!
-!
-||widget.retell.cc^$domain=63.ru
-63.ru###record-header > div button[title="В закладки"]
-63.ru###record-header > div > button[title="В закладки"] + div[class]:not([id]):not([style])
