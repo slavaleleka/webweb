@@ -1,7 +1,7 @@
 ! Title: /tro/lo.lo
 ! Description: test.ing
-! Version: 1.0.0.10
-! TimeUpdated: 2023-10-14T13:00:00+03:00
+! Version: 1.0.0.11
+! TimeUpdated: 2023-10-15T13:00:00+03:00
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/testing/tro/lo.lo
 ! to subscribe: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/testing/tro/lo.lo
@@ -17,3 +17,6 @@ example.org#%#//scriptlet('set-constant', 'test0', '123')
 !#else
 example.org#%#//scriptlet('set-constant', 'test0', '666')
 !#endif
+
+example.com##p > a
+##h1
