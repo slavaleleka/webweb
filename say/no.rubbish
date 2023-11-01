@@ -1,9 +1,9 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite/tags
 !               better to use in addition to AdGuard Social and AdGuard Annoyances filters
-! Version: 1.1.203
+! Version: 1.1.204
 ! Expires: 2 hours
-! TimeUpdated: 2023-10-19T17:00:00+03:00
+! TimeUpdated: 2023-10-21T17:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
@@ -11,6 +11,12 @@
 !
 !
 ! general elemhide --- START
+###reactions
+##.reactions-refresh
+###reactions__container
+###thread-share-bar
+##.share-bar-refresh
+##.comment__share > *
 ##.sfsi_socialwpr
 ##div[class^="post_subscribe__"]
 ##div[class^="post_authorSubscription__"]
@@ -254,6 +260,7 @@
 ##[data-favorite-mode]
 ##.js-add-favorite
 ##.add-favorite-button
+###favorite-button
 ###block-sharethis-sharethis-block
 ##.block-sharethis
 ##.js-bookmark-btn
@@ -272,6 +279,7 @@
 ##.js_favorites_button
 ##.towishlist
 ##[data-action="add-to-wishlist"]
+##[data-action="favorite"]
 ##.wishlist-btn
 ###oct-policy
 ##.user-favorites
@@ -367,7 +375,6 @@ context.reverso.net##button.copy.icon
 github.com##signup-prompt-controller
 mbk-news.appspot.com##.mistape_caption
 stackoverflow.com##.js-voting-container > .js-reactions
-disqus.com###reactions__container
 stackexchange.com,stackoverflow.com##.post-menu
 executive-shaving.co.uk##.wishlist
 madte.st##.test-soc-wrap
@@ -443,8 +450,9 @@ ukrinform.ua#?#article p:contains(Приєднуйтесь до наших)
 ##.news-links-social
 !
 !# no puccian
-#?#a:contains(Читать на русском)
 ##.header__content a[href^="/rus/"]
+#?#a:contains(/^рус$/i)
+#?#a:contains(Читать на русском)
 !
 ! specific ---  END
 !
