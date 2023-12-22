@@ -1,0 +1,13 @@
+! Title: TEST TITLE
+! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
+! Version: 1.0.2
+! TimeUpdated: 2023-12-21T13:02:00+02:00
+! Expires: 4 days (update frequency)
+!
+! tube-bunny.com#?#.page-wrapper div[class]:has(> div.title-vis > p > span:contains(Advertisement))
+! yeptube.com#?#.wrapper > div.container:has(> div.c-title > div.c-medtitle-output > h2.c-mt-output:contains(Advertisement))
+! mylust.com#?#div[class^="span"] > div.box:has(> div.title:contains(Advertisement))
+!
+! itemmania.in.th#%#(function(){window.twttr={conversion:{trackPid:function(){}}}})();
+!
+example.org##p > a
