@@ -1,11 +1,12 @@
 ! Title: ios Base filter (Optimized)
 ! Description: EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.
-! Version: 1.0.1
-! TimeUpdated: 2023-12-21T13:01:00+02:00
+! Version: 1.0.2
+! TimeUpdated: 2023-12-21T13:02:00+02:00
 ! Expires: 4 days (update frequency)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/testing/ios2opt.test
 ! subscribe: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/testing/ios2opt.test
+
 !
 ! #%#var AG_onLoad=function(func){if(document.readyState==="complete"||document.readyState==="interactive")func();else if(document.addEventListener)document.addEventListener("DOMContentLoaded",func);else if(document.attachEvent)document.attachEvent("DOMContentLoaded",func)};
 ! #%#var AG_removeElementById = function(id) { var element = document.getElementById(id); if (element && element.parentNode) { element.parentNode.removeChild(element); }};
