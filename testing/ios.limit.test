@@ -1,0 +1,13 @@
+! Title: /testing/ios.test advanced
+! Description: advanced rules
+! Version: 1.0.0
+! Expires: 2 hours
+! TimeUpdated: 2023-12-15T13:00:00+02:00
+!
+! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/testing/ios.limit.test
+! subscribe: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/testing/ios.limit.test
+!
+/ads/ga-audiences?
+/gpt.js$script,xmlhttprequest
+||nitropay.com^$third-party
+||doubleclick.net^
