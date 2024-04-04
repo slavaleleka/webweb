@@ -172,3 +172,14 @@ tiktok.com##div[class^="tiktok-"][class*="-DivBackHead"]
 ! location requests
 ! e.g. for xn--80aendabcfohwmhmcxqh2p.xn--p1ai
 #%#//scriptlet("set-constant", "navigator.geolocation.getCurrentPosition", "noopFunc")
+!
+!
+!#---------------------|
+!#  BLOCK ru WEBSITES  |
+!#---------------------|
+||*.ru^
+||yandex.*^
+||vk.com^
+||relap.io^
+!
+! TODO: do not add manually, use the script
