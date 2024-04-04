@@ -17,25 +17,14 @@ knowyourmeme.com##.sticky-sidebar
 svoboda.org##.foot__texts-wrap
 svoboda.org##.infgraphicsAttach
 texty.org.ua###readmorebanner-target
-||travel.yandex.ru/api/hotels/$domain=travel.yandex.ru
 ikea.com###search-results > section.survey
 tv.ivideon.com##.iv-tv-page-split-right
 tv.ivideon.com#$#div.iv-tv-page-split-left { margin-left: 0!important; padding-left: 0!important; }
-novostroy-m.ru###quiz
-novostroy-m.ru##a[href="/ipotechnyj-kalkulyator"][target="_blank"]
 ||lpsnmedia.net^$domain=smallflower.com|schick.com
-lider-mart.ru###custom_modal_window
-lider-mart.ru###modal_form_pop_up
 levelup.gitconnected.com,android.jlelse.eu,codeburst.io,medium.com##div[data-test-id="post-sidebar"]
 android.jlelse.eu,codeburst.io,medium.com#?#div.lm.r:has(> iframe[src^="https://cdn.embedly.com/widgets/media.html"])
 stackoverflow.com##body > div.theme-selector
 barbercompany.com##.block-service
-matreshkatm.ru##.banners_column
-xn--80aaadf9a6agjohr9n.xn--p1ai#?#.product-info > h5:contains(Что означают стикеры)
-xn--80aaadf9a6agjohr9n.xn--p1ai#?#.product-info > h5:contains(Что означают стикеры) + div[style^="font-size"]:not([class])
-vk.com###im_dialogs .ConvoRecommendList
-sgpress.ru##.content-block-wide-top
-sgpress.ru##a[href^="https://consaltika.ru/"]
 ! ANCHOR: end of common specifics
 ! !SECTION: common specifics
 !
@@ -64,11 +53,6 @@ myshows.me#$#.UserShowItem_mode_compact { padding: 7px 0!important; }
 myshows.me#$#.User-showsMore { margin-top: 10px!important; }
 myshows.me#$#.User-tabs { margin-bottom: 10px!important; }
 myshows.me#$#.User-hr { margin-bottom: 10px!important; }
-! drugoigorod.ru
-drugoigorod.ru#?#.article-content > p:has(> a[href="https://t.me/drugoigorod"])
-||w.hypercomments.com^$domain=drugoigorod.ru,third-party
-drugoigorod.ru#?#article h3:contains(HYPER_COMM)
-drugoigorod.ru##a.hc-link[href="http://hypercomments.com"]
 ! XTranslate extension banner — at least on example.org
 example.*##.XTranslate
 !
@@ -76,29 +60,10 @@ example.*##.XTranslate
 ! self-promo
 diffchecker.com##form.diff-form > .bottom-banner
 diffchecker.com##.diff-checker-page > .hero
-! sports.ru/nba/ -- making styles more compacted
-sports.ru#$#.news-item__social-line { margin: 0!important; padding: 0!important; }
-! nba store and nba league pass buttons
-sports.ru##nav.nba-links
-! LeaguePass banner on sports.ru
-ru.global.nba.com##.sib-scoreboard > .leaguepass-table
-! панель авторизации
-sports.ru##.user-panel__fixed
-sports.ru##.user-panel_state_loaded
-! рейтинг / подписаться на блог
-sports.ru##.nl-item .voting > *
-sports.ru##.nl-item a[data-type="subscribe-to-blog"]
-!
-! выбор редакции
-geekcity.ru##.single-container > .vc_row-fluid > div > div > div > div[class^="vc_custom_"]
 !
 ! chat widgets
 ||twitch.tv/embed/*/chat$third-party
 ||chatango.com^$third-party
-! TOP TEXT
-subscity.ru##.main-container > .about
-subscity.ru##.main-container > .divider
-subscity.ru##.main-container > .about ~ .capitalize
 !
 ! fix for vstat.info extension
 ! https://chrome.google.com/webstore/detail/vstat-2-visit-statistics/bohliiapbjnbphkefjiakajaimlleoma
@@ -112,16 +77,8 @@ web.vstat.info##.footer-block
 web.vstat.info#$#.time-dot { margin-top: 50px!important; }
 ||web.vstat.info/images/*_locker.*$image
 !
-! lk gosuslugi chat
-! lk.gosuslugi.ru#$##pso-widget { height: 600px!important; width: 800px!important; }
-! lk.gosuslugi.ru#$#.pso-body { height: 530px!important; }
-! lk.gosuslugi.ru#$#._ocwidget_chat_messangerWrap { height: 480px!important; }
-!
 ! SMALL SOCIALS
 slovotvir.org.ua#?#.app-word--discussion > div > div:has(> .app-facebook-share-btn)
-foamstore.ru##.product-info-social
-foamstore.ru##.footer_subscribe_block
-foamstore.ru##.subscribe-form-wrapper
 !
 basketball-video.com##.header_bg
 basketball-video.com##.content > .search
