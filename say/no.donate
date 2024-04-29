@@ -1,6 +1,6 @@
 ! Title: /say/no.donate
 ! Description: no donate banners, widgets etc
-! Version: 0.0.3
+! Version: 0.0.4
 ! Expires: 2 hours
 ! TimeUpdated: 2022-04-28T19:02:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
@@ -10,20 +10,16 @@
 !
 !
 ! general elemhide --- START
-! with tagnames:
-! ##header .moduletable-compare
 !
-! just with attributes:
-! ##[value="Сравнить"]
 ! general elemhide ---  END
 !
 ! specific --- START
-theins.ru###articleContainer a[href="http://donate.theins.ru/"]
-mil.in.ua##.single-news__wrapper > p[style^="padding-left"][style$="0px;"]
+mil.in.ua##.donate
+mil.in.ua##.modal-donate
 ! specific ---  END
 !
 ! extended css --- START
-vedomosti.ru#?#.layout__container > .page-banner:has(a[href*="vedomosti.ru/subscription"][href*="bannermobile"])
+!
 ! extended css  ---  END
 !
 ! whitelist --- START
@@ -32,5 +28,3 @@ vedomosti.ru#?#.layout__container > .page-banner:has(a[href*="vedomosti.ru/subsc
 !
 ! ###    FOR IOS    ###!
 !
-! ||widget.retell.cc^$domain=63.ru
-! 63.ru###record-header > div button[title="В закладки"]

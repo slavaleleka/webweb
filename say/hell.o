@@ -1,8 +1,8 @@
 ! Title: /say/hell.o
 ! Description: personal blocklist
-! Version: 1.1.3
+! Version: 1.1.4
 ! Expires: 2 hours
-! TimeUpdated: 2024-04-04T15:00:00+03:00
+! TimeUpdated: 2024-04-24T15:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
@@ -11,7 +11,6 @@
 !
 ! SECTION: common specifics
 example.*##.XTranslate
-myshows.me#?#ul.Header-nav > li:has(a[href="/about/donate/"])
 chytomo.com##.donate-single
 knowyourmeme.com##.sticky-sidebar
 svoboda.org##.foot__texts-wrap
@@ -29,9 +28,11 @@ barbercompany.com##.block-service
 ! !SECTION: common specifics
 !
 ! SECTION: grouped
-kurmyshi.media##.ad_after_content
-kurmyshi.media##.ad_container_bottom
-!
+! mil.in.ua -- dark theme
+mil.in.ua#$#.header__wrapper { background-color: #000 !important }
+mil.in.ua#$#main { background-color: #000 !important }
+mil.in.ua#$#h1, p, span, label { color: #e7eae9 !important }
+mil.in.ua#$#a { color: #1d9bf0 !important }
 ! quicknote.io - wtf popup on open
 quicknote.io#%#//scriptlet('remove-class', 'open', '.explanation', 'complete')
 ! m.censor.net
