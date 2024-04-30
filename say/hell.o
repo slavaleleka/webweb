@@ -1,8 +1,8 @@
 ! Title: /say/hell.o
 ! Description: personal blocklist
-! Version: 1.1.8
+! Version: 1.1.9
 ! Expires: 2 hours
-! TimeUpdated: 2024-04-25T15:03:00+03:00
+! TimeUpdated: 2024-04-25T15:04:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
@@ -29,16 +29,21 @@ barbercompany.com##.block-service
 !
 ! SECTION: grouped
 ! mil.in.ua -- dark theme
-mil.in.ua#$#header > div { background-color: #000 !important }
-mil.in.ua#$#nav { background-color: #000 !important }
-mil.in.ua#$#body { background-color: #000 !important }
-mil.in.ua#$#.main-container { background-color: #000 !important }
-mil.in.ua#$#.main-container > div { background-color: #000 !important }
-mil.in.ua#$#.sidebar { background-color: #000 !important }
-mil.in.ua#$#h1, p, span, label { color: #e7eae9 !important }
-mil.in.ua#$#.news-item__date { color: #000 !important }
-mil.in.ua#$#a { color: #2f80ed !important }
-mil.in.ua#$#a { color: #1d9bf0 !important }
+mil.in.ua#$#header > div { background-color: #000 !important; }
+mil.in.ua#$#nav { background-color: #000 !important; }
+mil.in.ua#$#body { background-color: #000 !important; }
+mil.in.ua#$#.main-container { background-color: #000 !important; }
+mil.in.ua#$#.main-container > div { background-color: #000 !important; }
+mil.in.ua#$#.sidebar { background-color: #000 !important; }
+mil.in.ua#$##video-special { background-color: #000 !important; }
+mil.in.ua#$#footer { background-color: #000 !important; }
+mil.in.ua#$#footer { border-top-color: #000 !important; }
+mil.in.ua##.footer__logo
+mil.in.ua#$#h1, h5, h6, p, span, label, footer li { color: #e7eae9 !important; }
+mil.in.ua#$#h6 { background-color: #534f46 !important; }
+mil.in.ua#$#.news-item__date { color: #000 !important; }
+mil.in.ua#$#a { color: #2f80ed !important; }
+mil.in.ua#$#a.button { border: 1px solid #2f80ed !important; background: #000 !important; }
 ! experimental: tweak for dark theme
 mil.in.ua#%#//scriptlet('trusted-create-element', 'head', 'meta', 'name="apple-mobile-web-app-capable" content="yes"')
 mil.in.ua#%#//scriptlet('trusted-create-element', 'head', 'meta', 'name="apple-mobile-web-app-status-bar-style" content="black-translucent"')
