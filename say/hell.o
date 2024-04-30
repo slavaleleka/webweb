@@ -1,8 +1,8 @@
 ! Title: /say/hell.o
 ! Description: personal blocklist
-! Version: 1.1.10
+! Version: 1.1.11
 ! Expires: 2 hours
-! TimeUpdated: 2024-04-25T15:05:00+03:00
+! TimeUpdated: 2024-04-25T15:06:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
@@ -39,6 +39,7 @@ mil.in.ua#$#.sidebar { border-left: 1px solid #444 !important; }
 mil.in.ua#$##video-special { background-color: #000 !important; }
 mil.in.ua#$#footer { background-color: #000 !important; }
 mil.in.ua#$#footer { border-top-color: #000 !important; }
+mil.in.ua#$#.footer__wrapper { background-color: #000 !important; }
 mil.in.ua##.footer__logo
 mil.in.ua#$#h1, h5, h6, p, span, label, footer li { color: #e7eae9 !important; }
 mil.in.ua#$#h6 { background-color: #534f46 !important; }
