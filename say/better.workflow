@@ -1,8 +1,8 @@
 ! Title: /say/better.workflow
 ! Description: tiny improvements
-! Version: 0.0.26
+! Version: 0.0.27
 ! Expires: 2 hours
-! TimeUpdated: 2023-12-02T13:00:00+03:00
+! TimeUpdated: 2024-05-02T13:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/better.workflow
@@ -70,4 +70,4 @@ bit.int.agrd.dev,bit.adguard.com#$#.side-panel ol.dashboard-repositories-list > 
 ! create jira issue from the bitbucket task
 bit.int.agrd.dev#$##select2-drop > ul.select2-results { max-height: 280px !important }
 !
-@@||bit.int.agrd.dev/rest/api/latest/projects/ADGUARD-FILTERS/repos/scriptlets/*/google-analytics.
+@@||bit.int.agrd.dev^$domain=bit.int.agrd.dev
