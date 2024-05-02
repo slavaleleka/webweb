@@ -1,8 +1,8 @@
 ! Title: /say/hell.o
 ! Description: personal blocklist
-! Version: 1.1.17
+! Version: 1.1.18
 ! Expires: 2 hours
-! TimeUpdated: 2024-04-26T15:17:00+03:00
+! TimeUpdated: 2024-04-26T15:18:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
@@ -53,6 +53,9 @@ mil.in.ua#$#a.button { border: 1px solid #2f80ed !important; background: #000 !i
 [$path=/domain%3Dmil.in.ua/]facebook.com#$#html { background-color: #000 !important; }
 ! experimental: tweak for dark theme on ios
 !#if (adguard_app_ios)
+! top bar
+mil.in.ua#%#//scriptlet('trusted-create-element', 'head', 'meta', 'name="theme-color" content="#000"')
+! address bar
 mil.in.ua#%#//scriptlet('trusted-create-element', 'head', 'meta', 'name="apple-mobile-web-app-capable" content="yes"')
 mil.in.ua#%#//scriptlet('trusted-create-element', 'head', 'meta', 'name="apple-mobile-web-app-status-bar-style" content="black-translucent"')
 !#endif
