@@ -1,3 +1,3 @@
 
 Supported filter lists:
-https://slavaleleka.github.io/webweb/wiki/lists.md
+[slavaleleka.github.io/webweb/wiki/lists](https://slavaleleka.github.io/webweb/wiki/lists)
