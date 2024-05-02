@@ -10,7 +10,7 @@
 
 ### 🐣 hell.o
 
-[source][hell-o-source] | [raw][hell-o-raw] | <a href="abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o&title=/say/hell.o">subscribe</a>
+[source][hell-o-source] | [raw][hell-o-raw] | <a href="abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o&title=hell.o">subscribe</a>
 
 [hell-o-source]: ./say/hell.o
 [hell-o-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
