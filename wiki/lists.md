@@ -50,7 +50,7 @@
 [subscribe][dark-please-subscribe] | [source][dark-please-source] | [raw][dark-please-raw]
 
 [dark-please-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/dark.please&title=/say/dark.please
-https://github.com/slavaleleka/webweb/blob/master/say/dark.please
+[dark-please-source]: https://github.com/slavaleleka/webweb/blob/master/say/dark.please
 [dark-please-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/dark.please
 
 
