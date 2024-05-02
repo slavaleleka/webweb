@@ -1,8 +1,8 @@
 ! Title: /say/hell.o
 ! Description: personal blocklist
-! Version: 1.1.16
+! Version: 1.1.17
 ! Expires: 2 hours
-! TimeUpdated: 2024-04-26T15:06:00+03:00
+! TimeUpdated: 2024-04-26T15:17:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
@@ -48,11 +48,15 @@ mil.in.ua#$#h6 { background-color: #534f46 !important; }
 mil.in.ua#$#.news-item__date { color: #000 !important; }
 mil.in.ua#$#a { color: #2f80ed !important; }
 mil.in.ua#$#a.button { border: 1px solid #2f80ed !important; background: #000 !important; }
+! fix comment section
+[$path=/domain%3Dmil.in.ua/]facebook.com#$#span { color: #fff !important; }
+[$path=/domain%3Dmil.in.ua/]facebook.com#$#html { background-color: #000 !important; }
 ! experimental: tweak for dark theme on ios
 !#if (adguard_app_ios)
 mil.in.ua#%#//scriptlet('trusted-create-element', 'head', 'meta', 'name="apple-mobile-web-app-capable" content="yes"')
-!#endif
 mil.in.ua#%#//scriptlet('trusted-create-element', 'head', 'meta', 'name="apple-mobile-web-app-status-bar-style" content="black-translucent"')
+!#endif
+!
 ! quicknote.io - wtf popup on open
 quicknote.io#%#//scriptlet('remove-class', 'open', '.explanation', 'complete')
 ! m.censor.net
