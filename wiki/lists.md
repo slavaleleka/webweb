@@ -1,4 +1,4 @@
-## Filter lists
+## Supported filter lists
 
 ### 🐣 hell.o
 
