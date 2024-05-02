@@ -12,7 +12,7 @@
 
 [source][hell-o-source] | [raw][hell-o-raw] |
 
-<a href="abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o&title=test1">subscribe</a>
+<a href="abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o&title=test1" title="subscribe">subscribe</a>
 
 [hell-o-source]: ./say/hell.o
 [hell-o-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
