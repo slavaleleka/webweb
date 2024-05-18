@@ -176,7 +176,7 @@
 ##div[class^="WishListButton"]
 ##button[data-hook="share_button"]
 ##svg.icon-like
-##button[data-favorite]
+~megogo.net##button[data-favorite]
 !
 ##li-icon[type="bookmark-outline"]
 ##.ProductHeader__wishlist-icon
