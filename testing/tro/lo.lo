@@ -1,7 +1,7 @@
 ! Title: /tro/lo.lo
 ! Description: test.ing
-! Version: 1.0.0.13
-! TimeUpdated: 2024-05-21T13:00:00+03:00
+! Version: 1.0.0.14
+! TimeUpdated: 2024-05-22T13:00:00+03:00
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/testing/tro/lo.lo
 ! to subscribe: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/testing/tro/lo.lo
@@ -23,3 +23,5 @@
 
 
 @@||example.com^$document
+
+example.org#%#console.log('test123');
