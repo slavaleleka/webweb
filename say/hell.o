@@ -1,8 +1,8 @@
 ! Title: /say/hell.o
 ! Description: personal blocklist
-! Version: 1.2.2
+! Version: 1.2.3
 ! Expires: 2 hours
-! TimeUpdated: 2024-05-27T15:00:00+03:00
+! TimeUpdated: 2024-05-28T15:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! to add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
@@ -11,6 +11,8 @@
 !
 ! SECTION: common specifics
 buymeacoffee.com##.mob-payout-sec
+! other games promo in the player
+nba.com##.swiper
 trip.com##.m-flightlist__chromebutton
 example.*##.XTranslate
 chytomo.com##.donate-single
