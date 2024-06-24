@@ -1,9 +1,9 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite/tags
 !               better to use in addition to AdGuard Social and AdGuard Annoyances filters
-! Version: 1.1.209
+! Version: 1.1.210
 ! Expires: 2 hours
-! TimeUpdated: 2024-06-06T14:00:00+03:00
+! TimeUpdated: 2024-06-07T14:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
@@ -414,7 +414,8 @@ zmina.info##.subscribe_disclimer
 !
 !
 ! TODO: consider not to limit by domain
-!# hashtags / tag
+!# hashtags / tag -- START
+! generic standard css
 ##.tags
 ##.post-tags
 ##.singlePost__tags
@@ -432,31 +433,40 @@ zmina.info##.subscribe_disclimer
 ##.news-tags
 ##.c-post__tags
 ##.tags-links
+! generic extended css
+#?#div:contains(/^(Т|т)еги(:?)$/)
+#?#span:contains(/related\\stags/i):upward(1)
+! specific
 mil.in.ua##.hashtags
 zmina.info##.article_tags
 bbc.com##[aria-labelledby="related-topics"]
-#?#div:contains(/^(Т|т)еги(:?)$/)
-#?#span:contains(/related\\stags/i):upward(1)
+babel.ua#?#.c-post-dl:contains(/Теги:/)
+!# hashtags / tag -- END
 !
 !
-!# mistakes
+!
+!# mistakes -- START
 ! report a mistake on text
+##.post__report
+##.c-post-err
 24tv.ua##.text_search_error
 chytomo.com##.mistake
 zmina.info##.disklamer
-##.post__report
+!# mistakes -- END
 !
 !
-!# promo socials
-ukrinform.ua#?#article p:contains(Приєднуйтесь до наших)
+!# promo socials -- START
 ##.news-links-social
+ukrinform.ua#?#article p:contains(Приєднуйтесь до наших)
+!# promo socials -- END
 !
-!# no puccian / no lang switcher
+!# no puccian / no lang switcher -- START
 ##.header__content a[href^="/rus/"]
 #?#a:contains(/^рус$/i)
 #?#a:contains(Читать на русском)
 rbc.ua##.lang-group
-babel.ua##ul.c-lang-list
+babel.ua##.c-lang-list
+!# no puccian / no lang switcher -- END
 !
 ! specific ---  END
 !
