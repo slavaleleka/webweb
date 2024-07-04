@@ -136,20 +136,5 @@ tiktok.com##div[class^="tiktok-"][class*="-DivBackHead"]
 !#---------------------|
 !#  BLOCK ru WEBSITES  |
 !#---------------------|
-||*.ru^
-||*.su^
-||*.ru.net^
-! .рф
-||*.xn--p1ai^
-! .рус
-||*.xn--p1acf^
-! .дети
-||*.xn--d1acj3b^
-! .москва
-||*.xn--80adxhks^
+!#include ./no.puccian
 !
-||yandex.*^
-||vk.com^
-||relap.io^
-!
-! TODO: do not add manually, use the script

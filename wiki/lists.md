@@ -53,6 +53,13 @@
 [dark-please-source]: https://github.com/slavaleleka/webweb/blob/master/say/dark.please
 [dark-please-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/dark.please
 
+### 💥 no.puccian [alpha[*]]
+
+[subscribe][no-puccian-subscribe] | [source][no-puccian-source] | [raw][no-puccian-raw]
+
+[no-puccian-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.puccian&title=/say/no.puccian
+[no-puccian-source]: https://github.com/slavaleleka/webweb/blob/master/say/no.puccian
+[no-puccian-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.puccian
 
 ### 🧽 screw.urltrack [alpha[*]]
 
