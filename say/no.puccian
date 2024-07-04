@@ -24,6 +24,7 @@
 ||yandex.*^
 ||ya.*^
 ||dzen.*^
+||yastatic.net^
 ||kinopoisk.*^
 ||vk.com^
 ||vk.payservice.io^
@@ -31,6 +32,12 @@
 ||gismeteo.*^
 ||rp5.*^
 ||tass.*^
-
+||sputnikglobe.*^
+||sputniknews.*^
+||2gis.*^
+||bitrix24.*^
+||kaspersky.*^
+||moscowtimes.*^
+||sputnik.*^
 !
 ! TODO: do not add manually, use the script
