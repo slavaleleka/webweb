@@ -1,9 +1,9 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite/tags
 !               better to use in addition to AdGuard Social and AdGuard Annoyances filters
-! Version: 1.1.210
+! Version: 1.1.211
 ! Expires: 2 hours
-! TimeUpdated: 2024-06-07T14:00:00+03:00
+! TimeUpdated: 2024-07-07T14:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
@@ -11,195 +11,36 @@
 !
 !
 ! general elemhide --- START
-###reactions
-##.reactions-refresh
-###reactions__container
-###thread-share-bar
-##.share-bar-refresh
-##.comment__share > *
-##.sfsi_socialwpr
-##div[class^="post_subscribe__"]
-##div[class^="post_authorSubscription__"]
-##div[class^="style_sharer__"]
-##.new-sharin-sn
-##.saveJobContainer
-##.command-print-job
-##.shr-opn
+!
+! general elemhide - PRINT - start
+##.print
 ###print-page
-##.sharing-icons
-##.byline__share
-##[data-testid="favorites-button"]
-##[aria-label="Favorite this product"]
-##[title="Favorite this product"]
-###aFavoriEkleBtn
-##[onclick="javascript:FavoriUrunDetay();"]
-##[title="Add to Favorites"]
-##[data-original-title="Favorilere Ekle"]
-##.block-share-link
-###product-review-subscription
-##.icons-wishlist
-##.wishlist_bonus
-##.wishlist-modal-popup
-##.link-share-heart
-###product-addto-wishlist-ajax-description
-##.WishIcon
-##.hotspotwishlist
-##.sAddToWishListWrapper
-##.icon-wishlist
-##.wishlist-button
-##.js-add-to-wishlist
-~president.gov.ua##.fa-heart
-##svg[data-icon="heart"]
-##a[onclick^="add_favorite("]
-##.productWishlistButton
-##a[title="Add to wishlist"]
-##header .fav_products
-##header .favorite-products-link
-##[class^="ProductItem__productCardFavourite"]
-##[class^="ProductActive__cartConfirmationAddToFavs"]
-##[class*=header i] [data-test="fav_icon"]
-##a[title="To wish list"]
-##header a[href*="/wishlist"]
-###favorite-icon
-##[data-testid="favorite-icon"]
-##.icon-favourite
-##.ssf-share-trigger
-##.b-wishlist_button
-##.b-product_wishlist-btn
-##[data-id="addToWishlist"]
-##[data-add-to-wishlist-url]
-##[data-widget-event-click="addToWishlist"]
-##[data-tau="product_addToWishList"]
-##.b-header_wishlist
-##button[aria-label="Поделиться"]
-##[data-testid="pdp-save-button-unsaved"]
-##[aria-label="Share Post"]
-##.js-share--expandable
-##.js-btn-sharing-overlay
-##.wp-embed-share
-##.post_rating
-##.social-share-yellow
-##[class^="styles__shareAudioButton___"]
 ##.print-button
-##[id^="print-button"]
-###like-dislike-subnav
-##button.vote-this[data-type="like"]
-##button[data-gfg-action="like-article"]
-##button[data-gfg-action="bookmark-article"]
-##[data-original-title="Добавить в избранное"]
-##a[href^="javascript:addToFav("]
-##.favor-inner
-##.mistape_caption
-##.favourite-sku-control
-##.product__bookmark
-##[onclick^="wishlist.add("]
-##.mf-widget-print-button
-##.navbar__wish-list
-##.js_add2wishlist
 ##.js_print
-##a[class*="header"][href="/favorite/"]
-##.card__fav
-##.product__fav
-##.sm-wish-toggle
-##.sm-header-wishlist
-##[onclick*="click_favorite"]
-##[slot="wishlist-control"]
-##.filmInfo_fav
-##.header_btn-fav
-##[data-fav-btn]
-##[data-sub-modules="Fav"]
-##header .wishlist_view
-##.btn-wishlist
-##[value="В избранное"]
-##.wish_count
-##.js-product-favorites
-##[aria-label="Добавить в вишлист"]
-##[title="Добавить в вишлист"]
-##.nr-header__user-nav-item--wish
-##.add-favorites
-##.js-add_favorites
-##.wish-button
-##[aria-label="В избранное"]
-##.default-header-wishlist
-##[title="Распечатать страницу"]
-##[title="Нашли ошибку?"]
+##.command-print-job
+##[id^="print-button"]
+##.mf-widget-print-button
 ##[data-handlermode="print"]
-##[data-handlermode="itemerror"]
-##[data-handlermode="url2mail"]
-##.ic__hasSet__bookmark
-##[title="В закладки"]
-##[data-handler="bookmarks"]
-##[data-titlefalse="В закладки"]
-##[data-captionfalse="В закладки"]
-##[data-e2e-id="share_button"]
-##[data-e2e-id="favourites-add"]
 ##[data-e2e-id="print-btn"]
-##.js-product-card-share-button
-##.tooltip-container__favorite
-##.actions__favorite
-##[title="Добавить в избранное"]
-##.js-add2favorite
-##.header__favorite
 ##.print-out
-##.addto-wishlist
-##.heart-empty
-##[onclick*="addToWishlist"]
-##[title="В избранное"]
-##.tcp-product-actions__action_favorite
-##.wish-list-widget
-##.js-noAuthFavLink
-##svg.i-heart
-##button.heart
-##button[data-type="heart"]
-##div[class^="shareWithFriends_"]
-~tv.kyivstar.ua##button.favorite
-##div[data-spec^="favorite-"]
 ##a[href="javascript:window.print()"]
-##li.email-icon
 ##li.print-icon
-##a[class*="button-in-favorite"]
 ##button[marker="print-button"]
 ##a[href="#print"]
 ##a[href="javascript:window.print()"]
-~adguard-dns.io,~reports.dv,~adguard.com,~telegram.org,~mail.google.com##a[href^="mailto:"]
-##a[href="#tab_share"]
-##button.share
-##svg[id^="heart-svg"]
-##button.wishlist
-##img.icon[src*="favorite" i]
-##header .favorites_block
-##header .favorite
-##a[class*="AddToWishlist"]
-##a[onclick^="wishlist.add("]
-##button[aria-label="Add to wishlist"]
-##a[href="#add_favorite"]
-##div[class^="WishListButton"]
-##button[data-hook="share_button"]
-##svg.icon-like
-~megogo.net##button[data-favorite]
-!
-##li-icon[type="bookmark-outline"]
-##.ProductHeader__wishlist-icon
-##.js--AddToWishList
-##.js--ProductHeader__add-to-wishlist
-##.HeaderMenu__buttons_wishlist
-##[data-auto="wishlist-button"]
-##[aria-label="Добавить в избранное"]
-##.add-to-favourite
-##.icon-favourite-gray
-##.product__fav
-##.vx-product-fav
-##.favorite_check
-##.favorite-label
-##.icon-favorites
+##.printSource
+##[href="#printSource"]
+##.itemPrint
+##.action-card__print-link
+##[onclick^="window.print"]
+##.button_strip_print
+##.PrintButton
+##.cz-print-icon
 ##.g-icon_print
-##.uw-save-product-btn
-##.js-favorite-button
-##.btn__icon._like
-##.btn--fav
-##.favourite
-##.favourite-link
-~savelife.in.ua##.btn-heart
+##.artPrintBLK
+! general elemhide - PRINT - end
+!
+! general elemhide - SHARE - start
 ##.doShareLink
 ##.js-share-button
 ##.bzr-icon_name_share
@@ -211,16 +52,87 @@
 ##.sharethis-inline-share-buttons
 ##.product-share
 ##.b-sticked-material-share
-##.stickedBlock__spacer
-##.yasr-auto-insert-visitor
 ##[data-target="#shareModal"]
 ##.share-article__button
-##.btn-favorite
-##.js-btn-favorite
-##.like-button
 ##.vjs-share-open
 ##.vjs-icon-share
 ###vjs-share-open-button
+##button[data-hook="share_button"]
+##a[href="#tab_share"]
+##button.share
+##div[class^="shareWithFriends_"]
+##[data-e2e-id="share_button"]
+##.js-product-card-share-button
+###thread-share-bar
+##.share-bar-refresh
+##.comment__share > *
+##div[class^="style_sharer__"]
+##.byline__share
+##.block-share-link
+##.link-share-heart
+##.ssf-share-trigger
+##[aria-label="Share Post"]
+##.js-share--expandable
+##.js-btn-sharing-overlay
+##.wp-embed-share
+##.social-share-yellow
+##[class^="styles__shareAudioButton___"]
+##.new-sharin-sn
+##.sharing-icons
+##[data-xf-init="share-tooltip"]
+##.sidebar-share-wrapper
+###product-share
+##[aria-controls="sharing-menu"]
+##[data-bi-name="share"]
+##.share_wrapp
+##.addthis_sharing_toolbox
+##.vjs-share-control
+##.js_share-tools
+##.js-share-link
+##[data-role="share"]
+##.story__share
+##.article__social
+##.post_socialIcons
+##.post-share-float
+##[data-role="shareButton"]
+##.share_center_square_cta
+##.share-url
+##.anv-splash-share
+###block-sharethis-sharethis-block
+##.block-sharethis
+##.sfsi_socialwpr
+##.email-share-item
+##li.email-icon
+##.icon-hl-email
+##.itemEmail
+! general elemhide - SHARE - end
+!
+! general elemhide - FAVORITE - start
+##.ProductHeader__wishlist-icon
+##.js--AddToWishList
+##.js--ProductHeader__add-to-wishlist
+##.HeaderMenu__buttons_wishlist
+##[data-auto="wishlist-button"]
+##.add-to-favourite
+##.icon-favourite-gray
+##.product__fav
+##.vx-product-fav
+##.favorite_check
+##.favorite-label
+##.icon-favorites
+##li-icon[type="bookmark-outline"]
+##.ic__hasSet__bookmark
+##button[data-gfg-action="bookmark-article"]
+##.saveJobContainer
+##[data-testid="pdp-save-button-unsaved"]
+##.uw-save-product-btn
+##.js-favorite-button
+##.btn--fav
+##.favourite
+##.favourite-link
+~savelife.in.ua##.btn-heart
+##.btn-favorite
+##.js-btn-favorite
 ##.tm-product-favorite
 ##.uk-product-favorite
 ##[data-product-favorite]
@@ -229,27 +141,17 @@
 ##.xf-svg__heart
 ##.button-favorite
 ##.add_favorites
-##.article__search-error
 ##.js-favorite
 ##.js-favorites
 ##.Single__Link--Favorites
 ##.icon-favorite-heart-button
 ##.favorites-button--add
 ##.product__favorite
-##[data-role="shareButton"]
 ##.item-add-todb-heart
-##.PrintButton
-##.cz-print-icon
 ##.button_favourite
 ##.FloatingHat-Favorites
-##.share_center_square_cta
-##.email-share-item
-##.share-url
-##.toggle-like
 ##.ItemAddToFavorite
 ##.FavoriteAction
-###subscribe-blog
-##.anv-splash-share
 ##.favorites[onclick]
 ##.wishlist-control
 ##[data-wishlist-control]
@@ -261,90 +163,192 @@
 ##.js-add-favorite
 ##.add-favorite-button
 ###favorite-button
-###block-sharethis-sharethis-block
-##.block-sharethis
-##.js-bookmark-btn
-##.printSource
-##[href="#printSource"]
 ##.add-to-wishlist
 ##[data-ajax-inject^="wishlist-link-"]
 ##[href$="/wishlist"]
 ##.wishlist__nav
 ##.item-wishlist
 ##[data-lightbox-target="product-wishlist"]
-##.icon-hl-email
-##.subscription
-##.js-subscription_block
 ##.favorites_button
 ##.js_favorites_button
 ##.towishlist
 ##[data-action="add-to-wishlist"]
 ##[data-action="favorite"]
 ##.wishlist-btn
-###oct-policy
 ##.user-favorites
-~myshows.me##[class$="__favorite"]
+##[class$="__favorite"]
 ##.link-wishlist
 ##.image_name_favorite
-##.addthis_sharing_toolbox
-##.itemEmail
-##.itemPrint
-##.j-add-to-postpone
-##.j-postpone
 ##.add-to-favorite
 ##.add-to-favorites
-##.action-card__print-link
-##[onclick^="window.print"]
 ##.iwishAddWrap
 ##.iWishAdd
-##.bookmark-btn
-##[data-action="add-bookmark"]
 ##.btn-favourites
-###subscribe-form_footer
-##.subscribe-form_footer
-##.subscribe_wrap
-##.post__subscribe_bottom
-##.wish_item
-##.ya-chat-widget
-##.share_wrapp
 ##.add-to-fav
 ##.product-to-fav
 ##[data-bind*=":button.addToWishlist"]
-##.bookmark
-###newsletter_block_left
-##.sendtofriend
 ##.wishlist-link
-##.newsletterForm
-##.footerNewsletter
-##[data-list-type="bookmarks"]
-##[data-bi-name="bookmark"]
-##[aria-controls="sharing-menu"]
-##[data-bi-name="share"]
 ##.add_to_wishlist
 ##.addToWishlist
 ##.item-toggle-favorite
 ##.js-item-toggle-favorite
 ##.js-item-favorite
-###product-share
-##.js-post-bookmark
-##.button_strip_print
-##.bookmarkLink
-##[data-xf-init="share-tooltip"]
 ##[data-widget="addToFavorite"]
-##.sidebar-share-wrapper
-##[class*="__bookmark___"]
-##[href*="---bookmark_"]
 ##.js-favorite-link
 ##.button--favorites
-##.print
-##.vjs-share-control
-##.js_share-tools
-##.js-share-link
-##[data-role="share"]
-##.story__share
-##.article__social
-##.post_socialIcons
-##.post-share-float
+##[data-testid="favorites-button"]
+##[aria-label="Favorite this product"]
+##[title="Favorite this product"]
+###aFavoriEkleBtn
+##[onclick="javascript:FavoriUrunDetay();"]
+##[title="Add to Favorites"]
+##[data-original-title="Favorilere Ekle"]
+##a[onclick^="add_favorite("]
+##header .fav_products
+##header .favorite-products-link
+##[class^="ProductItem__productCardFavourite"]
+##[class^="ProductActive__cartConfirmationAddToFavs"]
+##[class*=header i] [data-test="fav_icon"]
+###favorite-icon
+##[data-testid="favorite-icon"]
+##.icon-favourite
+##[title="В закладки"]
+##.js-bookmark-btn
+##.bookmark-btn
+##[data-action="add-bookmark"]
+##.bookmark
+##[data-list-type="bookmarks"]
+##[data-bi-name="bookmark"]
+##.js-post-bookmark
+##.bookmarkLink
+##[class*="__bookmark___"]
+##[href*="---bookmark_"]
+##[data-handler="bookmarks"]
+##[data-titlefalse="В закладки"]
+##[data-captionfalse="В закладки"]
+##.heart-empty
+##[onclick*="addToWishlist"]
+##[title="В избранное"]
+##.wish-list-widget
+##svg.i-heart
+##button.heart
+##button[data-type="heart"]
+##[data-e2e-id="favourites-add"]
+##.tooltip-container__favorite
+##.actions__favorite
+##.js-add2favorite
+##.header__favorite
+##.addto-wishlist
+##.tcp-product-actions__action_favorite
+##.js-noAuthFavLink
+~tv.kyivstar.ua##button.favorite
+##div[data-spec^="favorite-"]
+##a[class*="button-in-favorite"]
+##svg[id^="heart-svg"]
+##button.wishlist
+##img.icon[src*="favorite" i]
+##header .favorites_block
+##header .favorite
+##a[class*="AddToWishlist"]
+##a[onclick^="wishlist.add("]
+##button[aria-label="Add to wishlist"]
+##a[href="#add_favorite"]
+##div[class^="WishListButton"]
+##.icons-wishlist
+##.wishlist_bonus
+##.wishlist-modal-popup
+###product-addto-wishlist-ajax-description
+##.WishIcon
+##.hotspotwishlist
+##.sAddToWishListWrapper
+##.icon-wishlist
+##.wishlist-button
+##.js-add-to-wishlist
+~president.gov.ua##.fa-heart
+##svg[data-icon="heart"]
+##.productWishlistButton
+##a[title="Add to wishlist"]
+##a[title="To wish list"]
+##header a[href*="/wishlist"]
+##.b-wishlist_button
+##.b-product_wishlist-btn
+##[data-id="addToWishlist"]
+##[data-add-to-wishlist-url]
+##[data-widget-event-click="addToWishlist"]
+##[data-tau="product_addToWishList"]
+##.b-header_wishlist
+##a[href^="javascript:addToFav("]
+##.favor-inner
+##.favourite-sku-control
+##a[class*="header"][href="/favorite/"]
+##.card__fav
+##.product__fav
+##[onclick*="click_favorite"]
+##.filmInfo_fav
+##.header_btn-fav
+##[data-fav-btn]
+##[data-sub-modules="Fav"]
+##.js-product-favorites
+##.add-favorites
+##.js-add_favorites
+##header .wishlist_view
+##.btn-wishlist
+##.wish_count
+##.nr-header__user-nav-item--wish
+##.wish-button
+##.default-header-wishlist
+##[slot="wishlist-control"]
+##.product__bookmark
+##[onclick^="wishlist.add("]
+##.navbar__wish-list
+##.js_add2wishlist
+##.sm-wish-toggle
+##.sm-header-wishlist
+##.wish_item
+~megogo.net##button[data-favorite]
+! general elemhide - FAVORITE - end
+!
+! general elemhide - SUBSCRIBE - start
+##div[class^="post_subscribe__"]
+##div[class^="post_authorSubscription__"]
+###product-review-subscription
+###subscribe-blog
+##.subscription
+##.js-subscription_block
+###subscribe-form_footer
+##.subscribe-form_footer
+##.subscribe_wrap
+##.post__subscribe_bottom
+###newsletter_block_left
+##.newsletterForm
+##.footerNewsletter
+
+! general elemhide - SUBSCRIBE - end
+!
+##svg.icon-like
+###reactions
+##.reactions-refresh
+###reactions__container
+##.shr-opn
+##.post_rating
+###like-dislike-subnav
+##button.vote-this[data-type="like"]
+##button[data-gfg-action="like-article"]
+##.mistape_caption
+##[data-handlermode="itemerror"]
+##[data-handlermode="url2mail"]
+~adguard-dns.io,~reports.dv,~adguard.com,~telegram.org,~mail.google.com##a[href^="mailto:"]
+##.btn__icon._like
+##.stickedBlock__spacer
+##.yasr-auto-insert-visitor
+##.like-button
+##.article__search-error
+##.toggle-like
+###oct-policy
+##.j-add-to-postpone
+##.j-postpone
+##.ya-chat-widget
+##.sendtofriend
 ! general elemhide ---  END
 !
 ! specific --- START
