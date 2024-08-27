@@ -14,7 +14,7 @@
         content="default-src 'self'; script-src 'self'; img-src 'self' https://slavaleleka.github.io;"
     >
 
-    <script>
+    <!-- <script>
         function loadUnsafeResource() {
             // Attempt to load a resource that redirects to an unsafe domain
             const img = document.createElement('img');
@@ -27,7 +27,10 @@
 
             document.body.appendChild(img);
         }
-    </script>
+    </script> -->
+
+    <!-- Link to external script -->
+    <script src="script.js"></script>
 </head>
 <body>
     <h1>CSP Test: ERR_UNSAFE_REDIRECT</h1>
