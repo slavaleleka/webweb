@@ -16,7 +16,9 @@
 
     <!-- Link to external script -->
     <!-- <script src="unsafe-redirect-script.js"></script> -->
-    <script>
+    <script
+        nonce="nonce-abc123"
+    >
         function loadUnsafeResource() {
             // Attempt to load a resource that redirects to an unsafe domain
             const img = document.createElement('img');
