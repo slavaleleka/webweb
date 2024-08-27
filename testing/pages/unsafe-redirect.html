@@ -1,0 +1,36 @@
+<!------------------------------------------------------------------------->
+<!-- https://slavaleleka.github.io/webweb/testing/pages/unsafe-redirect.html -->
+<!------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test CSP ERR_UNSAFE_REDIRECT</title>
+
+    <!-- Content Security Policy that restricts resources to self and a specific domain -->
+    <meta
+        http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; img-src 'self' https://slavaleleka.github.io;"
+    >
+
+    <script>
+        function loadUnsafeResource() {
+            // Attempt to load a resource that redirects to an unsafe domain
+            const img = document.createElement('img');
+
+            // This URL should redirect to an unsafe location
+            img.src = 'https://slavaleleka.github.io/webweb/testing/pages/unsafe-redirect-png.png';
+
+            img.onload = () => console.log('Image loaded successfully');
+            img.onerror = (err) => console.error('Failed to load image:', err);
+
+            document.body.appendChild(img);
+        }
+    </script>
+</head>
+<body>
+    <h1>CSP Test: ERR_UNSAFE_REDIRECT</h1>
+    <button onclick="loadUnsafeResource()">Load Unsafe Resource</button>
+</body>
+</html>
