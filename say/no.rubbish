@@ -1,9 +1,9 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite/tags
-!               better to use in addition to AdGuard Social and AdGuard Annoyances filters
-! Version: 1.1.212
+!               better to use with some other social media blocking lists
+! Version: 1.1.213
 ! Expires: 2 hours
-! TimeUpdated: 2024-07-08T14:00:00+03:00
+! TimeUpdated: 2024-08-08T14:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
@@ -41,6 +41,7 @@
 ! general elemhide - PRINT - end
 !
 ! general elemhide - SHARE - start
+##.post_article_social
 ##.doShareLink
 ##.article_content .post__social
 ##.js-share-button
