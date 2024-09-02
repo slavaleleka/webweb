@@ -1,5 +1,5 @@
 <!------------------------------------------------------------------------->
-<!-- https://slavaleleka.github.io/webweb/testing/pages/unsafe-redirect.html -->
+<!-- https://slavaleleka.github.io/webweb/testing/pages/png-redirect.html -->
 <!------------------------------------------------------------------------->
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +15,7 @@
     >
 
     <!-- Link to external script -->
-    <!-- <script src="unsafe-redirect-script.js"></script> -->
+    <!-- <script src="png-redirect-script.js"></script> -->
     <script
         nonce="nonce-abc123"
     >
@@ -23,8 +23,8 @@
             // Attempt to load a resource that redirects to an unsafe domain
             const img = document.createElement('img');
 
-            img.src = 'https://slavaleleka.github.io/webweb/testing/pages/unsafe-redirect-png.png';
-            // img.src = 'https://raw.githubusercontent.com/slavaleleka/webweb/master/testing/pages/unsafe-redirect-png.png';
+            img.src = 'https://slavaleleka.github.io/webweb/testing/pages/png-redirect.png';
+            // img.src = 'https://raw.githubusercontent.com/slavaleleka/webweb/master/testing/pages/png-redirect.png';
 
             // ||slavaleleka.github.io^$image,redirect=2x2-transparent.png
 
