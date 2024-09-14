@@ -1,9 +1,9 @@
 ! Title: /say/no.rubbish
 ! Description:  no sharing/print/favorite/tags
 !               better to use with some other social media blocking lists
-! Version: 1.1.214
+! Version: 1.1.215
 ! Expires: 2 hours
-! TimeUpdated: 2024-08-09T14:00:00+03:00
+! TimeUpdated: 2024-09-09T14:00:00+03:00
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
@@ -41,6 +41,9 @@
 ! general elemhide - PRINT - end
 !
 ! general elemhide - SHARE - start
+##.c-sharer
+##.c-sharer_inner
+##.c-sharer_btn
 ##.post_news_social
 ##.post_article_social
 ##.doShareLink
