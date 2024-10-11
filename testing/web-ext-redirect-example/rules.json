@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "priority": 1,
+        "action": {
+            "type": "redirect",
+            "redirect": {
+            "url": "https://example.com"
+            }
+        },
+        "condition": {
+            "urlFilter": "https://specificdomain.com/*",
+            "resourceTypes": ["main_frame"]
+        }
+    }
+]
