@@ -1,2 +1,42 @@
-# create github workflow yaml config which should be triggered by changes in 'say' directory,
-# it should run some script and commit the changes back to the repository after the script is run
+name: Run Script and Commit Changes
+
+on:
+  push:
+    paths:
+      - 'say/**/*.txt'
+      - '!say/compiler'
+  pull_request:
+    paths:
+      - 'say/**/*.txt'
+      - '!say/compiler'
+  workflow_dispatch:
+
+jobs:
+  run-script-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Git user
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+
+      - name: Run script
+        run: |
+          cd say/compiler
+          pnpm install
+          pnpm run compile
+
+      - name: Check for changes
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git add .
+            git commit -m "Automated changes from GitHub Actions"
+            git push origin HEAD:${{ github.ref_name }}
+          else
+            echo "No changes to commit"
+          fi
