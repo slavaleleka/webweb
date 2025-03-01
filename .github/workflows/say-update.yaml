@@ -1,4 +1,8 @@
-name: Run Script and Commit Changes
+name: Update 'say' lists
+
+env:
+  PNPM_VERSION: 8
+  NODE_VERSION: 20
 
 on:
   workflow_dispatch:
@@ -8,13 +12,21 @@ on:
       - '!say/compiler/**'
 
 jobs:
-  run-script-and-commit:
+  built:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Use Node.jobs
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
 
       - name: Set up Git user
         run: |
