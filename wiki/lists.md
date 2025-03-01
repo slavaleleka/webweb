@@ -27,9 +27,9 @@ Single list with all other separate lists combined.
 
 [subscribe][no-rubbish-subscribe] | [source][no-rubbish-source] | [raw][no-rubbish-raw]
 
-[no-rubbish-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish&title=/say/no.rubbish
-[no-rubbish-source]: https://github.com/slavaleleka/webweb/blob/master/say/no.rubbish
-[no-rubbish-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
+[no-rubbish-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/no.rubbish&title=/say/no.rubbish
+[no-rubbish-source]: https://github.com/slavaleleka/webweb/blob/master/say/dir.no.rubbish
+[no-rubbish-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/no.rubbish
 
 
 ### 🧮 no.compare

@@ -1,14 +1,3 @@
-! Title: /say/no.rubbish
-! Description:  no sharing/print/favorite/tags
-!               better to use with some other social media blocking lists
-! Version: 1.1.217
-! Expires: 2 hours
-! TimeUpdated: 2024-12-11T14:00:00+03:00
-! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
-!
-! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
-! subscribe: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.rubbish
-!
 !
 ! general elemhide --- START
 !
