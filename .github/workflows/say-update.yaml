@@ -1,14 +1,11 @@
 name: Run Script and Commit Changes
 
 on:
-  push:
-    branches:
-      - master
-    paths:
-      - 'say/**'
-      - '!say/**/version
-      - '!say/compiler/**'
   workflow_dispatch:
+  push:
+    paths:
+      - 'say/**/*.txt'
+      - '!say/compiler/**'
 
 jobs:
   run-script-and-commit:
