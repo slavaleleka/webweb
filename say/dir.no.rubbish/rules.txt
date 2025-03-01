@@ -496,6 +496,7 @@ genius.com#?#span[class^="LabelWithIcon__Label"]:contains(Share):upward(button)
 ! #?#a[href^="mailto:"]:not(:upward(footer))
 ! extended css  ---  END
 !
+!
 ! whitelist --- START
 ! whitelist  ---  END
 !
