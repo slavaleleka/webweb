@@ -1,0 +1,2 @@
+# create github workflow yaml config which should be triggered by changes in 'say' directory,
+# it should run some script and commit the changes back to the repository after the script is run

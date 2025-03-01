@@ -17,7 +17,7 @@ const COMMENT_PREFIX = `${COMMENT_MARK}${SPACE}`;
 
 const HEADER_LINE_SEPARATOR = `${COLON}${SPACE}`;
 
-const VERSION_FILE_NAME = 'version.txt';
+const VERSION_FILE_NAME = 'version';
 
 const HEADER_PREFIX = {
     TITLE: 'Title',
