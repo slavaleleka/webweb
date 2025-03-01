@@ -43,7 +43,7 @@ jobs:
         run: |
           if [[ -n "$(git status --porcelain)" ]]; then
             git add .
-            git commit -m "Automated changes from GitHub Actions"
+            git commit -m "update 'say' filter lists"
             git push origin HEAD:${{ github.ref_name }}
           else
             echo "No changes to commit"
