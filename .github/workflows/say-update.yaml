@@ -4,7 +4,8 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'say/**/*.txt'
+      - 'say/**'
+      - '!say/**/version
       - '!say/compiler/**'
 
 jobs:
