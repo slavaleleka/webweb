@@ -1,0 +1,13 @@
+{
+    "name": "say-compiler",
+    "version": "0.1.0",
+    "description": "Compiler for local lists",
+    "scripts": {
+        "compile": "tsx src/index.ts"
+    },
+    "dependencies": {
+        "@types/node": "^22.13.8",
+        "tsx": "^4.19.3",
+        "typescript": "^5.8.2"
+    }
+}
