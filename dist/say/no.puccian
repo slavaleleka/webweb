@@ -1,0 +1,43 @@
+! Title: say/no.puccian
+! Description: block ru websites
+! Version: 0.1.8
+! Time Updated: 2025-03-01T22:14:31.739Z
+! Expires: 2 hours
+! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
+!
+! Add Link: https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/no.puccian
+! Subscribe Link: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/no.puccian
+!
+!
+||*.ru^
+||*.su^
+||*.ru.net^
+! .рф
+||*.xn--p1ai^
+! .рус
+||*.xn--p1acf^
+! .дети
+||*.xn--d1acj3b^
+! .москва
+||*.xn--80adxhks^
+!
+||yandex.*^
+||ya.*^
+||dzen.*^
+||yastatic.net^
+||kinopoisk.*^
+||vk.com^
+||vk.payservice.io^
+||relap.io^
+||gismeteo.*^
+||rp5.*^
+||tass.*^
+||sputnikglobe.*^
+||sputniknews.*^
+||2gis.*^
+||bitrix24.*^
+||kaspersky.*^
+||moscowtimes.*^
+||sputnik.*^
+!
+! TODO: do not add manually, use the script

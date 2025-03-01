@@ -1,0 +1,44 @@
+! Title: say/dark.please
+! Description: personal dark theme customizations
+! Version: 0.1.10
+! Time Updated: 2025-03-01T22:14:31.738Z
+! Expires: 2 hours
+! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
+!
+! Add Link: https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/dark.please
+! Subscribe Link: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/dark.please
+!
+!
+! SECTION: grouped
+! mil.in.ua -- dark theme
+mil.in.ua#$#header > div { background-color: #000 !important; }
+mil.in.ua#$#nav { background-color: #000 !important; }
+mil.in.ua#$#body { background-color: #000 !important; }
+mil.in.ua#$#.main-container { background-color: #000 !important; }
+mil.in.ua#$#.main-container > div { background-color: #000 !important; }
+mil.in.ua#$#blockquote { background-color: #5a1406 !important; }
+mil.in.ua#$#.sidebar { background-color: #000 !important; }
+mil.in.ua#$#@media (min-width: 1200px) { .sidebar--right { border-left: 1px solid #444 !important; } }
+mil.in.ua#$##video-special { background-color: #000 !important; }
+mil.in.ua#$#footer { background-color: #000 !important; }
+mil.in.ua#$#footer { border-top-color: #000 !important; }
+mil.in.ua#$#.footer__wrapper { background-color: #000 !important; }
+mil.in.ua##.footer__logo
+mil.in.ua#$#h1, h2, h3, h4, h5, h6, p, span, label, footer li { color: #e7eae9 !important; }
+mil.in.ua#$#.single-news__wrapper ol, .single-news__wrapper ul { color: #e7eae9 !important; }
+mil.in.ua#$#h6 { background-color: #534f46 !important; }
+mil.in.ua#$#.news-item__date { color: #000 !important; }
+mil.in.ua#$#a { color: #2f80ed !important; }
+mil.in.ua#$#a.button { border: 1px solid #2f80ed !important; background: #000 !important; }
+! fix comment section
+[$path=/domain%3Dmil.in.ua/]facebook.com#$#span { color: #fff !important; }
+[$path=/domain%3Dmil.in.ua/]facebook.com#$#html { background-color: #000 !important; }
+! experimental: tweak for dark theme on ios
+!#if (adguard_app_ios)
+! top bar
+mil.in.ua#%#//scriptlet('trusted-create-element', 'head', 'meta', 'name="theme-color" content="#000"')
+! address bar
+mil.in.ua#%#//scriptlet('trusted-create-element', 'head', 'meta', 'name="apple-mobile-web-app-capable" content="yes"')
+mil.in.ua#%#//scriptlet('trusted-create-element', 'head', 'meta', 'name="apple-mobile-web-app-status-bar-style" content="black-translucent"')
+!#endif
+!

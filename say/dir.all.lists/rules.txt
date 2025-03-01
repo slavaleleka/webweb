@@ -1,0 +1,5 @@
+! consider included files as relative files in dist directory
+!#include ./better.workflow
+!#include ./dark.please
+!#include ./hell.o
+!#include ./no.puccian

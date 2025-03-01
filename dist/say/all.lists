@@ -1,0 +1,15 @@
+! Title: say/all.lists
+! Description: all lists combined
+! Version: 0.0.10
+! Time Updated: 2025-03-01T22:14:31.740Z
+! Expires: 2 hours
+! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
+!
+! Add Link: https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/all.lists
+! Subscribe Link: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/all.lists
+!
+! consider included files as relative files in dist directory
+!#include ./better.workflow
+!#include ./dark.please
+!#include ./hell.o
+!#include ./no.puccian

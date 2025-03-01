@@ -1,0 +1,37 @@
+{
+    "better.workflow": {
+        "description": "tiny improvements",
+        "sourceDir": "dir.better.workflow",
+        "sourceFiles": [
+            "rules.txt"
+        ]
+    },
+    "dark.please": {
+        "description": "personal dark theme customizations",
+        "sourceDir": "dir.dark.please",
+        "sourceFiles": [
+            "rules.txt"
+        ]
+    },
+    "hell.o": {
+        "description": "personal blocklist",
+        "sourceDir": "dir.hell.o",
+        "sourceFiles": [
+            "rules.txt"
+        ]
+    },
+    "no.puccian": {
+        "description": "block ru websites",
+        "sourceDir": "dir.no.puccian",
+        "sourceFiles": [
+            "rules.txt"
+        ]
+    },
+    "all.lists": {
+        "description": "all lists combined",
+        "sourceDir": "dir.all.lists",
+        "sourceFiles": [
+            "rules.txt"
+        ]
+    }
+}

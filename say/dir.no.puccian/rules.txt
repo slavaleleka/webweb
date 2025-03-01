@@ -1,0 +1,33 @@
+!
+||*.ru^
+||*.su^
+||*.ru.net^
+! .рф
+||*.xn--p1ai^
+! .рус
+||*.xn--p1acf^
+! .дети
+||*.xn--d1acj3b^
+! .москва
+||*.xn--80adxhks^
+!
+||yandex.*^
+||ya.*^
+||dzen.*^
+||yastatic.net^
+||kinopoisk.*^
+||vk.com^
+||vk.payservice.io^
+||relap.io^
+||gismeteo.*^
+||rp5.*^
+||tass.*^
+||sputnikglobe.*^
+||sputniknews.*^
+||2gis.*^
+||bitrix24.*^
+||kaspersky.*^
+||moscowtimes.*^
+||sputnik.*^
+!
+! TODO: do not add manually, use the script
