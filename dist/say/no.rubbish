@@ -1,7 +1,7 @@
 ! Title: say/no.rubbish
 ! Description: no sharing/print/favorite/tags; better to use with some other social media blocking lists
-! Version: 1.1.220
-! Time Updated: 2025-03-01T22:38:49.601Z
+! Version: 1.1.221
+! Time Updated: 2025-03-01T22:56:54.660Z
 ! Expires: 2 hours
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
@@ -505,6 +505,7 @@ genius.com#?#span[class^="LabelWithIcon__Label"]:contains(Share):upward(button)
 ! [beta] extended css -- temporary disable
 ! #?#a[href^="mailto:"]:not(:upward(footer))
 ! extended css  ---  END
+!
 !
 ! whitelist --- START
 ! whitelist  ---  END
