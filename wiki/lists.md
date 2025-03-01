@@ -1,12 +1,26 @@
-## Supported filter lists
+# Supported filter lists
+
+## Combined lists
+
+### 💐 all.lists
+
+Single list with all other separate lists combined.
+
+[subscribe][all-lists-subscribe] | [source][all-lists-source] | [raw][all-lists-raw]
+
+[all-lists-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/all.lists&title=say/all.lists
+[all-lists-source]: https://github.com/slavaleleka/webweb/tree/master/say/dir.all.lists
+[all-lists-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/all.lists
+
+## Separate lists
 
 ### 🐣 hell.o
 
-[subscribe][hell-o-subscribe] | [source][hell-o-source] | [raw][no-rubbish-raw]
+[subscribe][hell-o-subscribe] | [source][hell-o-source] | [raw][hell-o-raw]
 
-[hell-o-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o&title=/say/hell.o
-[hell-o-source]: https://github.com/slavaleleka/webweb/blob/master/say/hell.o
-[hell-o-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/hell.o
+[hell-o-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/hell.o&title=say/hell.o
+[hell-o-source]: https://github.com/slavaleleka/webweb/tree/master/say/dir.hell.o
+[hell-o-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/hell.o
 
 
 ### 🎩 no.rubbish
@@ -40,26 +54,26 @@
 
 [subscribe][better-workflow-subscribe] | [source][better-workflow-source] | [raw][better-workflow-raw]
 
-[better-workflow-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/better.workflow&title=/say/better.workflow
-[better-workflow-source]: https://github.com/slavaleleka/webweb/blob/master/say/better.workflow
-[better-workflow-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/better.workflow
+[better-workflow-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/better.workflow&title=say/better.workflow
+[better-workflow-source]: https://github.com/slavaleleka/webweb/blob/master/say/dir.better.workflow
+[better-workflow-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/better.workflow
 
 
 ### 🕶 dark.please
 
 [subscribe][dark-please-subscribe] | [source][dark-please-source] | [raw][dark-please-raw]
 
-[dark-please-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/dark.please&title=/say/dark.please
-[dark-please-source]: https://github.com/slavaleleka/webweb/blob/master/say/dark.please
-[dark-please-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/dark.please
+[dark-please-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/dark.please&title=say/dark.please
+[dark-please-source]: https://github.com/slavaleleka/webweb/blob/master/say/dir.dark.please
+[dark-please-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/dark.please
 
 ### 💥 no.puccian [alpha[*]]
 
 [subscribe][no-puccian-subscribe] | [source][no-puccian-source] | [raw][no-puccian-raw]
 
-[no-puccian-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.puccian&title=/say/no.puccian
+[no-puccian-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/no.puccian&title=say/no.puccian
 [no-puccian-source]: https://github.com/slavaleleka/webweb/blob/master/say/no.puccian
-[no-puccian-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.puccian
+[no-puccian-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/no.puccian
 
 ### 🧽 screw.urltrack [alpha[*]]
 
