@@ -32,6 +32,8 @@ const EXPIRES_HEADER_LINE = 'Expires: 2 hours';
 
 const LICENSE_HEADER_LINE = 'License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)';
 
+const AUTHOR_HEADER_LINE = 'Author: Slava Leleka';
+
 const SAY_STR = 'say';
 
 const filterListsDirRoot = path.resolve(__dirname, '../..');
@@ -119,6 +121,7 @@ const getListHeader = ({
         getHeaderLine(HEADER_PREFIX.TIME_UPDATED, timeUpdated),
         `${COMMENT_PREFIX}${EXPIRES_HEADER_LINE}`,
         `${COMMENT_PREFIX}${LICENSE_HEADER_LINE}`,
+        `${COMMENT_PREFIX}${AUTHOR_HEADER_LINE}`,
         `${COMMENT_MARK}`,
         getHeaderLine(HEADER_PREFIX.ADD_LINK, addLink),
         getHeaderLine(HEADER_PREFIX.SUBSCRIBE_LINK, subscribeLink),

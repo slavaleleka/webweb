@@ -1,9 +1,10 @@
 ! Title: say/screw.param.track
 ! Description: [alpha] removing url tracking params
-! Version: 0.2.3
-! Time Updated: 2025-03-02T03:56:30.321Z
+! Version: 0.2.5
+! Time Updated: 2025-03-02T04:03:38.178Z
 ! Expires: 2 hours
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
+! Author: Slava Leleka
 !
 ! Add Link: https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/screw.param.track
 ! Subscribe Link: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/screw.param.track

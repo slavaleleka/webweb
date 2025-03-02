@@ -1,9 +1,10 @@
 ! Title: say/no.donate
 ! Description: hide donate banners, widgets, etc.
-! Version: 0.0.8
-! Time Updated: 2025-03-02T03:56:30.320Z
+! Version: 0.0.10
+! Time Updated: 2025-03-02T04:03:38.173Z
 ! Expires: 2 hours
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
+! Author: Slava Leleka
 !
 ! Add Link: https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/no.donate
 ! Subscribe Link: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/no.donate

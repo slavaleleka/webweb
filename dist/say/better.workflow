@@ -1,9 +1,10 @@
 ! Title: say/better.workflow
 ! Description: tiny improvements
-! Version: 0.0.50
-! Time Updated: 2025-03-02T03:56:30.318Z
+! Version: 0.0.52
+! Time Updated: 2025-03-02T04:03:38.170Z
 ! Expires: 2 hours
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
+! Author: Slava Leleka
 !
 ! Add Link: https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/better.workflow
 ! Subscribe Link: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/better.workflow
