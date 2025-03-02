@@ -1,7 +1,7 @@
 ! Title: say/hell.o
 ! Description: personal blocklist
-! Version: 1.2.18
-! Time Updated: 2025-03-01T23:02:55.565Z
+! Version: 1.2.19
+! Time Updated: 2025-03-02T03:24:45.495Z
 ! Expires: 2 hours
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
@@ -46,15 +46,6 @@ espreso.tv##.pre_content_header_block
 espreso.tv#$#.main-wrapper { padding-top: 0 !important; }
 espreso.tv#?#.news-content > p:has(a[href="https://t.me/espresotb"])
 espreso.tv##.similar_by_tag
-! myshows.me
-myshows.me#?#.Page-aside > h3:contains(KinopoiskHD)
-myshows.me#?#.Page-aside > .episodes-kp-promo
-myshows.me##.ShowDetails__section > .online-link
-myshows.me#$#.UserShowItem-titleOriginal { margin-top: 0!important; }
-myshows.me#$#.UserShowItem_mode_compact { padding: 7px 0!important; }
-myshows.me#$#.User-showsMore { margin-top: 10px!important; }
-myshows.me#$#.User-tabs { margin-bottom: 10px!important; }
-myshows.me#$#.User-hr { margin-bottom: 10px!important; }
 ! XTranslate extension banner — at least on example.org
 example.*##.XTranslate
 !
@@ -97,6 +88,41 @@ nbafullhd.com#$#.entry iframe { max-width: none!important; }
 nbafullhd.com#$#.entry-content iframe { width: 1000px!important; height: 570px!important; }
 nbafullhd.com#$##header-main { padding: 0!important; }
 nbafullhd.com#$#.main-container { padding-top: 0!important; margin-top: 0!important; }
+!
+meetup.com#%#//scriptlet('trusted-click-element', 'div[aria-live="polite"][role="dialog"] button.underline', 'containsText:free plan')
+meetup.com#$#.blur-sm { --tw-blur: blur(0) !important; }
+!
+!
+ca.indeed.com##.jobsearch-ViewJobButtons-container button[aria-label="Copy link"]
+!
+ca.indeed.com#$?#.underShelfFooter li:contains(/year/i) { background: yellow !important; }
+ca.indeed.com#$?#.jobsearch-JobComponent-description li:contains(/year/i) { background: yellow !important; }
+ca.indeed.com#$?#.jobsearch-JobComponent-description p:contains(/year/i) { background: yellow !important; }
+!
+ca.indeed.com#$?#p:contains(/CITIZENSHIP.+?REQUIRED/i) { background: red !important; }
+ca.indeed.com#$?##jobDescriptionText li:contains(/CITIZENSHIP.+?REQUIRED/i) { background: red !important; }
+!
+ca.indeed.com#$?#.jobsearch-JobComponent { margin-top: 0 !important; }
+ca.indeed.com#$?#.jobsearch-HeaderContainer { padding-top: 0 !important; padding-bottom: 0 !important; }
+ca.indeed.com#$?#.jobsearch-RichSearch { padding-top: 0 !important; padding-bottom: 0 !important; }
+ca.indeed.com#$?#form#jobsearch > div { margin-bottom: 8px !important; }
+ca.indeed.com#$?#.jobsearch-ViewJobButtons-container { padding-bottom: 0 !important; }
+ca.indeed.com#$?##jobDescriptionTitleHeading { margin-top: 0 !important; }
+ca.indeed.com#$?#.jobsearch-JobComponent-description #benefitsSectionTitle { margin-top: 0 !important; margin-bottom: 0 !important; }
+ca.indeed.com#$?#.jobsearch-JobInfoHeader-title-container { margin-top: 0 !important; }
+ca.indeed.com#$?##jobLocationSectionTitle { margin-bottom: 0 !important; }
+ca.indeed.com#$?##jobLocationWrapper { margin-bottom: 0 !important; }
+ca.indeed.com#$?#.jobsearch-JobComponent-description div[role="separator"][aria-orientation="horizontal"] { margin-top: 0 !important; margin-bottom: 0 !important; }
+ca.indeed.com#$?##mosaic-provider-jobcards ul li:has(div[data-testid="appliedSnippet"]) { opacity: 0.2 !important; }
+ca.indeed.com#$?##mosaic-provider-jobcards ul li:has(h2.jobTitle:contains(AI Trainer)) { opacity: 0.2 !important; }
+ca.indeed.com#$?##jobsearch-ViewjobPaneWrapper:has(.jobsearch-HeaderContainer .jobsearch-IndeedApplyButton span.indeed-apply-status-applied) { opacity: 0.2 !important; }
+ca.indeed.com#$?##jobsearch-ViewjobPaneWrapper:has(.jobsearch-HeaderContainer .jobsearch-IndeedApplyButton span.indeed-apply-status-applied) { opacity: 0.4 !important; }
+ca.indeed.com#$##jobsearch-ViewjobPaneWrapper .jobsearch-HeaderContainer .jobsearch-IndeedApplyButton span.indeed-apply-status-applied button#indeedApplyButton { background: red !important; }
+ca.indeed.com#$?##jobsearch-ViewJobLayout-rowSpacingLine { margin-bottom: 0 !important; }
+ca.indeed.com#$?#.jobsearch-ViewJobLayout--standalone { margin-top: 0 !important; }
+ca.indeed.com#$?#.jobsearch-DesktopStickyContainer { padding-top: 0 !important; }
+!
+!
 !
 ! !SECTION: grouped
 !

@@ -1,0 +1,43 @@
+! Title: say/screw.param.track
+! Description: [alpha] removing url tracking params
+! Version: 0.2.1
+! Time Updated: 2025-03-02T03:24:45.498Z
+! Expires: 2 hours
+! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
+!
+! Add Link: https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/screw.param.track
+! Subscribe Link: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/screw.param.track
+!
+||airbnb.*^$removeparam=federated_search_id
+||airbnb.*^$removeparam=source_impression_id
+||airbnb.*^$removeparam=translate_ugc
+!
+||ca.indeed.com/viewjob^$removeparam=tk
+||ca.indeed.com/viewjob^$removeparam=from
+||ca.indeed.com/viewjob^$removeparam=vjs
+||ca.indeed.com/viewjob^$removeparam=cmp
+||ca.indeed.com/viewjob^$removeparam=t
+||ca.indeed.com/viewjob^$removeparam=q
+||ca.indeed.com/viewjob^$removeparam=l
+||ca.indeed.com/viewjob^$removeparam=xpse
+||ca.indeed.com/viewjob^$removeparam=xfps
+||ca.indeed.com/viewjob^$removeparam=xkcb
+||ca.indeed.com/viewjob^$removeparam=hl
+||ca.indeed.com/viewjob^$removeparam=rjptk
+||ca.indeed.com/viewjob^$removeparam=advn
+||ca.indeed.com/viewjob^$removeparam=adid
+||ca.indeed.com/viewjob^$removeparam=ad
+||ca.indeed.com/viewjob^$removeparam=sjdu
+||ca.indeed.com/viewjob^$removeparam=acatk
+||ca.indeed.com/viewjob^$removeparam=pub
+||ca.indeed.com/viewjob^$removeparam=i2af
+||ca.indeed.com/viewjob^$removeparam=camk
+||ca.indeed.com/viewjob^$removeparam=jrtk
+||ca.indeed.com/viewjob^$removeparam=alid
+||ca.indeed.com/viewjob^$removeparam=g1tAS
+||ca.indeed.com/viewjob^$removeparam=g1tLH
+||ca.indeed.com/viewjob^$removeparam=rgtk
+||ca.indeed.com/cmp^$removeparam=from
+||ca.indeed.com/cmp^$removeparam=tk
+||ca.indeed.com/cmp^$removeparam=fromjk
+||ca.indeed.com/cmp^$removeparam=attributionid
