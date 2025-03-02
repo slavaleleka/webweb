@@ -31,3 +31,5 @@
 ||ca.indeed.com/cmp^$removeparam=tk
 ||ca.indeed.com/cmp^$removeparam=fromjk
 ||ca.indeed.com/cmp^$removeparam=attributionid
+!
+||app.realmmlp.ca^$removeparam=view
