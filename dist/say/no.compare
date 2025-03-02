@@ -1,15 +1,14 @@
 ! Title: say/no.compare
 ! Description: no comparing elements while shopping
-! Version: 0.1.1
-! Time Updated: 2025-03-02T03:24:45.496Z
+! Version: 0.1.2
+! Time Updated: 2025-03-02T03:55:03.399Z
 ! Expires: 2 hours
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
 ! Add Link: https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/no.compare
 ! Subscribe Link: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/no.compare
 !
-!
-! general elemhide --- START
+!# generic --- START
 ! with tag names:
 ##div[data-replace-container^="product-compare"]
 ##label[for^="product-compare-"]
@@ -57,24 +56,14 @@
 ##[id^="compare_"]
 ##[id^="product-compare-"]
 ##[slot="cmplist-control"]
-! general elemhide ---  END
+!# generic --- END
 !
-! specific --- START
+!
+!# specific --- START
 !
 ! rules which might break something
 ! ##.compare
 ! example.org##.compare
 !
-! specific ---  END
-!
-! extended css --- START
-! generic:
-!
-! extended css  ---  END
-!
-! whitelist --- START
-! whitelist  ---  END
-!
-!
-!###    FOR IOS    ###!
-!
+yourshaving.com##.functional_wrapper .add_to_compare
+!# specific --- END

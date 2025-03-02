@@ -1,7 +1,7 @@
 ! Title: say/better.workflow
 ! Description: tiny improvements
-! Version: 0.0.48
-! Time Updated: 2025-03-02T03:24:45.495Z
+! Version: 0.0.49
+! Time Updated: 2025-03-02T03:55:03.397Z
 ! Expires: 2 hours
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
@@ -95,3 +95,4 @@ agrd.dev###dashboard-container .dashboard-jira-issues
 !
 ! builds queue
 #$?#.buildInfo a:contains(AdGuard JS Libraries › ) { background-color: khaki !important; }
+#$?#.buildInfo a:contains(AdGuard Extensions › browser extension) { background-color: #f6cf1e !important; }
