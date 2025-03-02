@@ -1,4 +1,12 @@
-import { COMMENT_MARK, COMMENT_PREFIX, DIST_DIR, HEADER_LINE_SEPARATOR, NEW_LINE, SAY_STR, SLASH } from './constants';
+import {
+    COMMENT_MARK,
+    COMMENT_PREFIX,
+    DIST_DIR,
+    HEADER_LINE_SEPARATOR,
+    NEW_LINE,
+    SAY_STR,
+    SLASH,
+} from './constants';
 import { type HeaderConfig } from './types';
 
 const HEADER_PREFIX = {
