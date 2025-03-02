@@ -85,3 +85,4 @@ agrd.dev###dashboard-container .dashboard-jira-issues
 !
 ! builds queue
 #$?#.buildInfo a:contains(AdGuard JS Libraries › ) { background-color: khaki !important; }
+#$?#.buildInfo a:contains(AdGuard Extensions › browser extension) { background-color: #f6cf1e !important; }

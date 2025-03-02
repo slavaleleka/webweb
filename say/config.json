@@ -59,7 +59,13 @@
         "description": "no sharing/print/favorite/tags; better to use with some other social media blocking lists",
         "sourceDir": "dir.no.rubbish",
         "sourceFiles": [
-            "rules.txt"
+            "favorite.txt",
+            "mistakes.txt",
+            "print.txt",
+            "share.txt",
+            "subscribe.txt",
+            "tags.txt",
+            "unsorted.txt"
         ]
     },
     "screw.param.track": {

@@ -1,0 +1,216 @@
+!# generic elemhide - START
+##[title="Add to wishlist"]
+##.a-fav-button
+##svg.heart
+##.favoriteproducts_block_extra_add
+##[title="Add to wishlist"]
+##.ProductHeader__wishlist-icon
+##.js--AddToWishList
+##.js--ProductHeader__add-to-wishlist
+##.HeaderMenu__buttons_wishlist
+##[data-auto="wishlist-button"]
+##.add-to-favourite
+##.icon-favourite-gray
+##.product__fav
+##.vx-product-fav
+##.favorite_check
+##.favorite-label
+##.icon-favorites
+##li-icon[type="bookmark-outline"]
+##.ic__hasSet__bookmark
+##button[data-gfg-action="bookmark-article"]
+##.saveJobContainer
+##[data-testid="pdp-save-button-unsaved"]
+##.uw-save-product-btn
+##.js-favorite-button
+##.btn--fav
+##.favourite
+##.favourite-link
+~savelife.in.ua##.btn-heart
+##.btn-favorite
+##.js-btn-favorite
+##.tm-product-favorite
+##.uk-product-favorite
+##[data-product-favorite]
+##.opt-favorite
+##.js-product__favorite
+##.xf-svg__heart
+##.button-favorite
+##.add_favorites
+##.js-favorite
+##.js-favorites
+##.Single__Link--Favorites
+##.icon-favorite-heart-button
+##.favorites-button--add
+##.product__favorite
+##.item-add-todb-heart
+##.button_favourite
+##.FloatingHat-Favorites
+##.ItemAddToFavorite
+##.FavoriteAction
+##.favorites[onclick]
+##.wishlist-control
+##[data-wishlist-control]
+##.actions__favor
+##.product-favorite
+##[data-marker="favorite"]
+##[data-marker="header/favorites"]
+##[data-favorite-mode]
+##.js-add-favorite
+##.add-favorite-button
+###favorite-button
+##.add-to-wishlist
+##[data-ajax-inject^="wishlist-link-"]
+##[href$="/wishlist"]
+##.wishlist__nav
+##.item-wishlist
+##[data-lightbox-target="product-wishlist"]
+##.favorites_button
+##.js_favorites_button
+##.towishlist
+##[data-action="add-to-wishlist"]
+##[data-action="favorite"]
+##.wishlist-btn
+##.user-favorites
+##[class$="__favorite"]
+##.link-wishlist
+##.image_name_favorite
+##.add-to-favorite
+##.add-to-favorites
+##.iwishAddWrap
+##.iWishAdd
+##.btn-favourites
+##.add-to-fav
+##.product-to-fav
+##[data-bind*=":button.addToWishlist"]
+##.wishlist-link
+##.add_to_wishlist
+##.addToWishlist
+##.item-toggle-favorite
+##.js-item-toggle-favorite
+##.js-item-favorite
+##[data-widget="addToFavorite"]
+##.js-favorite-link
+##.button--favorites
+##[data-testid="favorites-button"]
+##[aria-label="Favorite this product"]
+##[title="Favorite this product"]
+###aFavoriEkleBtn
+##[onclick="javascript:FavoriUrunDetay();"]
+##[title="Add to Favorites"]
+##[data-original-title="Favorilere Ekle"]
+##a[onclick^="add_favorite("]
+##header .fav_products
+##header .favorite-products-link
+##[class^="ProductItem__productCardFavourite"]
+##[class^="ProductActive__cartConfirmationAddToFavs"]
+##[class*=header i] [data-test="fav_icon"]
+###favorite-icon
+##[data-testid="favorite-icon"]
+##.icon-favourite
+##[title="В закладки"]
+##.js-bookmark-btn
+##.bookmark-btn
+##[data-action="add-bookmark"]
+##.bookmark
+##[data-list-type="bookmarks"]
+##[data-bi-name="bookmark"]
+##.js-post-bookmark
+##.bookmarkLink
+##[class*="__bookmark___"]
+##[href*="---bookmark_"]
+##[data-handler="bookmarks"]
+##[data-titlefalse="В закладки"]
+##[data-captionfalse="В закладки"]
+##.heart-empty
+##[onclick*="addToWishlist"]
+##.wish-list-widget
+##svg.i-heart
+##button.heart
+##button[data-type="heart"]
+##[data-e2e-id="favourites-add"]
+##.tooltip-container__favorite
+##.actions__favorite
+##.js-add2favorite
+##.header__favorite
+##.addto-wishlist
+##.tcp-product-actions__action_favorite
+##.js-noAuthFavLink
+~tv.kyivstar.ua##button.favorite
+##div[data-spec^="favorite-"]
+##a[class*="button-in-favorite"]
+##svg[id^="heart-svg"]
+##button.wishlist
+##img.icon[src*="favorite" i]
+##header .favorites_block
+##header .favorite
+##a[class*="AddToWishlist"]
+##a[onclick^="wishlist.add("]
+##button[aria-label="Add to wishlist"]
+##a[href="#add_favorite"]
+##div[class^="WishListButton"]
+##.icons-wishlist
+##.wishlist_bonus
+##.wishlist-modal-popup
+###product-addto-wishlist-ajax-description
+##.WishIcon
+##.hotspotwishlist
+##.sAddToWishListWrapper
+##.icon-wishlist
+##.wishlist-button
+##.js-add-to-wishlist
+~president.gov.ua##.fa-heart
+##svg[data-icon="heart"]
+##.productWishlistButton
+##a[title="Add to wishlist"]
+##a[title="To wish list"]
+##header a[href*="/wishlist"]
+##.b-wishlist_button
+##.b-product_wishlist-btn
+##[data-id="addToWishlist"]
+##[data-add-to-wishlist-url]
+##[data-widget-event-click="addToWishlist"]
+##[data-tau="product_addToWishList"]
+##.b-header_wishlist
+##a[href^="javascript:addToFav("]
+##.favor-inner
+##.favourite-sku-control
+##a[class*="header"][href="/favorite/"]
+##.card__fav
+##.product__fav
+##[onclick*="click_favorite"]
+##.filmInfo_fav
+##.header_btn-fav
+##[data-fav-btn]
+##[data-sub-modules="Fav"]
+##.js-product-favorites
+##.add-favorites
+##.js-add_favorites
+##header .wishlist_view
+##.btn-wishlist
+##.wish_count
+##.nr-header__user-nav-item--wish
+##.wish-button
+##.default-header-wishlist
+##[slot="wishlist-control"]
+##.product__bookmark
+##[onclick^="wishlist.add("]
+##.navbar__wish-list
+##.js_add2wishlist
+##.sm-wish-toggle
+##.sm-header-wishlist
+##.wish_item
+~megogo.net##button[data-favorite]
+!# generic - END
+!
+!# specific - START
+! standard css
+executive-shaving.co.uk##.wishlist
+nba.com##button[data-text="FAVORITE"]
+ebay.com##.s-item__watchheart
+booking.com###wrap-hotelpage-top .lists-hotel-dropdown-square-heart
+monster.ca##.save-button
+ikea.com##.range-revamp-product-compact__add-to-list-button
+! extended css
+giphy.com#?#div[class^="Navigation-"] div[class^="ButtonDiv-"]:has(> div > div[class^="FavoriteContainer-"])
+!# specific - END

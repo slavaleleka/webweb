@@ -1,0 +1,27 @@
+!# generic - START
+##.print
+###print-page
+##.print-button
+##.js_print
+##.command-print-job
+##[id^="print-button"]
+##.mf-widget-print-button
+##[data-handlermode="print"]
+##[data-e2e-id="print-btn"]
+##.print-out
+##a[href="javascript:window.print()"]
+##li.print-icon
+##button[marker="print-button"]
+##a[href="#print"]
+##a[href="javascript:window.print()"]
+##.printSource
+##[href="#printSource"]
+##.itemPrint
+##.action-card__print-link
+##[onclick^="window.print"]
+##.button_strip_print
+##.PrintButton
+##.cz-print-icon
+##.g-icon_print
+##.artPrintBLK
+!# generic - END

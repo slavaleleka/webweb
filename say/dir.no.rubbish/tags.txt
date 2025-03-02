@@ -1,0 +1,31 @@
+!# generic -- START
+! standard css
+##.tags
+##.post-tags
+##.singlePost__tags
+##.article-tags
+##.tagsitem
+##.tags-area
+##.post__tags
+##.tags-wrapper
+##.b-post-tags
+##.post_tags
+##.tagcloud
+##.entry-tags
+##.ipagesTagGroup-title
+##.ipagesTagGroup-tagList
+##.news-tags
+##.c-post__tags
+##.tags-links
+! extended css
+#?#div:contains(/^(Т|т)еги(:?)$/)
+#?#span:contains(/related\\stags/i):upward(1)
+!# generic -- END
+!
+!
+!# specific -- START
+mil.in.ua##.hashtags
+zmina.info##.article_tags
+bbc.com##[aria-labelledby="related-topics"]
+babel.ua#?#.c-post-dl:contains(/Теги:/)
+!# specific -- END

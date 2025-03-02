@@ -1,0 +1,94 @@
+!# generic elemhide - unsorted - START
+##svg.icon-like
+###reactions
+##.reactions-refresh
+###reactions__container
+##.shr-opn
+##.post_rating
+###like-dislike-subnav
+##button.vote-this[data-type="like"]
+##button[data-gfg-action="like-article"]
+##.mistape_caption
+##[data-handlermode="itemerror"]
+##[data-handlermode="url2mail"]
+~adguard-dns.io,~reports.dv,~adguard.com,~telegram.org,~mail.google.com##a[href^="mailto:"]
+##.btn__icon._like
+##.stickedBlock__spacer
+##.yasr-auto-insert-visitor
+##.like-button
+##.article__search-error
+##.toggle-like
+###oct-policy
+##.j-add-to-postpone
+##.j-postpone
+##.ya-chat-widget
+##.sendtofriend
+!# generic - unsorted - END
+!
+!
+!# specific - unsorted - START
+!
+nauka.ua##.banner-zone-top-homepage
+dou.ua##.tg-promo
+dribbble.com##.keyboard-legend
+context.reverso.net##button.add.icon.addentry
+context.reverso.net##button.non-favourite
+context.reverso.net##button.copy.icon
+github.com##signup-prompt-controller
+mbk-news.appspot.com##.mistape_caption
+stackoverflow.com##.js-voting-container > .js-reactions
+stackexchange.com,stackoverflow.com##.post-menu
+madte.st##.test-soc-wrap
+landofroses.co.uk###main .socialHolder
+teenslang.su###tele
+latimes.com##a.ActionLink[data-dropdown-trigger=""]
+yourshaving.com##.functional_wrapper .quick-view
+merriam-webster.com##.save-to-list
+amazon.com##[data-feature-name="tellAFriendBox"]
+fmovies.app##.fmr-buttons
+svoboda.org##.foot__texts-wrap
+svoboda.org##.infgraphicsAttach
+imgflip.com###done-embed-codes
+imgflip.com###done > .done-msg
+yakaboo.ua##.like
+m.censor.net##.block-social-link
+!# specific - unsorted -- END
+!
+!
+!# font customization -- START
+zmina.info##.article_controls
+!# font customization -- END
+!
+!
+!# promo socials -- START
+##.news-links-social
+ukrinform.ua#?#article p:contains(Приєднуйтесь до наших)
+!# promo socials -- END
+!
+! extended css --- START
+#?#div[class^="css-"]:has(> a[class^="css-"]:contains(/FEEDBACK:/))
+! gitbook.com cookies
+#?##animatedComponent:has(a[href$="/privacy/cookies"])
+!
+nachasi.com##ul.show-tablet > li:has(a[class^="style_comments__"])
+nachasi.com##ul.show-tablet > li:has(a[class^="style_tooltip__"])
+nauka.ua#?#[itemprop="articleBody"] > p:has(a[href="https://t.me/naukaua"])
+nauka.ua#?#[itemprop="articleBody"] > p:has(a[href="https://t.me/naukaua"]) + hr
+bbc.com#?#main > div:has(> p > a[href="https://t.me/bbcukrainian"])
+!
+! [beta] extended css -- temporary disable
+! #?#a[href^="mailto:"]:not(:upward(footer))
+! extended css  ---  END
+!
+! whitelist --- START
+! whitelist  ---  END
+!
+!# no puccian / no lang switcher -- START
+##.header__content a[href^="/rus/"]
+!
+#?#a:contains(/^рус$/i)
+#?#a:contains(Читать на русском)
+!
+rbc.ua##.lang-group
+babel.ua##.c-lang-list
+!# no puccian / no lang switcher -- END

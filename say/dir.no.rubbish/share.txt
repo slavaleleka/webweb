@@ -1,0 +1,103 @@
+!# generic - START
+##a[click^="share-"]
+##.sj-share-icon
+##share-job
+##.c-sharer
+##.c-sharer_inner
+##.c-sharer_btn
+##.post_news_social
+##.post_article_social
+##.doShareLink
+##.article_content .post__social
+##.js-share-button
+##.bzr-icon_name_share
+##.product-detail__share
+##[data-share-title]
+##[data-share-url]
+##[class^="EmotionsAndShare_share__"]
+##.icon-shareIcon
+##.sharethis-inline-share-buttons
+##.product-share
+##.b-sticked-material-share
+##[data-target="#shareModal"]
+##.share-article__button
+##.vjs-share-open
+##.vjs-icon-share
+###vjs-share-open-button
+##button[data-hook="share_button"]
+##a[href="#tab_share"]
+##button.share
+##div[class^="shareWithFriends_"]
+##[data-e2e-id="share_button"]
+##.js-product-card-share-button
+###thread-share-bar
+##.share-bar-refresh
+##.comment__share > *
+##div[class^="style_sharer__"]
+##.byline__share
+##.block-share-link
+##.link-share-heart
+##.ssf-share-trigger
+##[aria-label="Share Post"]
+##.js-share--expandable
+##.js-btn-sharing-overlay
+##.wp-embed-share
+##.social-share-yellow
+##[class^="styles__shareAudioButton___"]
+##.new-sharin-sn
+##.sharing-icons
+##[data-xf-init="share-tooltip"]
+##.sidebar-share-wrapper
+###product-share
+##[aria-controls="sharing-menu"]
+##[data-bi-name="share"]
+##.share_wrapp
+##.addthis_sharing_toolbox
+##.vjs-share-control
+##.js_share-tools
+##.js-share-link
+##[data-role="share"]
+##.story__share
+##.article__social
+##.post_socialIcons
+##.post-share-float
+##[data-role="shareButton"]
+##.share_center_square_cta
+##.share-url
+##.anv-splash-share
+###block-sharethis-sharethis-block
+##.block-sharethis
+##.sfsi_socialwpr
+##.email-share-item
+##li.email-icon
+##.icon-hl-email
+##.itemEmail
+##share-job
+##.sj-share-icon
+##a[click^="share-"]
+!# generic - END
+!
+!
+!# specific - START
+!
+! #share
+play.pod.co###share
+!
+! .share
+freecodecamp.org##.share
+!
+! #social
+perfume-click.co.uk###social
+!
+!
+! standard css
+reddit.com##div[id$="-share-menu"]
+nytimes.com##.more-share-item
+tiktok.com##.share-container
+!
+!
+! extended css
+amazon.com#?#[data-automation-id="bottom-bar-actions"] > div:has(> span > button#shareTrigger)
+blick.ch#?#button[aria-label="facebook"]:upward(1)
+genius.com#?#span[class^="LabelWithIcon__Label"]:contains(Share):upward(button)
+!# specific - END

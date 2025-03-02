@@ -1,0 +1,13 @@
+! report a mistake on text
+!
+!# specific - START
+##.post__report
+##.c-post-err
+!# generic - END
+!
+!
+!# specific - START
+24tv.ua##.text_search_error
+chytomo.com##.mistake
+zmina.info##.disklamer
+!# specific - END

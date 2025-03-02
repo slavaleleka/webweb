@@ -1,0 +1,28 @@
+!# generic elemhide - START
+##div[class^="post_subscribe__"]
+##div[class^="post_authorSubscription__"]
+###product-review-subscription
+###subscribe-blog
+##.subscription
+##.js-subscription_block
+###subscribe-form_footer
+##.subscribe-form_footer
+##.subscribe_wrap
+##.post__subscribe_bottom
+###newsletter_block_left
+##.newsletterForm
+##.footerNewsletter
+!# generic elemhide - END
+!
+!
+!# specific - START
+! #newsletter
+perfume-click.co.uk###newsletter
+!
+zmina.info##.subcribe
+zmina.info##.subscribe_disclimer
+!
+investigate-europe.eu##body > aside.page-banner-bottom
+investigate-europe.eu##.modal-newsletter
+investigate-europe.eu##.side-alert-newsletter
+!
