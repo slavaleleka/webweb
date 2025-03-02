@@ -11,7 +11,7 @@
 ##.mistape_caption
 ##[data-handlermode="itemerror"]
 ##[data-handlermode="url2mail"]
-~adguard-dns.io,~reports.dv,~adguard.com,~telegram.org,~mail.google.com##a[href^="mailto:"]
+~agrd.dev,~jobbank.gc.ca,~adguard-dns.io,~adguard.com,~mail.google.com##a[href^="mailto:"]
 ##.btn__icon._like
 ##.stickedBlock__spacer
 ##.yasr-auto-insert-visitor
