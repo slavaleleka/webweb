@@ -1,0 +1,15 @@
+! Title: say/imabroke
+! Description: [alpha] no paywalls
+! Version: 0.1.3
+! Time Updated: 2025-03-02T03:24:45.496Z
+! Expires: 2 hours
+! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
+!
+! Add Link: https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/imabroke
+! Subscribe Link: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/imabroke
+!
+latimes.com#$##reg-overlay { display: none!important; }
+latimes.com#$#html { overflow-x: hidden !important; overflow-y: scroll !important; padding-right: 0 !important; }
+latimes.com#%#//scriptlet('prevent-addEventListener', 'scroll', 'event.dispatch')
+latimes.com#%#//scriptlet('remove-attr', 'data-ssor-modalup', 'html')
+latimes.com#%#//scriptlet('remove-attr', 'data-dss-meterup', 'html')

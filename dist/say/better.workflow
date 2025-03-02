@@ -1,7 +1,7 @@
 ! Title: say/better.workflow
 ! Description: tiny improvements
-! Version: 0.0.47
-! Time Updated: 2025-03-01T23:02:55.562Z
+! Version: 0.0.48
+! Time Updated: 2025-03-02T03:24:45.495Z
 ! Expires: 2 hours
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 !
@@ -80,6 +80,14 @@ github.com#$##partial-discussion-header { margin: 0!important; }
 #$##select2-drop > ul.select2-results { max-height: 280px !important }
 !
 @@||agrd.dev^$domain=agrd.dev
+!
+! bitbucket — new rules to observe
+#$#nav.aui-header { padding-top: 0 !important; }
+#$##dashboard-container .main-section { margin-top: 4px !important; }
+#?##dashboard-container > .main-panel > h1:contains(Your work)
+!
+! bitbucket — jira issues
+agrd.dev###dashboard-container .dashboard-jira-issues
 !
 !
 !

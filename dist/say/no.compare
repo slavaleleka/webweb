@@ -1,0 +1,80 @@
+! Title: say/no.compare
+! Description: no comparing elements while shopping
+! Version: 0.1.1
+! Time Updated: 2025-03-02T03:24:45.496Z
+! Expires: 2 hours
+! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
+!
+! Add Link: https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/no.compare
+! Subscribe Link: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/no.compare
+!
+!
+! general elemhide --- START
+! with tag names:
+##div[data-replace-container^="product-compare"]
+##label[for^="product-compare-"]
+##.header-menu-wrapper a[href="/compare/"]
+##header .moduletable-compare
+!
+! just with attributes:
+###compareBlock-header
+##.add-to-compare
+~megogo.net##.compare
+##.compare-block
+##.compare-block__link
+##.compare-button
+##.compare-inited
+##.compare_item
+##.compare_item_button
+##.compare-link
+##.compare-checkbox
+##.compare-product
+##.c-product-tile__compare-button
+##.default-header-compare
+##.ic__hasSet__compare
+##.header__compare
+##.js-add-to-compare
+##.js_add2compare
+##.js-compare
+##.js-product-compare
+##.js-product-comparison
+##.js-toggle-compare
+##.js--AddToComparison
+##.js--ProductHeader__add-to-compare
+##.navbar__compare
+##.plp-compare-checkbox
+##.product-compare
+##.sm-header-compare__link
+##.tab-compare
+##.HeaderMenu__buttons_compare
+##[aria-label="Add to compare"]
+##[data-ajax-id="product-compare"]
+##[data-ajax*="/shop-compare/"]
+##[data-id^="popover-product-compare-"]
+##[data-handler="compare"]
+##[data-selenium="compareToggle"]
+##[data-widget="webAddToCompare"]
+##[id^="compare_"]
+##[id^="product-compare-"]
+##[slot="cmplist-control"]
+! general elemhide ---  END
+!
+! specific --- START
+!
+! rules which might break something
+! ##.compare
+! example.org##.compare
+!
+! specific ---  END
+!
+! extended css --- START
+! generic:
+!
+! extended css  ---  END
+!
+! whitelist --- START
+! whitelist  ---  END
+!
+!
+!###    FOR IOS    ###!
+!
