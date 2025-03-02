@@ -71,6 +71,14 @@ github.com#$##partial-discussion-header { margin: 0!important; }
 !
 @@||agrd.dev^$domain=agrd.dev
 !
+! bitbucket — new rules to observe
+#$#nav.aui-header { padding-top: 0 !important; }
+#$##dashboard-container .main-section { margin-top: 4px !important; }
+#?##dashboard-container > .main-panel > h1:contains(Your work)
+!
+! bitbucket — jira issues
+agrd.dev###dashboard-container .dashboard-jira-issues
+!
 !
 !
 ! BAMBOO:

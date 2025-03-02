@@ -27,7 +27,7 @@ Single list with all other separate lists combined.
 
 [subscribe][no-rubbish-subscribe] | [source][no-rubbish-source] | [raw][no-rubbish-raw]
 
-[no-rubbish-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/no.rubbish&title=/say/no.rubbish
+[no-rubbish-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/no.rubbish&title=say/no.rubbish
 [no-rubbish-source]: https://github.com/slavaleleka/webweb/blob/master/say/dir.no.rubbish
 [no-rubbish-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/no.rubbish
 
@@ -36,18 +36,18 @@ Single list with all other separate lists combined.
 
 [subscribe][no-compare-subscribe] | [source][no-compare-source] | [raw][no-compare-raw]
 
-[no-compare-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.compare&title=/say/no.compare
-[no-compare-source]: https://github.com/slavaleleka/webweb/blob/master/say/no.compare
-[no-compare-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.compare
+[no-compare-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/no.compare&title=say/no.compare
+[no-compare-source]: https://github.com/slavaleleka/webweb/blob/master/say/dir.no.compare
+[no-compare-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/no.compare
 
 
 ### 🪙 no.donate
 
 [subscribe][no-donate-subscribe] | [source][no-donate-source] | [raw][no-donate-raw]
 
-[no-donate-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.donate&title=/say/no.donate
-[no-donate-source]: https://github.com/slavaleleka/webweb/blob/master/say/no.donate
-[no-donate-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.donate
+[no-donate-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/no.donate&title=say/no.donate
+[no-donate-source]: https://github.com/slavaleleka/webweb/blob/master/say/dir.no.donate
+[no-donate-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/no.donate
 
 
 ### 🛠️ better.workflow
@@ -72,25 +72,25 @@ Single list with all other separate lists combined.
 [subscribe][no-puccian-subscribe] | [source][no-puccian-source] | [raw][no-puccian-raw]
 
 [no-puccian-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/no.puccian&title=say/no.puccian
-[no-puccian-source]: https://github.com/slavaleleka/webweb/blob/master/say/no.puccian
+[no-puccian-source]: https://github.com/slavaleleka/webweb/blob/master/say/dir.no.puccian
 [no-puccian-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/no.puccian
 
-### 🧽 screw.urltrack [alpha[*]]
+### 🧽 screw.param.track [alpha[*]]
 
-[subscribe][screw-urltrack-subscribe] | [source][screw-urltrack-source] | [raw][screw-urltrack-raw]
+[subscribe][screw-param-track-subscribe] | [source][screw-urltrack-source] | [raw][screw-urltrack-raw]
 
-[screw-urltrack-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/screw.urltrack&title=/say/screw.urltrack
-[screw-urltrack-source]: https://github.com/slavaleleka/webweb/blob/master/say/screw.urltrack
-[screw-urltrack-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/screw.urltrack
+[screw-urltrack-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/screw.param.track&title=say/screw.param.track
+[screw-urltrack-source]: https://github.com/slavaleleka/webweb/blob/master/say/dir.screw.param.track
+[screw-urltrack-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/screw.param.track
 
 
 ### 🏴‍☠️ imabroke [alpha[*]]
 
 [subscribe][imabroke-subscribe] | [source][imabroke-source] | [raw][imabroke-raw]
 
-[imabroke-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/imabroke&title=/say/imabroke
-[imabroke-source]: https://github.com/slavaleleka/webweb/blob/master/say/imabroke
-[imabroke-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/imabroke
+[imabroke-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/imabroke&title=say/imabroke
+[imabroke-source]: https://github.com/slavaleleka/webweb/blob/master/say/dir.imabroke
+[imabroke-raw]: https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/imabroke
 
 * * *
 
@@ -99,10 +99,3 @@ Single list with all other separate lists combined.
 > \*: may not be supported.
 
 [*]: #asterisk-one "may not be supported"
-
-
-<!-- <h3>once for all:</h3> -->
-
-<!-- <a href="https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/all.lists">💐 all.lists</a> -->
-
-<!-- <h3>one by one:</h3> -->

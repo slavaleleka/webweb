@@ -1,4 +1,11 @@
 {
+    "all.lists": {
+        "description": "all lists combined",
+        "sourceDir": "dir.all.lists",
+        "sourceFiles": [
+            "rules.txt"
+        ]
+    },
     "better.workflow": {
         "description": "tiny improvements",
         "sourceDir": "dir.better.workflow",
@@ -20,8 +27,29 @@
             "rules.txt"
         ]
     },
+    "imabroke": {
+        "description": "[alpha] no paywalls",
+        "sourceDir": "dir.imabroke",
+        "sourceFiles": [
+            "rules.txt"
+        ]
+    },
+    "no.compare": {
+        "description": "no comparing elements while shopping",
+        "sourceDir": "dir.no.compare",
+        "sourceFiles": [
+            "rules.txt"
+        ]
+    },
+    "no.donate": {
+        "description": "hide donate banners, widgets, etc.",
+        "sourceDir": "dir.no.donate",
+        "sourceFiles": [
+            "rules.txt"
+        ]
+    },
     "no.puccian": {
-        "description": "block ru websites",
+        "description": "block ru websites; already included into hell.o",
         "sourceDir": "dir.no.puccian",
         "sourceFiles": [
             "rules.txt"
@@ -34,9 +62,9 @@
             "rules.txt"
         ]
     },
-    "all.lists": {
-        "description": "all lists combined",
-        "sourceDir": "dir.all.lists",
+    "screw.param.track": {
+        "description": "[alpha] removing url tracking params",
+        "sourceDir": "dir.screw.param.track",
         "sourceFiles": [
             "rules.txt"
         ]

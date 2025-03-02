@@ -1,20 +1,9 @@
-! Title: /say/no.compare
-! Description: no comparing elements while shopping
-! Version: 0.0.18
-! Expires: 2 hours
-! TimeUpdated: 2024-05-16T19:00:00+03:00
-! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
-!
-! add: https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.compare
-! subscribe: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/say/no.compare
-!
 !
 ! general elemhide --- START
-! with tagnames:
+! with tag names:
 ##div[data-replace-container^="product-compare"]
 ##label[for^="product-compare-"]
 ##.header-menu-wrapper a[href="/compare/"]
-##input[value="Сравнить"]
 ##header .moduletable-compare
 !
 ! just with attributes:
@@ -49,45 +38,27 @@
 ##.tab-compare
 ##.HeaderMenu__buttons_compare
 ##[aria-label="Add to compare"]
-##[aria-label="Добавить к сравнению"]
-##[aria-label="Сравнить"]
 ##[data-ajax-id="product-compare"]
 ##[data-ajax*="/shop-compare/"]
-##[data-captionfalse="Сравнить"]
 ##[data-id^="popover-product-compare-"]
 ##[data-handler="compare"]
 ##[data-selenium="compareToggle"]
-##[data-title="К сравнению"]
-##[data-titlefalse="Сравнить"]
 ##[data-widget="webAddToCompare"]
 ##[id^="compare_"]
 ##[id^="product-compare-"]
 ##[slot="cmplist-control"]
-##[title="В сравнение"]
-##[title="Добавить в сравнение"]
-##[title="Сравнить"]
-##[title="Сравнение товаров"]
-##[title="Перейти к сравнению"]
-##[value="Сравнить"]
 ! general elemhide ---  END
 !
 ! specific --- START
 !
-! rules which might break smtg
+! rules which might break something
 ! ##.compare
 ! example.org##.compare
-!
-e-katalog.ru###bar_bm_compared
 !
 ! specific ---  END
 !
 ! extended css --- START
 ! generic:
-!
-! specific:
-e-katalog.ru#?#.desc-short-prices div[class][id^="c_"]:has(> input[onclick*="add-compare"])
-e-katalog.ru#?#.touchcarousel-item > label[for^="chk_"]:has(> span:contains(сравнить))
-domclick.ru##button:has(> span:contains(Сравнить))
 !
 ! extended css  ---  END
 !
@@ -97,5 +68,3 @@ domclick.ru##button:has(> span:contains(Сравнить))
 !
 !###    FOR IOS    ###!
 !
-! ||widget.retell.cc^$domain=63.ru
-! 63.ru###record-header > div button[title="В закладки"]

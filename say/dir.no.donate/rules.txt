@@ -1,0 +1,20 @@
+!
+! general elemhide --- START
+!
+! general elemhide ---  END
+!
+! specific --- START
+mil.in.ua##.donate
+mil.in.ua##a[data-modal="modal-donate"]
+! specific ---  END
+!
+! extended css --- START
+!
+! extended css  ---  END
+!
+! whitelist --- START
+! whitelist  ---  END
+!
+!
+! ###    FOR IOS    ###!
+!

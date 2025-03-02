@@ -1,0 +1,5 @@
+latimes.com#$##reg-overlay { display: none!important; }
+latimes.com#$#html { overflow-x: hidden !important; overflow-y: scroll !important; padding-right: 0 !important; }
+latimes.com#%#//scriptlet('prevent-addEventListener', 'scroll', 'event.dispatch')
+latimes.com#%#//scriptlet('remove-attr', 'data-ssor-modalup', 'html')
+latimes.com#%#//scriptlet('remove-attr', 'data-dss-meterup', 'html')
