@@ -17,6 +17,8 @@
 ##.news-tags
 ##.c-post__tags
 ##.tags-links
+##[data-testid="tags"]
+##section[aria-labelledby="tags-heading"]
 ! extended css
 #?#div:contains(/^(Т|т)еги(:?)$/)
 #?#span:contains(/related\\stags/i):upward(1)
