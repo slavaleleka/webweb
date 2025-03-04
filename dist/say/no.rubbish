@@ -1,7 +1,7 @@
 ! Title: say/no.rubbish
 ! Description: no sharing/print/favorite/tags; better to use with some other social media blocking lists
-! Version: 1.2.5
-! Time Updated: 2025-03-02T04:38:03.608Z
+! Version: 1.2.6
+! Time Updated: 2025-03-02T04:41:00.295Z
 ! Expires: 2 hours
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 ! Author: Slava Leleka
@@ -446,7 +446,7 @@ babel.ua#?#.c-post-dl:contains(/Теги:/)
 ##.mistape_caption
 ##[data-handlermode="itemerror"]
 ##[data-handlermode="url2mail"]
-~adguard-dns.io,~reports.dv,~adguard.com,~telegram.org,~mail.google.com##a[href^="mailto:"]
+~agrd.dev,~jobbank.gc.ca,~adguard-dns.io,~adguard.com,~mail.google.com##a[href^="mailto:"]
 ##.btn__icon._like
 ##.stickedBlock__spacer
 ##.yasr-auto-insert-visitor
