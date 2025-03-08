@@ -1,4 +1,9 @@
 !# generic elemhide - START
+###addToWishlist_feature_div
+##[data-feature-name="addToWishlist"]
+##[data-csa-c-content-id="addToWishlist"]
+##[data-csa-c-slot-id="addToWishlist_feature_div"]
+##[data-cel-widget="addToWishlist_feature_div"]
 ##[title="Add to wishlist"]
 ##.a-fav-button
 ##svg.heart
