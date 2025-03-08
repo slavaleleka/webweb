@@ -1,4 +1,5 @@
 !# generic elemhide - START
+##[data-automation-id="heart-item"]
 ###addToWishlist_feature_div
 ##[data-feature-name="addToWishlist"]
 ##[data-csa-c-content-id="addToWishlist"]
