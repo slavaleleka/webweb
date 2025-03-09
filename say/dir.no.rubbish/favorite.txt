@@ -1,4 +1,14 @@
 !# generic elemhide - START
+##wish-list-heart-container
+##wish-list-heart
+##.wish-list-heart--medium
+##.nl-product-card__wishlist--icon
+##.nl-icon-ct-favorite-inactive
+##[data-testid="icon-ct-favorite-inactive-hidden"]
+##.nl-buy-box__add-cart-wishlist
+##.nl-buy-box__wishlist-container
+##.nl-buy-box__wishlist-container--with-label
+##[data-testid="wishlist-button"]
 ##[data-automation-id="heart-item"]
 ###addToWishlist_feature_div
 ##[data-feature-name="addToWishlist"]
