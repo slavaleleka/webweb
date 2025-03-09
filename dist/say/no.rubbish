@@ -1,7 +1,7 @@
 ! Title: say/no.rubbish
 ! Description: no sharing/print/favorite/tags; better to use with some other social media blocking lists
-! Version: 1.2.9
-! Time Updated: 2025-03-08T05:34:35.666Z
+! Version: 1.2.10
+! Time Updated: 2025-03-09T08:06:33.464Z
 ! Expires: 2 hours
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 ! Author: Slava Leleka
@@ -10,6 +10,16 @@
 ! Subscribe Link: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/no.rubbish
 !
 !# generic elemhide - START
+##wish-list-heart-container
+##wish-list-heart
+##.wish-list-heart--medium
+##.nl-product-card__wishlist--icon
+##.nl-icon-ct-favorite-inactive
+##[data-testid="icon-ct-favorite-inactive-hidden"]
+##.nl-buy-box__add-cart-wishlist
+##.nl-buy-box__wishlist-container
+##.nl-buy-box__wishlist-container--with-label
+##[data-testid="wishlist-button"]
 ##[data-automation-id="heart-item"]
 ###addToWishlist_feature_div
 ##[data-feature-name="addToWishlist"]

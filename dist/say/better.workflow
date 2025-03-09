@@ -1,7 +1,7 @@
 ! Title: say/better.workflow
 ! Description: tiny improvements
-! Version: 0.0.57
-! Time Updated: 2025-03-08T05:34:35.662Z
+! Version: 0.0.58
+! Time Updated: 2025-03-09T08:06:33.461Z
 ! Expires: 2 hours
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 ! Author: Slava Leleka
