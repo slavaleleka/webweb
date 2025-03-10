@@ -1,4 +1,7 @@
 !# generic elemhide - START
+##.pip-desktop-favourite-button-wrapper
+##.pip-favourite-button
+##[aria-label="Save to shopping list"]
 ##wish-list-heart-container
 ##wish-list-heart
 ##.wish-list-heart--medium
