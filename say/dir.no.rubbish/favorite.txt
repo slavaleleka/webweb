@@ -232,4 +232,6 @@ monster.ca##.save-button
 ikea.com##.range-revamp-product-compact__add-to-list-button
 ! extended css
 giphy.com#?#div[class^="Navigation-"] div[class^="ButtonDiv-"]:has(> div > div[class^="FavoriteContainer-"])
+eventbrite.ca#?#section.event-card-actions button:has(#heart-chunky_svg__eds-icon--user-chunky_svg)
+eventbrite.ca#?#.eds-event-card-content__actions-container button:has(#heart-chunky_svg__eds-icon--user-chunky_svg)
 !# specific - END
