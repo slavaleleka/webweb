@@ -1,7 +1,7 @@
 ! Title: say/better.workflow
 ! Description: tiny improvements
-! Version: 0.0.60
-! Time Updated: 2025-03-10T19:16:54.825Z
+! Version: 0.0.61
+! Time Updated: 2025-03-11T22:46:54.299Z
 ! Expires: 2 hours
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 ! Author: Slava Leleka
@@ -89,6 +89,20 @@ github.com#$##partial-discussion-header { margin: 0!important; }
 !
 ! bitbucket — jira issues
 agrd.dev###dashboard-container .dashboard-jira-issues
+! create jira issue from the bitbucket task
+#?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(Story Points))
+#?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(Epic Link))
+#?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(Checklist))
+#?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(Attachment))
+#?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(External issue ID))
+#?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(Upvotes))
+#?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(Due Date))
+#?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(Fix Version/s))
+#?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(Linked Issues))
+#?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(Labels))
+#?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(Priority))
+#?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(Time Tracking))
+#?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(Log Work))
 !
 !
 !
