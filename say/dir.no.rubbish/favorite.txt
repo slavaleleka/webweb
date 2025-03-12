@@ -224,6 +224,7 @@
 !
 !# specific - START
 ! standard css
+ikea.com##button[aria-label^="Save "][aria-label$=" to shopping list"]
 executive-shaving.co.uk##.wishlist
 nba.com##button[data-text="FAVORITE"]
 ebay.com##.s-item__watchheart
