@@ -52,6 +52,7 @@ imgflip.com###done-embed-codes
 imgflip.com###done > .done-msg
 yakaboo.ua##.like
 m.censor.net##.block-social-link
+devblogs.microsoft.com##.evo-social-sidebar
 !# specific - unsorted -- END
 !
 !
