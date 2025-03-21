@@ -1,7 +1,7 @@
 ! Title: say/no.rubbish
 ! Description: no sharing/print/favorite/tags; better to use with some other social media blocking lists
-! Version: 1.2.14
-! Time Updated: 2025-03-12T03:32:03.178Z
+! Version: 1.2.15
+! Time Updated: 2025-03-21T17:49:02.078Z
 ! Expires: 2 hours
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 ! Author: Slava Leleka
@@ -511,6 +511,7 @@ imgflip.com###done-embed-codes
 imgflip.com###done > .done-msg
 yakaboo.ua##.like
 m.censor.net##.block-social-link
+devblogs.microsoft.com##.evo-social-sidebar
 !# specific - unsorted -- END
 !
 !
