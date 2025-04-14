@@ -1,7 +1,7 @@
 ! Title: say/no.puccian
 ! Description: block ru websites; already included into hell.o
-! Version: 0.1.29
-! Time Updated: 2025-03-21T17:49:02.077Z
+! Version: 0.1.30
+! Time Updated: 2025-04-14T17:16:06.903Z
 ! Expires: 2 hours
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 ! Author: Slava Leleka
@@ -40,5 +40,80 @@
 ||kaspersky.*^
 ||moscowtimes.*^
 ||sputnik.*^
+||1tv.com^
+||1tv.live^
+||rtr-planeta.com^
+||rt.com^
+||korrespondent.net^
+||sputniknews.com^
+||meduza.io^
+||russia-insider.com^
+||pravdareport.com^
+||desk-russie.eu^
+||englishrussia.com^
+||russianuniverse.org^
+||therussophile.org^
+||fort-russ.com^
+||rbth.com^
+||rusvesna.su^
+||newsru.com^
+||svoboda.org^
+||russia.tv^
+||tricolor.tv^
+||kubnews-ru^
+||kommersant-ru^
+||ura.news^
+||meduza.io^
+||pravdafrance.com^
+||zona.media^
+||rusvesna.su^
+||navalny.com^
+||politobzor.net^
+||politnavigator.net^
+||novorosinform.org^
+||sputnikipogrom.com^
+||stopfake.org^
+||kavkazcenter.com^
+||wow-impulse.net^
+||vodvore.net^
+||onhotnews.com^
+||moskva.fm^
+||moskva.fm^
+||piter.fm^
+||yaplakal.com^
+||kinogo.*^
+||fishki.net^
+||kinozal.tv^
+||gidonlinekino.com^
+||amerikanki.com^
+||deti-online.com^
+||androeed.*^
+||5play.*^
+||5play-mod.tokyo^
+||pdalife.to^
+||4pda.to^
+||zvuk.com^
+||zaycev.fm^
+||mp3k.pro^
+||drweb.com^
+||mydiv.net^
+||fanfics.me^
+||fanfics.info^
+||holywarsoo.net^
+||boomdown.org^
+||author.today^
+||fanficus.com^
+||lib.rus.ec^
+||boosty.to^
+||litres.*^
+||mangalib.*^
+||slashlib.*^
+||ranobelib.*^
+||hentailib.*^
+||anilib.*^
+||tilda.*^
+||creatium.io^
+||ukit.com^
+||habr.com^
 !
 ! TODO: do not add manually, use the script
