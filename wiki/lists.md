@@ -77,7 +77,7 @@ Single list with all other separate lists combined.
 
 ### 🧽 screw.param.track [alpha[*]]
 
-[subscribe][screw-param-track-subscribe] | [source][screw-urltrack-source] | [raw][screw-urltrack-raw]
+[subscribe][screw-urltrack-subscribe] | [source][screw-urltrack-source] | [raw][screw-urltrack-raw]
 
 [screw-urltrack-subscribe]: abp:subscribe?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/screw.param.track&title=say/screw.param.track
 [screw-urltrack-source]: https://github.com/slavaleleka/webweb/blob/master/say/dir.screw.param.track
