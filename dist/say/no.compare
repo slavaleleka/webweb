@@ -1,7 +1,7 @@
 ! Title: say/no.compare
 ! Description: no comparing elements while shopping
-! Version: 0.1.17
-! Time Updated: 2025-04-14T17:16:06.903Z
+! Version: 0.1.18
+! Time Updated: 2025-06-01T17:23:39.109Z
 ! Expires: 2 hours
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 ! Author: Slava Leleka
@@ -10,13 +10,13 @@
 ! Subscribe Link: https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/slavaleleka/webweb/master/dist/say/no.compare
 !
 !# generic --- START
-! with tag names:
+##.o_add_compare_dyn
+##[aria-label="Compare"]
+##[data-action="o_comparelist"]
 ##div[data-replace-container^="product-compare"]
 ##label[for^="product-compare-"]
 ##.header-menu-wrapper a[href="/compare/"]
 ##header .moduletable-compare
-!
-! just with attributes:
 ###compareBlock-header
 ##.add-to-compare
 ~megogo.net##.compare
