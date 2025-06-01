@@ -1,11 +1,11 @@
 !# generic --- START
-! with tag names:
+##.o_add_compare_dyn
+##[aria-label="Compare"]
+##[data-action="o_comparelist"]
 ##div[data-replace-container^="product-compare"]
 ##label[for^="product-compare-"]
 ##.header-menu-wrapper a[href="/compare/"]
 ##header .moduletable-compare
-!
-! just with attributes:
 ###compareBlock-header
 ##.add-to-compare
 ~megogo.net##.compare

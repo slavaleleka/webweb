@@ -1,4 +1,6 @@
 !# generic - START
+##[title="Share"]
+##.tp-share-product
 ##a[click^="share-"]
 ##.sj-share-icon
 ##share-job
