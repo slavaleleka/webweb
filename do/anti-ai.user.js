@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Anti-AI Elements
 // @namespace    http://tampermonkey.net/
-// @version      0.1.1
+// @version      0.1.2
 // @description  Hides Google Search AI Overview.
 // @author       Slava Leleka @slavaleleka
 // @license      MIT
@@ -78,14 +78,13 @@
     const observeDOMChanges = () => {
         const observer = new MutationObserver(function(mutations) {
             for (const mutation of mutations) {
-                if (!mutation.addedNodes || mutation.addedNodes.length === 0) continue;
+                if (!mutation.addedNodes || mutation.addedNodes.length === 0) {
+                    continue;
+                }
 
                 for (const node of mutation.addedNodes) {
-                    if (node.nodeType !== Node.ELEMENT_NODE) continue;
-
-                    // Check for our target elements and hide them
-                    if (node.matches && node.matches(SIMPLE_MATCH_SELECTOR)) {
-                        hideElement(node);
+                    if (node.nodeType !== Node.ELEMENT_NODE) {
+                        continue;
                     }
 
                     // Check children of added nodes
@@ -105,10 +104,19 @@
      * Intercept and block XMLHttpRequest
      */
     const interceptXHR = () => {
-        XMLHttpRequest.prototype.open = function(method, url, async, user, password) {
+        XMLHttpRequest.prototype.open = function(
+            method,
+            url,
+            async,
+            user,
+            password
+        ) {
             if (shouldBlockRequest(url)) {
                 console.log('Blocking XHR request:', url);
-                return nativeXHROpen.apply(this, [method, 'about:blank', async, user, password]);
+                return nativeXHROpen.apply(
+                    this,
+                    [method, 'about:blank', async, user, password],
+                );
             }
             return nativeXHROpen.apply(this, arguments);
         };
