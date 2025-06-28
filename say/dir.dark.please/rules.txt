@@ -23,7 +23,10 @@ militarnyi.com#$#.w-nav-link { color: #f4f4f4 !important; text-decoration: under
 ! experimental: tweak for dark theme on ios
 !#if (adguard_app_ios)
 ! top bar
-militarnyi.com#%#//scriptlet('trusted-create-element', 'head', 'meta', 'name="theme-color" content="#000"')
+militarnyi.com#%#//scriptlet('trusted-set-attr', 'head > meta[name="theme-color"]', 'content', '#000')
+! previous rule:
+! militarnyi.com#%#//scriptlet('trusted-create-element', 'head', 'meta', 'name="theme-color" content="#000"')
+!
 ! address bar
 militarnyi.com#%#//scriptlet('trusted-create-element', 'head', 'meta', 'name="apple-mobile-web-app-capable" content="yes"')
 militarnyi.com#%#//scriptlet('trusted-create-element', 'head', 'meta', 'name="apple-mobile-web-app-status-bar-style" content="black-translucent"')
