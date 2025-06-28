@@ -26,7 +26,7 @@
 !
 !
 !# specific -- START
-mil.in.ua##.hashtags
+militarnyi.com##.hashtags_conteiner
 zmina.info##.article_tags
 bbc.com##[aria-labelledby="related-topics"]
 babel.ua#?#.c-post-dl:contains(/Теги:/)
