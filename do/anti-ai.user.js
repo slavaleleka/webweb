@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Anti-AI Elements
 // @namespace    http://tampermonkey.net/
-// @version      0.1.5
+// @version      0.1.6
 // @description  Hides Google Search AI Overview.
 // @author       Slava Leleka @slavaleleka
 // @license      MIT
