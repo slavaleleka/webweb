@@ -1,7 +1,7 @@
 ! Title: say/no.donate
 ! Description: hide donate banners, widgets, etc.
-! Version: 0.0.23
-! Time Updated: 2025-06-01T17:23:39.109Z
+! Version: 0.0.24
+! Time Updated: 2025-06-28T18:38:47.061Z
 ! Expires: 2 hours
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 ! Author: Slava Leleka
@@ -15,8 +15,9 @@
 ! general elemhide ---  END
 !
 ! specific --- START
-mil.in.ua##.donate
-mil.in.ua##a[data-modal="modal-donate"]
+militarnyi.com##.support_block-mobile
+militarnyi.com##.navbar_container .button--support
+militarnyi.com##a[data-modal="modal-donate"]
 ! specific ---  END
 !
 ! extended css --- START
