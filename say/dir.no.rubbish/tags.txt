@@ -1,5 +1,6 @@
 !# generic -- START
 ! standard css
+##.standart-hashtag-list
 ##.tags
 ##.post-tags
 ##.singlePost__tags
@@ -30,4 +31,10 @@ militarnyi.com##.hashtags_conteiner
 zmina.info##.article_tags
 bbc.com##[aria-labelledby="related-topics"]
 babel.ua#?#.c-post-dl:contains(/Теги:/)
+! tags on militarnyi.com for cards in grid section
+militarnyi.com##.grid-list-popular .card-content-news .nets-list
+militarnyi.com##.grid-list .card-content-news .nets-list
+militarnyi.com#$?#.card-content-news .nets-wrapper { remove: true; }
+! WARNING! may be dangerous
+militarnyi.com#$?#.grid-list-popular .card-content-news .w-dyn-list:has(.nets-list) { remove: true; }
 !# specific -- END

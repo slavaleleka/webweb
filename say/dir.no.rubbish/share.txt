@@ -1,4 +1,5 @@
 !# generic - START
+##a[fs-socialshare-element]
 ##[title="Share"]
 ##.tp-share-product
 ##a[click^="share-"]
@@ -99,6 +100,7 @@ tiktok.com##.share-container
 !
 !
 ! extended css
+militarnyi.com#$?#.margin-bottom-art:has(> .share-text) { remove: true; }
 amazon.com#?#[data-automation-id="bottom-bar-actions"] > div:has(> span > button#shareTrigger)
 blick.ch#?#button[aria-label="facebook"]:upward(1)
 genius.com#?#span[class^="LabelWithIcon__Label"]:contains(Share):upward(button)
