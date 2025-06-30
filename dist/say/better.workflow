@@ -1,7 +1,7 @@
 ! Title: say/better.workflow
 ! Description: tiny improvements
-! Version: 0.0.68
-! Time Updated: 2025-06-28T22:06:18.079Z
+! Version: 0.0.69
+! Time Updated: 2025-06-30T16:40:43.805Z
 ! Expires: 2 hours
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 ! Author: Slava Leleka
@@ -71,6 +71,9 @@ github.com#$##partial-discussion-header { margin: 0!important; }
 ##.dashboard-empty-reviewing > svg
 #$#.empty-state { margin: 0!important; }
 ##.empty-state .dashboard-empty-description
+#$#.pull-request-title-review-section .pull-request-title { margin: 0 !important; }
+#$#.change-view .change-header { padding: 2px 8px 2px 24px !important; }
+#$#.pull-request-tabs .tabs-pane[role="tabpanel"] { padding: 2px !important; }
 !
 #$##dashboard-container > .main-panel { padding-top: 0!important; }
 #$##dashboard-container > .side-panel > .dashboard-repositories-section { padding-top: 4px!important; }
