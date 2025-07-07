@@ -1,4 +1,8 @@
 !# generic elemhide - START
+##.favorites-button
+##.j-widget-favorites-add
+##[title="Додати товар в список бажань"]
+##.favorites-button__icon
 ##.pip-desktop-favourite-button-wrapper
 ##.pip-favourite-button
 ##[aria-label="Save to shopping list"]
