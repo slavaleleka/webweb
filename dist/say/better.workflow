@@ -1,7 +1,7 @@
 ! Title: say/better.workflow
 ! Description: tiny improvements
-! Version: 0.0.74
-! Time Updated: 2025-07-08T15:36:06.292Z
+! Version: 0.0.75
+! Time Updated: 2025-07-08T15:41:37.438Z
 ! Expires: 2 hours
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 ! Author: Slava Leleka
@@ -45,8 +45,8 @@ github.com#$##partial-discussion-header { margin: 0!important; }
 #$#ul#ghx-column-headers > { padding: 5px 9px !important; }
 #$#input#quickSearchInput.search { background: none!important; border: 1px solid black!important; }
 !
-#$#section#create-issue-dialog.aui-dialog2 { top: 10px !important; min-height: 750px !important; }
-#$#section#create-issue-dialog.aui-dialog2 .aui-dialog2-content { max-height: 100% !important; }
+#$#section#create-issue-dialog.aui-dialog2 { top: 10px !important; min-height: 780px !important; }
+#$#section#create-issue-dialog.aui-dialog2 .aui-dialog2-content { min-height: 680px !important; }
 #$#section#edit-issue-dialog.aui-dialog2 { top: 10px !important; min-height: 800px !important; }
 #$#section#edit-issue-dialog.aui-dialog2 .aui-dialog2-content { max-height: 100% !important; }
 #$#section#create-subtask-dialog { top: 10px !important; min-height: 750px !important; }
