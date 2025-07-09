@@ -11,13 +11,28 @@
 ! .москва
 ||*.xn--80adxhks^
 !
+!
+! yandex
 ||yandex.*^
 ||ya.*^
 ||dzen.*^
 ||yastatic.net^
 ||kinopoisk.*^
+! vk
 ||vk.com^
 ||vk.payservice.io^
+||vk.company^
+||userapi.com^
+||vk-portal.net^
+||vkuservideo.net^
+||mycdn.me^
+!
+!
+||megafon.com^
+||ucoz.net^
+||yabbi.me^
+||24smi.*^
+||ren.tv^
 ||relap.io^
 ||gismeteo.*^
 ||rp5.*^
@@ -106,3 +121,8 @@
 ||habr.com^
 !
 ! TODO: do not add manually, use the script
+!
+!
+! risky domains
+||actionpay.net^
+||acint.net^
