@@ -1,7 +1,7 @@
 ! Title: say/no.puccian
 ! Description: block ru websites; already included into hell.o
-! Version: 0.1.42
-! Time Updated: 2025-07-08T15:43:18.258Z
+! Version: 0.1.43
+! Time Updated: 2025-07-09T14:51:52.040Z
 ! Expires: 2 hours
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 ! Author: Slava Leleka
@@ -22,13 +22,28 @@
 ! .москва
 ||*.xn--80adxhks^
 !
+!
+! yandex
 ||yandex.*^
 ||ya.*^
 ||dzen.*^
 ||yastatic.net^
 ||kinopoisk.*^
+! vk
 ||vk.com^
 ||vk.payservice.io^
+||vk.company^
+||userapi.com^
+||vk-portal.net^
+||vkuservideo.net^
+||mycdn.me^
+!
+!
+||megafon.com^
+||ucoz.net^
+||yabbi.me^
+||24smi.*^
+||ren.tv^
 ||relap.io^
 ||gismeteo.*^
 ||rp5.*^
@@ -117,3 +132,8 @@
 ||habr.com^
 !
 ! TODO: do not add manually, use the script
+!
+!
+! risky domains
+||actionpay.net^
+||acint.net^
