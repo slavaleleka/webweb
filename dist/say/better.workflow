@@ -1,7 +1,7 @@
 ! Title: say/better.workflow
 ! Description: tiny improvements
-! Version: 0.0.78
-! Time Updated: 2025-07-09T17:03:21.865Z
+! Version: 0.0.79
+! Time Updated: 2025-07-10T17:23:33.478Z
 ! Expires: 2 hours
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 ! Author: Slava Leleka
@@ -108,6 +108,9 @@ agrd.dev###dashboard-container .dashboard-jira-issues
 #?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(Priority))
 #?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(Time Tracking))
 #?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(Log Work))
+#?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(Sprint))
+#?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(Team))
+#?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(Original story points))
 !
 !
 !
