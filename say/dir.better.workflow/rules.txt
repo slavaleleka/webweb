@@ -97,6 +97,9 @@ agrd.dev###dashboard-container .dashboard-jira-issues
 #?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(Priority))
 #?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(Time Tracking))
 #?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(Log Work))
+#?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(Sprint))
+#?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(Team))
+#?#form.jira-interation-create-issue-form.jira-create-form .jira-field:has(label:contains(Original story points))
 !
 !
 !
