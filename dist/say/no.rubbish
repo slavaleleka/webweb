@@ -485,7 +485,7 @@ militarnyi.com#$?#.grid-list-popular .card-content-news .w-dyn-list:has(.nets-li
 ##.mistape_caption
 ##[data-handlermode="itemerror"]
 ##[data-handlermode="url2mail"]
-~agrd.dev,~jobbank.gc.ca,~adguard-dns.io,~adguard.com,~mail.google.com##a[href^="mailto:"]
+~app.slack.com,~agrd.dev,~jobbank.gc.ca,~adguard-dns.io,~adguard.com,~mail.google.com##a[href^="mailto:"]
 ##.btn__icon._like
 ##.stickedBlock__spacer
 ##.yasr-auto-insert-visitor
