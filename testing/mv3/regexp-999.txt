@@ -1,4 +1,3 @@
-! https://raw.githubusercontent.com/slavaleleka/webweb/master/testing/mv3/regexp-999.txt
 /4rkpro8fvfy61rcte1yupl1vivlrtdxa.pgwwqqkhxxrmzgza\\/[a-z0-9_-]*.gif/
 /4rkpro8fvfy61rcte1yupl1vivlrtdxb.pgwwqqkhxxrmzgza\\/[a-z0-9_-]*.gif/
 /4rkpro8fvfy61rcte1yupl1vivlrtdxc.pgwwqqkhxxrmzgzb\\/[a-z0-9_-]*.gif/
