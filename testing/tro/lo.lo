@@ -26,5 +26,3 @@
 ||slavaleleka.github.io^$image,redirect=2x2-transparent.png
 
 example.org#%#console.log('test123');
-
-example.org$$script:contains(eval(atob(decrypt(_0x)
