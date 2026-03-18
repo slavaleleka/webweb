@@ -106,5 +106,5 @@ agrd.dev###dashboard-container .dashboard-jira-issues
 ! BAMBOO:
 !
 ! builds queue
-#$?#.buildInfo a:contains(AdGuard JS Libraries › ) { background-color: khaki !important; }
-#$?#.buildInfo a:contains(AdGuard Extensions › browser extension) { background-color: #f6cf1e !important; }
+#$?#.buildInfo a:contains(JS Libraries › ) { background-color: #f6ef1e !important; }
+#$?#.buildInfo a:contains(Browser Extensions › browser extension) { background-color: #f6e11e !important; }
