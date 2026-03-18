@@ -1,7 +1,7 @@
 ! Title: say/better.workflow
 ! Description: tiny improvements
-! Version: 0.0.81
-! Time Updated: 2025-10-30T23:16:16.260Z
+! Version: 0.0.82
+! Time Updated: 2026-03-18T13:22:04.006Z
 ! Expires: 2 hours
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 ! Author: Slava Leleka
@@ -117,5 +117,5 @@ agrd.dev###dashboard-container .dashboard-jira-issues
 ! BAMBOO:
 !
 ! builds queue
-#$?#.buildInfo a:contains(AdGuard JS Libraries › ) { background-color: khaki !important; }
-#$?#.buildInfo a:contains(AdGuard Extensions › browser extension) { background-color: #f6cf1e !important; }
+#$?#.buildInfo a:contains(JS Libraries › ) { background-color: #f6ef1e !important; }
+#$?#.buildInfo a:contains(Browser Extensions › browser extension) { background-color: #f6e11e !important; }
